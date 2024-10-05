@@ -35,7 +35,7 @@ const Nav = () => {
           toggle
             ? "scale-[1]  opacity-100 right-5"
             : "scale-50 opacity-0 right-[-100%]"
-        } transition-all duration-500 ease-linear`}
+        } transition-all duration-300 ease-linear`}
       >
         <li>
           <a href="#home" className="s">
