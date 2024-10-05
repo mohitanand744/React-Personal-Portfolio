@@ -34,7 +34,7 @@ const Nav = () => {
         className={`fixed top-[5.5rem] list-none p-5 border border-slate-600 w-[70%] h-[15rem] flex sm:hidden flex-col gap-2 items-center justify-center text-lg rounded-3xl custom-shadow backdrop-blur-sm bg-black/30  ${
           toggle
             ? "scale-[1]  opacity-100 right-5"
-            : "scale-50 opacity-0 right-[-100%]"
+            : "scale-0 opacity-0 right-[-100%]"
         } transition-all duration-300 ease-linear`}
       >
         <li>
