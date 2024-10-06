@@ -13,10 +13,10 @@ const AboutMe = () => {
           />
         </div>
       </div>
-      <div className="col-span-7">
+      <div className="col-span-7 ">
         <h1 className="highLight-text text-[3rem] lg:text-[4rem]">About me</h1>
         <div className="flex justify-between gap-4 flex-wrap w-[90%] mt-10 text-white">
-          <div className="flex flex-col gap-3 text-2xl lg:text-3xl">
+          <div className="flex flex-col gap-2 text-2xl lg:text-3xl">
             <p className="font-bold">
               Name: <span className="font-normal">Mohit Anand</span>
             </p>{" "}
@@ -25,7 +25,7 @@ const AboutMe = () => {
               <span className="font-normal">anandmohit744@gmail.com</span>
             </p>
           </div>
-          <div className="flex flex-col gap-3 text-2xl lg:text-3xl">
+          <div className="flex flex-col gap-2 text-2xl lg:text-3xl">
             <p className="font-bold">
               Role: <span className="font-normal">Frontend Developer</span>
             </p>{" "}
