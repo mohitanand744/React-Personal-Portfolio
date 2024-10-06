@@ -96,11 +96,11 @@ body {
 
   &::before {
     content: "srgsfg";
-    height: 2px;
+    height: 1px;
     width: 100%;
     position: absolute;
     background: linear-gradient(45deg, #f06, #3cf);
-    bottom: -7px;
+    bottom: -6px;
     left: 0;
   }
 }
