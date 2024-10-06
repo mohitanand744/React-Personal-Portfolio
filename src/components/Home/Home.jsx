@@ -9,25 +9,40 @@ const Home = () => {
           <div className="flex justify-center items-center gap-3 h-full ">
             <ul className="list-none flex flex-col gap-2">
               <li>
-                <img
-                  className="w-[5rem] sm:w-[4rem] md:w-[5rem] "
-                  src="/linkedin.png"
-                  alt="icon"
-                />
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/mohit-anand-developer"
+                >
+                  {" "}
+                  <img
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[5rem] sm:w-[4rem] md:w-[5rem] "
+                    src="/linkedin.png"
+                    alt="icon"
+                  />
+                </a>
               </li>
               <li>
-                <img
-                  className="w-[5rem] sm:w-[4rem] md:w-[5rem] "
-                  src="/github.png"
-                  alt="icon"
-                />
+                <a target="_blank" href="https://github.com/mohitanand744">
+                  {" "}
+                  <img
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[5rem] sm:w-[4rem] md:w-[5rem] "
+                    src="/github.png"
+                    alt="icon"
+                  />
+                </a>
               </li>
               <li>
-                <img
-                  className="w-[5rem] sm:w-[4rem] md:w-[5rem] "
-                  src="insta.png"
-                  alt="icon"
-                />
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/v3_beast_rider123/"
+                >
+                  {" "}
+                  <img
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[5rem] sm:w-[4rem] md:w-[5rem] "
+                    src="insta.png"
+                    alt="icon"
+                  />{" "}
+                </a>
               </li>
             </ul>
 
@@ -44,16 +59,22 @@ const Home = () => {
                 Frontend Developer @WeboConnect | Teamwork Makes The Dream work.
               </p>
 
-              <div className="flex gap-5 text-white mt-4">
-                <Button text={"Hire me"} />
-                <Button text={"1:1 Call"} />
+              <div className="flex gap-3 lg:gap-5 text-white mt-4">
+                <Button
+                  text={"Hire me"}
+                  url={"https://www.linkedin.com/in/mohit-anand-developer"}
+                />
+                <Button
+                  text={"1:1 Call"}
+                  url={"https://topmate.io/mohit_anand_developer"}
+                />
               </div>
             </div>
           </div>
         </div>
         <div className="lg:col-span-5 order-1 lg:order-2">
           <div className="flex justify-center items-center ">
-            <div className="ms-2 profileImageContainer w-[25rem] md:w-[35rem] h-[25rem] md:h-[35rem] rounded-full">
+            <div className="ms-2 profileImageContainer w-[26rem] md:w-[38rem] h-[26rem] md:h-[38rem] rounded-full">
               <img
                 className="w-full h-full rounded-full object-cover"
                 src="/hero-profile.jpeg"
