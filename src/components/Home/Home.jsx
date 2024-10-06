@@ -47,15 +47,16 @@ const Home = () => {
             </ul>
 
             <div className="head">
-              <h1 className="font-bold text-white text-[2.6rem] sm:text-[3rem] md:text-[5rem]">
-                Hi There, I'm <span className="highLight-text">Mohit</span>{" "}
+              <h1 className="font-bold text-white text-[3rem] sm:text-[3rem] md:text-[5rem] leading-10 lg:leading-[5rem]">
+                Hi There, I'm <span className="highLight-text ">Mohit</span>{" "}
                 <br />{" "}
-                <span className="text-[2rem] sm:text-[2.3rem] md:text-[3.8rem]">
+                <span className=" text-[2rem] sm:text-[2.3rem] md:text-[3.8rem] ">
                   {" "}
                   a <span className="highLight-text">Web Developer</span>
                 </span>
               </h1>
-              <p className="text-white text-[1.3rem] sm:text-md md:text-3xl">
+
+              <p className="text-white text-[1.3rem] sm:text-md md:text-3xl mt-5">
                 Frontend Developer @WeboConnect | Teamwork Makes The Dream work.
               </p>
 
