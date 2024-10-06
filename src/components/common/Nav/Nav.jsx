@@ -9,7 +9,7 @@ const Nav = () => {
   };
 
   return (
-    <header className="flex justify-between items-center text-white px-10 py-5">
+    <header className="flex justify-between items-center text-white py-6">
       <div className="bg-white w-[4rem] md:w-[5.7rem] rounded-full">
         <img src="/logo2.png" className=" w-[4rem] md:w-[5.7rem]" />
       </div>

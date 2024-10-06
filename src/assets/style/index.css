@@ -148,7 +148,8 @@ body {
 /***** Profile Section *****/
 
 .profileImageContainer {
-  box-shadow: #f06 0px 7px 16px 0px, rgba(36, 200, 255, 0.747) 0px -7px 16px 0px;
+  box-shadow: #f06 5px 7px 16px 0px,
+    rgba(36, 200, 255, 0.747) -5px -7px 16px 0px;
 }
 
 /***** End Profile Section *****/

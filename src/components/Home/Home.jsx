@@ -3,7 +3,7 @@ import Button from "../common/Buttons/Button";
 
 const Home = () => {
   return (
-    <div className="hero px-3 md:px-10 mt-36 lg:mt-52">
+    <div className="hero mt-36 lg:mt-64">
       <div className="grid gap-10 grid-cols-1 lg:grid-cols-12">
         <div className="lg:col-span-7 h-[48vh] order-2 lg:order-1">
           <div className="flex justify-center items-center gap-3 h-full ">
