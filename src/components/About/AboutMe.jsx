@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "../common/Buttons/Button";
 
 const AboutMe = () => {
+  const [readMore, setReadMore] = useState(false);
+
+  const readMoreText = () => {
+    setReadMore((readMore) => !readMore);
+  };
+
   return (
     <div className="about grid gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72">
       <div className="col-span-5 p-2">
@@ -40,15 +46,19 @@ const AboutMe = () => {
             scalable web applications using React.js, Bootstrap, and Tailwind
             CSS. Currently interning at WeboConnect, I focus on enhancing user
             experiences and improving performance through dynamic interfaces and
-            API integration. Transitioning into programming after overcoming a
-            spinal cord injury, I bring resilience, adaptability, and a passion
-            for creating impactful web solutions. I am continually expanding my
-            skills, currently learning backend technologies to further enrich my
-            projects.
+            API integration.{" "}
+            {readMore &&
+              "Transitioning into programming after overcoming a spinal cord injury, I bring resilience, adaptability, and a passion for creating impactful web solutions. I am continually expanding my skills, currently learning backend technologies to further enrich my projects."}{" "}
+            <span
+              className="highLight-text cursor-pointer"
+              onClick={readMoreText}
+            >
+              {readMore ? "read less" : "read more"}
+            </span>
           </p>
         </div>
         <div className="mt-10 lg:mt-20">
-          <Button text={"Resume"} />
+          <Button text={"Resume"} img={"/download.png"} />
         </div>
       </div>
     </div>

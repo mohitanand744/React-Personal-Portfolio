@@ -86,6 +86,11 @@ body {
     rgba(146, 0, 243, 0.527) 0px 5px 60px -30px inset,
     rgb(183, 0, 255) 0px -2px 6px 0px inset;
 }
+.custom-shadow2 {
+  box-shadow: rgba(50, 50, 93, 0.884) 0px 50px 100px -20px,
+    rgba(34, 33, 33, 0.801) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.952) 0px -2px 6px 0px inset;
+}
 
 .active {
   background: linear-gradient(rgb(255, 0, 102), #3cf);
@@ -95,7 +100,7 @@ body {
   position: relative;
 
   &::before {
-    content: "srgsfg";
+    content: "";
     height: 1px;
     width: 100%;
     position: absolute;
