@@ -9,6 +9,10 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
 }
 
+html {
+  font-size: 62.5%;
+}
+
 /* The body background image setup */
 body {
   background-image: url("/bg.jpg");
@@ -20,6 +24,48 @@ body {
   padding: 0;
   overflow-x: hidden;
   background-color: #000;
+}
+
+/***** Global CSS *****/
+
+.custom-button {
+  position: relative;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  align-items: center;
+  border-radius: 4rem;
+  -webkit-border-radius: 4rem;
+  -moz-border-radius: 4rem;
+  -ms-border-radius: 4rem;
+  -o-border-radius: 4rem;
+  color: #fff;
+  z-index: 1;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    inset: 0;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    z-index: -1;
+    border-radius: 4rem;
+    -webkit-border-radius: 4rem;
+    -moz-border-radius: 4rem;
+    -ms-border-radius: 4rem;
+    -o-border-radius: 4rem;
+    background-size: 200%;
+    transition: 0.3s ease-in;
+    -webkit-transition: 0.3s ease-in;
+    -moz-transition: 0.3s ease-in;
+    -ms-transition: 0.3s ease-in;
+    -o-transition: 0.3s ease-in;
+  }
+
+  &:hover::after {
+    background-position: 100% 0;
+  }
 }
 
 /* Overlay to create the blur effect */
@@ -36,7 +82,97 @@ body {
 }
 
 .custom-shadow {
-  box-shadow: rgba(111, 0, 255, 0.521) 0px 10px 100px -20px,
-    rgba(0, 37, 248, 0.3) 0px 30px 60px -30px,
-    rgba(115, 0, 247, 0.781) 0px 0px 7px 0px inset;
+  box-shadow: rgba(18, 1, 255, 0.425) 0px 0px 100px -40px inset,
+    rgba(146, 0, 243, 0.527) 0px 5px 60px -30px inset,
+    rgb(183, 0, 255) 0px -2px 6px 0px inset;
 }
+
+.active {
+  background: linear-gradient(rgb(255, 0, 102), #3cf);
+  font-weight: bold;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  position: relative;
+
+  &::before {
+    content: "srgsfg";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(45deg, #f06, #3cf);
+    bottom: -7px;
+    left: 0;
+  }
+}
+
+.highLight-text {
+  background: linear-gradient(rgb(255, 0, 102), #3cf);
+  font-weight: 700;
+  padding-bottom: 3px;
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+/***** End Global CSS *****/
+
+/***** Navbar Section *****/
+
+.navlinks {
+  position: relative;
+
+  &::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(45deg, #f06, #3cf);
+    left: 0;
+    bottom: -6px;
+    translate: -100%;
+    opacity: 0;
+    transition: all 0.4s;
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    -ms-transition: all 0.4s;
+    -o-transition: all 0.4s;
+  }
+
+  &:hover::after {
+    translate: 0%;
+    opacity: 1;
+  }
+}
+
+/***** End Navbar Section *****/
+
+/***** Profile Section *****/
+
+.profileImageContainer {
+  box-shadow: #f06 0px 7px 16px 0px, rgba(36, 200, 255, 0.747) 0px -7px 16px 0px;
+}
+
+/***** End Profile Section *****/
+
+/***** scrollbar Section *****/
+
+/* width */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #a3a3a3;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#eb1d6f, #10baf3);
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #2c2c2c;
+}
+
+/***** End scrollbar Section *****/
