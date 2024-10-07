@@ -10,7 +10,7 @@ const Nav = () => {
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
-    const yOffset = -230; // Height of the navbar
+    const yOffset = -150; // Height of the navbar
     const y =
       section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -24,23 +24,13 @@ const Nav = () => {
       </div>
 
       <nav
-        className="hidden sm:flex gap-8 text-xl md:text-3xl"
+        className="hidden sm:flex gap-8 text-xl md:text-3xl font-medium"
         data-aos="fade-left"
       >
         <p
           onClick={() => {
-            setActive("Home");
-            scrollToSection("Home");
-          }}
-          className={`cursor-pointer navlinks ${
-            active === "Home" ? "active" : ""
-          }`}
-        >
-          Home
-        </p>
-        <p
-          onClick={() => {
             setActive("About");
+            setToggle(false);
             scrollToSection("About");
           }}
           className={`cursor-pointer navlinks ${
@@ -52,6 +42,7 @@ const Nav = () => {
         <p
           onClick={() => {
             setActive("Skills");
+            setToggle(false);
             scrollToSection("Skills");
           }}
           className={`cursor-pointer navlinks ${
@@ -63,6 +54,7 @@ const Nav = () => {
         <p
           onClick={() => {
             setActive("Projects");
+            setToggle(false);
             scrollToSection("Projects");
           }}
           className={`cursor-pointer navlinks ${
@@ -74,6 +66,7 @@ const Nav = () => {
         <p
           onClick={() => {
             setActive("Experience");
+            setToggle(false);
             scrollToSection("Experience");
           }}
           className={`cursor-pointer navlinks ${
@@ -85,6 +78,7 @@ const Nav = () => {
         <p
           onClick={() => {
             setActive("Contact");
+            setToggle(false);
             scrollToSection("Contact");
           }}
           className={`cursor-pointer navlinks ${
@@ -115,18 +109,8 @@ const Nav = () => {
       >
         <p
           onClick={() => {
-            setActive("Home");
-            scrollToSection("Home");
-          }}
-          className={`cursor-pointer w-[13rem] text-center navlinks ${
-            active === "Home" ? "active" : ""
-          }`}
-        >
-          Home
-        </p>
-        <p
-          onClick={() => {
             setActive("About");
+            setToggle(false);
             scrollToSection("About");
           }}
           className={`cursor-pointer w-[13rem] text-center navlinks ${
@@ -138,6 +122,7 @@ const Nav = () => {
         <p
           onClick={() => {
             setActive("Skills");
+            setToggle(false);
             scrollToSection("Skills");
           }}
           className={`cursor-pointer w-[13rem] text-center navlinks ${
@@ -149,6 +134,7 @@ const Nav = () => {
         <p
           onClick={() => {
             setActive("Projects");
+            setToggle(false);
             scrollToSection("Projects");
           }}
           className={`cursor-pointer w-[13rem] text-center navlinks ${
@@ -160,6 +146,7 @@ const Nav = () => {
         <p
           onClick={() => {
             setActive("Experience");
+            setToggle(false);
             scrollToSection("Experience");
           }}
           className={`cursor-pointer w-[13rem] text-center navlinks ${
@@ -171,6 +158,7 @@ const Nav = () => {
         <p
           onClick={() => {
             setActive("Contact");
+            setToggle(false);
             scrollToSection("Contact");
           }}
           className={`cursor-pointer w-[13rem] text-center navlinks ${

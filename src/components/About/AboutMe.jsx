@@ -16,7 +16,7 @@ const AboutMe = () => {
       <div className="col-span-5 p-2">
         <div data-aos="zoom-in" className="flex lg:justify-center items-center">
           <img
-            className="profileImageContainer text-center w-[25rem] md:w-[30rem] md:h-[40rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover"
+            className="profileImageContainer text-center w-[20rem] md:w-[30rem] md:h-[40rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover"
             src="/p2.jpg"
             alt=""
           />
