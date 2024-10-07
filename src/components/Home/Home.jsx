@@ -3,8 +3,11 @@ import Button from "../common/Buttons/Button";
 
 const Home = () => {
   return (
-    <div className="hero mt-36 lg:mt-64">
-      <div className="grid gap-10 grid-cols-1 lg:grid-cols-12">
+    <div id="Home" className="hero mt-60 lg:mt-96">
+      <div
+        data-aos="zoom-in"
+        className="grid gap-10 grid-cols-1 lg:grid-cols-12"
+      >
         <div className="lg:col-span-7 h-[48vh] order-2 lg:order-1">
           <div className="flex justify-center items-center gap-3 h-full ">
             <ul className="list-none flex flex-col gap-2">
@@ -15,7 +18,7 @@ const Home = () => {
                 >
                   {" "}
                   <img
-                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[5rem] sm:w-[4rem] md:w-[5rem] "
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[6rem] sm:w-[4rem] md:w-[5rem] "
                     src="/linkedin.png"
                     alt="icon"
                   />
@@ -25,7 +28,7 @@ const Home = () => {
                 <a target="_blank" href="https://github.com/mohitanand744">
                   {" "}
                   <img
-                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[5rem] sm:w-[4rem] md:w-[5rem] "
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[6rem] sm:w-[4rem] md:w-[5rem] "
                     src="/github.png"
                     alt="icon"
                   />
@@ -38,7 +41,7 @@ const Home = () => {
                 >
                   {" "}
                   <img
-                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[5rem] sm:w-[4rem] md:w-[5rem] "
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[6rem] sm:w-[4rem] md:w-[5rem] "
                     src="insta.png"
                     alt="icon"
                   />{" "}
@@ -47,7 +50,7 @@ const Home = () => {
             </ul>
 
             <div className="head">
-              <h1 className="font-bold text-white text-[3rem] sm:text-[3rem] md:text-[5rem] leading-10 lg:leading-[5rem]">
+              <h1 className="font-bold text-white text-[3rem] sm:text-[3rem] md:text-[5rem] leading-10  md:leading-[4rem] lg:leading-[5rem]">
                 Hi There, I'm <span className="highLight-text ">Mohit</span>{" "}
                 <br />{" "}
                 <span className=" text-[2rem] sm:text-[2.3rem] md:text-[3.8rem] ">
@@ -56,7 +59,7 @@ const Home = () => {
                 </span>
               </h1>
 
-              <p className="text-white text-[1.3rem] sm:text-md md:text-3xl mt-5">
+              <p className="text-white text-[1.5rem] sm:text-md md:text-3xl mt-5">
                 Frontend Developer @WeboConnect | Teamwork Makes The Dream work.
               </p>
 
@@ -74,7 +77,10 @@ const Home = () => {
           </div>
         </div>
         <div className="lg:col-span-5 order-1 lg:order-2">
-          <div className="flex justify-center items-center ">
+          <div
+            data-aos="slide-right"
+            className="flex justify-center items-center "
+          >
             <div className="ms-2 profileImageContainer w-[26rem] md:w-[38rem] h-[26rem] md:h-[38rem] rounded-full">
               <img
                 className="w-full h-full rounded-full object-cover"

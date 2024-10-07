@@ -9,9 +9,12 @@ const AboutMe = () => {
   };
 
   return (
-    <div className="about grid gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72">
+    <div
+      id="About"
+      className="about grid gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72"
+    >
       <div className="col-span-5 p-2">
-        <div className="flex lg:justify-center items-center">
+        <div data-aos="zoom-in" className="flex lg:justify-center items-center">
           <img
             className="profileImageContainer text-center w-[25rem] md:w-[30rem] md:h-[40rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover"
             src="/p2.jpg"
@@ -19,7 +22,7 @@ const AboutMe = () => {
           />
         </div>
       </div>
-      <div className="col-span-7 ">
+      <div className="col-span-7 " data-aos="fade-right">
         <h1 className="highLight-text text-[3rem] lg:text-[4rem]">About me</h1>
         <div className="flex justify-between gap-4 flex-wrap w-[90%] mt-10 text-white">
           <div className="flex flex-col gap-2 text-2xl lg:text-3xl">
@@ -58,7 +61,13 @@ const AboutMe = () => {
           </p>
         </div>
         <div className="mt-10 lg:mt-20">
-          <Button text={"Resume"} img={"/download.png"} />
+          <Button
+            text={"Resume"}
+            url={
+              "https://drive.google.com/file/d/1fTyvC_b0lpXg1t-UCg4bA8KniEhBugTs/view?usp=drive_link"
+            }
+            img={"/download.png"}
+          />
         </div>
       </div>
     </div>
