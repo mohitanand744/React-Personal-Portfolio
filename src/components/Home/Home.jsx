@@ -78,7 +78,7 @@ const Home = () => {
         </div>
         <div className="lg:col-span-5 order-1 lg:order-2">
           <div
-            data-aos="slide-right"
+            data-aos="fade-right"
             className="flex justify-center items-center "
           >
             <div className="ms-2 profileImageContainer w-[26rem] md:w-[38rem] h-[26rem] md:h-[38rem] rounded-full">
