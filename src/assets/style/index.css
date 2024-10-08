@@ -154,7 +154,7 @@ body {
   &::after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 1rem;
     bottom: 0;
     width: 4px;
     height: 100%;

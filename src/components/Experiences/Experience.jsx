@@ -16,9 +16,22 @@ const Experience = () => {
         </p>
       </center>
 
+      <div className="scrollButtons block md:hidden relative h-[4rem]">
+        <img
+          className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-4"
+          src="/rightArrow.png"
+          alt=""
+        />
+        <img
+          className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-20 rotate-[180deg]"
+          src="/rightArrow.png"
+          alt=""
+        />
+      </div>
+
       <div
         data-aos="zoom-in"
-        className="timeline hide-ScrollBar mx-auto lg:w-[70%] my-16 flex md:flex-col gap-10 overflow-x-auto"
+        className="timeline p-3 hide-ScrollBar mx-auto lg:w-[70%] my-6 flex md:flex-col gap-10 overflow-x-auto"
       >
         {experience.map((experience, i) => (
           <div
