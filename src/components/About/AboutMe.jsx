@@ -25,7 +25,7 @@ const AboutMe = () => {
           />
         </div>
       </div>
-      <div className="col-span-7 " data-aos="flip-right">
+      <div className="col-span-7 " data-aos="zoom-in">
         <h1 className="highLight-text text-[3rem] lg:text-[4rem]">About me</h1>
         <div className="flex justify-between gap-4 flex-wrap w-[90%] mt-10 text-white">
           <div className="flex flex-col gap-2 text-2xl lg:text-3xl">
