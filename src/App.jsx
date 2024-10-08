@@ -25,13 +25,13 @@ function App() {
 
   return (
     <>
-      <section className="Home ">
+      <section className="Home w-full min-h-[100vh] ">
         {" "}
         {!showGoToTop ? (
           ""
         ) : (
           <img
-            className="fixed bottom-10 right-10 w-16 lg:w-20 rotate-[268deg] cursor-pointer active:scale-90  transition-all duration-100 ease-linear z-50"
+            className="fixed bottom-16 right-16 w-16 lg:w-20 active:rotate-[368deg] cursor-pointer active:scale-90  transition-all duration-200  z-50 rotate-[268deg]"
             onClick={goToTop}
             src="/rightArrow.png"
             alt="Go to Top"
