@@ -37,8 +37,8 @@ function App() {
             alt="Go to Top"
           />
         )}
-        <div className="blur-overlay hidden md:block"></div>
-        <div className="px-3 lg:px-10">
+        <div className="blur-overlay"></div>
+        <div className="">
           <Nav />
           <Home />
           <AboutMe />

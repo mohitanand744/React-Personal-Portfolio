@@ -4,7 +4,11 @@ const Skill = () => {
   const [showSkills, setShowSkills] = useState("frontend");
 
   return (
-    <div id="Skills" data-aos="zoom-out" className="skills  h-[60rem] my-44">
+    <div
+      id="Skills"
+      data-aos="zoom-out"
+      className="skills  h-[60rem] my-44 px-3 lg:px-10"
+    >
       <center className="text-[4rem] highLight-text my-10">Skills</center>
 
       <div

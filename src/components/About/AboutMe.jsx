@@ -11,7 +11,7 @@ const AboutMe = () => {
   return (
     <div
       id="About"
-      className="about grid gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72"
+      className="about grid gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72 px-3 lg:px-10"
     >
       <div className="col-span-5 p-2">
         <div data-aos="zoom-in" className="flex lg:justify-center items-center">
