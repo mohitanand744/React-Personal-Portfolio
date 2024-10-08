@@ -22,6 +22,12 @@ body {
 
 /***** Global CSS *****/
 
+.hide-ScrollBar {
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
 .custom-button {
   position: relative;
   position: relative;
@@ -63,8 +69,8 @@ body {
 }
 
 .custom-shadow {
-  box-shadow: rgba(18, 1, 255, 0.425) 0px 0px 100px -40px inset,
-    rgba(146, 0, 243, 0.527) 0px 5px 60px -30px inset,
+  box-shadow: rgba(255, 1, 77, 0.5) 0px 0px 100px -40px inset,
+    rgba(0, 207, 243, 0.527) 0px 5px 60px -30px inset,
     rgb(183, 0, 255) 0px -2px 6px 0px inset;
 }
 .custom-shadow2 {
@@ -139,6 +145,50 @@ body {
 }
 
 /***** End Profile Section *****/
+
+/***** Experience Section *****/
+
+.timeline {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    background: linear-gradient(45deg, #f06, #3cf, #f06);
+    z-index: -1;
+    border-radius: 5rem;
+    -webkit-border-radius: 5rem;
+    -moz-border-radius: 5rem;
+    -ms-border-radius: 5rem;
+    -o-border-radius: 5rem;
+  }
+
+  .experienceBox {
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -6.3%;
+      width: 1.6rem;
+      height: 1.6rem;
+      border-radius: 50%;
+      -webkit-border-radius: 50%;
+      -moz-border-radius: 50%;
+      -ms-border-radius: 50%;
+      -o-border-radius: 50%;
+      background: #f06;
+      z-index: 1;
+    }
+  }
+}
+
+/***** End Experience Section *****/
 
 /***** scrollbar Section *****/
 

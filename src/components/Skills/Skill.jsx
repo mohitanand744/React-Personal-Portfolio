@@ -1,16 +1,42 @@
 import React, { useState } from "react";
+import useContextData from "../../Hook/useContextData";
+import SectionHeading from "../common/Heading/SectionHeading";
 
 const Skill = () => {
-  const [showSkills, setShowSkills] = useState("frontend");
+  const [showSkills, setShowSkills] = useState("all");
+  const { skills } = useContextData();
+
+  const filterSkillsCategory = skills.filter(
+    (skill) => showSkills === "all" || skill.category === showSkills
+  );
 
   return (
-    <div id="Skills" data-aos="zoom-in" className="skills  my-44 px-3 lg:px-10">
-      <center className="text-[4rem] highLight-text my-10">Skills</center>
+    <div
+      id="Skills"
+      data-aos="zoom-in"
+      className="skills h-fit  my-44 px-3 lg:px-10"
+    >
+      <center className="my-10 mx-auto w-[96%] lg:w-[40%] mb-14">
+        <SectionHeading text={"Skills"} />
+        <p className="text-white text-xl lg:text-2xl ">
+          Expertise in multiple frameworks and a passion for continuous
+          learning, seeking to expand my skills as a full-stack developer.
+        </p>
+      </center>
 
       <div
         data-aos="zoom-in"
-        className="flex justify-center items-center text-white text-[1.6rem] md:text-4xl gap-16"
+        className="flex justify-center items-center flex-wrap text-white text-[1.6rem] md:text-4xl gap-8 md:gap-16"
       >
+        <button
+          data-aos="flip-left"
+          onClick={() => setShowSkills("all")}
+          className={`${
+            showSkills === "all" ? " highLight-text" : ""
+          } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
+        >
+          All
+        </button>
         <button
           data-aos="flip-right"
           onClick={() => setShowSkills("frontend")}
@@ -31,109 +57,18 @@ const Skill = () => {
         </button>
       </div>
 
-      {showSkills === "frontend" ? (
-        <>
-          <div className="flex rounded-3xl my-16 gap-14 justify-center flex-wrap  items-center ">
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/html.png" alt="" />
-              <p className="text-white">HTML</p>
-            </div>
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/css.png" alt="" />
-
-              <p className="text-white">CSS</p>
-            </div>
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/js.png" alt="" />
-              <p className="text-white">JavaScript</p>
-            </div>
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/react.png" alt="" />
-
-              <p className="text-white">React</p>
-            </div>
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/tailwind.png" alt="" />
-
-              <p className="text-white">Tailwind</p>
-            </div>
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/bootstrap.png" alt="" />
-
-              <p className="text-white">Bootstrap</p>
-            </div>
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/responsive.png" alt="" />
-              <p className="text-white">Responsive Design</p>
-            </div>
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/github.png" alt="" />
-              <p className="text-white">Git | GitHub</p>
-            </div>
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/api.png" alt="" />
-
-              <p className="text-white">API</p>
-            </div>
-          </div>
-        </>
-      ) : (
-        <>
+      <div className="w-[97%] md:w-[78%] lg:w-[60%] mx-auto flex rounded-3xl my-16 gap-14 justify-center flex-wrap  items-center">
+        {filterSkillsCategory.map((skill, i) => (
           <div
+            key={i}
             data-aos="zoom-in"
-            className="flex rounded-3xl my-16 gap-14 justify-center flex-wrap  items-center"
+            className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
           >
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/express.png" alt="" />
-              <p className="text-white">Express</p>
-            </div>
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/node-js.png" alt="" />
-              <p className="text-white">Node</p>
-            </div>
-            <div
-              data-aos="zoom-in"
-              className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
-            >
-              <img src="/mongoDB.png" alt="" />
-              <p className="text-white">MongoDB</p>
-            </div>
+            <img src={skill.image} alt="" />
+            <p className="text-white">{skill.title}</p>
           </div>
-        </>
-      )}
+        ))}
+      </div>
     </div>
   );
 };

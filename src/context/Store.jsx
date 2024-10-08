@@ -1,6 +1,8 @@
 import { createContext, useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import skills from "./../Data/Skills.json";
+import experience from "./../Data/Experience.json";
 
 export const Store = createContext();
 
@@ -14,7 +16,14 @@ const StoreProvider = ({ children }) => {
 
   return (
     <>
-      <Store.Provider value={{}}>{children}</Store.Provider>
+      <Store.Provider
+        value={{
+          skills,
+          experience,
+        }}
+      >
+        {children}
+      </Store.Provider>
     </>
   );
 };

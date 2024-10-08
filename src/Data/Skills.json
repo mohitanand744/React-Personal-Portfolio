@@ -1,0 +1,62 @@
+[
+  {
+    "title": "HTML",
+    "image": "/html.png",
+    "category": "frontend"
+  },
+  {
+    "title": "CSS",
+    "image": "/css.png",
+    "category": "frontend"
+  },
+  {
+    "title": "JavaScript",
+    "image": "/js.png",
+    "category": "frontend"
+  },
+  {
+    "title": "React",
+    "image": "/react.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Tailwind",
+    "image": "/tailwind.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Bootstrap",
+    "image": "/bootstrap.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Responsive Design",
+    "image": "/responsive.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Git | GitHub",
+    "image": "/github.png",
+    "category": "frontend"
+  },
+  {
+    "title": "API",
+    "image": "/api.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Express",
+    "image": "/express.png",
+    "category": "backend"
+  },
+  {
+    "title": "Node",
+    "image": "/node-js.png",
+    "category": "backend"
+  },
+  {
+    "title": "MongoDB",
+    "image": "/mongoDB.png",
+    "category": "backend"
+  }
+]

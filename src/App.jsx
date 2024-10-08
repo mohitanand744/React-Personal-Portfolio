@@ -3,6 +3,7 @@ import AboutMe from "./components/About/AboutMe";
 import Nav from "./components/common/Nav/Nav";
 import Home from "./components/Home/Home";
 import Skill from "./components/Skills/Skill";
+import Experience from "./components/Experiences/Experience";
 
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);
@@ -42,6 +43,7 @@ function App() {
           <Home />
           <AboutMe />
           <Skill />
+          <Experience />
         </div>
       </section>
     </>

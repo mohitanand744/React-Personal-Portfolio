@@ -10,7 +10,7 @@ const Nav = () => {
 
   const scrollToSection = (id) => {
     const section = document.getElementById(id);
-    const yOffset = -150; // Height of the navbar
+    const yOffset = -180; // Height of the navbar
     const y =
       section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 

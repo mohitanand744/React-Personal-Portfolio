@@ -1,0 +1,53 @@
+@media screen and (width < 768px) {
+  /***** Experience Section *****/
+
+  .timeline {
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: -1.2rem;
+      width: 4px;
+      height: 100%;
+      background: linear-gradient(45deg, #f06, #3cf, #f06);
+      z-index: -1;
+      border-radius: 5rem;
+      -webkit-border-radius: 5rem;
+      -moz-border-radius: 5rem;
+      -ms-border-radius: 5rem;
+      -o-border-radius: 5rem;
+    }
+
+    .experienceBox {
+      position: relative;
+
+      &::after {
+        content: "";
+        left: -4.9%;
+      }
+    }
+  }
+
+  /***** End Experience Section *****/
+}
+
+@media screen and (width < 648px) {
+  /***** Experience Section *****/
+
+  .timeline {
+    &::after {
+      display: none;
+    }
+
+    .experienceBox {
+      position: relative;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+
+  /***** End Experience Section *****/
+}

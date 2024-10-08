@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Button from "../common/Buttons/Button";
+import SectionHeading from "../common/Heading/SectionHeading";
 
 const AboutMe = () => {
   const [readMore, setReadMore] = useState(false);
@@ -11,7 +12,7 @@ const AboutMe = () => {
   return (
     <div
       id="About"
-      className="about grid gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72 px-3 lg:px-10"
+      className="about h-fit grid gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72 px-3 lg:px-10"
     >
       <div className="col-span-5 p-2">
         <div
@@ -26,7 +27,7 @@ const AboutMe = () => {
         </div>
       </div>
       <div className="col-span-7 " data-aos="zoom-in">
-        <h1 className="highLight-text text-[3rem] lg:text-[4rem]">About me</h1>
+        <SectionHeading text={"About me"} />
         <div className="flex justify-between gap-4 flex-wrap w-[90%] mt-10 text-white">
           <div className="flex flex-col gap-2 text-2xl lg:text-3xl">
             <p className="font-bold">
