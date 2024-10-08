@@ -14,7 +14,10 @@ const AboutMe = () => {
       className="about grid gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72 px-3 lg:px-10"
     >
       <div className="col-span-5 p-2">
-        <div data-aos="zoom-in" className="flex lg:justify-center items-center">
+        <div
+          data-aos="flip-left"
+          className="flex lg:justify-center items-center"
+        >
           <img
             className="profileImageContainer text-center w-[20rem] md:w-[30rem] md:h-[40rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover"
             src="/p2.jpg"

@@ -18,7 +18,7 @@ const Nav = () => {
   };
 
   return (
-    <header className="flex justify-between items-center text-white px-10 py-8 backdrop-blur-sm bg-black/30 rounded-b-3xl fixed top-0 z-50 w-full">
+    <header className="flex justify-between items-center text-white px-10 py-8 backdrop-blur-sm bg-black/30 rounded-b-3xl sticky top-0 z-50 w-full">
       <div className="bg-white rounded-full" data-aos="flip-right">
         <img src="/logo2.png" className="w-[4rem] md:w-[5.7rem]" alt="logo" />
       </div>
