@@ -3,7 +3,7 @@ import Button from "../common/Buttons/Button";
 
 const Home = () => {
   return (
-    <div id="Home" className="hero mt-60 lg:mt-96 px-3 lg:px-10">
+    <div id="Home" className="hero mt-52 lg:mt-96 px-3 lg:px-10">
       <div
         data-aos="zoom-in"
         className="grid gap-10 grid-cols-1 lg:grid-cols-12"
