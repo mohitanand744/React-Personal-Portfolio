@@ -37,7 +37,6 @@ function App() {
             alt="Go to Top"
           />
         )}
-        <div className="blur-overlay"></div>
         <div className="">
           <Nav />
           <Home />
