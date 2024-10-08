@@ -12,7 +12,7 @@ const Skill = () => {
         className="flex justify-center items-center text-white text-[1.6rem] md:text-4xl gap-16"
       >
         <button
-          data-aos="fade-right"
+          data-aos="flip-right"
           onClick={() => setShowSkills("frontend")}
           className={`${
             showSkills === "frontend" ? " highLight-text" : ""
@@ -21,7 +21,7 @@ const Skill = () => {
           Frontend
         </button>
         <button
-          data-aos="fade-left"
+          data-aos="flip-left"
           onClick={() => setShowSkills("backend")}
           className={`${
             showSkills === "backend" ? " highLight-text " : ""

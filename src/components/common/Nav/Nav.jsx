@@ -19,13 +19,13 @@ const Nav = () => {
 
   return (
     <header className="flex justify-between items-center text-white px-16 py-8 backdrop-blur-sm bg-black/30 rounded-b-3xl fixed top-0 z-50 left-0 right-0">
-      <div className="bg-white rounded-full" data-aos="fade-right">
+      <div className="bg-white rounded-full" data-aos="flip-right">
         <img src="/logo2.png" className="w-[4rem] md:w-[5.7rem]" alt="logo" />
       </div>
 
       <nav
         className="hidden sm:flex gap-8 text-xl md:text-3xl font-medium"
-        data-aos="fade-left"
+        data-aos="flip-left"
       >
         <p
           onClick={() => {
@@ -90,7 +90,7 @@ const Nav = () => {
       </nav>
 
       {/* Mobile menu toggle */}
-      <div className="block sm:hidden" data-aos="fade-left">
+      <div className="block sm:hidden" data-aos="flip-left">
         <img
           className="menu w-[4rem] active:rotate-[360deg] transition-all duration-500 ease-linear"
           src="./menu.png"
