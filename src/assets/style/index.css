@@ -138,8 +138,8 @@ body {
     rgb(183, 0, 255) 0px -2px 6px 0px inset;
 }
 .custom-shadow2 {
-  box-shadow: rgba(50, 50, 93, 0.884) 0px 50px 100px -20px,
-    rgba(34, 33, 33, 0.801) 0px 30px 60px -30px,
+  box-shadow: rgba(10, 10, 97, 0.884) 0px 50px 100px -20px,
+    rgba(78, 20, 20, 0.801) 0px 30px 60px -30px,
     rgba(10, 37, 64, 0.952) 0px -2px 6px 0px inset;
 }
 
@@ -218,8 +218,9 @@ body {
   &::after {
     content: "";
     position: absolute;
-    top: 1rem;
+    top: 1.8%;
     bottom: 0;
+    left: 0.7%;
     width: 4px;
     height: 100%;
     background: linear-gradient(45deg, #f06, #3cf, #f06);
@@ -237,8 +238,8 @@ body {
     &::after {
       content: "";
       position: absolute;
-      top: 0;
-      left: -6.2%;
+      top: 0%;
+      left: -6.5%;
       width: 1.6rem;
       height: 1.6rem;
       border-radius: 50%;

@@ -26,7 +26,7 @@ const Skill = () => {
 
       <div
         data-aos="zoom-in"
-        className="flex justify-center items-center flex-wrap text-white text-[1.6rem] md:text-4xl gap-8 md:gap-16"
+        className="flex justify-center items-center flex-wrap text-white text-[1.6rem] md:text-3xl gap-8 md:gap-16"
       >
         <button
           data-aos="flip-left"
