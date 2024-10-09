@@ -92,7 +92,7 @@ const Experience = () => {
             </div>
             <p className="text-xl lg:text-2xl">{experienceItem.description}</p>
             <div className="mt-6 mb-3 flex items-center w-full relative">
-              <h3 className="text-xl md:text-3xl">Skills Used</h3>
+              <h3 className="text-2xl md:text-3xl">Skills Used</h3>
               <div className="scrollButtons h-[4rem]">
                 <img
                   className="w-[3.6rem] absolute active:scale-90 transition-all duration-200 ease-linear right-4 cursor-pointer"
