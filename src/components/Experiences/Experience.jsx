@@ -1,19 +1,15 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import SectionHeading from "../common/Heading/SectionHeading";
 import useContextData from "../../Hook/useContextData";
 
 const Experience = () => {
   const { experience, skills } = useContextData();
   const scrollContainers = useRef([]);
-  const [, setDisable] = useState(false);
+  const scrollExperienceContainers = useRef();
 
   const scroll = (index, direction) => {
     const scrollAmount = 150;
     const container = scrollContainers.current[index]; // Get the correct container
-
-    const { scrollLeft, scrollWidth, offsetWidth } = container;
-
-    setDisable(scrollLeft === 0 || scrollLeft < 0);
 
     if (container) {
       container.scrollBy({
@@ -21,6 +17,18 @@ const Experience = () => {
         behavior: "smooth",
       });
     }
+  };
+
+  const scrollExperienceBox = (direction) => {
+    const container = scrollExperienceContainers.current;
+    const { offsetWidth } = container;
+
+    const scrollAmount = offsetWidth;
+
+    container?.scrollBy({
+      left: direction === "right" ? scrollAmount : -scrollAmount,
+      behavior: "smooth",
+    });
   };
 
   const skillsUsed = skills.filter((skill) => skill.category === "frontend");
@@ -36,8 +44,24 @@ const Experience = () => {
         </p>
       </center>
 
+      <div className="scrollButtons relative md:hidden h-[3rem]">
+        <img
+          className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-4 cursor-pointer"
+          src="/rightArrow.png"
+          alt="Scroll Right"
+          onClick={() => scrollExperienceBox("right")}
+        />
+        <img
+          className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-20 rotate-[180deg] cursor-pointer"
+          src="/rightArrow.png"
+          alt="Scroll Left"
+          onClick={() => scrollExperienceBox("left")}
+        />
+      </div>
+
       <div
         data-aos="zoom-in"
+        ref={scrollExperienceContainers}
         className="timeline p-[1rem] hide-ScrollBar mx-auto md:w-[60rem] lg:w-[90rem] my-6 flex md:flex-col gap-10 overflow-x-scroll overflow-y-hidden"
       >
         {experience.map((experienceItem, index) => (
