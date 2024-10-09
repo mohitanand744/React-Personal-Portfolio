@@ -28,6 +28,70 @@ body {
   }
 }
 
+.custom-button2 {
+  color: white;
+  padding: 0.35em;
+  padding-left: 1rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 0.9em !important;
+  border: none;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  height: 4rem;
+  padding-right: 3.3em;
+  cursor: pointer;
+  -webkit-border-radius: 0.9em !important;
+  -moz-border-radius: 0.9em !important;
+  -ms-border-radius: 0.9em !important;
+  -o-border-radius: 0.9em !important;
+}
+
+.custom-button2 .icon {
+  background: white;
+  margin-left: 1em;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  box-shadow: 0.1em 0.1em 0.6em 0.2em #7b52b9;
+  right: 0.3em;
+  transition: all 0.3s;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.custom-button2:hover .icon {
+  width: calc(100% - 0.6em);
+  border-radius: 2rem;
+  -webkit-border-radius: 2rem;
+  -moz-border-radius: 2rem;
+  -ms-border-radius: 2rem;
+  -o-border-radius: 2rem;
+}
+
+.custom-button2 .icon svg {
+  width: 1.8rem;
+  transition: transform 0.3s;
+  color: #7b52b9;
+}
+
+.custom-button2:hover .icon svg {
+  transform: translateX(0.1em);
+}
+
+.custom-button2:active .icon {
+  transform: scale(0.95);
+}
+
 .custom-button {
   position: relative;
   position: relative;
@@ -174,7 +238,7 @@ body {
       content: "";
       position: absolute;
       top: 0;
-      left: -6.3%;
+      left: -6.2%;
       width: 1.6rem;
       height: 1.6rem;
       border-radius: 50%;

@@ -19,14 +19,11 @@ const Nav = () => {
 
   return (
     <header className="flex justify-between items-center text-white px-10 py-8 backdrop-blur-sm bg-black/30 rounded-b-3xl sticky top-0 z-50 w-full">
-      <div className="bg-white rounded-full" data-aos="flip-right">
+      <div className="bg-white rounded-full">
         <img src="/logo2.png" className="w-[4rem] md:w-[5.7rem]" alt="logo" />
       </div>
 
-      <nav
-        className="hidden sm:flex gap-8 text-xl md:text-3xl font-medium"
-        data-aos="flip-left"
-      >
+      <nav className="hidden sm:flex gap-8 text-xl md:text-3xl font-medium">
         <p
           onClick={() => {
             setActive("About");

@@ -14,7 +14,7 @@ const Skill = () => {
     <div
       id="Skills"
       data-aos="zoom-in"
-      className="skills h-fit  my-44 px-3 lg:px-10"
+      className="skills h-fit mt-32 md:my-44 px-3 lg:px-10"
     >
       <center className="my-10 mx-auto w-[96%] lg:w-[40%] mb-14">
         <SectionHeading text={"Skills"} />
@@ -64,8 +64,8 @@ const Skill = () => {
             data-aos="zoom-in"
             className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
           >
-            <img src={skill.image} alt="" />
-            <p className="text-white">{skill.title}</p>
+            <img className="w-[3.8rem] md:w-[6rem]" src={skill.image} alt="" />
+            <p className="text-white text-lg sm:text-xl">{skill.title}</p>
           </div>
         ))}
       </div>
