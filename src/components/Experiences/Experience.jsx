@@ -124,6 +124,10 @@ const Experience = () => {
           </div>
         ))}
       </div>
+
+      <p className="mt-32 px-10 text-2xl md:text-3xl text-red-600">
+        Work in progress...
+      </p>
     </div>
   );
 };
