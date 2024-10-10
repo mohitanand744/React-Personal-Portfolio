@@ -25,7 +25,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="projects mb-96">
+    <div id="Projects" className="projects mb-96">
       <center className="my-10 mx-auto w-[96%] lg:w-[44%]" data-aos="zoom-in">
         <SectionHeading text={"Latest Work"} />
         <p className="text-white text-xl lg:text-2xl flex items-center justify-center gap-5">
@@ -41,6 +41,19 @@ const Projects = () => {
           </a>
         </p>
       </center>
+
+      <div className="scrollButtons w-[90%] relative lg:hidden h-[0.3rem]">
+        <img
+          className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-4 cursor-pointer"
+          src="/rightArrow.png"
+          alt="Scroll Right"
+        />
+        <img
+          className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-20 rotate-[180deg] cursor-pointer"
+          src="/rightArrow.png"
+          alt="Scroll Left"
+        />
+      </div>
 
       <div className="latestWork w-[78%] mx-auto lg:justify-center my-24 hide-ScrollBar flex overflow-x-scroll  lg:flex-wrap  gap-8">
         {latestProjects.map((project, i) => (
