@@ -1,0 +1,139 @@
+[
+  {
+    "title": "TODO App",
+    "description": "A simple Todo app with modern UI. Features include adding tasks, deleting tasks, and marking tasks as completed.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "live_url": "https://todo-app-mohit-anand.netlify.app",
+    "github_url": "https://github.com/mohitanand744/TODO-WEB-APP.git",
+    "image": "/TODO.png"
+  },
+  {
+    "title": "Gender Guesser",
+    "description": "A web app using a third-party API to predict the gender of a name entered by the user.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "API"
+    ],
+    "live_url": "https://predict-gender-by-name.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/Predict-Gender-By-Name.git",
+    "image": "https://i.pinimg.com/736x/e5/73/e6/e573e641b66d8e0a91b41133ac25598b.jpg"
+  },
+  {
+    "title": "Generate Gradient Color",
+    "description": "Click to create a gradient color and get the CSS code for it.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "live_url": "https://gradient-colour-website.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/Create-your-Own-Gradient-Colour-.git",
+    "image": "/Gradients.jpg"
+  },
+  {
+    "title": "Currency Converter",
+    "description": "Convert any currency and check the current exchange rate (e.g., 1 USD to INR).",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "API"
+    ],
+    "live_url": "https://mohit-anand-currency-converter.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/Currency-Converter.git",
+    "image": "/CurrencyConverter.jpg"
+  },
+  {
+    "title": "Weather App",
+    "description": "Check the weather for any city, including cloud behavior, humidity, wind speed, and temperature.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "API"
+    ],
+    "live_url": "https://weather-app-mohit-anand.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/Weather-Web-App-API-.git",
+    "image": "/weatherApp.jpg"
+  },
+  {
+    "title": "Tic Tac Toe Game",
+    "description": "A Tic Tac Toe game with background music, options to mute/unmute, and game restart functionality.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "live_url": "https://tic-tac-toe-mohit-anand.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/Tic-Tac-Toe-Game.git",
+    "image": "/tictactoe.webp",
+    "projectTime": "Latest"
+  },
+  {
+    "title": "Stop Watch",
+    "description": "A stopwatch app that allows users to start, stop, record laps, and reset the timer.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "live_url": "https://stop-watch-mohit.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/stop-watch.git",
+    "image": "/stopWatch.png"
+  },
+  {
+    "title": "Flipkart Clone",
+    "description": "An eCommerce website with functionality like adding to cart, dynamic price calculation based on product quantity, and JSON-based product data.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "live_url": "https://mohit-filpkart-clone.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/Flipkart-clone-Using-Vite.git",
+    "image": "/flipkartClone.png",
+    "projectTime": "Latest"
+  },
+  {
+    "title": "RMAT",
+    "description": "An eCommerce website featuring cart functionality, product search, dynamic price updates, and product details page. Product data is JSON-based.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "live_url": "https://mohit-online-shopping-site.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/E-commerce-Website.git",
+    "image": "/E-Commerce banner.png",
+    "projectTime": "Latest"
+  },
+  {
+    "title": "My Portfolio",
+    "description": "A personal portfolio showcasing my experience, projects, and skills.",
+    "skills": [
+      "React",
+      "Tailwind CSS"
+    ],
+    "live_url": "",
+    "github_url": "https://github.com/mohitanand744/My-Portfolio.git",
+    "image": "/portfolio.png",
+    "projectTime": "Latest"
+  },
+  {
+    "title": "React TODO App",
+    "description": "A Todo app with modern UI. Features include adding tasks, deleting tasks, and marking tasks as completed, task Timing.",
+    "skills": [
+      "React"
+    ],
+    "live_url": "https://todo-app-mohit-anand.netlify.app",
+    "github_url": "https://github.com/mohitanand744/TODO-WEB-APP.git",
+    "image": "/react TODO.png",
+    "projectTime": "Latest"
+  }
+]

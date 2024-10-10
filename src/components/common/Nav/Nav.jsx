@@ -87,7 +87,7 @@ const Nav = () => {
       </nav>
 
       {/* Mobile menu toggle */}
-      <div className="block sm:hidden" data-aos="flip-left">
+      <div className="block sm:hidden">
         <img
           className="menu w-[4rem] active:rotate-[360deg] transition-all duration-500 ease-linear"
           src="./menu.png"

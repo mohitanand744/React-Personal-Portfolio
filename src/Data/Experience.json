@@ -3,6 +3,7 @@
     "company": "BazaarNxt",
     "logo": "/bazaarnxt.png",
     "position": "Frontend Developer",
+    "type": "Internship",
     "start_date": "May 2023",
     "end_date": "Aug 2023",
     "description": "This experience has been truly transformative, allowing me to work on diverse projects, learn from a fantastic team, and develop proficiency in (React.js, Tailwind Css, Responsive web app, APIs). I'm grateful for the supportive environment at BazaarNxt and look forward to applying these skills in my future career"
@@ -11,6 +12,7 @@
     "company": "WeboConnect",
     "logo": "/weboconnect.jpeg",
     "position": "Frontend Developer",
+    "type": "Internship",
     "start_date": "Aug 2024",
     "end_date": "Working",
     "description": "I am currently interning at WeboConnect as a Frontend Developer. Focusing on enhancing user experiences through dynamic and responsive interfaces. My work involves using React to build and optimize web applications, ensuring seamless functionality and a polished look for our clients."

@@ -11,12 +11,10 @@ const Experience = () => {
     const scrollAmount = 150;
     const container = scrollContainers.current[index]; // Get the correct container
 
-    if (container) {
-      container.scrollBy({
-        left: direction === "right" ? scrollAmount : -scrollAmount,
-        behavior: "smooth",
-      });
-    }
+    container?.scrollBy({
+      left: direction === "right" ? scrollAmount : -scrollAmount,
+      behavior: "smooth",
+    });
   };
 
   const scrollExperienceBox = (direction) => {
@@ -72,13 +70,14 @@ const Experience = () => {
           >
             <div className="flex gap-4 mb-5 w-full">
               <img
-                className="w-[3rem] h-[3rem] lg:h-[4rem] my-auto lg:w-[6rem] object-cover"
+                className="w-[4rem] h-[3rem] lg:h-[4rem] my-auto lg:w-[6rem] object-cover"
                 src={experienceItem.logo}
                 alt={experienceItem.company}
               />
               <div className="w-full">
-                <h1 className="text-3xl lg:text-4xl">
-                  {experienceItem.company}
+                <h1 className="text-3xl lg:text-4xl flex items-center flex-wrap sm:gap-3">
+                  {experienceItem.company}{" "}
+                  <span className="text-2xl ">[ {experienceItem.type} ]</span>
                 </h1>
                 <p className="text-lg sm:text-2xl">
                   {experienceItem.start_date} - {experienceItem.end_date}
@@ -124,10 +123,6 @@ const Experience = () => {
           </div>
         ))}
       </div>
-
-      <p className="mt-32 px-10 text-2xl md:text-3xl text-red-600">
-        Work in progress...
-      </p>
     </div>
   );
 };

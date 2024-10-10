@@ -3,6 +3,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import skills from "./../Data/Skills.json";
 import experience from "./../Data/Experience.json";
+import projects from "./../Data/Projects.json";
 
 export const Store = createContext();
 
@@ -20,6 +21,7 @@ const StoreProvider = ({ children }) => {
         value={{
           skills,
           experience,
+          projects,
         }}
       >
         {children}
