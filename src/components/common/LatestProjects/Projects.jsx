@@ -65,37 +65,48 @@ const Projects = () => {
         <button
           onClick={() => setFilterProject("Frontend")}
           data-aos="flip-right"
-          className={`border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
+          className={`border-b-2 ${
+            filterProjects === "Frontend" && "highLight-text"
+          } h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
         >
           Frontend
         </button>
         <button
           onClick={() => setFilterProject("Full Stack")}
           data-aos="flip-left"
-          className={`border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
+          className={`border-b-2 ${
+            filterProjects === "Full Stack" && "highLight-text"
+          } h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
         >
           Full Stack
         </button>
       </div>
 
       <div className="scrollButtons w-[90%] relative lg:hidden my-6">
-        <img
-          className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-4 cursor-pointer"
-          src="/rightArrow.png"
-          alt="Scroll Right"
-          onClick={() => scrollContainerFun("right")}
-        />
-        <img
-          className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-20 rotate-[180deg] cursor-pointer"
-          src="/rightArrow.png"
-          alt="Scroll Left"
-          onClick={() => scrollContainerFun("left")}
-        />
+        {latestProjects.length <= 1 ? (
+          ""
+        ) : (
+          <>
+            <img
+              className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-4 cursor-pointer"
+              src="/rightArrow.png"
+              alt="Scroll Right"
+              onClick={() => scrollContainerFun("right")}
+            />
+            <img
+              className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-20 rotate-[180deg] cursor-pointer"
+              src="/rightArrow.png"
+              alt="Scroll Left"
+              onClick={() => scrollContainerFun("left")}
+            />
+          </>
+        )}
       </div>
-
       <div
         ref={scrollContainer}
-        className="latestWork w-[82%] md:w-[80%]  mx-auto lg:justify-center my-28 hide-ScrollBar flex overflow-x-scroll  lg:flex-wrap  gap-8"
+        className={`latestWork w-[82%] md:w-[80%]  mx-auto ${
+          latestProjects.length <= 1 && "justify-center"
+        } lg:justify-center my-28 hide-ScrollBar flex overflow-x-scroll  lg:flex-wrap  gap-8`}
       >
         {latestProjects.map((project, i) => (
           <div
