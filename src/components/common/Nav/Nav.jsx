@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import useContextData from "../../../Hook/useContextData";
 
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState("Home");
   const location = useLocation();
+  const { userInput, handleUserInput } = useContextData();
 
   const toggleMenu = () => {
     setToggle((toggle) => !toggle);
@@ -23,14 +25,16 @@ const Nav = () => {
   };
 
   return (
-    <header className="flex justify-between items-center text-white px-10 py-8 backdrop-blur-sm bg-black/30 rounded-b-3xl sticky top-0 z-50 w-full relative">
+    <header className="flex justify-between items-center text-white px-10 py-8 backdrop-blur-sm bg-black/30 rounded-b-3xl sticky top-0 z-50 w-full">
       <div className="bg-white rounded-full">
-        <img src="/logo2.png" className="w-[4rem] md:w-[5.7rem]" alt="logo" />
+        <img src="/logo2.png" className="w-[4.5rem] md:w-[5.7rem]" alt="logo" />
       </div>
       {location.pathname === "/projects" && (
         <input
           type="text"
-          placeholder="for ex: social media, Frontend Projects.."
+          value={userInput}
+          onChange={handleUserInput}
+          placeholder="Search projects (e.g., 'React', 'Clone')"
           className="w-full outline-none border-none py-6 px-6 bg-transparent custom-shadow3 text-xl md:text-2xl absolute top-32 rounded-b-2xl left-0 right-0 sm:hidden"
         />
       )}
@@ -39,8 +43,10 @@ const Nav = () => {
           <>
             <input
               type="text"
-              placeholder="for ex: social media, Frontend Projects.."
-              className="w-[30rem] md:w-[45rem] outline-none border-none rounded-3xl py-3 px-6 bg-transparent custom-shadow3 md:text-2xl"
+              value={userInput}
+              onChange={handleUserInput}
+              placeholder="Search projects (e.g., 'React', 'Clone')"
+              className="w-[30rem] md:w-[50rem] outline-none border-none rounded-3xl py-5 px-6 bg-transparent custom-shadow3 md:text-2xl"
             />
             <Link
               to={"/"}

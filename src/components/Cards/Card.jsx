@@ -45,9 +45,9 @@ const Card = ({
       <div className="flex flex-wrap gap-2 px-3">
         <h2 className="text-white text-xl sm:text-2xl">Skills Used :</h2>
         <div className=" flex items-center flex-wrap">
-          <p className="text-center text-white  text-xl lg:text-2xl">
+          <p className="text-center text-white  flex flex-wrap w-full text-xl lg:text-2xl">
             {skills.map((skill, i) => (
-              <span key={i} className="me-3">
+              <span key={i} className="me-1 ">
                 {skill},
               </span>
             ))}
