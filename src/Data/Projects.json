@@ -1,15 +1,56 @@
 [
   {
-    "title": "TODO App",
-    "description": "A simple Todo app with modern UI. Features include adding tasks, deleting tasks, and marking tasks as completed.",
+    "title": "Social media (memo)",
+    "description": "I’ve built a social media web app using React, Tailwind CSS, and Bootstrap, where users can create accounts, log in, upload posts, and customize profiles, with data managed through local storage. Right now, it’s frontend-only, but I’m learning backend development to add more features using Node.js and Express.",
+    "skills": [
+      "React",
+      "Tailwind"
+    ],
+    "live_url": "https://react-social-media-application.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/React-Beginner-level-Social-media-app-.git",
+    "image": "/memo.png",
+    "projectTime": "Latest",
+    "category": "Frontend"
+  },
+  {
+    "title": "Flipkart Clone",
+    "description": "An eCommerce website with functionality like adding to cart, dynamic price calculation based on product quantity, and JSON-based product data.",
     "skills": [
       "HTML",
       "CSS",
       "JavaScript"
     ],
-    "live_url": "https://todo-app-mohit-anand.netlify.app",
-    "github_url": "https://github.com/mohitanand744/TODO-WEB-APP.git",
-    "image": "/TODO.png",
+    "live_url": "https://mohit-filpkart-clone.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/Flipkart-clone-Using-Vite.git",
+    "image": "/flipkartClone.png",
+    "projectTime": "Latest",
+    "category": "Frontend"
+  },
+  {
+    "title": "RMAT",
+    "description": "An eCommerce website featuring cart functionality, product search, dynamic price updates, and product details page. Product data is JSON-based.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "live_url": "https://mohit-online-shopping-site.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/E-commerce-Website.git",
+    "image": "/E-Commerce banner.png",
+    "projectTime": "Latest",
+    "category": "Frontend"
+  },
+  {
+    "title": "My Portfolio",
+    "description": "A personal portfolio showcasing my experience, projects, and skills.",
+    "skills": [
+      "React",
+      "Tailwind CSS"
+    ],
+    "live_url": "https://mohit-anand.netlify.app",
+    "github_url": "https://github.com/mohitanand744/My-Portfolio.git",
+    "image": "/portfolio.png",
+    "projectTime": "Latest",
     "category": "Frontend"
   },
   {
@@ -54,6 +95,19 @@
     "category": "Frontend"
   },
   {
+    "title": "TODO App",
+    "description": "A simple Todo app with modern UI. Features include adding tasks, deleting tasks, and marking tasks as completed.",
+    "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript"
+    ],
+    "live_url": "https://todo-app-mohit-anand.netlify.app",
+    "github_url": "https://github.com/mohitanand744/TODO-WEB-APP.git",
+    "image": "/TODO.png",
+    "category": "Frontend"
+  },
+  {
     "title": "Weather App",
     "description": "Check the weather for any city, including cloud behavior, humidity, wind speed, and temperature.",
     "skills": [
@@ -92,47 +146,6 @@
     "live_url": "https://stop-watch-mohit.netlify.app/",
     "github_url": "https://github.com/mohitanand744/stop-watch.git",
     "image": "/stopWatch.png",
-    "category": "Frontend"
-  },
-  {
-    "title": "Flipkart Clone",
-    "description": "An eCommerce website with functionality like adding to cart, dynamic price calculation based on product quantity, and JSON-based product data.",
-    "skills": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "live_url": "https://mohit-filpkart-clone.netlify.app/",
-    "github_url": "https://github.com/mohitanand744/Flipkart-clone-Using-Vite.git",
-    "image": "/flipkartClone.png",
-    "projectTime": "Latest",
-    "category": "Frontend"
-  },
-  {
-    "title": "RMAT",
-    "description": "An eCommerce website featuring cart functionality, product search, dynamic price updates, and product details page. Product data is JSON-based.",
-    "skills": [
-      "HTML",
-      "CSS",
-      "JavaScript"
-    ],
-    "live_url": "https://mohit-online-shopping-site.netlify.app/",
-    "github_url": "https://github.com/mohitanand744/E-commerce-Website.git",
-    "image": "/E-Commerce banner.png",
-    "projectTime": "Latest",
-    "category": "Frontend"
-  },
-  {
-    "title": "My Portfolio",
-    "description": "A personal portfolio showcasing my experience, projects, and skills.",
-    "skills": [
-      "React",
-      "Tailwind CSS"
-    ],
-    "live_url": "https://mohit-anand.netlify.app",
-    "github_url": "https://github.com/mohitanand744/My-Portfolio.git",
-    "image": "/portfolio.png",
-    "projectTime": "Latest",
     "category": "Frontend"
   },
   {
