@@ -95,7 +95,7 @@ const Projects = () => {
 
       <div
         ref={scrollContainer}
-        className="latestWork w-[78%]  mx-auto lg:justify-center my-28 hide-ScrollBar flex overflow-x-scroll  lg:flex-wrap  gap-8"
+        className="latestWork w-[82%] md:w-[80%]  mx-auto lg:justify-center my-28 hide-ScrollBar flex overflow-x-scroll  lg:flex-wrap  gap-8"
       >
         {latestProjects.map((project, i) => (
           <div
