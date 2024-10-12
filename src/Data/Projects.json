@@ -9,7 +9,8 @@
     ],
     "live_url": "https://todo-app-mohit-anand.netlify.app",
     "github_url": "https://github.com/mohitanand744/TODO-WEB-APP.git",
-    "image": "/TODO.png"
+    "image": "/TODO.png",
+    "category": "Frontend"
   },
   {
     "title": "Gender Guesser",
@@ -22,7 +23,8 @@
     ],
     "live_url": "https://predict-gender-by-name.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Predict-Gender-By-Name.git",
-    "image": "https://i.pinimg.com/736x/e5/73/e6/e573e641b66d8e0a91b41133ac25598b.jpg"
+    "image": "https://i.pinimg.com/736x/e5/73/e6/e573e641b66d8e0a91b41133ac25598b.jpg",
+    "category": "Frontend"
   },
   {
     "title": "Generate Gradient Color",
@@ -34,7 +36,8 @@
     ],
     "live_url": "https://gradient-colour-website.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Create-your-Own-Gradient-Colour-.git",
-    "image": "/Gradients.jpg"
+    "image": "/Gradients.jpg",
+    "category": "Frontend"
   },
   {
     "title": "Currency Converter",
@@ -47,7 +50,8 @@
     ],
     "live_url": "https://mohit-anand-currency-converter.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Currency-Converter.git",
-    "image": "/CurrencyConverter.jpg"
+    "image": "/CurrencyConverter.jpg",
+    "category": "Frontend"
   },
   {
     "title": "Weather App",
@@ -60,7 +64,8 @@
     ],
     "live_url": "https://weather-app-mohit-anand.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Weather-Web-App-API-.git",
-    "image": "/weatherApp.jpg"
+    "image": "/weatherApp.jpg",
+    "category": "Frontend"
   },
   {
     "title": "Tic Tac Toe Game",
@@ -73,7 +78,8 @@
     "live_url": "https://tic-tac-toe-mohit-anand.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Tic-Tac-Toe-Game.git",
     "image": "/tictactoe.webp",
-    "projectTime": "Latest"
+    "projectTime": "Latest",
+    "category": "Frontend"
   },
   {
     "title": "Stop Watch",
@@ -85,7 +91,8 @@
     ],
     "live_url": "https://stop-watch-mohit.netlify.app/",
     "github_url": "https://github.com/mohitanand744/stop-watch.git",
-    "image": "/stopWatch.png"
+    "image": "/stopWatch.png",
+    "category": "Frontend"
   },
   {
     "title": "Flipkart Clone",
@@ -98,7 +105,8 @@
     "live_url": "https://mohit-filpkart-clone.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Flipkart-clone-Using-Vite.git",
     "image": "/flipkartClone.png",
-    "projectTime": "Latest"
+    "projectTime": "Latest",
+    "category": "Frontend"
   },
   {
     "title": "RMAT",
@@ -111,7 +119,8 @@
     "live_url": "https://mohit-online-shopping-site.netlify.app/",
     "github_url": "https://github.com/mohitanand744/E-commerce-Website.git",
     "image": "/E-Commerce banner.png",
-    "projectTime": "Latest"
+    "projectTime": "Latest",
+    "category": "Frontend"
   },
   {
     "title": "My Portfolio",
@@ -120,10 +129,11 @@
       "React",
       "Tailwind CSS"
     ],
-    "live_url": "",
+    "live_url": "https://mohit-anand.netlify.app",
     "github_url": "https://github.com/mohitanand744/My-Portfolio.git",
     "image": "/portfolio.png",
-    "projectTime": "Latest"
+    "projectTime": "Latest",
+    "category": "Frontend"
   },
   {
     "title": "React TODO App",
@@ -134,6 +144,19 @@
     "live_url": "https://todo-app-mohit-anand.netlify.app",
     "github_url": "https://github.com/mohitanand744/TODO-WEB-APP.git",
     "image": "/react TODO.png",
-    "projectTime": "Latest"
+    "projectTime": "Latest",
+    "category": "Frontend"
+  },
+  {
+    "title": "Work in progress...",
+    "description": "I am continually expanding my skills, currently learning backend technologies to further enrich my projects.",
+    "skills": [
+      "MERN"
+    ],
+    "live_url": "",
+    "github_url": "",
+    "image": "https://thehubbackend.com/media/65246d_c7bd3ba476fb4191af59a11494ad027f_mv2.jpg",
+    "projectTime": "Latest",
+    "category": "Full Stack"
   }
 ]
