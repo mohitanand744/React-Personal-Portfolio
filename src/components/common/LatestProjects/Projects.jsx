@@ -2,21 +2,25 @@ import React, { useRef, useState } from "react";
 import SectionHeading from "../Heading/SectionHeading";
 import useContextData from "../../../Hook/useContextData";
 import Button from "../Buttons/Button";
+import { Link } from "react-router-dom";
+import Card from "../../Cards/Card";
 
 const Projects = () => {
   const { projects } = useContextData();
   const [isExpanded, setIsExpanded] = useState(null);
   const [readMore, setReadMore] = useState(false);
   const [filterProjects, setFilterProject] = useState("Frontend");
-  const [showAll, setShowAll] = useState(false);
   const scrollContainer = useRef();
 
   const readMoreFun = (i) => {
-    setIsExpanded(i);
-
-    i && setReadMore((readMore) => !readMore);
-
-    return;
+    if (i === isExpanded) {
+      // If the same project is clicked again, just toggle readMore
+      setReadMore((prevReadMore) => !prevReadMore);
+    } else {
+      // If a different project is clicked, expand it and set readMore to true
+      setIsExpanded(i);
+      setReadMore(true);
+    }
   };
 
   const latestProjects = projects.filter(
@@ -111,154 +115,26 @@ const Projects = () => {
           latestProjects.length <= 1 && "justify-center"
         } lg:justify-center my-28 hide-ScrollBar flex overflow-x-scroll overflow-y-hidden  lg:flex-wrap  gap-8`}
       >
-        {!showAll ? (
-          <>
-            {latestProjects.map((project, i) => (
-              <div
-                data-aos="flip-left"
-                key={i}
-                className="projectBox rounded-3xl flex flex-col justify-between gap-6 py-8 p-6 custom-shadow w-[35rem] h-fit"
-              >
-                <div className="imgContainer   w-[97%] h-[15rem] md:h-[20rem] mx-auto">
-                  <img
-                    className="w-full h-full rounded-3xl object-cover"
-                    src={project.image}
-                    alt=""
-                  />
-                </div>
-
-                <div className="text-white  w-[95%] mx-auto">
-                  <h2 className="text-4xl highLight-text">{project.title}</h2>
-                  <p className="text-xl sm:text-2xl">
-                    {isExpanded === i && readMore
-                      ? project.description
-                      : shortenDescription(project.description, 50)}
-                    <a
-                      className="cursor-pointer highLight-text"
-                      onClick={() => readMoreFun(i)}
-                    >
-                      {isExpanded === i && readMore ? "read less" : "read more"}
-                    </a>
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2 px-3">
-                  <h2 className="text-white text-xl sm:text-2xl">
-                    Skills Used :
-                  </h2>
-                  <div className=" flex items-center flex-wrap">
-                    <p className="text-center text-white  text-xl lg:text-2xl">
-                      {project.skills.map((skill, i) => (
-                        <span key={i} className="me-3">
-                          {skill},
-                        </span>
-                      ))}
-                    </p>
-                  </div>
-                </div>
-                {project.github_url && (
-                  <div className="flex gap-5 justify-evenly text-white">
-                    <>
-                      <a href={project.live_url} target="_blank">
-                        <button
-                          className={`highLight-text  w-[13rem] h-14 active:scale-[0.88] transition-all duration-300 text-xl sm:text-2xl ease rounded-3xl border-slate-600 custom-shadow2 border-b-2 `}
-                        >
-                          {" "}
-                          Live Demo
-                        </button>
-                      </a>
-                      <a href={project.github_url} target="_blank">
-                        <button
-                          className={`highLight-text  w-[13rem] h-14 active:scale-[0.88] transition-all duration-300 text-xl sm:text-2xl ease rounded-3xl border-slate-600 custom-shadow2 border-b-2 `}
-                        >
-                          GitHub
-                        </button>
-                      </a>
-                    </>
-                  </div>
-                )}
-              </div>
-            ))}
-          </>
-        ) : (
-          <>
-            {projects.map((project, i) => (
-              <div
-                data-aos="flip-left"
-                key={i}
-                className="projectBox rounded-3xl flex flex-col justify-between gap-6 py-8 p-6 custom-shadow w-[35rem] h-fit"
-              >
-                <div className="imgContainer   w-[97%] h-[15rem] md:h-[20rem] mx-auto">
-                  <img
-                    className="w-full h-full rounded-3xl object-cover"
-                    src={project.image}
-                    alt=""
-                  />
-                </div>
-
-                <div className="text-white  w-[95%] mx-auto">
-                  <h2 className="text-4xl highLight-text">{project.title}</h2>
-                  <p className="text-xl sm:text-2xl">
-                    {isExpanded === i && readMore
-                      ? project.description
-                      : shortenDescription(project.description, 50)}
-                    <a
-                      className="cursor-pointer highLight-text"
-                      onClick={() => readMoreFun(i)}
-                    >
-                      {isExpanded === i && readMore ? "read less" : "read more"}
-                    </a>
-                  </p>
-                </div>
-                <div className="flex flex-wrap gap-2 px-3">
-                  <h2 className="text-white text-xl sm:text-2xl">
-                    Skills Used :
-                  </h2>
-                  <div className=" flex items-center flex-wrap">
-                    <p className="text-center text-white  text-xl lg:text-2xl">
-                      {project.skills.map((skill, i) => (
-                        <span key={i} className="me-3">
-                          {skill},
-                        </span>
-                      ))}
-                    </p>
-                  </div>
-                </div>
-                {project.github_url && (
-                  <div className="flex gap-5 justify-evenly text-white">
-                    <>
-                      <a href={project.live_url} target="_blank">
-                        <button
-                          className={`highLight-text  w-[13rem] h-14 active:scale-[0.88] transition-all duration-300 text-xl sm:text-2xl ease rounded-3xl border-slate-600 custom-shadow2 border-b-2 `}
-                        >
-                          {" "}
-                          Live Demo
-                        </button>
-                      </a>
-                      <a href={project.github_url} target="_blank">
-                        <button
-                          className={`highLight-text  w-[13rem] h-14 active:scale-[0.88] transition-all duration-300 text-xl sm:text-2xl ease rounded-3xl border-slate-600 custom-shadow2 border-b-2 `}
-                        >
-                          GitHub
-                        </button>
-                      </a>
-                    </>
-                  </div>
-                )}
-              </div>
-            ))}
-          </>
-        )}
+        {latestProjects.map((project, i) => (
+          <Card
+            key={i}
+            image={project.image}
+            title={project.title}
+            description={project.description}
+            index={i}
+            isExpanded={isExpanded}
+            readMore={readMore}
+            readMoreFun={readMoreFun}
+            skills={project.skills}
+            github_url={project.github_url}
+            live_url={project.live_url}
+            shortenDescription={shortenDescription}
+          />
+        ))}
       </div>
-      <div
-        onClick={() => setShowAll((showAll) => !showAll)}
-        className=" flex justify-center w-[100%] md:w-[55%] mx-auto"
-      >
-        {latestProjects.length <= 1 ? (
-          ""
-        ) : (
-          <Button text={`${showAll ? "Latest" : "All Projects"}`} />
-        )}
-      </div>
+      <Link to={"/projects"} className="flex justify-center md:w-[53%] mx-auto">
+        <Button text={"All Projects"} />
+      </Link>
     </div>
   );
 };
