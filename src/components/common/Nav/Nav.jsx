@@ -3,10 +3,10 @@ import { Link, useLocation } from "react-router-dom";
 import useContextData from "../../../Hook/useContextData";
 
 const Nav = () => {
+  const { userInput, setUserInput, handleUserInput } = useContextData();
   const [toggle, setToggle] = useState(false);
   const [active, setActive] = useState("Home");
   const location = useLocation();
-  const { userInput, handleUserInput } = useContextData();
 
   const toggleMenu = () => {
     setToggle((toggle) => !toggle);
@@ -30,24 +30,45 @@ const Nav = () => {
         <img src="/logo2.png" className="w-[4.5rem] md:w-[5.7rem]" alt="logo" />
       </div>
       {location.pathname === "/projects" && (
-        <input
-          type="text"
-          value={userInput}
-          onChange={handleUserInput}
-          placeholder="Search projects (e.g., 'React', 'Clone')"
-          className="w-full outline-none border-none py-6 px-6 bg-transparent custom-shadow3 text-xl md:text-2xl absolute top-32 rounded-b-2xl left-0 right-0 sm:hidden"
-        />
+        <div className="absolute w-full right-0 left-0 top-0 sm:hidden">
+          <input
+            type="text"
+            value={userInput}
+            onChange={handleUserInput}
+            placeholder="Search projects (e.g., 'React', 'Clone')"
+            className="w-full outline-none border-none py-6 px-6  backdrop-blur-sm bg-black/80  custom-shadow3 text-xl md:text-2xl relative top-32 rounded-b-2xl left-0 right-0 "
+          />
+          {userInput !== "" && (
+            <img
+              className="absolute top-[9.5rem] right-5 w-[1.7rem] cursor-pointer"
+              src="https://img.icons8.com/nolan/64/delete-sign.png"
+              alt="delete-sign"
+              onClick={() => setUserInput("")}
+            />
+          )}
+        </div>
       )}
       <nav className="hidden sm:flex gap-8 text-xl md:text-3xl font-medium">
         {location.pathname === "/projects" ? (
           <>
-            <input
-              type="text"
-              value={userInput}
-              onChange={handleUserInput}
-              placeholder="Search projects (e.g., 'React', 'Clone')"
-              className="w-[30rem] md:w-[50rem] outline-none border-none rounded-3xl py-5 px-6 bg-transparent custom-shadow3 md:text-2xl"
-            />
+            <div className="relative">
+              <input
+                type="text"
+                value={userInput}
+                onChange={handleUserInput}
+                placeholder="Search projects (e.g., 'React', 'Clone')"
+                className="w-[30rem] md:w-[50rem] backdrop-blur-sm bg-black/60 outline-none border-none rounded-3xl py-5 px-6 custom-shadow3 md:text-2xl"
+              />
+
+              {userInput !== "" && (
+                <img
+                  className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
+                  src="https://img.icons8.com/nolan/64/delete-sign.png"
+                  alt="delete-sign"
+                  onClick={() => setUserInput("")}
+                />
+              )}
+            </div>
             <Link
               to={"/"}
               onClick={() => {

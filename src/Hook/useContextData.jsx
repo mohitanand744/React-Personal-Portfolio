@@ -9,6 +9,8 @@ const useContextData = () => {
     userInput,
     setUserInput,
     handleUserInput,
+    isExpanded,
+    setIsExpanded,
   } = useContext(Store);
 
   return {
@@ -18,6 +20,8 @@ const useContextData = () => {
     userInput,
     setUserInput,
     handleUserInput,
+    isExpanded,
+    setIsExpanded,
   };
 };
 

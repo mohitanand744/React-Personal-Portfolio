@@ -1,20 +1,50 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SectionHeading from "../components/common/Heading/SectionHeading";
 import useContextData from "../Hook/useContextData";
 import Card from "../components/Cards/Card";
+import Pagination from "../components/Paginations/Pagination";
 
 const AllProjects = () => {
   const { projects, userInput } = useContextData();
   const [isExpanded, setIsExpanded] = useState(null);
   const [readMore, setReadMore] = useState(false);
 
+  // Pagination States
+
+  const [currentPage, setCurrentPage] = useState(1);
+  const projectsPerPage = 8;
+
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [userInput]);
+
   const filterProject = projects.filter(
     (project) =>
-      project.title.toLowerCase().includes(userInput) ||
+      project.title.toLowerCase().includes(userInput.trim()) ||
       project.description.toLowerCase().includes(userInput) ||
       project.category.toLowerCase().includes(userInput) ||
       project.skills.some((skill) => skill.toLowerCase().includes(userInput))
   );
+
+  const totalPages = Math.ceil(filterProject.length / projectsPerPage);
+
+  // First Approach
+
+  /* const lastIndex = currentPage * projectsPerPage
+const firstIndex = lastIndex - projectsPerPage
+
+const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
+
+  // second Approach
+  const startIndex = (currentPage - 1) * projectsPerPage;
+  const sliceProjects = filterProject.slice(
+    startIndex,
+    startIndex + projectsPerPage
+  );
+
+  const handlePageChange = (pageNum) => {
+    setCurrentPage(pageNum);
+  };
 
   const readMoreFun = (i) => {
     if (i === isExpanded) {
@@ -66,7 +96,7 @@ const AllProjects = () => {
       </center>
 
       <div className="flex flex-wrap justify-center gap-10 mt-16">
-        {filterProject.map((project, i) => (
+        {sliceProjects.map((project, i) => (
           <Card
             key={i}
             image={project.image}
@@ -83,6 +113,15 @@ const AllProjects = () => {
           />
         ))}
       </div>
+
+      {totalPages > 1 && (
+        <Pagination
+          totalPages={totalPages}
+          currentPage={currentPage}
+          handlePageChange={handlePageChange}
+          setCurrentPage={setCurrentPage}
+        />
+      )}
     </div>
   );
 };
