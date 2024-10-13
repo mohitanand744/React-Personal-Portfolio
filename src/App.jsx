@@ -40,7 +40,7 @@ function App() {
             alt="Go to Top"
           />
         )}
-        <div className="">
+        <div className="w-full">
           <Home />
           <AboutMe />
           <Skill />
