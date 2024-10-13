@@ -38,12 +38,18 @@ const Nav = () => {
             placeholder="Search projects (e.g., 'React', 'Clone')"
             className="w-full outline-none border-none py-6 px-6  backdrop-blur-sm bg-black/80  custom-shadow3 text-xl md:text-2xl relative top-32 rounded-b-2xl left-0 right-0 "
           />
-          {userInput !== "" && (
+          {userInput !== "" ? (
             <img
-              className="absolute top-[9.5rem] right-5 w-[1.7rem] cursor-pointer"
+              className="absolute top-[9.4rem] right-5 w-[1.8rem] cursor-pointer"
               src="https://img.icons8.com/nolan/64/delete-sign.png"
               alt="delete-sign"
               onClick={() => setUserInput("")}
+            />
+          ) : (
+            <img
+              className="absolute top-[9.2rem] right-5 w-[1.8rem] cursor-pointer"
+              src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
+              alt="search"
             />
           )}
         </div>
@@ -60,12 +66,18 @@ const Nav = () => {
                 className="w-[30rem] md:w-[50rem] backdrop-blur-sm bg-black/60 outline-none border-none rounded-3xl py-5 px-6 custom-shadow3 md:text-2xl"
               />
 
-              {userInput !== "" && (
+              {userInput !== "" ? (
                 <img
                   className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
                   src="https://img.icons8.com/nolan/64/delete-sign.png"
                   alt="delete-sign"
                   onClick={() => setUserInput("")}
+                />
+              ) : (
+                <img
+                  className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
+                  src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
+                  alt="search"
                 />
               )}
             </div>
