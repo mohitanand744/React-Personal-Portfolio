@@ -27,7 +27,13 @@ const Nav = () => {
   return (
     <header className="flex justify-between items-center text-white px-10 py-8 backdrop-blur-sm bg-black/30 rounded-b-3xl sticky top-0 z-50 w-full">
       <div className="bg-white rounded-full">
-        <img src="/logo2.png" className="w-[4.5rem] md:w-[5.7rem]" alt="logo" />
+        <Link to={"/"}>
+          <img
+            src="/logo2.png"
+            className="w-[4.5rem] md:w-[5.7rem]"
+            alt="logo"
+          />
+        </Link>
       </div>
       {location.pathname === "/projects" && (
         <div className="absolute w-full right-0 left-0 top-0 sm:hidden">

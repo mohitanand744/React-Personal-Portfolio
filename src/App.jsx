@@ -5,6 +5,7 @@ import Home from "./components/Home/Home";
 import Skill from "./components/Skills/Skill";
 import Experience from "./components/Experiences/Experience";
 import Projects from "./components/common/LatestProjects/Projects";
+import ContactForm from "./components/Contact/ContactForm";
 
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);
@@ -45,6 +46,7 @@ function App() {
           <Skill />
           <Experience />
           <Projects />
+          <ContactForm />
         </div>
       </section>
     </>

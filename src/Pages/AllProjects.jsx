@@ -3,11 +3,14 @@ import SectionHeading from "../components/common/Heading/SectionHeading";
 import useContextData from "../Hook/useContextData";
 import Card from "../components/Cards/Card";
 import Pagination from "../components/Paginations/Pagination";
+import ProjectsNotFound from "../components/Errors/ProjectsNotFound";
 
 const AllProjects = () => {
   const { projects, userInput } = useContextData();
   const [isExpanded, setIsExpanded] = useState(null);
   const [readMore, setReadMore] = useState(false);
+
+  const userInputWords = userInput.trim().toLowerCase().split(/\s+/); // Array Of Words..
 
   // Pagination States
 
@@ -18,13 +21,15 @@ const AllProjects = () => {
     setCurrentPage(1);
   }, [userInput]);
 
-  const filterProject = projects.filter(
-    (project) =>
-      project.title.toLowerCase().includes(userInput.trim()) ||
-      project.description.toLowerCase().includes(userInput) ||
-      project.category.toLowerCase().includes(userInput) ||
-      project.skills.some((skill) => skill.toLowerCase().includes(userInput))
-  );
+  const filterProject = projects.filter((project) => {
+    return userInputWords.every(
+      (word) =>
+        project.title.toLowerCase().includes(word) ||
+        project.description.toLowerCase().includes(word) ||
+        project.category.toLowerCase().includes(word) ||
+        project.skills.some((skill) => skill.toLowerCase().includes(word))
+    );
+  });
 
   const totalPages = Math.ceil(filterProject.length / projectsPerPage);
 
@@ -96,22 +101,26 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
       </center>
 
       <div className="flex flex-wrap justify-center gap-10 mt-16">
-        {sliceProjects.map((project, i) => (
-          <Card
-            key={i}
-            image={project.image}
-            title={project.title}
-            description={project.description}
-            index={i}
-            isExpanded={isExpanded}
-            readMore={readMore}
-            readMoreFun={readMoreFun}
-            skills={project.skills}
-            github_url={project.github_url}
-            live_url={project.live_url}
-            shortenDescription={shortenDescription}
-          />
-        ))}
+        {filterProject.length > 0 ? (
+          sliceProjects.map((project, i) => (
+            <Card
+              key={i}
+              image={project.image}
+              title={project.title}
+              description={project.description}
+              index={i}
+              isExpanded={isExpanded}
+              readMore={readMore}
+              readMoreFun={readMoreFun}
+              skills={project.skills}
+              github_url={project.github_url}
+              live_url={project.live_url}
+              shortenDescription={shortenDescription}
+            />
+          ))
+        ) : (
+          <ProjectsNotFound />
+        )}
       </div>
 
       {totalPages > 1 && (
