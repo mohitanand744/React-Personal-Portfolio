@@ -190,7 +190,7 @@ const Nav = () => {
         }`}
       >
         <div
-          className={`z-40 fixed top-[0rem] right-0 list-none py-8 h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-s-3xl custom-shadow3 px-10  backdrop-blur-sm bg-black/80 transition-all duration-300 ease-linear overflow-hidden ${
+          className={`z-40 fixed top-[0rem] right-0 list-none py-8 h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-s-3xl custom-shadow3 px-10  backdrop-blur-sm bg-black/80 transition-all duration-200 ease-linear overflow-hidden ${
             toggle ? "w-[68%] " : "w-0"
           }`}
         >
