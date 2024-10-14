@@ -185,13 +185,13 @@ const Nav = () => {
       {/* Mobile dropdown menu */}
       <div
         onClick={toggleMenu}
-        className={`fixed z-0 cursor-pointer top-[0rem] h-[100vh] w-full backdrop-blur-lg bg-black/50  ${
-          toggle ? "right-0" : "right-[-100%]"
+        className={`fixed z-0 cursor-pointer top-[0rem] right-0 h-[100vh] w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-100 ${
+          toggle ? "w-full" : "w-0"
         }`}
       >
         <div
-          className={`z-40 fixed top-[0rem] list-none py-8 w-[68%] h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-s-3xl custom-shadow3 px-10  backdrop-blur-sm bg-black/80 transition-all duration-300 ease-linear ${
-            toggle ? " right-0" : "  right-[-100%]"
+          className={`z-40 fixed top-[0rem] right-0 list-none py-8 h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-s-3xl custom-shadow3 px-10  backdrop-blur-sm bg-black/80 transition-all duration-300 ease-linear overflow-hidden ${
+            toggle ? "w-[68%] " : "w-0"
           }`}
         >
           <img
