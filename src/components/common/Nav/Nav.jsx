@@ -185,14 +185,15 @@ const Nav = () => {
       {/* Mobile dropdown menu */}
       <div
         onClick={toggleMenu}
-        className={`fixed z-0 cursor-pointer top-[0rem] right-0 h-[100vh] w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-100 ${
-          toggle ? "w-full" : "w-0"
+        className={`fixed -z-10 cursor-pointer top-[0rem] right-0  w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-100 ${
+          toggle ? "w-full h-[100vh]" : "w-0"
         }`}
       >
         <div
-          className={`z-40 fixed top-[0rem] right-0 list-none py-8 h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-s-3xl custom-shadow3 px-10  backdrop-blur-sm bg-black/80 transition-all duration-200 ease-linear overflow-hidden ${
-            toggle ? "w-[68%] " : "w-0"
+          className={`z-40 fixed top-[0rem] right-0 list-none  h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-s-3xl custom-shadow3 cursor-default  backdrop-blur-sm bg-black/80 transition-all duration-200 ease-linear overflow-hidden ${
+            toggle ? "w-[68%] py-8 px-10" : "w-0 py-0 px-0"
           }`}
+          onClick={(e) => e.stopPropagation()}
         >
           <img
             className="w-[2rem] cursor-pointer"
@@ -225,6 +226,7 @@ const Nav = () => {
               <p
                 onClick={() => {
                   setActive("About");
+
                   setToggle(false);
                   scrollToSection("About");
                 }}
@@ -242,6 +244,7 @@ const Nav = () => {
               <p
                 onClick={() => {
                   setActive("Skills");
+
                   setToggle(false);
                   scrollToSection("Skills");
                 }}
@@ -259,6 +262,7 @@ const Nav = () => {
               <p
                 onClick={() => {
                   setActive("Projects");
+
                   setToggle(false);
                   scrollToSection("Projects");
                 }}
@@ -276,6 +280,7 @@ const Nav = () => {
               <p
                 onClick={() => {
                   setActive("Experience");
+
                   setToggle(false);
                   scrollToSection("Experience");
                 }}
@@ -293,6 +298,7 @@ const Nav = () => {
               <p
                 onClick={() => {
                   setActive("Contact");
+
                   setToggle(false);
                   scrollToSection("Contact");
                 }}
