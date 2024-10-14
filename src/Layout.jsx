@@ -12,8 +12,9 @@ const Layout = () => {
     window.addEventListener("load", () => {
       setLoading(false);
     });
+
     return () => window.removeEventListener("load", () => {});
-  }, []);
+  }, [loading]);
 
   return (
     <div>
