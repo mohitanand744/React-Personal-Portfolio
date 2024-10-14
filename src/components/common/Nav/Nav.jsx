@@ -8,7 +8,9 @@ const Nav = () => {
   const [active, setActive] = useState("Home");
   const location = useLocation();
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
+    e.stopPropagation();
+
     setToggle((toggle) => !toggle);
   };
 
@@ -16,7 +18,7 @@ const Nav = () => {
     setTimeout(() => {
       const section = document.getElementById(id);
       if (!section) return;
-      const yOffset = -160; // Height of the navbar
+      const yOffset = -180; // Height of the navbar
       const y =
         section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -182,95 +184,132 @@ const Nav = () => {
 
       {/* Mobile dropdown menu */}
       <div
-        className={`fixed top-[7.5rem] list-none py-8 w-[90%] max-w-full flex sm:hidden flex-col gap-3 items-center justify-center text-3xl rounded-3xl custom-shadow backdrop-blur-sm bg-black/70 transition-all duration-300 ease-linear ${
-          toggle
-            ? "scale-100 opacity-100 right-6"
-            : "scale-0 opacity-0 right-[-100%]"
+        onClick={toggleMenu}
+        className={`fixed z-0 cursor-pointer top-[0rem] h-[100vh] w-full backdrop-blur-lg bg-black/50  ${
+          toggle ? "right-0" : "right-[-100%]"
         }`}
       >
-        {location.pathname === "/projects" ? (
-          <>
-            <Link
-              to={"/"}
-              onClick={() => {
-                setActive("Projects");
-                setToggle(false);
-                scrollToSection("Projects");
-              }}
-              className={`cursor-pointer navlinks flex items-center gap-3`}
-            >
-              Home
-              <img
-                className="w-[2rem] md:w-[3.6rem] rotate-45"
-                src="https://img.icons8.com/nolan/64/logout-rounded.png"
-                alt="logout-rounded"
-              />
-            </Link>
-          </>
-        ) : (
-          <>
-            <p
-              onClick={() => {
-                setActive("About");
-                setToggle(false);
-                scrollToSection("About");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "About" ? "active" : ""
-              }`}
-            >
-              About
-            </p>
-            <p
-              onClick={() => {
-                setActive("Skills");
-                setToggle(false);
-                scrollToSection("Skills");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Skills" ? "active" : ""
-              }`}
-            >
-              Skills
-            </p>
-            <p
-              onClick={() => {
-                setActive("Projects");
-                setToggle(false);
-                scrollToSection("Projects");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Projects" ? "active" : ""
-              }`}
-            >
-              Projects
-            </p>
-            <p
-              onClick={() => {
-                setActive("Experience");
-                setToggle(false);
-                scrollToSection("Experience");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Experience" ? "active" : ""
-              }`}
-            >
-              Experience
-            </p>
-            <p
-              onClick={() => {
-                setActive("Contact");
-                setToggle(false);
-                scrollToSection("Contact");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Contact" ? "active" : ""
-              }`}
-            >
-              Contact
-            </p>
-          </>
-        )}
+        <div
+          className={`z-40 fixed top-[0rem] list-none py-8 w-[68%] h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-s-3xl custom-shadow3 px-10  backdrop-blur-sm bg-black/80 transition-all duration-300 ease-linear ${
+            toggle ? " right-0" : "  right-[-100%]"
+          }`}
+        >
+          <img
+            className="w-[2rem] cursor-pointer"
+            src="https://img.icons8.com/nolan/64/delete-sign.png"
+            alt="delete-sign"
+            onClick={toggleMenu}
+          />
+
+          {location.pathname === "/projects" ? (
+            <>
+              <Link
+                to={"/"}
+                onClick={() => {
+                  setActive("Projects");
+                  setToggle(false);
+                  scrollToSection("Projects");
+                }}
+                className={`cursor-pointer   flex items-center gap-3`}
+              >
+                Home
+                <img
+                  className="w-[2rem] md:w-[3.6rem] rotate-45"
+                  src="https://img.icons8.com/nolan/64/logout-rounded.png"
+                  alt="logout-rounded"
+                />
+              </Link>
+            </>
+          ) : (
+            <>
+              <p
+                onClick={() => {
+                  setActive("About");
+                  setToggle(false);
+                  scrollToSection("About");
+                }}
+                className={`cursor-pointer flex items-center gap-3 ${
+                  active === "About" ? "active" : ""
+                }`}
+              >
+                <img
+                  className="w-[3rem]"
+                  src="https://img.icons8.com/nolan/64/user-default.png"
+                  alt="user-default"
+                />{" "}
+                About
+              </p>
+              <p
+                onClick={() => {
+                  setActive("Skills");
+                  setToggle(false);
+                  scrollToSection("Skills");
+                }}
+                className={`cursor-pointer  flex items-center gap-3 ${
+                  active === "Skills" ? "active" : ""
+                }`}
+              >
+                <img
+                  className="w-[3rem]"
+                  src="https://img.icons8.com/nolan/64/internship.png"
+                  alt="user-settings"
+                />{" "}
+                Skills
+              </p>
+              <p
+                onClick={() => {
+                  setActive("Projects");
+                  setToggle(false);
+                  scrollToSection("Projects");
+                }}
+                className={`cursor-pointer   flex items-center gap-3 ${
+                  active === "Projects" ? "active" : ""
+                }`}
+              >
+                <img
+                  className="w-[3rem]"
+                  src="https://img.icons8.com/nolan/64/group-of-projects.png"
+                  alt="group-of-projects"
+                />{" "}
+                Projects
+              </p>
+              <p
+                onClick={() => {
+                  setActive("Experience");
+                  setToggle(false);
+                  scrollToSection("Experience");
+                }}
+                className={`cursor-pointer   flex items-center gap-3 ${
+                  active === "Experience" ? "active" : ""
+                }`}
+              >
+                <img
+                  className="w-[3rem]"
+                  src="https://img.icons8.com/nolan/64/parse-resumes.png"
+                  alt="parse-resumes"
+                />{" "}
+                Experience
+              </p>
+              <p
+                onClick={() => {
+                  setActive("Contact");
+                  setToggle(false);
+                  scrollToSection("Contact");
+                }}
+                className={`cursor-pointer  flex items-center gap-3 ${
+                  active === "Contact" ? "active" : ""
+                }`}
+              >
+                <img
+                  className="w-[3rem]"
+                  src="https://img.icons8.com/nolan/64/new-post.png"
+                  alt="new-post"
+                />{" "}
+                Contact
+              </p>
+            </>
+          )}
+        </div>
       </div>
     </header>
   );

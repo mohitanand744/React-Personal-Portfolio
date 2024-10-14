@@ -10,7 +10,7 @@ const Home = () => {
       >
         <div className="lg:col-span-7 h-[48vh] order-2 lg:order-1">
           <div className="flex justify-center items-center gap-3 h-full ">
-            <ul className="list-none flex flex-col gap-2">
+            <ul className="list-none flex flex-col w-[7rem] md:w-[6rem] gap-2">
               <li>
                 <a
                   target="_blank"
@@ -18,7 +18,7 @@ const Home = () => {
                 >
                   {" "}
                   <img
-                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[6rem] sm:w-[4rem] md:w-[5rem] "
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
                     src="/linkedin.png"
                     alt="icon"
                   />
@@ -28,7 +28,7 @@ const Home = () => {
                 <a target="_blank" href="https://github.com/mohitanand744">
                   {" "}
                   <img
-                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[6rem] sm:w-[4rem] md:w-[5rem] "
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
                     src="/github.png"
                     alt="icon"
                   />
@@ -41,7 +41,7 @@ const Home = () => {
                 >
                   {" "}
                   <img
-                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[6rem] sm:w-[4rem] md:w-[5rem] "
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
                     src="insta.png"
                     alt="icon"
                   />{" "}

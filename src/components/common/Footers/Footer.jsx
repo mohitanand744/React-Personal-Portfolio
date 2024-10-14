@@ -20,7 +20,7 @@ const Footer = () => {
   };
   return (
     <footer>
-      <div className="footer-content custom-shadow rounded-t-[2rem] text-white text-center w-full h-fit grid grid-cols-1 md:grid-cols-12 p-8 items-center py-20 gap-16">
+      <div className="footer-content custom-shadow rounded-t-[2rem] text-white text-center w-full h-fit grid grid-cols-1 md:grid-cols-12 p-8 items-center py-32 gap-16">
         <div className="md:col-span-5 flex items-center justify-center xxl:justify-start w-full gap-5 flex-wrap sm:gap-16">
           <div className="custom-shadow max-w-[13rem] max-h-[13rem] md:max-w-[15rem] md:max-h-[15rem] rounded-full p-4">
             <img
