@@ -9,22 +9,10 @@ const Layout = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const handleLoad = () => {
+    setTimeout(() => {
       setLoading(false);
-    };
-
-    // Check if the document is already loaded
-    if (document.readyState === "complete") {
-      setLoading(false); // If already loaded, no need to wait
-    } else {
-      window.addEventListener("load", handleLoad); // Otherwise, wait for load event
-    }
-
-    // Cleanup function to remove event listener
-    return () => {
-      window.removeEventListener("load", handleLoad);
-    };
-  }, [loading]);
+    }, 3000);
+  }, []);
 
   return (
     <div>
