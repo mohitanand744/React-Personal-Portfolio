@@ -20,7 +20,7 @@ const Footer = () => {
   };
   return (
     <footer>
-      <div className="footer-content custom-shadow rounded-t-[2rem] text-white text-center w-full h-fit grid grid-cols-1 md:grid-cols-12 p-8 items-center py-16 gap-8">
+      <div className="footer-content custom-shadow rounded-t-[2rem] text-white text-center w-full h-fit grid grid-cols-1 md:grid-cols-12 p-8 items-center py-20 gap-8">
         <div className="md:col-span-6 flex items-center justify-center md:justify-start w-full gap-6 flex-wrap sm:gap-16">
           <div className="custom-shadow max-w-[13rem] max-h-[13rem] md:max-w-[15rem] md:max-h-[15rem] rounded-full p-4">
             <img
@@ -102,44 +102,47 @@ const Footer = () => {
           </p>
         </nav>
 
-        <div className="flex md:col-span-3 justify-center flex-col items-center">
-          <ul className="list-none flex gap-2 ">
-            <li>
-              <a
-                target="_blank"
-                href="https://www.linkedin.com/in/mohit-anand-developer"
-              >
-                {" "}
-                <img
-                  className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] sm:w-[4rem] md:w-[4.3rem] "
-                  src="/linkedin.png"
-                  alt="icon"
-                />
-              </a>
-            </li>
-            <li>
-              <a target="_blank" href="https://github.com/mohitanand744">
-                {" "}
-                <img
-                  className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] sm:w-[4rem] md:w-[4.3rem] "
-                  src="/github.png"
-                  alt="icon"
-                />
-              </a>
-            </li>
-            <li>
-              <a
-                target="_blank"
-                href="https://www.instagram.com/v3_beast_rider123/"
-              >
-                {" "}
-                <img
-                  className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] sm:w-[4rem] md:w-[4.3rem] "
-                  src="insta.png"
-                  alt="icon"
-                />{" "}
-              </a>
-            </li>
+        <div className="flex md:col-span-3 justify-between flex-col h-full items-center">
+          <ul className="list-none flex flex-col gap-2 ">
+            <h2 className="text-3xl highLight-text">Social Media</h2>
+            <div className="flex">
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.linkedin.com/in/mohit-anand-developer"
+                >
+                  {" "}
+                  <img
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] sm:w-[4rem] md:w-[4.3rem] "
+                    src="/linkedin.png"
+                    alt="icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://github.com/mohitanand744">
+                  {" "}
+                  <img
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] sm:w-[4rem] md:w-[4.3rem] "
+                    src="/github.png"
+                    alt="icon"
+                  />
+                </a>
+              </li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.instagram.com/v3_beast_rider123/"
+                >
+                  {" "}
+                  <img
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] sm:w-[4rem] md:w-[4.3rem] "
+                    src="insta.png"
+                    alt="icon"
+                  />{" "}
+                </a>
+              </li>
+            </div>
           </ul>
 
           <div className="flex flex-col gap-3 text-xl md:text-2xl mt-5">
