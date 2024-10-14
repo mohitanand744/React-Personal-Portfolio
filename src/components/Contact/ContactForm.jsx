@@ -4,6 +4,7 @@ import Button from "../common/Buttons/Button";
 const ContactForm = () => {
   return (
     <form
+      data-aos="zoom-in"
       action="https://formspree.io/f/xpzvpoeo"
       method="POST"
       className="w-[96%] md:w-[55%] mx-auto my-32 custom-shadow p-8 rounded-[2rem]"
@@ -50,28 +51,8 @@ const ContactForm = () => {
         ></textarea>
       </div>
 
-      <div className="w-full flex items-center justify-between  mx-auto">
+      <div className="w-full">
         <Button text={"Submit"} />
-        <div className="flex items-center gap-4">
-          <p className="text-xl md:text-2xl highLight-text font-medium me-2">
-            Let's Connect
-          </p>
-          <img
-            className=" w-[0.7rem] h-[1.8rem] movingRight"
-            src="/download.png"
-          />
-          <a
-            target="_blank"
-            href="https://www.linkedin.com/in/mohit-anand-developer"
-          >
-            {" "}
-            <img
-              className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] md:w-[4.5rem] "
-              src="/linkedin.png"
-              alt="icon"
-            />
-          </a>
-        </div>
       </div>
     </form>
   );

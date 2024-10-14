@@ -3,6 +3,7 @@ import Nav from "./components/common/Nav/Nav";
 import { Outlet } from "react-router-dom";
 import StoreProvider from "./context/Store";
 import Loading from "./components/Loadings/Loading";
+import Footer from "./components/common/Footers/Footer";
 
 const Layout = () => {
   const [loading, setLoading] = useState(true);
@@ -23,6 +24,7 @@ const Layout = () => {
           <>
             <Nav />
             <Outlet />
+            <Footer />
           </>
         )}
       </StoreProvider>
