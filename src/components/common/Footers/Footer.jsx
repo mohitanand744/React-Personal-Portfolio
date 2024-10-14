@@ -20,8 +20,8 @@ const Footer = () => {
   };
   return (
     <footer>
-      <div className="footer-content custom-shadow rounded-t-[2rem] text-white text-center w-full h-fit grid grid-cols-1 md:grid-cols-12 p-8 items-center py-20 gap-8">
-        <div className="md:col-span-6 flex items-center justify-center md:justify-start w-full gap-6 flex-wrap sm:gap-16">
+      <div className="footer-content custom-shadow rounded-t-[2rem] text-white text-center w-full h-fit grid grid-cols-1 md:grid-cols-12 p-8 items-center py-20 gap-16">
+        <div className="md:col-span-5 flex items-center justify-center xxl:justify-start w-full gap-5 flex-wrap sm:gap-16">
           <div className="custom-shadow max-w-[13rem] max-h-[13rem] md:max-w-[15rem] md:max-h-[15rem] rounded-full p-4">
             <img
               className=" w-full h-full object-cover rounded-full"
@@ -59,12 +59,40 @@ const Footer = () => {
         </div>
 
         <nav className="flex flex-col md:col-span-2 gap-2 text-xl md:text-2xl">
+          <h2 className="highLight-text text-3xl">Insightful Links</h2>
+          <p
+            onClick={() => {
+              alert("Working on it..");
+            }}
+            className={`cursor-pointer `}
+          >
+            Blogs
+          </p>
+          <p
+            onClick={() => {
+              alert("Working on it..");
+            }}
+            className={`cursor-pointer `}
+          >
+            Free Notes
+          </p>
+          <p
+            onClick={() => {
+              alert("Working on it..");
+            }}
+            className={`cursor-pointer `}
+          >
+            Tech News
+          </p>
+        </nav>
+
+        <nav className="flex flex-col md:col-span-2 gap-2 text-xl md:text-2xl">
           <h2 className="highLight-text text-3xl">Links</h2>
           <p
             onClick={() => {
               scrollToSection("About");
             }}
-            className={`cursor-pointer navlinks`}
+            className={`cursor-pointer `}
           >
             About
           </p>
@@ -72,7 +100,7 @@ const Footer = () => {
             onClick={() => {
               scrollToSection("Skills");
             }}
-            className={`cursor-pointer navlinks`}
+            className={`cursor-pointer `}
           >
             Skills
           </p>
@@ -80,7 +108,7 @@ const Footer = () => {
             onClick={() => {
               scrollToSection("Projects");
             }}
-            className={`cursor-pointer navlinks`}
+            className={`cursor-pointer `}
           >
             Projects
           </p>
@@ -88,21 +116,13 @@ const Footer = () => {
             onClick={() => {
               scrollToSection("Experience");
             }}
-            className={`cursor-pointer navlinks`}
+            className={`cursor-pointer `}
           >
             Experience
           </p>
-          <p
-            onClick={() => {
-              scrollToSection("Contact");
-            }}
-            className={`cursor-pointer navlinks`}
-          >
-            Contact
-          </p>
         </nav>
 
-        <div className="flex md:col-span-3 justify-between flex-col h-full items-center">
+        <div className="flex md:col-span-3 gap-4 justify-center flex-col h-full items-center">
           <ul className="list-none flex flex-col gap-2 ">
             <h2 className="text-3xl highLight-text">Social Media</h2>
             <div className="flex">
