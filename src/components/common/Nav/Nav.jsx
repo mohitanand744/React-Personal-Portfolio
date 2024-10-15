@@ -48,14 +48,14 @@ const Nav = () => {
           />
           {userInput !== "" ? (
             <img
-              className="absolute top-[9.4rem] right-5 w-[1.8rem] cursor-pointer"
+              className="absolute  top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
               src="https://img.icons8.com/nolan/64/delete-sign.png"
               alt="delete-sign"
               onClick={() => setUserInput("")}
             />
           ) : (
             <img
-              className="absolute top-[9.2rem] right-5 w-[1.8rem] cursor-pointer"
+              className="absolute top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
               src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
               alt="search"
             />

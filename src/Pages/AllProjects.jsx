@@ -77,7 +77,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
       >
         <SectionHeading text={"All Projects"} />
 
-        <div className="flex justify-center items-center my-6 gap-3">
+        <div className="flex justify-center flex-wrap items-center my-6 gap-3">
           <p className="text-white text-xl lg:text-2xl flex items-center justify-center gap-5">
             Source Code
             <img
@@ -90,7 +90,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
               target="_blank"
             >
               GitHub
-              <img src="/github.png" className="w-[3.6rem]" alt="github" /> |
+              <img src="/github.png" className="w-[3.6rem]" alt="github" />
             </a>
           </p>
 
