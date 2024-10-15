@@ -38,13 +38,13 @@ const Nav = () => {
         </Link>
       </div>
       {location.pathname === "/projects" && (
-        <div className="absolute w-full right-0 left-0 top-0 sm:hidden">
+        <div className="absolute w-full  right-0 left-0 top-32 sm:hidden">
           <input
             type="text"
             value={userInput}
             onChange={handleUserInput}
             placeholder="Search projects (e.g., 'React', 'Clone')"
-            className="w-full outline-none border-none py-6 px-6  backdrop-blur-sm bg-black/80  custom-shadow3 text-xl md:text-2xl relative top-32 rounded-b-2xl left-0 right-0 "
+            className="w-full outline-none border-none py-6 px-6  backdrop-blur-sm bg-black/80  custom-shadow3 text-xl md:text-2xl relative rounded-b-2xl left-0 right-0 "
           />
           {userInput !== "" ? (
             <img
@@ -173,30 +173,33 @@ const Nav = () => {
       </nav>
 
       {/* Mobile menu toggle */}
-      <div className="block sm:hidden">
+      <div
+        className="block w-[4rem] h-[4rem] 
+          sm:hidden cursor-pointer"
+      >
         <img
-          className="menu w-[4rem] active:rotate-[360deg] transition-all duration-500 ease-linear"
+          className="menu w-full h-full object-cover  active:rotate-[360deg] transition-all duration-500 ease-linear cursor-pointer"
           src="./menu.png"
-          onClick={toggleMenu}
           alt="menu"
+          onClick={toggleMenu}
         />
       </div>
 
       {/* Mobile dropdown menu */}
       <div
         onClick={toggleMenu}
-        className={`fixed z-10 cursor-pointer top-[0rem] right-0  w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-100 ${
-          toggle ? "w-full h-[100vh]" : "w-0"
+        className={`fixed z-10 cursor-pointer top-0  right-0 h-[100vh]  w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-[20] ${
+          toggle ? "opacity-100 left-[0rem]" : "opacity-0 -left-[100%]"
         }`}
       >
         <div
-          className={`z-40 fixed top-[0rem] right-0 list-none py-8  h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-s-3xl custom-shadow3 cursor-default  backdrop-blur-sm bg-black/80 transition-all duration-300 ease-linear overflow-hidden ${
-            toggle ? "w-[68%]  px-10" : "w-0 px-0"
+          className={`z-20 fixed top-[0rem] right-0 list-none w-[68%]  py-8  px-10 h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-e-3xl custom-shadow3 cursor-default  backdrop-blur-sm bg-black/80 transition-all duration-200 ease-linear overflow-hidden ${
+            toggle ? "left-0" : "-left-[100%]"
           }`}
           onClick={(e) => e.stopPropagation()}
         >
           <img
-            className="w-[2rem] cursor-pointer"
+            className="w-[2rem] cursor-pointer absolute right-8 "
             src="https://img.icons8.com/nolan/64/delete-sign.png"
             alt="delete-sign"
             onClick={toggleMenu}
@@ -211,7 +214,7 @@ const Nav = () => {
                   setToggle(false);
                   scrollToSection("Projects");
                 }}
-                className={`cursor-pointer   flex items-center gap-3`}
+                className={`cursor-pointer mt-16  flex items-center gap-3`}
               >
                 Home
                 <img
@@ -230,7 +233,7 @@ const Nav = () => {
                   setToggle(false);
                   scrollToSection("About");
                 }}
-                className={`cursor-pointer flex items-center gap-3 ${
+                className={`cursor-pointer flex mt-16 gap-3 ${
                   active === "About" ? "active" : ""
                 }`}
               >
@@ -248,7 +251,7 @@ const Nav = () => {
                   setToggle(false);
                   scrollToSection("Skills");
                 }}
-                className={`cursor-pointer  flex items-center gap-3 ${
+                className={`cursor-pointer  flex  gap-3 ${
                   active === "Skills" ? "active" : ""
                 }`}
               >
@@ -266,7 +269,7 @@ const Nav = () => {
                   setToggle(false);
                   scrollToSection("Projects");
                 }}
-                className={`cursor-pointer   flex items-center gap-3 ${
+                className={`cursor-pointer   flex  gap-3 ${
                   active === "Projects" ? "active" : ""
                 }`}
               >
@@ -284,7 +287,7 @@ const Nav = () => {
                   setToggle(false);
                   scrollToSection("Experience");
                 }}
-                className={`cursor-pointer   flex items-center gap-3 ${
+                className={`cursor-pointer   flex  gap-3 ${
                   active === "Experience" ? "active" : ""
                 }`}
               >
@@ -302,7 +305,7 @@ const Nav = () => {
                   setToggle(false);
                   scrollToSection("Contact");
                 }}
-                className={`cursor-pointer  flex items-center gap-3 ${
+                className={`cursor-pointer  flex  gap-3 ${
                   active === "Contact" ? "active" : ""
                 }`}
               >
