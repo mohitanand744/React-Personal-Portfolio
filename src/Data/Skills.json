@@ -35,8 +35,28 @@
     "category": "frontend"
   },
   {
+    "title": "Code Review",
+    "image": "https://img.icons8.com/nolan/64/code--v1.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Optimization",
+    "image": "https://img.icons8.com/external-jumpicon-solid-gradient-ayub-irawan/32/external-Optimization-crisis-management-jumpicon-(solid-gradient)-jumpicon-solid-gradient-ayub-irawan.png",
+    "category": "frontend"
+  },
+  {
     "title": "GitHub",
     "image": "/github.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Team Work",
+    "image": "https://img.icons8.com/nolan/64/parallel-tasks.png",
+    "category": "common"
+  },
+  {
+    "title": "Figma",
+    "image": "https://img.icons8.com/nolan/64/figma.png",
     "category": "frontend"
   },
   {
