@@ -185,12 +185,12 @@ const Nav = () => {
       {/* Mobile dropdown menu */}
       <div
         onClick={toggleMenu}
-        className={`fixed -z-10 cursor-pointer top-[0rem] right-0  w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-100 ${
+        className={`fixed z-10 cursor-pointer top-[0rem] right-0  w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-100 ${
           toggle ? "w-full h-[100vh]" : "w-0"
         }`}
       >
         <div
-          className={`z-40 fixed top-[0rem] right-0 list-none  h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-s-3xl custom-shadow3 cursor-default  backdrop-blur-sm bg-black/80 transition-all duration-200 ease-linear overflow-hidden ${
+          className={`z-40 fixed top-[0rem] right-0 list-none  h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-s-3xl custom-shadow3 cursor-default  backdrop-blur-sm bg-black/80 transition-all duration-300 ease-linear overflow-hidden ${
             toggle ? "w-[68%] py-8 px-10" : "w-0 py-0 px-0"
           }`}
           onClick={(e) => e.stopPropagation()}
