@@ -8,7 +8,6 @@ const ContactForm = () => {
       action="https://formspree.io/f/xpzvpoeo"
       method="POST"
       className="w-[96%] md:w-[55%] mx-auto my-32 custom-shadow p-8 rounded-[2rem]"
-      id="Contact"
     >
       <h2 className="text-center text-[3rem] md:text-[4rem] font-bold highLight-text mb-8">
         Contact Me

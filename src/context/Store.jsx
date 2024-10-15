@@ -11,6 +11,7 @@ export const Store = createContext();
 const StoreProvider = ({ children }) => {
   const { pathname } = useLocation();
   const [userInput, setUserInput] = useState("");
+  const [active, setActive] = useState("Home");
 
   const handleUserInput = (e) => {
     setUserInput(e.target.value.toLowerCase());
@@ -37,6 +38,8 @@ const StoreProvider = ({ children }) => {
           userInput,
           setUserInput,
           handleUserInput,
+          active,
+          setActive,
         }}
       >
         {children}

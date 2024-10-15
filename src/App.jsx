@@ -1,14 +1,23 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import AboutMe from "./components/About/AboutMe";
-import Nav from "./components/common/Nav/Nav";
 import Home from "./components/Home/Home";
 import Skill from "./components/Skills/Skill";
 import Experience from "./components/Experiences/Experience";
 import Projects from "./components/common/LatestProjects/Projects";
 import ContactForm from "./components/Contact/ContactForm";
+import useContextData from "./Hook/useContextData";
 
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);
+  const { setActive } = useContextData();
+  // Selecting Containers
+
+  const home = useRef(null);
+  const about = useRef(null);
+  const skill = useRef(null);
+  const experience = useRef(null);
+  const projects = useRef(null);
+  const contact = useRef(null);
 
   const handleScroll = () => {
     if (window.pageYOffset >= 130) {
@@ -19,7 +28,43 @@ function App() {
   };
 
   useEffect(() => {
+    // watching all sections
     window.addEventListener("scroll", handleScroll);
+
+    const sections = [
+      { id: "Home", container: home },
+      { id: "About", container: about },
+      { id: "Skill", container: skill },
+      { id: "Experience", container: experience },
+      { id: "Projects", container: projects },
+      { id: "Contact", container: contact },
+    ];
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActive(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.5 } // Trigger when 50% of the section is visible
+    );
+
+    sections.forEach((section) => {
+      if (section.container.current) {
+        observer.observe(section.container.current);
+      }
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+      sections.forEach((section) => {
+        if (section.container.current) {
+          observer.unobserve(section.container.current);
+        }
+      });
+    };
   }, []);
 
   const goToTop = () => {
@@ -41,12 +86,28 @@ function App() {
           />
         )}
         <div className="w-full">
-          <Home />
-          <AboutMe />
-          <Skill />
-          <Experience />
-          <Projects />
-          <ContactForm />
+          <div id="Home" ref={home}>
+            <Home />
+          </div>
+
+          <div id="About" ref={about}>
+            <AboutMe />
+          </div>
+
+          <div id="Skills" ref={skill}>
+            <Skill />
+          </div>
+          <div id="Experience" ref={experience}>
+            <Experience />
+          </div>
+
+          <div id="Projects" ref={projects}>
+            <Projects />
+          </div>
+
+          <div id="Contact" ref={contact}>
+            <ContactForm />
+          </div>
         </div>
       </section>
     </>

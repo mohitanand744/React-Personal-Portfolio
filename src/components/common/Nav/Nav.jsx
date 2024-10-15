@@ -3,9 +3,9 @@ import { Link, useLocation } from "react-router-dom";
 import useContextData from "../../../Hook/useContextData";
 
 const Nav = () => {
-  const { userInput, setUserInput, handleUserInput } = useContextData();
+  const { userInput, setUserInput, handleUserInput, active, setActive } =
+    useContextData();
   const [toggle, setToggle] = useState(false);
-  const [active, setActive] = useState("Home");
   const location = useLocation();
 
   const toggleMenu = (e) => {
@@ -43,7 +43,7 @@ const Nav = () => {
             type="text"
             value={userInput}
             onChange={handleUserInput}
-            placeholder="Search projects (e.g., 'React', 'Clone')"
+            placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
             className="w-full outline-none border-none py-6 px-6  backdrop-blur-sm bg-black/80  custom-shadow3 text-xl md:text-2xl relative rounded-b-2xl left-0 right-0 "
           />
           {userInput !== "" ? (
@@ -70,7 +70,7 @@ const Nav = () => {
                 type="text"
                 value={userInput}
                 onChange={handleUserInput}
-                placeholder="Search projects (e.g., 'React', 'Clone')"
+                placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
                 className="w-[30rem] md:w-[50rem] backdrop-blur-sm bg-black/60 outline-none border-none rounded-3xl py-5 px-6 custom-shadow3 md:text-2xl"
               />
 
@@ -100,8 +100,8 @@ const Nav = () => {
             >
               Home
               <img
-                className="w-[2rem] md:w-[3.6rem] rotate-45"
-                src="https://img.icons8.com/nolan/64/logout-rounded.png"
+                className="w-[2rem] md:w-[3.3rem]"
+                src="https://img.icons8.com/nolan/64/home-page.png"
                 alt="logout-rounded"
               />
             </Link>
@@ -134,18 +134,6 @@ const Nav = () => {
             </p>
             <p
               onClick={() => {
-                setActive("Projects");
-                setToggle(false);
-                scrollToSection("Projects");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Projects" ? "active" : ""
-              }`}
-            >
-              Projects
-            </p>
-            <p
-              onClick={() => {
                 setActive("Experience");
                 setToggle(false);
                 scrollToSection("Experience");
@@ -156,6 +144,19 @@ const Nav = () => {
             >
               Experience
             </p>
+            <p
+              onClick={() => {
+                setActive("Projects");
+                setToggle(false);
+                scrollToSection("Projects");
+              }}
+              className={`cursor-pointer navlinks ${
+                active === "Projects" ? "active" : ""
+              }`}
+            >
+              Projects
+            </p>
+
             <p
               onClick={() => {
                 setActive("Contact");
@@ -216,12 +217,12 @@ const Nav = () => {
                 }}
                 className={`cursor-pointer mt-16  flex items-center gap-3`}
               >
-                Home
                 <img
-                  className="w-[2rem] md:w-[3.6rem] rotate-45"
-                  src="https://img.icons8.com/nolan/64/logout-rounded.png"
+                  className="w-[2.6rem]"
+                  src="https://img.icons8.com/nolan/64/home-page.png"
                   alt="logout-rounded"
                 />
+                Home
               </Link>
             </>
           ) : (

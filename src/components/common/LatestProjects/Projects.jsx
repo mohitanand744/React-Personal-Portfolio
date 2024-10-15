@@ -47,7 +47,7 @@ const Projects = () => {
   };
 
   return (
-    <div id="Projects" className="projects mb-32">
+    <div id="Projects" className="projects mb-32 h-fit">
       <center className="my-10 mx-auto w-[96%] lg:w-[44%]" data-aos="zoom-in">
         <SectionHeading text={"Latest Work"} />
         <p className="text-white text-xl lg:text-2xl flex items-center justify-center gap-5">
