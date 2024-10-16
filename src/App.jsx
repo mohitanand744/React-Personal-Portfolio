@@ -14,6 +14,7 @@ function App() {
     x: 0,
     y: 0,
   });
+  const [mouseOut, setMouseOut] = useState(false);
 
   // Storing Mouse Moves
 
@@ -70,10 +71,14 @@ function App() {
 
     // tracking mouseMove
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("mouseout", () => setMouseOut(true));
+    window.addEventListener("mouseover", () => setMouseOut(false));
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("mouseout", () => setMouseOut(true));
+      window.removeEventListener("mouseover", () => setMouseOut(false));
       sections.forEach((section) => {
         if (section.container.current) {
           observer.unobserve(section.container.current);
@@ -100,10 +105,15 @@ function App() {
             alt="Go to Top"
           />
         )}
-        <div
-          className={`followCursor w-8 h-8 fixed rounded-full `}
-          style={{ top: `${mousePosition.y}px`, left: `${mousePosition.x}px` }}
-        ></div>
+        {!mouseOut && (
+          <div
+            className={`followCursor w-8 h-8 fixed rounded-full `}
+            style={{
+              top: `${mousePosition.y}px`,
+              left: `${mousePosition.x}px`,
+            }}
+          ></div>
+        )}
         <div className="w-full">
           <div id="Home" ref={home}>
             <Home />
