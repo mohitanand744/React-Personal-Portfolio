@@ -69,7 +69,7 @@ const AboutMe = () => {
           <Button
             text={"Resume"}
             url={
-              "https://drive.google.com/file/d/1fTyvC_b0lpXg1t-UCg4bA8KniEhBugTs/view?usp=drive_link"
+              "https://drive.google.com/file/d/1J1PlHoE5eoPRQN5FRl2pD3tUIU5XwSOe/view?usp=drive_link"
             }
             img={"/download.png"}
           />
