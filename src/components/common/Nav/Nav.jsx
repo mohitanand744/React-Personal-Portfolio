@@ -201,8 +201,8 @@ const Nav = () => {
         }`}
       >
         <div
-          className={`z-20 fixed top-[0rem] right-0 list-none w-[68%]  py-8  px-10 h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-e-3xl custom-shadow3 cursor-default  backdrop-blur-sm bg-black/80 transition-all duration-[300ms] ease-linear overflow-hidden ${
-            toggle ? "left-0" : "-left-[100%]"
+          className={`z-20 fixed top-[0rem] right-0 list-none w-[68%]  py-8  px-10 h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-e-3xl custom-shadow3 cursor-default  backdrop-blur-sm bg-black/80 transition-all duration-300 ease-in-out overflow-hidden ${
+            toggle ? "left-0" : "left-[-100%]"
           }`}
           onClick={(e) => e.stopPropagation()}
         >
