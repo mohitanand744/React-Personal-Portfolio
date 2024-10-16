@@ -20,6 +20,7 @@ const AboutMe = () => {
           className="flex lg:justify-center items-center"
         >
           <img
+            loading="lazy"
             className="profileImageContainer text-center w-[20rem] md:w-[30rem] md:h-[40rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover"
             src="/p2.jpg"
             alt=""

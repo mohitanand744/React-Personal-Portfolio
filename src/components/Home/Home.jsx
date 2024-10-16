@@ -18,6 +18,7 @@ const Home = () => {
                 >
                   {" "}
                   <img
+                    loading="lazy"
                     className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
                     src="/linkedin.png"
                     alt="icon"
@@ -28,6 +29,7 @@ const Home = () => {
                 <a target="_blank" href="https://github.com/mohitanand744">
                   {" "}
                   <img
+                    loading="lazy"
                     className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
                     src="/github.png"
                     alt="icon"
@@ -41,6 +43,7 @@ const Home = () => {
                 >
                   {" "}
                   <img
+                    loading="lazy"
                     className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
                     src="insta.png"
                     alt="icon"
@@ -83,6 +86,7 @@ const Home = () => {
           >
             <div className="ms-2 profileImageContainer w-[26rem] md:w-[38rem] h-[26rem] md:h-[38rem] rounded-full">
               <img
+                loading="lazy"
                 className="w-full h-full rounded-full object-cover"
                 src="/hero-profile.jpeg"
                 alt=""

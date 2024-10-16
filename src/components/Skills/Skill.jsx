@@ -64,7 +64,12 @@ const Skill = () => {
             data-aos="zoom-in"
             className="flex flex-col gap-3 justify-center items-center text-xl md:text-2xl font-bold"
           >
-            <img className="w-[3.8rem] md:w-[6rem]" src={skill.image} alt="" />
+            <img
+              loading="lazy"
+              className="w-[3.8rem] md:w-[6rem]"
+              src={skill.image}
+              alt=""
+            />
             <p className="text-white text-lg sm:text-xl">{skill.title}</p>
           </div>
         ))}

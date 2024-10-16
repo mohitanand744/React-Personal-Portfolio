@@ -8,7 +8,14 @@ const Button = ({ text, url, img }) => {
         className="text-decoration-none text-white flex gap-3"
         href={url}
       >
-        {img && <img className="w-4 lg:w-8 shadow-2xl" src={img} alt="" />}{" "}
+        {img && (
+          <img
+            loading="lazy"
+            className="w-4 lg:w-8 shadow-2xl"
+            src={img}
+            alt=""
+          />
+        )}{" "}
         {text}
       </a>
     </button>

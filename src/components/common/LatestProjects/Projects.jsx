@@ -52,14 +52,23 @@ const Projects = () => {
         <SectionHeading text={"Latest Work"} />
         <p className="text-white text-xl lg:text-2xl flex items-center justify-center gap-5">
           Source Code
-          <img className=" w-[1rem] h-[2rem] movingRight" src="/download.png" />
+          <img
+            loading="lazy"
+            className=" w-[1rem] h-[2rem] movingRight"
+            src="/download.png"
+          />
           <a
             href="https://github.com/mohitanand744"
             className="activeName flex items-center gap-2"
             target="_blank"
           >
             GitHub
-            <img src="/github.png" className="w-[3.6rem]" alt="github" />
+            <img
+              loading="lazy"
+              src="/github.png"
+              className="w-[3.6rem]"
+              alt="github"
+            />
           </a>
         </p>
       </center>
@@ -95,12 +104,14 @@ const Projects = () => {
         ) : (
           <>
             <img
+              loading="lazy"
               className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-4 cursor-pointer"
               src="/rightArrow.png"
               alt="Scroll Right"
               onClick={() => scrollContainerFun("right")}
             />
             <img
+              loading="lazy"
               className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-20 rotate-[180deg] cursor-pointer"
               src="/rightArrow.png"
               alt="Scroll Left"

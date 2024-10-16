@@ -24,6 +24,7 @@ const Footer = () => {
         <div className="md:col-span-5 flex items-center justify-center xxl:justify-start w-full gap-5 flex-wrap sm:gap-16">
           <div className="custom-shadow max-w-[13rem] max-h-[13rem] md:max-w-[15rem] md:max-h-[15rem] rounded-full p-4">
             <img
+              loading="lazy"
               className=" w-full h-full object-cover rounded-full"
               src="/footer1.jpg"
               alt=""
@@ -44,6 +45,7 @@ const Footer = () => {
                 className="w-full outline-none border-b-[1px] border-slate-500 py-6 px-6  backdrop-blur-sm bg-black/80  custom-shadow2 text-xl rounded-[5rem] relative"
               />
               <img
+                loading="lazy"
                 className="w-[4rem] absolute right-2 top-2"
                 src="https://img.icons8.com/bubbles/100/news.png"
                 alt="news"
@@ -133,6 +135,7 @@ const Footer = () => {
                 >
                   {" "}
                   <img
+                    loading="lazy"
                     className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] sm:w-[4rem] md:w-[4.3rem] "
                     src="/linkedin.png"
                     alt="icon"
@@ -143,6 +146,7 @@ const Footer = () => {
                 <a target="_blank" href="https://github.com/mohitanand744">
                   {" "}
                   <img
+                    loading="lazy"
                     className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] sm:w-[4rem] md:w-[4.3rem] "
                     src="/github.png"
                     alt="icon"
@@ -156,6 +160,7 @@ const Footer = () => {
                 >
                   {" "}
                   <img
+                    loading="lazy"
                     className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] sm:w-[4rem] md:w-[4.3rem] "
                     src="insta.png"
                     alt="icon"

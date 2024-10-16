@@ -20,6 +20,7 @@ const Card = ({
     >
       <div className="imgContainer   w-[97%] h-[15rem] md:h-[20rem] mx-auto">
         <img
+          loading="lazy"
           className="w-full h-full rounded-3xl object-cover"
           src={image}
           alt=""

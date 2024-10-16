@@ -44,12 +44,14 @@ const Experience = () => {
 
       <div className="scrollButtons relative md:hidden h-[3rem]">
         <img
+          loading="lazy"
           className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-4 cursor-pointer"
           src="/rightArrow.png"
           alt="Scroll Right"
           onClick={() => scrollExperienceBox("right")}
         />
         <img
+          loading="lazy"
           className="w-[4rem] absolute active:scale-90 transition-all duration-200 ease-linear right-20 rotate-[180deg] cursor-pointer"
           src="/rightArrow.png"
           alt="Scroll Left"
@@ -70,6 +72,7 @@ const Experience = () => {
           >
             <div className="flex gap-4 mb-5 w-full">
               <img
+                loading="lazy"
                 className="w-[4rem] h-[3rem] lg:h-[4rem] my-auto lg:w-[6rem] object-cover"
                 src={experienceItem.logo}
                 alt={experienceItem.company}
@@ -94,12 +97,14 @@ const Experience = () => {
               <h3 className="text-2xl md:text-3xl">Skills Used</h3>
               <div className="scrollButtons h-[4rem]">
                 <img
+                  loading="lazy"
                   className="w-[3.6rem] absolute active:scale-90 transition-all duration-200 ease-linear right-4 cursor-pointer"
                   src="/rightArrow.png"
                   alt="Scroll Right"
                   onClick={() => scroll(index, "right")}
                 />
                 <img
+                  loading="lazy"
                   className="w-[3.6rem] absolute active:scale-90 transition-all duration-200 ease-linear right-20 rotate-[180deg] cursor-pointer"
                   src="/rightArrow.png"
                   alt="Scroll Left"
