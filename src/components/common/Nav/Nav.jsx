@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import useContextData from "../../../Hook/useContextData";
 
 const Nav = () => {
-  const { userInput, setUserInput, handleUserInput, active, setActive } =
-    useContextData();
+  const {
+    userInput,
+    setUserInput,
+    handleUserInput,
+    active,
+    setActive,
+    scrollToSection,
+  } = useContextData();
   const [toggle, setToggle] = useState(false);
   const location = useLocation();
 
@@ -14,17 +20,9 @@ const Nav = () => {
     setToggle((toggle) => !toggle);
   };
 
-  const scrollToSection = (id) => {
-    setTimeout(() => {
-      const section = document.getElementById(id);
-      if (!section) return;
-      const yOffset = -180; // Height of the navbar
-      const y =
-        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
-
-      window.scrollTo({ top: y, behavior: "smooth" });
-    }, 100);
-  };
+  useEffect(() => {
+    userInput !== "" && scrollToSection("Home");
+  }, [userInput]);
 
   return (
     <header className="flex justify-between items-center text-white px-10 py-8 backdrop-blur-sm bg-black/30 rounded-b-3xl sticky top-0 z-50 w-full">
@@ -74,7 +72,7 @@ const Nav = () => {
                 value={userInput}
                 onChange={handleUserInput}
                 placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
-                className="w-[30rem] md:w-[50rem] backdrop-blur-sm bg-black/60 outline-none border-none rounded-3xl py-5 px-6 custom-shadow3 md:text-2xl"
+                className="w-[38rem] md:w-[50rem] backdrop-blur-sm bg-black/60 outline-none border-none rounded-3xl py-5 px-6 custom-shadow3 md:text-2xl"
               />
 
               {userInput !== "" ? (
@@ -196,7 +194,7 @@ const Nav = () => {
       {/* Mobile dropdown menu */}
       <div
         onClick={toggleMenu}
-        className={`fixed z-10 cursor-pointer top-0  right-0 h-[100vh]  w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-[20ms] ${
+        className={`fixed z-10 cursor-pointer top-0  right-0 h-[100vh]  w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-[100ms] ${
           toggle ? "opacity-100 left-[0rem]" : "opacity-0 -left-[100%]"
         }`}
       >

@@ -70,7 +70,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
   };
 
   return (
-    <div className="allProjects min-h-[100vh] px-10">
+    <div id="Home" className="allProjects min-h-[100vh] px-10">
       <center
         className="mt-32 sm:mt-16 mx-auto w-[96%] lg:w-[44%]"
         data-aos="zoom-in"
@@ -100,7 +100,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
         </div>
       </center>
 
-      <div className="flex flex-wrap justify-center gap-10 mt-16">
+      <div className="flex flex-wrap justify-center gap-10 my-16">
         {filterProject.length > 0 ? (
           sliceProjects.map((project, i) => (
             <Card

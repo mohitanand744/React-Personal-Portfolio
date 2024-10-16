@@ -48,5 +48,9 @@
     }
   }
 
+  .followCursor {
+    display: none;
+  }
+
   /***** End Experience Section *****/
 }

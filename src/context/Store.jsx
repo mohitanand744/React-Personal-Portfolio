@@ -24,6 +24,19 @@ const StoreProvider = ({ children }) => {
     });
   }, []);
 
+  // Scrolling to targeted Section
+  const scrollToSection = (id) => {
+    setTimeout(() => {
+      const section = document.getElementById(id);
+      if (!section) return;
+      const yOffset = -180; // Height of the navbar
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+    }, 100);
+  };
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -40,6 +53,7 @@ const StoreProvider = ({ children }) => {
           handleUserInput,
           active,
           setActive,
+          scrollToSection,
         }}
       >
         {children}

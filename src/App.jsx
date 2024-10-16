@@ -10,6 +10,17 @@ import useContextData from "./Hook/useContextData";
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);
   const { setActive } = useContextData();
+  const [mousePosition, setMousePosition] = useState({
+    x: 0,
+    y: 0,
+  });
+
+  // Storing Mouse Moves
+
+  const handleMouseMove = (e) => {
+    setMousePosition({ x: e.clientX, y: e.clientY });
+  };
+
   // Selecting Containers
 
   const home = useRef(null);
@@ -57,8 +68,12 @@ function App() {
       }
     });
 
+    // tracking mouseMove
+    window.addEventListener("mousemove", handleMouseMove);
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener("mousemove", handleMouseMove);
       sections.forEach((section) => {
         if (section.container.current) {
           observer.unobserve(section.container.current);
@@ -85,6 +100,10 @@ function App() {
             alt="Go to Top"
           />
         )}
+        <div
+          className={`followCursor w-8 h-8 fixed rounded-full `}
+          style={{ top: `${mousePosition.y}px`, left: `${mousePosition.x}px` }}
+        ></div>
         <div className="w-full">
           <div id="Home" ref={home}>
             <Home />

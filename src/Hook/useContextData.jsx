@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { Store } from "../context/Store";
 
 const useContextData = () => {
@@ -13,6 +13,7 @@ const useContextData = () => {
     setIsExpanded,
     active,
     setActive,
+    scrollToSection,
   } = useContext(Store);
 
   return {
@@ -26,6 +27,7 @@ const useContextData = () => {
     setIsExpanded,
     active,
     setActive,
+    scrollToSection,
   };
 };
 
