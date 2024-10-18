@@ -36,16 +36,14 @@ const Home = () => {
                   />
                 </a>
               </li>
+
               <li>
-                <a
-                  target="_blank"
-                  href="https://www.instagram.com/v3_beast_rider123/"
-                >
+                <a target="_blank" href="mailto:anandmohit744@gmail.com">
                   {" "}
                   <img
                     loading="lazy"
                     className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
-                    src="insta.png"
+                    src="email.png"
                     alt="icon"
                   />{" "}
                 </a>

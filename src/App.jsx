@@ -19,7 +19,10 @@ function App() {
   // Storing Mouse Moves
 
   const handleMouseMove = (e) => {
-    setMousePosition({ x: e.clientX, y: e.clientY });
+    // Check if the device width is larger than 768px (you can adjust this for your mobile breakpoint)
+    if (window.innerWidth > 768) {
+      setMousePosition({ x: e.clientX, y: e.clientY });
+    }
   };
 
   // Selecting Containers
@@ -71,8 +74,11 @@ function App() {
 
     // tracking mouseMove
     window.addEventListener("mousemove", handleMouseMove);
-    window.addEventListener("mouseout", () => setMouseOut(true));
-    window.addEventListener("mouseover", () => setMouseOut(false));
+
+    if (window.innerWidth > 768) {
+      window.addEventListener("mouseout", () => setMouseOut(true));
+      window.addEventListener("mouseover", () => setMouseOut(false));
+    }
 
     return () => {
       window.removeEventListener("scroll", handleScroll);

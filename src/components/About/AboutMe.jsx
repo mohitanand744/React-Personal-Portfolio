@@ -36,7 +36,9 @@ const AboutMe = () => {
             </p>{" "}
             <p className="font-bold">
               Email:{" "}
-              <span className="font-normal">anandmohit744@gmail.com</span>
+              <span className="font-normal">
+                <a href="mailto:name@email.com">anandmohit744@gmail.com</a>
+              </span>
             </p>
           </div>
           <div className="flex flex-col gap-2 text-2xl lg:text-3xl">
@@ -65,6 +67,7 @@ const AboutMe = () => {
             </span>
           </p>
         </div>
+
         <div className="mt-10 lg:mt-20">
           <Button
             text={"Resume"}

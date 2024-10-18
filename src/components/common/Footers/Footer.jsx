@@ -21,7 +21,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="footer-content custom-shadow rounded-t-[2rem] text-white text-center w-full h-fit grid grid-cols-1 md:grid-cols-12 p-8 items-center py-32 gap-16">
-        <div className="md:col-span-5 flex items-center justify-center xxl:justify-start w-full gap-5 flex-wrap sm:gap-16">
+        <div className="md:col-span-5 flex items-center justify-center xxl:justify-start w-full gap-8 flex-wrap sm:gap-16">
           <div className="custom-shadow max-w-[13rem] max-h-[13rem] md:max-w-[15rem] md:max-h-[15rem] rounded-full p-4">
             <img
               loading="lazy"
@@ -32,7 +32,7 @@ const Footer = () => {
           </div>
 
           <div className="subscription-form flex flex-col gap-4">
-            <p className="text-xl md:text-2xl">
+            <p className="text-2xl">
               Stay updated with my blogs and tech news:
             </p>
             <form
@@ -52,7 +52,7 @@ const Footer = () => {
               />
               <button
                 type="submit"
-                className="custom-shadow2 px-6 py-4 text-xl rounded-[2rem]"
+                className="custom-shadow2 px-6 py-4 text-2xl rounded-[2rem]"
               >
                 Subscribe
               </button>
@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <nav className="flex flex-col md:col-span-2 gap-2 text-xl md:text-2xl">
+        <nav className="flex flex-col md:col-span-2 gap-2 text-2xl">
           <h2 className="highLight-text text-3xl">Insightful Links</h2>
           <p
             onClick={() => {
@@ -88,7 +88,7 @@ const Footer = () => {
           </p>
         </nav>
 
-        <nav className="flex flex-col md:col-span-2 gap-2 text-xl md:text-2xl">
+        <nav className="flex flex-col md:col-span-2 gap-2 text-2xl">
           <h2 className="highLight-text text-3xl">Links</h2>
           <p
             onClick={() => {
@@ -167,10 +167,21 @@ const Footer = () => {
                   />{" "}
                 </a>
               </li>
+              <li>
+                <a target="_blank" href="mailto:anandmohit744@gmail.com">
+                  {" "}
+                  <img
+                    loading="lazy"
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] sm:w-[4rem] md:w-[4.3rem] "
+                    src="email.png"
+                    alt="icon"
+                  />{" "}
+                </a>
+              </li>
             </div>
           </ul>
 
-          <div className="flex flex-col gap-3 text-xl md:text-2xl mt-5">
+          <div className="flex flex-col gap-3 text-2xl mt-5">
             <p>© 2024 Mohit. All rights reserved.</p>
             <p>Built with React and Tailwind CSS.</p>
           </div>

@@ -163,6 +163,34 @@ const Nav = () => {
 
             <p
               onClick={() => {
+                /* setActive("Notes");
+                setToggle(false);
+                scrollToSection("Notes");*/
+                alert("Working on it...");
+              }}
+              className={`cursor-pointer navlinks ${
+                active === "Notes" ? "active" : ""
+              }`}
+            >
+              Free Notes
+            </p>
+            <p
+              onClick={() => {
+                /* setActive("Blogs");
+                setToggle(false);
+                scrollToSection("Blogs");*/
+
+                alert("Working on it...");
+              }}
+              className={`cursor-pointer navlinks ${
+                active === "Blogs" ? "active" : ""
+              }`}
+            >
+              Blogs
+            </p>
+
+            <p
+              onClick={() => {
                 setActive("Contact");
                 setToggle(false);
                 scrollToSection("Contact");
@@ -194,8 +222,8 @@ const Nav = () => {
       {/* Mobile dropdown menu */}
       <div
         onClick={toggleMenu}
-        className={`fixed z-10 cursor-pointer top-0  right-0 h-[100vh]  w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-[100ms] ${
-          toggle ? "opacity-100 left-[0rem]" : "opacity-0 -left-[100%]"
+        className={`fixed z-10 cursor-pointer top-0  right-0 h-[100vh]  w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-[50ms] ${
+          toggle ? "opacity-100 left-0" : "opacity-0 -left-[100%]"
         }`}
       >
         <div
@@ -241,7 +269,7 @@ const Nav = () => {
                   setToggle(false);
                   scrollToSection("About");
                 }}
-                className={`cursor-pointer flex mt-16 gap-3 ${
+                className={`cursor-pointer flex mt-16 gap-3 items-center ${
                   active === "About" ? "active" : ""
                 }`}
               >
@@ -260,7 +288,7 @@ const Nav = () => {
                   setToggle(false);
                   scrollToSection("Skills");
                 }}
-                className={`cursor-pointer  flex  gap-3 ${
+                className={`cursor-pointer  flex  gap-3 items-center ${
                   active === "Skills" ? "active" : ""
                 }`}
               >
@@ -279,7 +307,7 @@ const Nav = () => {
                   setToggle(false);
                   scrollToSection("Projects");
                 }}
-                className={`cursor-pointer   flex  gap-3 ${
+                className={`cursor-pointer   flex  gap-3 items-center ${
                   active === "Projects" ? "active" : ""
                 }`}
               >
@@ -298,7 +326,7 @@ const Nav = () => {
                   setToggle(false);
                   scrollToSection("Experience");
                 }}
-                className={`cursor-pointer   flex  gap-3 ${
+                className={`cursor-pointer   flex  gap-3 items-center ${
                   active === "Experience" ? "active" : ""
                 }`}
               >
@@ -312,12 +340,51 @@ const Nav = () => {
               </p>
               <p
                 onClick={() => {
+                  /* setActive("Notes");
+                setToggle(false);
+                scrollToSection("Notes");*/
+                  alert("Working on it...");
+                }}
+                className={`cursor-pointer flex gap-3 items-center ${
+                  active === "Notes" ? "active" : ""
+                }`}
+              >
+                <img
+                  loading="lazy"
+                  className="w-[3rem]"
+                  src="https://img.icons8.com/nolan/64/create-new.png"
+                  alt="new-post"
+                />
+                Free Notes
+              </p>
+              <p
+                onClick={() => {
+                  /* setActive("Blogs");
+                setToggle(false);
+                scrollToSection("Blogs");*/
+
+                  alert("Working on it...");
+                }}
+                className={`cursor-pointer flex gap-3 items-center ${
+                  active === "Blogs" ? "active" : ""
+                }`}
+              >
+                <img
+                  loading="lazy"
+                  className="w-[3rem]"
+                  src="https://img.icons8.com/nolan/64/bulleted-list.png"
+                  alt="new-post"
+                />
+                Blogs
+              </p>
+              <p
+                onClick={() => {
                   setActive("Contact");
 
                   setToggle(false);
                   scrollToSection("Contact");
                 }}
-                className={`cursor-pointer  flex  gap-3 ${
+                className={`cursor-pointer  flex  gap-3 items-center ${
                   active === "Contact" ? "active" : ""
                 }`}
               >
