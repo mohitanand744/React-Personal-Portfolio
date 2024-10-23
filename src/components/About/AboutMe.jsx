@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Button from "../common/Buttons/Button";
 import SectionHeading from "../common/Heading/SectionHeading";
+import DownloadButton from "../common/Buttons/DownloadButton";
 
 const AboutMe = () => {
   const [readMore, setReadMore] = useState(false);
@@ -69,13 +70,7 @@ const AboutMe = () => {
         </div>
 
         <div className="mt-10 lg:mt-20">
-          <Button
-            text={"Resume"}
-            url={
-              "https://drive.google.com/file/d/1J1PlHoE5eoPRQN5FRl2pD3tUIU5XwSOe/view?usp=drive_link"
-            }
-            img={"/download.png"}
-          />
+          <DownloadButton />
         </div>
       </div>
     </div>
