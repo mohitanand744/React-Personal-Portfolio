@@ -36,33 +36,34 @@ const Nav = () => {
           />
         </Link>
       </div>
-      {location.pathname === "/projects" && (
-        <div className="absolute w-full  right-0 left-0 top-32 sm:hidden">
-          <input
-            type="text"
-            value={userInput}
-            onChange={handleUserInput}
-            placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
-            className="w-full outline-none border-none py-6 px-6  backdrop-blur-sm bg-black/80  custom-shadow3 text-xl md:text-2xl relative rounded-b-2xl left-0 right-0 "
-          />
-          {userInput !== "" ? (
-            <img
-              loading="lazy"
-              className="absolute  top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
-              src="https://img.icons8.com/nolan/64/delete-sign.png"
-              alt="delete-sign"
-              onClick={() => setUserInput("")}
+      {location.pathname === "/projects" ||
+        (location.pathname === "/notes" && (
+          <div className="absolute w-full  right-0 left-0 top-32 sm:hidden">
+            <input
+              type="text"
+              value={userInput}
+              onChange={handleUserInput}
+              placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
+              className="w-full outline-none border-none py-6 px-6  backdrop-blur-sm bg-black/80  custom-shadow3 text-xl md:text-2xl relative rounded-b-2xl left-0 right-0 "
             />
-          ) : (
-            <img
-              loading="lazy"
-              className="absolute top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
-              src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
-              alt="search"
-            />
-          )}
-        </div>
-      )}
+            {userInput !== "" ? (
+              <img
+                loading="lazy"
+                className="absolute  top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
+                src="https://img.icons8.com/nolan/64/delete-sign.png"
+                alt="delete-sign"
+                onClick={() => setUserInput("")}
+              />
+            ) : (
+              <img
+                loading="lazy"
+                className="absolute top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
+                src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
+                alt="search"
+              />
+            )}
+          </div>
+        ))}
       <nav className="hidden sm:flex gap-8 text-xl md:text-3xl font-medium">
         {location.pathname === "/projects" ? (
           <>
@@ -163,10 +164,9 @@ const Nav = () => {
 
             <p
               onClick={() => {
-                /* setActive("Notes");
+                setActive("Notes");
                 setToggle(false);
-                scrollToSection("Notes");*/
-                alert("Working on it...");
+                scrollToSection("Notes");
               }}
               className={`cursor-pointer navlinks ${
                 active === "Notes" ? "active" : ""

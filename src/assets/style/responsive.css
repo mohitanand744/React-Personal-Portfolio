@@ -52,5 +52,28 @@
     display: none;
   }
 
+  /***** Notes Section *****/
+
+  #Notes {
+    .timestamp {
+      position: relative;
+
+      &::after {
+        content: "";
+        display: none;
+      }
+
+      button {
+        position: relative;
+
+        &::after {
+          content: "";
+          display: none;
+        }
+      }
+    }
+  }
+  /***** End Notes Section *****/
+
   /***** End Experience Section *****/
 }

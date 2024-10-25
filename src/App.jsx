@@ -6,6 +6,7 @@ import Experience from "./components/Experiences/Experience";
 import Projects from "./components/common/LatestProjects/Projects";
 import ContactForm from "./components/Contact/ContactForm";
 import useContextData from "./Hook/useContextData";
+import LatestNotes from "./components/FreeNotes/LatestNotes";
 
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);
@@ -33,6 +34,7 @@ function App() {
   const experience = useRef(null);
   const projects = useRef(null);
   const contact = useRef(null);
+  const notes = useRef(null);
 
   const handleScroll = () => {
     if (window.pageYOffset >= 130) {
@@ -53,6 +55,7 @@ function App() {
       { id: "Experience", container: experience },
       { id: "Projects", container: projects },
       { id: "Contact", container: contact },
+      { id: "Notes", container: notes },
     ];
 
     const observer = new IntersectionObserver(
@@ -138,6 +141,10 @@ function App() {
 
           <div id="Projects" ref={projects}>
             <Projects />
+          </div>
+
+          <div id="Notes" ref={notes}>
+            <LatestNotes />
           </div>
 
           <div id="Contact" ref={contact}>

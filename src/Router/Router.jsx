@@ -9,6 +9,7 @@ import App from "../App";
 import Layout from "./../Layout";
 import Error404 from "../Pages/Error404";
 import AllProjects from "../Pages/AllProjects";
+import Notes from "../Pages/Notes";
 
 const Router = () => {
   const router = createBrowserRouter(
@@ -16,6 +17,7 @@ const Router = () => {
       <Route path="/" element={<Layout />}>
         <Route index element={<App />} />
         <Route path="projects" element={<AllProjects />} />
+        <Route path="notes" element={<Notes />} />
         <Route path="*" element={<Error404 />} />
       </Route>
     )
