@@ -64,7 +64,7 @@ const LatestNotes = () => {
       >
         {/* Sidebar */}
         <div className="col-span-1 md:col-span-3">
-          <div className="flex flex-wrap md:flex-col gap-10 hide-ScrollBar text-3xl items-center overflow-x-scroll  text-white timestamp">
+          <div className="flex flex-wrap md:flex-nowrap md:flex-col gap-10 hide-ScrollBar text-3xl items-center overflow-x-scroll  text-white timestamp">
             <button className="title highLight-text w-[17rem] h-14 active:scale-[0.88] transition-all duration-300 text-xl sm:text-3xl ease rounded-3xl border-slate-600 custom-shadow2 border-b-2">
               JavaScript
             </button>

@@ -1,3 +1,28 @@
+@media screen and (width < 1300px) {
+  /***** Notes Section *****/
+
+  #Notes {
+    .timestamp {
+      position: relative;
+
+      &::after {
+        content: "";
+        display: none;
+      }
+
+      button {
+        position: relative;
+
+        &::after {
+          content: "";
+          display: none;
+        }
+      }
+    }
+  }
+  /***** End Notes Section *****/
+}
+
 @media screen and (width < 1023px) {
   /***** Experience Section *****/
 
@@ -51,29 +76,6 @@
   .followCursor {
     display: none;
   }
-
-  /***** Notes Section *****/
-
-  #Notes {
-    .timestamp {
-      position: relative;
-
-      &::after {
-        content: "";
-        display: none;
-      }
-
-      button {
-        position: relative;
-
-        &::after {
-          content: "";
-          display: none;
-        }
-      }
-    }
-  }
-  /***** End Notes Section *****/
 
   /***** End Experience Section *****/
 }
