@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "JavaScript Basic to Advanced Full Notes",
+    "description": "My JavaScript notes cover everything from the basics to advanced topics, including variables, data types, functions, DOM manipulation, ES6+ features, asynchronous programming, and more. Perfect for learners looking to master both fundamental and modern JavaScript concepts.",
+    "price": 149,
+    "image": "/js.png"
+  },
+  {
+    "id": 2,
+    "title": "React Essentials and Advanced Guide",
+    "description": "These notes dive into React essentials, from JSX and components to state management, hooks, and performance optimization. Ideal for developers aiming to build scalable and responsive applications with a solid understanding of React fundamentals and advanced concepts.",
+    "price": 139,
+    "image": "/react.png"
+  },
+  {
+    "id": 3,
+    "title": "Node.js Complete Developer Notes",
+    "description": "A comprehensive guide covering the basics of Node.js, asynchronous programming, REST API development, Express.js, MongoDB, and more. Perfect for backend developers eager to build server-side applications with Node.js and enhance their backend skills.",
+    "price": 169,
+    "image": "/node-js.png"
+  },
+  {
+    "id": 4,
+    "title": "Data Structures and Algorithms (DSA)",
+    "description": "Master DSA with these notes covering arrays, linked lists, trees, graphs, sorting, and searching algorithms. Suited for those preparing for technical interviews and keen to strengthen their problem-solving skills with hands-on examples in JavaScript.",
+    "price": 179,
+    "image": "/dsaIcon.png"
+  }
+]

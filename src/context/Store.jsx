@@ -4,6 +4,7 @@ import "aos/dist/aos.css";
 import skills from "./../Data/Skills.json";
 import experience from "./../Data/Experience.json";
 import projects from "./../Data/Projects.json";
+import Notes from "./../Data/Notes.json";
 import { useLocation } from "react-router-dom";
 
 export const Store = createContext();
@@ -54,6 +55,7 @@ const StoreProvider = ({ children }) => {
           active,
           setActive,
           scrollToSection,
+          Notes,
         }}
       >
         {children}

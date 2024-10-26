@@ -7,24 +7,11 @@ import Projects from "./components/common/LatestProjects/Projects";
 import ContactForm from "./components/Contact/ContactForm";
 import useContextData from "./Hook/useContextData";
 import LatestNotes from "./components/FreeNotes/LatestNotes";
+import CursorFollowing from "./components/CurserAnimations/CursorFollowing";
 
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);
   const { setActive } = useContextData();
-  const [mousePosition, setMousePosition] = useState({
-    x: 0,
-    y: 0,
-  });
-  const [mouseOut, setMouseOut] = useState(false);
-
-  // Storing Mouse Moves
-
-  const handleMouseMove = (e) => {
-    // Check if the device width is larger than 768px (you can adjust this for your mobile breakpoint)
-    if (window.innerWidth > 768) {
-      setMousePosition({ x: e.clientX, y: e.clientY });
-    }
-  };
 
   // Selecting Containers
 
@@ -75,19 +62,8 @@ function App() {
       }
     });
 
-    // tracking mouseMove
-    window.addEventListener("mousemove", handleMouseMove);
-
-    if (window.innerWidth > 768) {
-      window.addEventListener("mouseout", () => setMouseOut(true));
-      window.addEventListener("mouseover", () => setMouseOut(false));
-    }
-
     return () => {
       window.removeEventListener("scroll", handleScroll);
-      window.removeEventListener("mousemove", handleMouseMove);
-      window.removeEventListener("mouseout", () => setMouseOut(true));
-      window.removeEventListener("mouseover", () => setMouseOut(false));
       sections.forEach((section) => {
         if (section.container.current) {
           observer.unobserve(section.container.current);
@@ -114,15 +90,7 @@ function App() {
             alt="Go to Top"
           />
         )}
-        {!mouseOut && (
-          <div
-            className={`followCursor w-8 h-8 fixed rounded-full `}
-            style={{
-              top: `${mousePosition.y}px`,
-              left: `${mousePosition.x}px`,
-            }}
-          ></div>
-        )}
+        <CursorFollowing />
         <div className="w-full">
           <div id="Home" ref={home}>
             <Home />

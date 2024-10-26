@@ -14,6 +14,7 @@ const useContextData = () => {
     active,
     setActive,
     scrollToSection,
+    Notes,
   } = useContext(Store);
 
   return {
@@ -28,6 +29,7 @@ const useContextData = () => {
     active,
     setActive,
     scrollToSection,
+    Notes,
   };
 };
 
