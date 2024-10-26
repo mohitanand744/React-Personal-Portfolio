@@ -13,7 +13,7 @@ const AboutMe = () => {
   return (
     <div
       id="About"
-      className="about h-fit grid gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72 px-3 lg:px-10"
+      className="about h-fit grid w-[98%] md:w-[80%] lg:w-[98%] mx-auto gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72 px-3 lg:px-10"
     >
       <div className="col-span-5 p-2">
         <div
