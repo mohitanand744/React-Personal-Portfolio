@@ -34,7 +34,7 @@ const Experience = () => {
   const skillsUsed = skills.filter((skill) => skill.category === "frontend");
 
   return (
-    <div id="Experience" className="px-4 mt-36 md:my-44">
+    <div id="Experience" className="sm:px-4 mt-36 md:my-44">
       <center className="my-10 mx-auto w-[96%] lg:w-[44%]" data-aos="zoom-in">
         <SectionHeading text={"Experience"} />
         <p className="text-white text-xl lg:text-2xl">
@@ -72,10 +72,10 @@ const Experience = () => {
             key={index}
             className="experienceBox custom-shadow p-7 sm:p-10 mx-auto text-white w-[100%] md:w-[90.4%] backdrop-blur-sm bg-black/40 rounded-3xl flex-none"
           >
-            <div className="flex gap-4 mb-5 w-full">
+            <div className="flex gap-4 flex-wrap  sm:flex-nowrap  mb-5 w-full">
               <img
                 loading="lazy"
-                className="w-[4rem] h-[3rem] lg:h-[4rem] my-auto lg:w-[6rem] object-cover"
+                className="w-[4rem] h-[4rem] sm:h-[3rem] lg:h-[4rem] my-auto lg:w-[6rem] object-cover"
                 src={experienceItem.logo}
                 alt={experienceItem.company}
               />
@@ -89,7 +89,7 @@ const Experience = () => {
                 </p>
               </div>
               <div className="w-full">
-                <p className="float-end text-lg sm:text-xl lg:text-2xl">
+                <p className="sm:float-end text-lg sm:text-xl lg:text-2xl">
                   Role: {experienceItem.position}
                 </p>
               </div>

@@ -97,7 +97,7 @@ const Projects = () => {
 
       <div
         data-aos="flip-left"
-        className="scrollButtons w-[90%] relative lg:hidden my-6"
+        className="scrollButtons w-[95%] relative lg:hidden my-6"
       >
         {latestProjects.length <= 1 ? (
           ""
@@ -122,7 +122,7 @@ const Projects = () => {
       </div>
       <div
         ref={scrollContainer}
-        className={`latestWork w-[82%] md:w-[80%]  mx-auto ${
+        className={`latestWork w-[32rem] md:w-[80%]  mx-auto ${
           latestProjects.length <= 1 && "justify-center"
         } lg:justify-center my-28 hide-ScrollBar flex overflow-x-scroll overflow-y-hidden  lg:flex-wrap  gap-8`}
       >

@@ -83,27 +83,27 @@ const LatestNotes = () => {
                     src={note.image}
                     alt=""
                   />
-                  <h2 className="text-[1.7rem] md:text-4xl leading-[30px] text-white font-semibold highLight-text">
+                  <h2 className="text-[1.5rem] sm:text-[1.7rem] md:text-4xl leading-[30px] text-white font-semibold highLight-text">
                     {note.title}
                   </h2>
-                  <p className="text-xl md:text-3xl text-white">
+                  <p className="text-lg sm:text-xl md:text-2xl text-white">
                     {note.description}
                   </p>
                   <div className=" flex justify-between items-center gap-10 mt-5">
                     <div className="flex gap-5">
                       <FilterButtons
                         onClickFun={() => alert("Coming Soon")}
-                        customStyling={"w-[10rem] sm:w-[15rem]"}
+                        customStyling={"w-[9rem] sm:w-[15rem]"}
                         text={"Buy Notes"}
                       />
                       <FilterButtons
                         onClickFun={() => alert("Coming Soon")}
-                        customStyling={"w-[10rem] sm:w-[15rem]"}
+                        customStyling={"w-[9rem] sm:w-[15rem]"}
                         text={"Notes Demo"}
                       />
                     </div>
                     <div className="price me-6">
-                      <p className="text-3xl text-white highLight-text">
+                      <p className="text-2xl sm:text-3xl text-white highLight-text">
                         ₹ {note.price}
                       </p>
                     </div>
