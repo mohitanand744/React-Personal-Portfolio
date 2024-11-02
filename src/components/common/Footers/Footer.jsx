@@ -76,7 +76,7 @@ const Footer = () => {
             }}
             className={`cursor-pointer `}
           >
-            Free Notes
+            Dev Notes
           </p>
           <p
             onClick={() => {

@@ -172,7 +172,7 @@ const Nav = () => {
                 active === "Notes" ? "active" : ""
               }`}
             >
-              Free Notes
+              Dev Notes
             </p>
             <p
               onClick={() => {
@@ -222,13 +222,13 @@ const Nav = () => {
       {/* Mobile dropdown menu */}
       <div
         onClick={toggleMenu}
-        className={`fixed z-10 cursor-pointer top-0  right-0 h-[100vh]  w-full backdrop-blur-lg bg-black/50 overflow-hidden transition-all duration-[50ms] ${
-          toggle ? "opacity-100 left-0" : "opacity-0 -left-[100%]"
+        className={`fixed z-10 cursor-pointer top-0 h-[100vh] w-full backdrop-blur-lg bg-black/50 overflow-hidden ${
+          toggle ? "left-0" : " -left-[100%]"
         }`}
       >
         <div
-          className={`z-20 fixed top-[0rem] right-0 list-none w-[25rem]  py-8  px-10 h-[100vh] flex sm:hidden flex-col gap-6  text-3xl rounded-e-3xl custom-shadow3 cursor-default  backdrop-blur-sm bg-black/80 transition-all duration-300 ease-in-out overflow-hidden ${
-            toggle ? "opacity-100 left-0" : "opacity-0 -left-[100%]"
+          className={` fixed top-0  list-none w-[26rem] py-8 px-10 h-[100%] flex sm:hidden flex-col gap-6 text-3xl rounded-e-3xl custom-shadow3 cursor-default backdrop-blur-sm bg-black/80 transition-all duration-200 ease-linear overflow-hidden ${
+            toggle ? "left-0" : " -left-[100%]"
           }`}
           onClick={(e) => e.stopPropagation()}
         >
@@ -354,7 +354,7 @@ const Nav = () => {
                   src="https://img.icons8.com/nolan/64/create-new.png"
                   alt="new-post"
                 />
-                Free Notes
+                Dev Notes
               </p>
               <p
                 onClick={() => {
