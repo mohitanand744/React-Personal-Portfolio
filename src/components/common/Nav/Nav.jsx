@@ -25,7 +25,7 @@ const Nav = () => {
   }, [userInput]);
 
   return (
-    <header className="flex justify-between items-center text-white px-10 py-8 backdrop-blur-sm bg-black/30 rounded-b-3xl sticky top-0 z-50 w-full">
+    <header className="sticky top-0 z-50 flex items-center justify-between w-full px-10 py-8 text-white backdrop-blur-sm bg-black/30 rounded-b-3xl">
       <div className="bg-white rounded-full">
         <Link to={"/"}>
           <img
@@ -36,35 +36,34 @@ const Nav = () => {
           />
         </Link>
       </div>
-      {location.pathname === "/projects" ||
-        (location.pathname === "/notes" && (
-          <div className="absolute w-full  right-0 left-0 top-32 sm:hidden">
-            <input
-              type="text"
-              value={userInput}
-              onChange={handleUserInput}
-              placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
-              className="w-full outline-none border-none py-6 px-6  backdrop-blur-sm bg-black/80  custom-shadow3 text-xl md:text-2xl relative rounded-b-2xl left-0 right-0 "
+      {location.pathname === "/projects" && (
+        <div className="absolute left-0 right-0 block w-full top-32 sm:hidden">
+          <input
+            type="text"
+            value={userInput}
+            onChange={handleUserInput}
+            placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
+            className="relative left-0 right-0 w-full px-6 py-6 text-xl border-b-[1px]  rounded-2xl outline-none backdrop-blur-sm bg-black/80 custom-shadow2 md:text-2xl"
+          />
+          {userInput !== "" ? (
+            <img
+              loading="lazy"
+              className="absolute  top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
+              src="https://img.icons8.com/nolan/64/delete-sign.png"
+              alt="delete-sign"
+              onClick={() => setUserInput("")}
             />
-            {userInput !== "" ? (
-              <img
-                loading="lazy"
-                className="absolute  top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
-                src="https://img.icons8.com/nolan/64/delete-sign.png"
-                alt="delete-sign"
-                onClick={() => setUserInput("")}
-              />
-            ) : (
-              <img
-                loading="lazy"
-                className="absolute top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
-                src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
-                alt="search"
-              />
-            )}
-          </div>
-        ))}
-      <nav className="hidden sm:flex gap-8 text-xl md:text-3xl font-medium">
+          ) : (
+            <img
+              loading="lazy"
+              className="absolute top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
+              src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
+              alt="search"
+            />
+          )}
+        </div>
+      )}
+      <nav className="hidden gap-8 text-xl font-medium sm:flex md:text-3xl">
         {location.pathname === "/projects" ? (
           <>
             <div className="relative">
@@ -73,7 +72,7 @@ const Nav = () => {
                 value={userInput}
                 onChange={handleUserInput}
                 placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
-                className="w-[38rem] md:w-[50rem] backdrop-blur-sm bg-black/60 outline-none border-none rounded-3xl py-5 px-6 custom-shadow3 md:text-2xl"
+                className="w-[38rem] md:w-[50rem] backdrop-blur-sm bg-black/60 outline-none border-t-[1px] border-b-[1px] rounded-3xl py-5 px-6 custom-shadow2 md:text-2xl"
               />
 
               {userInput !== "" ? (
@@ -240,163 +239,153 @@ const Nav = () => {
             onClick={toggleMenu}
           />
 
-          {location.pathname === "/projects" ? (
-            <>
-              <Link
-                to={"/"}
-                onClick={() => {
-                  setActive("Projects");
-                  setToggle(false);
-                  scrollToSection("Projects");
-                }}
-                className={`cursor-pointer mt-16  flex items-center gap-3`}
-              >
-                <img
-                  loading="lazy"
-                  className="w-[2.6rem]"
-                  src="https://img.icons8.com/nolan/64/home-page.png"
-                  alt="logout-rounded"
-                />
-                Home
-              </Link>
-            </>
-          ) : (
-            <>
-              <p
-                onClick={() => {
-                  setActive("About");
+          <Link>
+            <p
+              onClick={() => {
+                setActive("About");
 
-                  setToggle(false);
-                  scrollToSection("About");
-                }}
-                className={`cursor-pointer flex mt-16 gap-3 items-center ${
-                  active === "About" ? "active" : ""
-                }`}
-              >
-                <img
-                  loading="lazy"
-                  className="w-[3rem]"
-                  src="https://img.icons8.com/nolan/64/user-default.png"
-                  alt="user-default"
-                />{" "}
-                About
-              </p>
-              <p
-                onClick={() => {
-                  setActive("Skills");
+                setToggle(false);
+                scrollToSection("About");
+              }}
+              className={`cursor-pointer flex mt-16 gap-3 items-center ${
+                active === "About" ? "active" : ""
+              }`}
+            >
+              <img
+                loading="lazy"
+                className="w-[3rem]"
+                src="https://img.icons8.com/nolan/64/user-default.png"
+                alt="user-default"
+              />{" "}
+              About
+            </p>
+          </Link>
+          <Link>
+            <p
+              onClick={() => {
+                setActive("Skills");
 
-                  setToggle(false);
-                  scrollToSection("Skills");
-                }}
-                className={`cursor-pointer  flex  gap-3 items-center ${
-                  active === "Skills" ? "active" : ""
-                }`}
-              >
-                <img
-                  loading="lazy"
-                  className="w-[3rem]"
-                  src="https://img.icons8.com/nolan/64/internship.png"
-                  alt="user-settings"
-                />{" "}
-                Skills
-              </p>
-              <p
-                onClick={() => {
-                  setActive("Projects");
+                setToggle(false);
+                scrollToSection("Skills");
+              }}
+              className={`cursor-pointer  flex  gap-3 items-center ${
+                active === "Skills" ? "active" : ""
+              }`}
+            >
+              <img
+                loading="lazy"
+                className="w-[3rem]"
+                src="https://img.icons8.com/nolan/64/internship.png"
+                alt="user-settings"
+              />{" "}
+              Skills
+            </p>
+          </Link>
+          <Link>
+            <p
+              onClick={() => {
+                setActive("Projects");
 
-                  setToggle(false);
-                  scrollToSection("Projects");
-                }}
-                className={`cursor-pointer   flex  gap-3 items-center ${
-                  active === "Projects" ? "active" : ""
-                }`}
-              >
-                <img
-                  loading="lazy"
-                  className="w-[3rem]"
-                  src="https://img.icons8.com/nolan/64/group-of-projects.png"
-                  alt="group-of-projects"
-                />{" "}
-                Projects
-              </p>
-              <p
-                onClick={() => {
-                  setActive("Experience");
+                setToggle(false);
+                scrollToSection("Projects");
+              }}
+              className={`cursor-pointer   flex  gap-3 items-center ${
+                active === "Projects" ? "active" : ""
+              }`}
+            >
+              <img
+                loading="lazy"
+                className="w-[3rem]"
+                src="https://img.icons8.com/nolan/64/group-of-projects.png"
+                alt="group-of-projects"
+              />{" "}
+              Projects
+            </p>
+          </Link>
+          <Link>
+            <p
+              onClick={() => {
+                setActive("Experience");
 
-                  setToggle(false);
-                  scrollToSection("Experience");
-                }}
-                className={`cursor-pointer   flex  gap-3 items-center ${
-                  active === "Experience" ? "active" : ""
-                }`}
-              >
-                <img
-                  loading="lazy"
-                  className="w-[3rem]"
-                  src="https://img.icons8.com/nolan/64/parse-resumes.png"
-                  alt="parse-resumes"
-                />{" "}
-                Experience
-              </p>
-              <p
-                onClick={() => {
-                  setActive("Notes");
-                  setToggle(false);
-                  scrollToSection("Notes");
-                }}
-                className={`cursor-pointer flex gap-3 items-center ${
-                  active === "Notes" ? "active" : ""
-                }`}
-              >
-                <img
-                  loading="lazy"
-                  className="w-[3rem]"
-                  src="https://img.icons8.com/nolan/64/create-new.png"
-                  alt="new-post"
-                />
-                Dev Notes
-              </p>
-              <p
-                onClick={() => {
-                  /* setActive("Blogs");
+                setToggle(false);
+                scrollToSection("Experience");
+              }}
+              className={`cursor-pointer   flex  gap-3 items-center ${
+                active === "Experience" ? "active" : ""
+              }`}
+            >
+              <img
+                loading="lazy"
+                className="w-[3rem]"
+                src="https://img.icons8.com/nolan/64/parse-resumes.png"
+                alt="parse-resumes"
+              />{" "}
+              Experience
+            </p>
+          </Link>
+          <Link>
+            <p
+              onClick={() => {
+                setActive("Notes");
+                setToggle(false);
+                scrollToSection("Notes");
+              }}
+              className={`cursor-pointer flex gap-3 items-center ${
+                active === "Notes" ? "active" : ""
+              }`}
+            >
+              <img
+                loading="lazy"
+                className="w-[3rem]"
+                src="https://img.icons8.com/nolan/64/create-new.png"
+                alt="new-post"
+              />
+              Dev Notes
+            </p>
+          </Link>
+          <Link>
+            <p
+              onClick={() => {
+                /* setActive("Blogs");
                 setToggle(false);
                 scrollToSection("Blogs");*/
 
-                  alert("Working on it...");
-                }}
-                className={`cursor-pointer flex gap-3 items-center ${
-                  active === "Blogs" ? "active" : ""
-                }`}
-              >
-                <img
-                  loading="lazy"
-                  className="w-[3rem]"
-                  src="https://img.icons8.com/nolan/64/bulleted-list.png"
-                  alt="new-post"
-                />
-                Blogs
-              </p>
-              <p
-                onClick={() => {
-                  setActive("Contact");
+                alert("Working on it...");
+              }}
+              className={`cursor-pointer flex gap-3 items-center ${
+                active === "Blogs" ? "active" : ""
+              }`}
+            >
+              <img
+                loading="lazy"
+                className="w-[3rem]"
+                src="https://img.icons8.com/nolan/64/bulleted-list.png"
+                alt="new-post"
+              />
+              Blogs
+            </p>
+          </Link>
+          <Link>
+            <p
+              onClick={() => {
+                setActive("Contact");
 
-                  setToggle(false);
-                  scrollToSection("Contact");
-                }}
-                className={`cursor-pointer  flex  gap-3 items-center ${
-                  active === "Contact" ? "active" : ""
-                }`}
-              >
-                <img
-                  loading="lazy"
-                  className="w-[3rem]"
-                  src="https://img.icons8.com/nolan/64/new-post.png"
-                  alt="new-post"
-                />{" "}
-                Contact
-              </p>
-            </>
-          )}
+                setToggle(false);
+                scrollToSection("Contact");
+              }}
+              className={`cursor-pointer  flex  gap-3 items-center ${
+                active === "Contact" ? "active" : ""
+              }`}
+            >
+              <img
+                loading="lazy"
+                className="w-[3rem]"
+                src="https://img.icons8.com/nolan/64/new-post.png"
+                alt="new-post"
+              />{" "}
+              Contact
+            </p>
+          </Link>
         </div>
       </div>
     </header>

@@ -4,6 +4,7 @@ import useContextData from "../Hook/useContextData";
 import Card from "../components/Cards/Card";
 import Pagination from "../components/Paginations/Pagination";
 import ProjectsNotFound from "../components/Errors/ProjectsNotFound";
+import CursorFollowing from "../components/CurserAnimations/CursorFollowing";
 
 const AllProjects = () => {
   const { projects, userInput } = useContextData();
@@ -71,14 +72,16 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
 
   return (
     <div id="Home" className="allProjects min-h-[100vh] px-10">
+      <CursorFollowing />
+
       <center
         className="mt-32 sm:mt-16 mx-auto w-[96%] lg:w-[44%]"
         data-aos="zoom-in"
       >
         <SectionHeading text={"All Projects"} />
 
-        <div className="flex justify-center flex-wrap items-center my-6 gap-3">
-          <p className="text-white text-xl lg:text-2xl flex items-center justify-center gap-5">
+        <div className="flex flex-wrap items-center justify-center gap-3 my-6">
+          <p className="flex items-center justify-center gap-5 text-xl text-white lg:text-2xl">
             Source Code
             <img
               className=" w-[1rem] h-[2rem] movingRight"
@@ -86,7 +89,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
             />
             <a
               href="https://github.com/mohitanand744"
-              className="activeName flex items-center gap-2"
+              className="flex items-center gap-2 activeName"
               target="_blank"
             >
               GitHub
@@ -94,7 +97,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
             </a>
           </p>
 
-          <p className="text-2xl  text-white">
+          <p className="text-2xl text-white">
             Total Projects: {filterProject.length}
           </p>
         </div>
