@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import useContextData from "../../../Hook/useContextData";
 
 const Nav = () => {
@@ -13,6 +13,7 @@ const Nav = () => {
   } = useContextData();
   const [toggle, setToggle] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = (e) => {
     e.stopPropagation();
@@ -36,6 +37,7 @@ const Nav = () => {
           />
         </Link>
       </div>
+      {/* Mobile Searching... */}
       {location.pathname === "/projects" && (
         <div className="absolute left-0 right-0 block w-full top-32 sm:hidden">
           <input
@@ -63,52 +65,113 @@ const Nav = () => {
           )}
         </div>
       )}
-      <nav className="hidden gap-8 text-xl font-medium sm:flex md:text-3xl">
+      <nav className="items-center hidden gap-8 text-xl font-medium md:flex md:text-3xl">
         {location.pathname === "/projects" ? (
           <>
-            <div className="relative">
-              <input
-                type="text"
-                value={userInput}
-                onChange={handleUserInput}
-                placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
-                className="w-[38rem] md:w-[50rem] backdrop-blur-sm bg-black/60 outline-none border-t-[1px] border-b-[1px] rounded-3xl py-5 px-6 custom-shadow2 md:text-2xl"
-              />
-
-              {userInput !== "" ? (
-                <img
-                  loading="lazy"
-                  className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
-                  src="https://img.icons8.com/nolan/64/delete-sign.png"
-                  alt="delete-sign"
-                  onClick={() => setUserInput("")}
-                />
-              ) : (
-                <img
-                  loading="lazy"
-                  className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
-                  src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
-                  alt="search"
-                />
-              )}
-            </div>
-            <Link
-              to={"/"}
+            <p
               onClick={() => {
+                navigate("/");
+                setActive("About");
+
+                setToggle(false);
+                scrollToSection("About");
+              }}
+              className={`cursor-pointer navlinks ${
+                active === "About" ? "active" : ""
+              }`}
+            >
+              About
+            </p>
+            <p
+              onClick={() => {
+                navigate("/");
+                setActive("Skills");
+
+                setToggle(false);
+                scrollToSection("Skills");
+              }}
+              className={`cursor-pointer navlinks ${
+                active === "Skills" ? "active" : ""
+              }`}
+            >
+              Skills
+            </p>
+
+            <p
+              onClick={() => {
+                navigate("/");
                 setActive("Projects");
+
                 setToggle(false);
                 scrollToSection("Projects");
               }}
-              className={`cursor-pointer navlinks flex items-center gap-3`}
+              className={`cursor-pointer navlinks  ${
+                active === "Projects" ? "active" : ""
+              }`}
             >
-              Home
-              <img
-                loading="lazy"
-                className="w-[2rem] md:w-[3.3rem]"
-                src="https://img.icons8.com/nolan/64/home-page.png"
-                alt="logout-rounded"
-              />
-            </Link>
+              Projects
+            </p>
+
+            <p
+              onClick={() => {
+                navigate("/");
+                setActive("Experience");
+
+                setToggle(false);
+                scrollToSection("Experience");
+              }}
+              className={`cursor-pointer navlinks ${
+                active === "Experience" ? "active" : ""
+              }`}
+            >
+              Experience
+            </p>
+
+            <p
+              onClick={() => {
+                navigate("/");
+                setActive("Notes");
+                setToggle(false);
+                scrollToSection("Notes");
+              }}
+              className={`cursor-pointer navlinks  ${
+                active === "Notes" ? "active" : ""
+              }`}
+            >
+              Dev Notes
+            </p>
+
+            <p
+              onClick={() => {
+                /* 
+                  navigate("/")
+                  setActive("Blogs");
+                setToggle(false);
+                scrollToSection("Blogs");*/
+
+                alert("Working on it...");
+              }}
+              className={`cursor-pointer navlinks  ${
+                active === "Blogs" ? "active" : ""
+              }`}
+            >
+              Blogs
+            </p>
+
+            <p
+              onClick={() => {
+                navigate("/");
+                setActive("Contact");
+
+                setToggle(false);
+                scrollToSection("Contact");
+              }}
+              className={`cursor-pointer navlinks  ${
+                active === "Contact" ? "active" : ""
+              }`}
+            >
+              Contact
+            </p>
           </>
         ) : (
           <>
@@ -207,7 +270,7 @@ const Nav = () => {
       {/* Mobile menu toggle */}
       <div
         className="block w-[4rem] h-[4rem] 
-          sm:hidden cursor-pointer"
+          md:hidden cursor-pointer"
       >
         <img
           loading="lazy"
@@ -218,7 +281,7 @@ const Nav = () => {
         />
       </div>
 
-      {/* Mobile dropdown menu */}
+      {/* Mobile  menu */}
       <div
         onClick={toggleMenu}
         className={`fixed z-10 cursor-pointer top-0 h-[100vh] w-full backdrop-blur-lg bg-black/50 overflow-hidden ${

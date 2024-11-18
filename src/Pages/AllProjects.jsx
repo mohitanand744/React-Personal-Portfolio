@@ -7,7 +7,8 @@ import ProjectsNotFound from "../components/Errors/ProjectsNotFound";
 import CursorFollowing from "../components/CurserAnimations/CursorFollowing";
 
 const AllProjects = () => {
-  const { projects, userInput } = useContextData();
+  const { projects, userInput, handleUserInput, setUserInput } =
+    useContextData();
   const [isExpanded, setIsExpanded] = useState(null);
   const [readMore, setReadMore] = useState(false);
 
@@ -16,7 +17,15 @@ const AllProjects = () => {
   // Pagination States
 
   const [currentPage, setCurrentPage] = useState(1);
-  const projectsPerPage = 8;
+  const [projectsPerPage, setProjectsPerPage] = useState(
+    window.innerWidth < 848 ? 4 : 8
+  );
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setProjectsPerPage(window.innerWidth < 848 ? 4 : 8);
+    });
+  }, []);
 
   useEffect(() => {
     setCurrentPage(1);
@@ -75,35 +84,68 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
       <CursorFollowing />
 
       <center
-        className="mt-32 sm:mt-16 mx-auto w-[96%] lg:w-[44%]"
+        className="flex flex-wrap items-center justify-between px-3 mt-32 sm:mt-16 "
         data-aos="zoom-in"
       >
-        <SectionHeading text={"All Projects"} />
+        <div className="mx-auto text-center sm:mx-0 sm:text-start">
+          <SectionHeading text={"All Projects"} />
 
-        <div className="flex flex-wrap items-center justify-center gap-3 my-6">
-          <p className="flex items-center justify-center gap-5 text-xl text-white lg:text-2xl">
-            Source Code
-            <img
-              className=" w-[1rem] h-[2rem] movingRight"
-              src="/download.png"
+          <div className="gap-3 mb-6 ">
+            <p className="flex items-center justify-center gap-5 text-xl text-white lg:text-2xl">
+              Source Code
+              <img
+                className=" w-[1rem] h-[2rem] movingRight"
+                src="/download.png"
+              />
+              <a
+                href="https://github.com/mohitanand744"
+                className="flex items-center gap-2 activeName"
+                target="_blank"
+              >
+                GitHub
+                <img src="/github.png" className="w-[3.6rem]" alt="github" />
+              </a>
+            </p>
+          </div>
+        </div>
+
+        <div className="text-end">
+          <div className="relative hidden sm:block">
+            <input
+              type="text"
+              value={userInput}
+              onChange={handleUserInput}
+              placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
+              className="w-[38rem] sm:w-[30rem] md:w-[40rem] text-white backdrop-blur-sm bg-black/60 outline-none border-t-[1px] border-b-[1px] rounded-3xl py-5 px-6 custom-shadow2 md:text-2xl"
             />
-            <a
-              href="https://github.com/mohitanand744"
-              className="flex items-center gap-2 activeName"
-              target="_blank"
-            >
-              GitHub
-              <img src="/github.png" className="w-[3.6rem]" alt="github" />
-            </a>
-          </p>
 
-          <p className="text-2xl text-white">
-            Total Projects: {filterProject.length}
+            {userInput !== "" ? (
+              <img
+                loading="lazy"
+                className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
+                src="https://img.icons8.com/nolan/64/delete-sign.png"
+                alt="delete-sign"
+                onClick={() => setUserInput("")}
+              />
+            ) : (
+              <img
+                loading="lazy"
+                className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
+                src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
+                alt="search"
+              />
+            )}
+          </div>
+          <p className="mt-10 text-[2rem] text-white">
+            Total Projects:{" "}
+            <span className="font-medium text-green-400">
+              {filterProject.length}
+            </span>
           </p>
         </div>
       </center>
 
-      <div className="flex flex-wrap justify-center gap-10 my-16">
+      <div className="flex flex-wrap justify-center gap-10 mt-8 mb-16">
         {filterProject.length > 0 ? (
           sliceProjects.map((project, i) => (
             <Card
