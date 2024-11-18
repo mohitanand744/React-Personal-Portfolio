@@ -84,7 +84,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
       <CursorFollowing />
 
       <center
-        className="flex flex-wrap items-center justify-between px-3 mt-32 sm:mt-16 "
+        className="flex flex-wrap items-center justify-between gap-5 px-3 mt-32 sm:mt-16 "
         data-aos="zoom-in"
       >
         <div className="mx-auto text-center sm:mx-0 sm:text-start">
