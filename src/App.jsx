@@ -3,11 +3,11 @@ import AboutMe from "./components/About/AboutMe";
 import Home from "./components/Home/Home";
 import Skill from "./components/Skills/Skill";
 import Experience from "./components/Experiences/Experience";
-import Projects from "./components/common/LatestProjects/Projects";
 import ContactForm from "./components/Contact/ContactForm";
 import useContextData from "./Hook/useContextData";
 import LatestNotes from "./components/FreeNotes/LatestNotes";
 import CursorFollowing from "./components/CurserAnimations/CursorFollowing";
+import Projects from "./components/LatestProjects/Projects";
 
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);

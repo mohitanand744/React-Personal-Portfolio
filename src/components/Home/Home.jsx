@@ -3,13 +3,13 @@ import Button from "../common/Buttons/Button";
 
 const Home = () => {
   return (
-    <div id="Home" className="hero mt-32 lg:mt-64 px-3 lg:px-10">
+    <div id="Home" className="px-3 mt-32 hero lg:mt-64 lg:px-10">
       <div
         data-aos="zoom-in"
-        className="grid gap-10 grid-cols-1 lg:grid-cols-12"
+        className="grid grid-cols-1 gap-10 lg:grid-cols-12"
       >
         <div className="lg:col-span-7 h-[48vh] order-2 lg:order-1">
-          <div className="flex justify-center items-center gap-3 h-full ">
+          <div className="flex items-center justify-center h-full gap-3 ">
             <ul className="list-none flex flex-col w-[7rem] md:w-[6rem] gap-2">
               <li>
                 <a
@@ -18,7 +18,6 @@ const Home = () => {
                 >
                   {" "}
                   <img
-                    loading="lazy"
                     className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
                     src="/linkedin.png"
                     alt="icon"
@@ -29,7 +28,6 @@ const Home = () => {
                 <a target="_blank" href="https://github.com/mohitanand744">
                   {" "}
                   <img
-                    loading="lazy"
                     className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
                     src="/github.png"
                     alt="icon"
@@ -41,7 +39,6 @@ const Home = () => {
                 <a target="_blank" href="mailto:anandmohit744@gmail.com">
                   {" "}
                   <img
-                    loading="lazy"
                     className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
                     src="email.png"
                     alt="icon"
@@ -64,7 +61,7 @@ const Home = () => {
                 Frontend Developer @WeboConnect | Teamwork Makes The Dream work.
               </p>
 
-              <div className="flex gap-3 lg:gap-5 text-white mt-4">
+              <div className="flex gap-3 mt-4 text-white lg:gap-5">
                 <Button
                   text={"Hire me"}
                   url={"https://www.linkedin.com/in/mohit-anand-developer"}
@@ -77,15 +74,14 @@ const Home = () => {
             </div>
           </div>
         </div>
-        <div className="lg:col-span-5 order-1 lg:order-2">
+        <div className="order-1 lg:col-span-5 lg:order-2">
           <div
             data-aos="flip-right"
-            className="flex justify-center items-center "
+            className="flex items-center justify-center "
           >
             <div className="ms-2 profileImageContainer w-[26rem] md:w-[38rem] h-[26rem] md:h-[38rem] rounded-full">
               <img
-                loading="lazy"
-                className="w-full h-full rounded-full object-cover"
+                className="object-cover w-full h-full rounded-full"
                 src="/hero-profile.jpeg"
                 alt=""
               />

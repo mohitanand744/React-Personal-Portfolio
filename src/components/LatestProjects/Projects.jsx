@@ -1,9 +1,9 @@
 import React, { useRef, useState } from "react";
-import SectionHeading from "../Heading/SectionHeading";
-import useContextData from "../../../Hook/useContextData";
-import Button from "../Buttons/Button";
+import SectionHeading from "../common/Heading/SectionHeading";
+import useContextData from "../../Hook/useContextData";
+import Button from "../common/Buttons/Button";
 import { Link } from "react-router-dom";
-import Card from "../../Cards/Card";
+import Card from "../Cards/Card";
 
 const Projects = () => {
   const { projects } = useContextData();

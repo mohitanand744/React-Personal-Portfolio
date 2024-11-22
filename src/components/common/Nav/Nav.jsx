@@ -30,7 +30,6 @@ const Nav = () => {
       <div className="bg-white rounded-full">
         <Link to={"/"}>
           <img
-            loading="lazy"
             src="/logo2.png"
             className="w-[4.5rem] md:w-[5.7rem]"
             alt="logo"
@@ -49,7 +48,6 @@ const Nav = () => {
           />
           {userInput !== "" ? (
             <img
-              loading="lazy"
               className="absolute  top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
               src="https://img.icons8.com/nolan/64/delete-sign.png"
               alt="delete-sign"
@@ -57,7 +55,6 @@ const Nav = () => {
             />
           ) : (
             <img
-              loading="lazy"
               className="absolute top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
               src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
               alt="search"
@@ -273,7 +270,6 @@ const Nav = () => {
           md:hidden cursor-pointer"
       >
         <img
-          loading="lazy"
           className="menu w-full h-full object-cover  active:rotate-[360deg] transition-all duration-500 ease-linear cursor-pointer"
           src="./menu.png"
           alt="menu"
@@ -295,7 +291,6 @@ const Nav = () => {
           onClick={(e) => e.stopPropagation()}
         >
           <img
-            loading="lazy"
             className="w-[2rem] cursor-pointer absolute right-8 "
             src="https://img.icons8.com/nolan/64/delete-sign.png"
             alt="delete-sign"
@@ -315,7 +310,6 @@ const Nav = () => {
               }`}
             >
               <img
-                loading="lazy"
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/user-default.png"
                 alt="user-default"
@@ -336,7 +330,6 @@ const Nav = () => {
               }`}
             >
               <img
-                loading="lazy"
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/internship.png"
                 alt="user-settings"
@@ -357,7 +350,6 @@ const Nav = () => {
               }`}
             >
               <img
-                loading="lazy"
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/group-of-projects.png"
                 alt="group-of-projects"
@@ -378,7 +370,6 @@ const Nav = () => {
               }`}
             >
               <img
-                loading="lazy"
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/parse-resumes.png"
                 alt="parse-resumes"
@@ -398,7 +389,6 @@ const Nav = () => {
               }`}
             >
               <img
-                loading="lazy"
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/create-new.png"
                 alt="new-post"
@@ -420,7 +410,6 @@ const Nav = () => {
               }`}
             >
               <img
-                loading="lazy"
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/bulleted-list.png"
                 alt="new-post"
@@ -441,7 +430,6 @@ const Nav = () => {
               }`}
             >
               <img
-                loading="lazy"
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/new-post.png"
                 alt="new-post"

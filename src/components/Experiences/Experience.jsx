@@ -75,7 +75,9 @@ const Experience = () => {
             <div className="flex flex-wrap w-full gap-4 mb-5 sm:flex-nowrap">
               <img
                 loading="lazy"
-                className="w-[4rem] h-[4rem] sm:h-[3rem] lg:h-[4rem] my-auto lg:w-[6rem] object-cover"
+                className={`${
+                  experienceItem.company === "WeboConnect" ? "" : "w-[3.9rem]"
+                } h-[4rem] sm:h-[3rem] lg:h-[4rem] my-auto lg:w-[6rem] object-cover`}
                 src={experienceItem.logo}
                 alt={experienceItem.company}
               />
