@@ -18,11 +18,11 @@ const AboutMe = () => {
       <div className="col-span-5 p-2">
         <div
           data-aos="flip-left"
-          className="flex lg:justify-center items-center"
+          className="flex items-center lg:justify-center"
         >
           <img
             loading="lazy"
-            className="profileImageContainer text-center w-[20rem] md:w-[30rem] md:h-[40rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover"
+            className="profileImageContainer text-center w-[20rem] md:w-[25rem] md:h-[32rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover"
             src="/p2.jpg"
             alt=""
           />
@@ -51,7 +51,7 @@ const AboutMe = () => {
             </p>
           </div>
         </div>
-        <div className="mt-10 lg:mt-16  text-2xl lg:text-3xl text-white lg:pr-28">
+        <div className="mt-10 text-2xl text-white lg:mt-16 lg:text-3xl lg:pr-28">
           <p>
             A dedicated Frontend Developer with hands-on experience in building
             scalable web applications using React.js, Bootstrap, and Tailwind
@@ -61,7 +61,7 @@ const AboutMe = () => {
             {readMore &&
               "Transitioning into programming after overcoming a spinal cord injury, I bring resilience, adaptability, and a passion for creating impactful web solutions. I am continually expanding my skills, currently learning backend technologies to further enrich my projects."}{" "}
             <span
-              className="highLight-text cursor-pointer"
+              className="cursor-pointer highLight-text"
               onClick={readMoreText}
             >
               {readMore ? "read less" : "read more"}

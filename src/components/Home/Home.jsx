@@ -16,9 +16,8 @@ const Home = () => {
                   target="_blank"
                   href="https://www.linkedin.com/in/mohit-anand-developer"
                 >
-                  {" "}
                   <img
-                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem]"
                     src="/linkedin.png"
                     alt="icon"
                   />
@@ -48,17 +47,18 @@ const Home = () => {
             </ul>
 
             <div className="head">
-              <h1 className="font-bold text-white text-[3rem] sm:text-[3rem] md:text-[5rem] leading-10  md:leading-[4rem] lg:leading-[5rem]">
+              <h1 className="font-bold text-white text-[3rem] sm:text-[3rem] md:text-[4rem] xl:text-[5rem] leading-10  md:leading-[4rem] lg:leading-[5rem]">
                 Hi There, I'm <span className="highLight-text ">Mohit</span>{" "}
                 <br />{" "}
-                <span className=" text-[2rem] sm:text-[2.3rem] md:text-[3.8rem] ">
+                <span className=" text-[2rem] sm:text-[2.3rem] md:text-[3rem] xl:text-[3.8rem]">
                   {" "}
                   a <span className="highLight-text">Web Developer</span>
                 </span>
               </h1>
 
               <p className="text-white text-[1.5rem] sm:text-md md:text-3xl mt-5">
-                Frontend Developer @WeboConnect | Teamwork Makes The Dream work.
+                Frontend Developer @WeboConnect | Learning MERN | Teamwork Makes
+                The Dream work.
               </p>
 
               <div className="flex gap-3 mt-4 text-white lg:gap-5">
@@ -79,7 +79,7 @@ const Home = () => {
             data-aos="flip-right"
             className="flex items-center justify-center "
           >
-            <div className="ms-2 profileImageContainer w-[26rem] md:w-[38rem] h-[26rem] md:h-[38rem] rounded-full">
+            <div className="ms-2 profileImageContainer w-[26rem] md:w-[30rem] lg:w-[35rem] h-[26rem] md:h-[30rem] lg:h-[35rem] rounded-full">
               <img
                 className="object-cover w-full h-full rounded-full"
                 src="/hero-profile.jpeg"

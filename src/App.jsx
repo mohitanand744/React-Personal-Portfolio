@@ -8,6 +8,7 @@ import useContextData from "./Hook/useContextData";
 import LatestNotes from "./components/FreeNotes/LatestNotes";
 import CursorFollowing from "./components/CurserAnimations/CursorFollowing";
 import Projects from "./components/LatestProjects/Projects";
+import RealWorldExperience from "./components/RealWorldExperineceData/RealWorldExperience";
 
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);
