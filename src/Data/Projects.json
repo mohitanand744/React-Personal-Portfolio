@@ -1,5 +1,19 @@
 [
   {
+    "title": "Pokémon World",
+    "description": "React project that dynamically displays Pokémon data by leveraging the Pokémon API, and I’m thrilled with the results!This project was a great learning experience, combining API integration with reusable and scalable React components.Check out the demo look of the website",
+    "skills": [
+      "React",
+      "Tailwind",
+      "Axios"
+    ],
+    "live_url": "https://pokiworld.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/pokiWorld.git",
+    "image": "/pokiWorld .png",
+    "projectTime": "Latest",
+    "category": "Frontend"
+  },
+  {
     "title": "Social media (memo)",
     "description": "I’ve built a social media web app using React, Tailwind CSS, and Bootstrap, where users can create accounts, log in, upload posts, and customize profiles, with data managed through local storage. Right now, it’s frontend-only, but I’m learning backend development to add more features using Node.js and Express.",
     "skills": [
@@ -154,8 +168,8 @@
     "skills": [
       "React"
     ],
-    "live_url": "https://todo-app-mohit-anand.netlify.app",
-    "github_url": "https://github.com/mohitanand744/TODO-WEB-APP.git",
+    "live_url": "https://todo-using-vite.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/TODO-App-Using-React.git",
     "image": "/react TODO.png",
     "projectTime": "",
     "category": "Frontend"

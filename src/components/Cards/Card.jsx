@@ -16,12 +16,12 @@ const Card = ({
   return (
     <div
       data-aos="flip-left"
-      className="projectBox rounded-3xl flex flex-col justify-between gap-6 py-8 p-6 custom-shadow w-[35rem] h-fit"
+      className="projectBox rounded-3xl flex flex-col items-start justify-between gap-6 py-8 p-6 custom-shadow w-[35rem] h-fit"
     >
       <div className="imgContainer   w-[97%] h-[15rem] md:h-[20rem] mx-auto">
         <img
           loading="lazy"
-          className="w-full h-full rounded-3xl object-cover"
+          className="object-cover w-full h-full rounded-3xl"
           src={image}
           alt=""
         />
@@ -44,9 +44,9 @@ const Card = ({
         </p>
       </div>
       <div className="flex flex-wrap gap-2 px-3">
-        <h2 className="text-white text-xl sm:text-2xl">Skills Used :</h2>
-        <div className=" flex items-center flex-wrap">
-          <p className="text-center text-white  flex flex-wrap w-full text-xl lg:text-2xl">
+        <h2 className="text-xl text-white sm:text-2xl">Skills Used :</h2>
+        <div className="flex flex-wrap items-center ">
+          <p className="flex flex-wrap w-full text-xl text-center text-white lg:text-2xl">
             {skills.map((skill, i) => (
               <span key={i} className="me-1 ">
                 {skill},
@@ -56,7 +56,7 @@ const Card = ({
         </div>
       </div>
       {github_url && (
-        <div className="flex gap-5 justify-evenly text-white">
+        <div className="flex gap-5 text-white justify-evenly">
           <>
             <a href={live_url} target="_blank">
               <button
