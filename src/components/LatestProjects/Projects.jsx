@@ -41,16 +41,16 @@ const Projects = () => {
     const { offsetWidth } = container;
 
     container.scrollBy({
-      left: direction === "right" ? offsetWidth : -offsetWidth,
+      left: direction === "right" ? 320 : -320,
       behavior: "smooth",
     });
   };
 
   return (
-    <div id="Projects" className="projects mb-32 h-fit">
+    <div id="Projects" className="mb-32 projects h-fit">
       <center className="my-10 mx-auto w-[96%] lg:w-[44%]" data-aos="zoom-in">
         <SectionHeading text={"Latest Work"} />
-        <p className="text-white text-xl lg:text-2xl flex items-center justify-center gap-5">
+        <p className="flex items-center justify-center gap-5 text-xl text-white lg:text-2xl">
           Source Code
           <img
             loading="lazy"
@@ -59,7 +59,7 @@ const Projects = () => {
           />
           <a
             href="https://github.com/mohitanand744"
-            className="activeName flex items-center gap-2"
+            className="flex items-center gap-2 activeName"
             target="_blank"
           >
             GitHub

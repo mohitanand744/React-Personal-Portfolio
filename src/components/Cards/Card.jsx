@@ -16,9 +16,9 @@ const Card = ({
   return (
     <div
       data-aos="flip-left"
-      className="projectBox rounded-3xl flex flex-col items-start justify-between gap-6 py-8 p-6 custom-shadow w-[35rem] h-fit"
+      className="projectBox rounded-3xl flex flex-col items-start justify-between gap-6 py-8 p-6 custom-shadow w-[34rem] h-fit"
     >
-      <div className="imgContainer   w-[97%] h-[15rem] md:h-[20rem] mx-auto">
+      <div className="imgContainer   w-[97%] h-[17rem] md:h-[20rem] mx-auto">
         <img
           loading="lazy"
           className="object-cover w-full h-full rounded-3xl"
@@ -56,7 +56,7 @@ const Card = ({
         </div>
       </div>
       {github_url && (
-        <div className="flex gap-5 text-white justify-evenly">
+        <div className="flex gap-5 mx-auto text-white justify-evenly">
           <>
             <a href={live_url} target="_blank">
               <button
