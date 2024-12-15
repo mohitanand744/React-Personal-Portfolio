@@ -113,9 +113,9 @@ function App() {
             <Projects />
           </div>
 
-          <div id="Notes" ref={notes}>
+          {/*  <div id="Notes" ref={notes}>
             <LatestNotes />
-          </div>
+          </div> */}
 
           <div id="Contact" ref={contact}>
             <ContactForm />

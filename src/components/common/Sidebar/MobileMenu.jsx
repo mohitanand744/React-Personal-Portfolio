@@ -11,13 +11,13 @@ const MobileMenu = () => {
       {/* Mobile  menu */}
       <div
         onClick={toggleMenu}
-        className={`fixed z-40 cursor-pointer top-0 h-[100vh] w-full md:hidden backdrop-blur-lg bg-black/50 overflow-hidden ${
-          toggle ? "left-0" : " -left-[100%]"
+        className={`fixed   cursor-pointer top-0 h-[100vh] transition-all duration-300  w-full md:hidden backdrop-blur-lg bg-black/50 overflow-hidden ${
+          toggle ? "opacity-100 z-40" : " opacity-0 -z-50"
         }`}
       >
         <div
-          className={`z-50 fixed top-0 text-white list-none w-[26rem] py-8 px-10 h-[100%] flex md:hidden flex-col gap-6 text-3xl rounded-e-3xl custom-shadow3 cursor-default backdrop-blur-sm bg-black/80 transition-all duration-200 ease-linear overflow-hidden ${
-            toggle ? "left-0" : " -left-[100%]"
+          className={`z-50 fixed top-0 text-white list-none w-full py-8 px-10 rounded-b-[5rem] flex md:hidden flex-col gap-6 text-3xl duration-200 custom-shadow3 cursor-default backdrop-blur-sm bg-black/80 transition-all ease-in overflow-hidden ${
+            toggle ? "top-0" : " -top-[50rem]"
           }`}
           onClick={(e) => e.stopPropagation()}
         >
@@ -36,16 +36,16 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("About");
               }}
-              className={`cursor-pointer flex mt-16 gap-3 items-center ${
+              className={`cursor-pointer flex justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto mt-16 gap-16 items-center ${
                 active === "About" ? "active" : ""
               }`}
             >
+              About
               <img
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/user-default.png"
                 alt="user-default"
               />{" "}
-              About
             </p>
           </Link>
           <Link>
@@ -56,16 +56,16 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("Skills");
               }}
-              className={`cursor-pointer  flex  gap-3 items-center ${
+              className={`cursor-pointer justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
                 active === "Skills" ? "active" : ""
               }`}
             >
+              Skills
               <img
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/internship.png"
                 alt="user-settings"
               />{" "}
-              Skills
             </p>
           </Link>
           <Link>
@@ -76,16 +76,16 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("Projects");
               }}
-              className={`cursor-pointer   flex  gap-3 items-center ${
+              className={`cursor-pointer justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto  flex  gap-16 items-center ${
                 active === "Projects" ? "active" : ""
               }`}
             >
+              Projects
               <img
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/group-of-projects.png"
                 alt="group-of-projects"
               />{" "}
-              Projects
             </p>
           </Link>
           <Link>
@@ -96,16 +96,16 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("Experience");
               }}
-              className={`cursor-pointer   flex  gap-3 items-center ${
+              className={`cursor-pointer  justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
                 active === "Experience" ? "active" : ""
               }`}
             >
+              Experience
               <img
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/parse-resumes.png"
                 alt="parse-resumes"
               />{" "}
-              Experience
             </p>
           </Link>
           <Link>
@@ -115,16 +115,16 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("Notes");
               }}
-              className={`cursor-pointer flex gap-3 items-center ${
+              className={`cursor-pointer flex justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${
                 active === "Notes" ? "active" : ""
               }`}
             >
+              Dev Notes
               <img
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/create-new.png"
                 alt="new-post"
               />
-              Dev Notes
             </p>
           </Link>
           <Link>
@@ -136,16 +136,16 @@ const MobileMenu = () => {
 
                 alert("Working on it...");
               }}
-              className={`cursor-pointer flex gap-3 items-center ${
+              className={`cursor-pointer flex justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${
                 active === "Blogs" ? "active" : ""
               }`}
             >
+              Blogs
               <img
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/bulleted-list.png"
                 alt="new-post"
               />
-              Blogs
             </p>
           </Link>
           <Link>
@@ -156,16 +156,16 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("Contact");
               }}
-              className={`cursor-pointer  flex  gap-3 items-center ${
+              className={`cursor-pointer justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
                 active === "Contact" ? "active" : ""
               }`}
             >
+              Contact
               <img
                 className="w-[3rem]"
                 src="https://img.icons8.com/nolan/64/new-post.png"
                 alt="new-post"
               />{" "}
-              Contact
             </p>
           </Link>
         </div>

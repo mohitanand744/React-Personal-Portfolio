@@ -29,8 +29,6 @@ const Experience = () => {
     });
   };
 
-  console.log("hii");
-
   const skillsUsed = skills.filter((skill) => skill.category === "frontend");
 
   return (
