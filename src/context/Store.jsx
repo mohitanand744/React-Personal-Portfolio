@@ -13,6 +13,7 @@ const StoreProvider = ({ children }) => {
   const { pathname } = useLocation();
   const [userInput, setUserInput] = useState("");
   const [active, setActive] = useState("Home");
+  const [toggle, setToggle] = useState(false);
 
   const handleUserInput = (e) => {
     setUserInput(e.target.value.toLowerCase());
@@ -37,6 +38,11 @@ const StoreProvider = ({ children }) => {
       window.scrollTo({ top: y, behavior: "smooth" });
     }, 100);
   };
+  const toggleMenu = (e) => {
+    e.stopPropagation();
+
+    setToggle((toggle) => !toggle);
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -56,6 +62,9 @@ const StoreProvider = ({ children }) => {
           setActive,
           scrollToSection,
           Notes,
+          toggleMenu,
+          toggle,
+          setToggle,
         }}
       >
         {children}

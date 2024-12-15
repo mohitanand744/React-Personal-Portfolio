@@ -9,6 +9,7 @@ import LatestNotes from "./components/FreeNotes/LatestNotes";
 import CursorFollowing from "./components/CurserAnimations/CursorFollowing";
 import Projects from "./components/LatestProjects/Projects";
 import RealWorldExperience from "./components/RealWorldExperineceData/RealWorldExperience";
+import MobileMenu from "./components/common/Sidebar/MobileMenu";
 
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);
@@ -120,6 +121,8 @@ function App() {
             <ContactForm />
           </div>
         </div>
+        {/* ! Sidebar  */}
+        <MobileMenu />
       </section>
     </>
   );

@@ -15,6 +15,9 @@ const useContextData = () => {
     setActive,
     scrollToSection,
     Notes,
+    toggleMenu,
+    toggle,
+    setToggle,
   } = useContext(Store);
 
   return {
@@ -30,6 +33,9 @@ const useContextData = () => {
     setActive,
     scrollToSection,
     Notes,
+    toggleMenu,
+    toggle,
+    setToggle,
   };
 };
 
