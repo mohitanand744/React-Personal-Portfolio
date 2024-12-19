@@ -121,8 +121,6 @@ function App() {
             <ContactForm />
           </div>
         </div>
-        {/* ! Sidebar  */}
-        <MobileMenu />
       </section>
     </>
   );

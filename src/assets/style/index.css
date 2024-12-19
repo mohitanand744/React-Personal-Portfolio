@@ -121,6 +121,7 @@ body {
   box-shadow: rgb(255, 1, 77) 0px 0px 60px -80px inset,
     rgba(0, 207, 243, 0.527) 0px 0px 60px -30px inset,
     rgb(140, 0, 255) 0px 0px 6px 0px inset;
+  overflow: hidden;
 }
 
 .custom-shadow2 {
