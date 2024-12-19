@@ -11,12 +11,12 @@ const MobileMenu = () => {
       {/* Mobile  menu */}
       <div
         onClick={toggleMenu}
-        className={`fixed   cursor-pointer top-0 h-[100vh] transition-all duration-300  w-full md:hidden backdrop-blur-lg bg-black/50 overflow-hidden ${
-          toggle ? "opacity-100 z-40" : " opacity-0 -z-50"
+        className={`fixed   cursor-pointer top-0 h-[100vh] transition-all duration-200  w-full md:hidden backdrop-blur-lg bg-black/50 overflow-hidden ${
+          toggle ? "top-0  z-40" : " -top-[100%] -z-50"
         }`}
       >
         <div
-          className={`z-50 fixed top-0 text-white list-none w-full py-8 px-10 rounded-b-[5rem] flex md:hidden flex-col gap-6 text-3xl duration-200 custom-shadow3 cursor-default backdrop-blur-sm bg-black/80 transition-all ease-in overflow-hidden ${
+          className={`z-50 fixed  text-white list-none w-full py-8 px-10 rounded-b-[5rem] flex md:hidden flex-col gap-6 text-3xl duration-200 custom-shadow3 cursor-default backdrop-blur-sm bg-black/80 transition-all  ease-in overflow-hidden ${
             toggle ? "top-0" : " -top-[50rem]"
           }`}
           onClick={(e) => e.stopPropagation()}
@@ -36,8 +36,10 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("About");
               }}
-              className={`cursor-pointer flex justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto mt-16 gap-16 items-center ${
-                active === "About" ? "active" : ""
+              className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto mt-16 gap-16 items-center ${
+                active === "About"
+                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  : ""
               }`}
             >
               About
@@ -56,8 +58,10 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("Skills");
               }}
-              className={`cursor-pointer justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
-                active === "Skills" ? "active" : ""
+              className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
+                active === "Skills"
+                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  : ""
               }`}
             >
               Skills
@@ -76,8 +80,10 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("Projects");
               }}
-              className={`cursor-pointer justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto  flex  gap-16 items-center ${
-                active === "Projects" ? "active" : ""
+              className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto  flex  gap-16 items-center ${
+                active === "Projects"
+                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  : ""
               }`}
             >
               Projects
@@ -96,8 +102,10 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("Experience");
               }}
-              className={`cursor-pointer  justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
-                active === "Experience" ? "active" : ""
+              className={`cursor-pointer  justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
+                active === "Experience"
+                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  : ""
               }`}
             >
               Experience
@@ -115,8 +123,10 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("Notes");
               }}
-              className={`cursor-pointer flex justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${
-                active === "Notes" ? "active" : ""
+              className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${
+                active === "Notes"
+                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  : ""
               }`}
             >
               Dev Notes
@@ -136,8 +146,10 @@ const MobileMenu = () => {
 
                 alert("Working on it...");
               }}
-              className={`cursor-pointer flex justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${
-                active === "Blogs" ? "active" : ""
+              className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${
+                active === "Blogs"
+                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  : ""
               }`}
             >
               Blogs
@@ -156,8 +168,10 @@ const MobileMenu = () => {
                 setToggle(false);
                 scrollToSection("Contact");
               }}
-              className={`cursor-pointer justify-between px-3 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
-                active === "Contact" ? "active" : ""
+              className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
+                active === "Contact"
+                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  : ""
               }`}
             >
               Contact
