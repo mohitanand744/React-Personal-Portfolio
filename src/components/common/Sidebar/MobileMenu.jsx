@@ -38,13 +38,13 @@ const MobileMenu = () => {
               }}
               className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto mt-16 gap-16 items-center ${
                 active === "About"
-                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  ? "custom-shadow3 rounded-full  transition-all"
                   : ""
               }`}
             >
               About
               <img
-                className="w-[3rem]"
+                className="w-[3.8rem] h-[3.8rem] custom-shadow3 rounded-full p-2"
                 src="https://img.icons8.com/nolan/64/user-default.png"
                 alt="user-default"
               />{" "}
@@ -60,13 +60,13 @@ const MobileMenu = () => {
               }}
               className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
                 active === "Skills"
-                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  ? "custom-shadow3 rounded-full  transition-all"
                   : ""
               }`}
             >
               Skills
               <img
-                className="w-[3rem]"
+                className="w-[3.8rem] h-[3.8rem] custom-shadow3 rounded-full p-2"
                 src="https://img.icons8.com/nolan/64/internship.png"
                 alt="user-settings"
               />{" "}
@@ -82,13 +82,13 @@ const MobileMenu = () => {
               }}
               className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto  flex  gap-16 items-center ${
                 active === "Projects"
-                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  ? "custom-shadow3 rounded-full  transition-all"
                   : ""
               }`}
             >
               Projects
               <img
-                className="w-[3rem]"
+                className="w-[3.8rem] h-[3.8rem] custom-shadow3 rounded-full p-2"
                 src="https://img.icons8.com/nolan/64/group-of-projects.png"
                 alt="group-of-projects"
               />{" "}
@@ -104,13 +104,13 @@ const MobileMenu = () => {
               }}
               className={`cursor-pointer  justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
                 active === "Experience"
-                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  ? "custom-shadow3 rounded-full  transition-all"
                   : ""
               }`}
             >
               Experience
               <img
-                className="w-[3rem]"
+                className="w-[3.8rem] h-[3.8rem] custom-shadow3 rounded-full p-2"
                 src="https://img.icons8.com/nolan/64/parse-resumes.png"
                 alt="parse-resumes"
               />{" "}
@@ -125,13 +125,13 @@ const MobileMenu = () => {
               }}
               className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${
                 active === "Notes"
-                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  ? "custom-shadow3 rounded-full  transition-all"
                   : ""
               }`}
             >
               Dev Notes
               <img
-                className="w-[3rem]"
+                className="w-[3.8rem] h-[3.8rem] custom-shadow3 rounded-full p-2"
                 src="https://img.icons8.com/nolan/64/create-new.png"
                 alt="new-post"
               />
@@ -148,13 +148,13 @@ const MobileMenu = () => {
               }}
               className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${
                 active === "Blogs"
-                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  ? "custom-shadow3 rounded-full  transition-all"
                   : ""
               }`}
             >
               Blogs
               <img
-                className="w-[3rem]"
+                className="w-[3.8rem] h-[3.8rem] custom-shadow3 rounded-full p-2"
                 src="https://img.icons8.com/nolan/64/bulleted-list.png"
                 alt="new-post"
               />
@@ -170,13 +170,13 @@ const MobileMenu = () => {
               }}
               className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
                 active === "Contact"
-                  ? "custom-shadow3 rounded-3xl scale-105 transition-all"
+                  ? "custom-shadow3 rounded-full  transition-all"
                   : ""
               }`}
             >
               Contact
               <img
-                className="w-[3rem]"
+                className="w-[3.8rem] h-[3.8rem] custom-shadow3 rounded-full p-2"
                 src="https://img.icons8.com/nolan/64/new-post.png"
                 alt="new-post"
               />{" "}

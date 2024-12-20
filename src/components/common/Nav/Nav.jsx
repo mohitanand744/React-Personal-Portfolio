@@ -16,10 +16,6 @@ const Nav = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    userInput !== "" && scrollToSection("Home");
-  }, [userInput]);
-
   return (
     <header className="sticky top-0 z-30 flex items-center justify-between w-full px-10 py-8 text-white backdrop-blur-sm bg-black/30 rounded-b-3xl">
       <div className="bg-white rounded-full">

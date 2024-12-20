@@ -26,7 +26,7 @@ function App() {
   const notes = useRef(null);
 
   const handleScroll = () => {
-    if (window.pageYOffset >= 130) {
+    if (window.pageYOffset >= 30) {
       setShowGoToTop(true);
     } else {
       setShowGoToTop(false);
