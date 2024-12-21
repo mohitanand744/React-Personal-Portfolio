@@ -22,7 +22,7 @@ const RealWorldExperience = () => {
       <Marquee
         gradient={true}
         gradientColor={[183, 0, 255]}
-        direction="right"
+        direction="left"
         speed={120}
         pauseOnHover
       >

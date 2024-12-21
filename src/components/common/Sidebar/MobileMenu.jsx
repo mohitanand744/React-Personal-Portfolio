@@ -11,8 +11,8 @@ const MobileMenu = () => {
       {/* Mobile  menu */}
       <div
         onClick={toggleMenu}
-        className={`fixed z-50  cursor-pointer top-0 h-[100vh] transition-all duration-200  w-full md:hidden backdrop-blur-lg bg-black/50 overflow-hidden ${
-          toggle ? "top-[0%]" : "-top-[100vh]"
+        className={`fixed z-50  cursor-pointer h-[100vh] transition-all duration-200  w-full md:hidden backdrop-blur-lg bg-black/50 overflow-hidden ${
+          toggle ? "top-0" : "-top-[100vh]"
         }`}
       >
         <div
