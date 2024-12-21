@@ -13,7 +13,7 @@ import MobileMenu from "./components/common/Sidebar/MobileMenu";
 
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);
-  const { setActive } = useContextData();
+  const { setActive, setToggle } = useContextData();
 
   // Selecting Containers
 
@@ -80,7 +80,10 @@ function App() {
 
   return (
     <>
-      <section className="Home w-full min-h-[100vh] ">
+      <section
+        className="Home w-full min-h-[100vh] "
+        onClick={() => setToggle(false)}
+      >
         {" "}
         {!showGoToTop ? (
           ""
