@@ -18,6 +18,7 @@ const useContextData = () => {
     toggleMenu,
     toggle,
     setToggle,
+    pathname,
   } = useContext(Store);
 
   return {
@@ -36,6 +37,7 @@ const useContextData = () => {
     toggleMenu,
     toggle,
     setToggle,
+    pathname,
   };
 };
 

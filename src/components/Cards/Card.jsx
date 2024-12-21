@@ -1,4 +1,5 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 const Card = ({
   image,
@@ -13,10 +14,13 @@ const Card = ({
   live_url,
   shortenDescription,
 }) => {
+  const navigate = useNavigate();
+
   return (
     <div
       data-aos="flip-left"
-      className="projectBox rounded-3xl flex flex-col items-start justify-between gap-6 py-8 p-6 custom-shadow w-[34rem] h-fit"
+      onClick={() => navigate(`/projects/${title.replaceAll(" ", "")}`)}
+      className="projectBox rounded-3xl flex flex-col items-start justify-between gap-6 py-8 p-6 custom-shadow w-[34rem] h-fit cursor-pointer"
     >
       <div className="imgContainer   w-[97%] h-[17rem] md:h-[20rem] mx-auto">
         <img

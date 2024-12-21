@@ -12,8 +12,8 @@ const Nav = () => {
     scrollToSection,
     toggleMenu,
     setToggle,
+    pathname,
   } = useContextData();
-  const location = useLocation();
   const navigate = useNavigate();
 
   return (
@@ -28,7 +28,7 @@ const Nav = () => {
         </Link>
       </div>
       {/* Mobile Searching... */}
-      {location.pathname === "/projects" && (
+      {pathname === "/projects" && (
         <div className="absolute left-0 right-0 block w-full top-32 sm:hidden">
           <input
             type="text"
@@ -54,205 +54,101 @@ const Nav = () => {
         </div>
       )}
       <nav className="items-center hidden gap-8 text-xl font-medium md:flex md:text-3xl">
-        {location.pathname === "/projects" ? (
-          <>
-            <p
-              onClick={() => {
-                navigate("/");
-                setActive("About");
+        <p
+          onClick={() => {
+            navigate("/");
+            setActive("About");
+            setToggle(false);
+            scrollToSection("About");
+          }}
+          className={`cursor-pointer navlinks ${
+            active === "About" ? "active" : ""
+          }`}
+        >
+          About
+        </p>
+        <p
+          onClick={() => {
+            navigate("/");
+            setActive("Skills");
+            setToggle(false);
+            scrollToSection("Skills");
+          }}
+          className={`cursor-pointer navlinks ${
+            active === "Skills" ? "active" : ""
+          }`}
+        >
+          Skills
+        </p>
+        <p
+          onClick={() => {
+            navigate("/");
+            setActive("Experience");
+            setToggle(false);
+            scrollToSection("Experience");
+          }}
+          className={`cursor-pointer navlinks ${
+            active === "Experience" ? "active" : ""
+          }`}
+        >
+          Experience
+        </p>
+        <p
+          onClick={() => {
+            navigate("/");
+            setActive("Projects");
+            setToggle(false);
+            scrollToSection("Projects");
+          }}
+          className={`cursor-pointer navlinks ${
+            active === "Projects" ? "active" : ""
+          }`}
+        >
+          Projects
+        </p>
 
-                setToggle(false);
-                scrollToSection("About");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "About" ? "active" : ""
-              }`}
-            >
-              About
-            </p>
-            <p
-              onClick={() => {
-                navigate("/");
-                setActive("Skills");
-
-                setToggle(false);
-                scrollToSection("Skills");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Skills" ? "active" : ""
-              }`}
-            >
-              Skills
-            </p>
-
-            <p
-              onClick={() => {
-                navigate("/");
-                setActive("Projects");
-
-                setToggle(false);
-                scrollToSection("Projects");
-              }}
-              className={`cursor-pointer navlinks  ${
-                active === "Projects" ? "active" : ""
-              }`}
-            >
-              Projects
-            </p>
-
-            <p
-              onClick={() => {
-                navigate("/");
-                setActive("Experience");
-
-                setToggle(false);
-                scrollToSection("Experience");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Experience" ? "active" : ""
-              }`}
-            >
-              Experience
-            </p>
-
-            <p
-              onClick={() => {
-                navigate("/");
-                setActive("Notes");
-                setToggle(false);
-                scrollToSection("Notes");
-              }}
-              className={`cursor-pointer navlinks  ${
-                active === "Notes" ? "active" : ""
-              }`}
-            >
-              Dev Notes
-            </p>
-
-            <p
-              onClick={() => {
-                /* 
-                  navigate("/")
-                  setActive("Blogs");
+        <p
+          onClick={() => {
+            navigate("/");
+            setActive("Notes");
+            setToggle(false);
+            scrollToSection("Notes");
+          }}
+          className={`cursor-pointer navlinks ${
+            active === "Notes" ? "active" : ""
+          }`}
+        >
+          Dev Notes
+        </p>
+        <p
+          onClick={() => {
+            navigate("/"); /* 
+            setActive("Blogs");
                 setToggle(false);
                 scrollToSection("Blogs");*/
 
-                alert("Working on it...");
-              }}
-              className={`cursor-pointer navlinks  ${
-                active === "Blogs" ? "active" : ""
-              }`}
-            >
-              Blogs
-            </p>
+            alert("Working on it...");
+          }}
+          className={`cursor-pointer navlinks ${
+            active === "Blogs" ? "active" : ""
+          }`}
+        >
+          Blogs
+        </p>
 
-            <p
-              onClick={() => {
-                navigate("/");
-                setActive("Contact");
-
-                setToggle(false);
-                scrollToSection("Contact");
-              }}
-              className={`cursor-pointer navlinks  ${
-                active === "Contact" ? "active" : ""
-              }`}
-            >
-              Contact
-            </p>
-          </>
-        ) : (
-          <>
-            <p
-              onClick={() => {
-                setActive("About");
-                setToggle(false);
-                scrollToSection("About");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "About" ? "active" : ""
-              }`}
-            >
-              About
-            </p>
-            <p
-              onClick={() => {
-                setActive("Skills");
-                setToggle(false);
-                scrollToSection("Skills");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Skills" ? "active" : ""
-              }`}
-            >
-              Skills
-            </p>
-            <p
-              onClick={() => {
-                setActive("Experience");
-                setToggle(false);
-                scrollToSection("Experience");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Experience" ? "active" : ""
-              }`}
-            >
-              Experience
-            </p>
-            <p
-              onClick={() => {
-                setActive("Projects");
-                setToggle(false);
-                scrollToSection("Projects");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Projects" ? "active" : ""
-              }`}
-            >
-              Projects
-            </p>
-
-            <p
-              onClick={() => {
-                setActive("Notes");
-                setToggle(false);
-                scrollToSection("Notes");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Notes" ? "active" : ""
-              }`}
-            >
-              Dev Notes
-            </p>
-            <p
-              onClick={() => {
-                /* setActive("Blogs");
-                setToggle(false);
-                scrollToSection("Blogs");*/
-
-                alert("Working on it...");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Blogs" ? "active" : ""
-              }`}
-            >
-              Blogs
-            </p>
-
-            <p
-              onClick={() => {
-                setActive("Contact");
-                setToggle(false);
-                scrollToSection("Contact");
-              }}
-              className={`cursor-pointer navlinks ${
-                active === "Contact" ? "active" : ""
-              }`}
-            >
-              Contact
-            </p>
-          </>
-        )}
+        <p
+          onClick={() => {
+            navigate("/");
+            setActive("Contact");
+            setToggle(false);
+            scrollToSection("Contact");
+          }}
+          className={`cursor-pointer navlinks ${
+            active === "Contact" ? "active" : ""
+          }`}
+        >
+          Contact
+        </p>
       </nav>
 
       {/* Mobile menu toggle */}
@@ -262,7 +158,7 @@ const Nav = () => {
       >
         <img
           className="menu w-full h-full object-cover  active:rotate-[360deg] transition-all duration-500 ease-linear cursor-pointer"
-          src="./menu.png"
+          src="/menu.png"
           alt="menu"
           onClick={toggleMenu}
         />

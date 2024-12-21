@@ -5,10 +5,17 @@ import Card from "../components/Cards/Card";
 import Pagination from "../components/Paginations/Pagination";
 import ProjectsNotFound from "../components/Errors/ProjectsNotFound";
 import CursorFollowing from "../components/CurserAnimations/CursorFollowing";
+import { Outlet } from "react-router-dom";
 
 const AllProjects = () => {
-  const { projects, userInput, handleUserInput, setUserInput } =
-    useContextData();
+  const {
+    projects,
+    userInput,
+    pathname,
+    handleUserInput,
+    setUserInput,
+    setToggle,
+  } = useContextData();
   const [isExpanded, setIsExpanded] = useState(null);
   const [readMore, setReadMore] = useState(false);
 
@@ -79,104 +86,112 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
     return description;
   };
 
-  return (
-    <div id="Home" className="allProjects min-h-[100vh] px-10">
-      <CursorFollowing />
-
-      <center
-        className="flex flex-wrap items-center justify-between gap-10 px-3 mt-32 sm:mt-16 "
-        data-aos="zoom-in"
+  return pathname === "/projects" ? (
+    <>
+      <div
+        id="Home"
+        className="allProjects min-h-[100vh] px-10"
+        onClick={() => setToggle(false)}
       >
-        <div className="mx-auto text-center sm:mx-0 sm:text-start">
-          <SectionHeading text={"All Projects"} />
+        <CursorFollowing />
 
-          <div className="gap-3 mb-6 ">
-            <p className="flex items-center justify-center gap-5 text-xl text-white lg:text-2xl">
-              Source Code
-              <img
-                className=" w-[1rem] h-[2rem] movingRight"
-                src="/download.png"
+        <center
+          className="flex flex-wrap items-center justify-between gap-10 px-3 mt-32 sm:mt-16 "
+          data-aos="zoom-in"
+        >
+          <div className="mx-auto text-center sm:mx-0 sm:text-start">
+            <SectionHeading text={"All Projects"} />
+
+            <div className="gap-3 mb-6 ">
+              <p className="flex items-center justify-center gap-5 text-xl text-white lg:text-2xl">
+                Source Code
+                <img
+                  className=" w-[1rem] h-[2rem] movingRight"
+                  src="/download.png"
+                />
+                <a
+                  href="https://github.com/mohitanand744"
+                  className="flex items-center gap-2 activeName"
+                  target="_blank"
+                >
+                  GitHub
+                  <img src="/github.png" className="w-[3.6rem]" alt="github" />
+                </a>
+              </p>
+            </div>
+          </div>
+
+          <div className="text-end">
+            <div className="relative hidden sm:block">
+              <input
+                type="text"
+                value={userInput}
+                onChange={handleUserInput}
+                placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
+                className="w-[38rem] sm:w-[30rem] md:w-[40rem] text-white backdrop-blur-sm bg-black/60 outline-none border-t-[1px] border-b-[1px] rounded-3xl py-5 px-6 custom-shadow2 md:text-2xl"
               />
-              <a
-                href="https://github.com/mohitanand744"
-                className="flex items-center gap-2 activeName"
-                target="_blank"
-              >
-                GitHub
-                <img src="/github.png" className="w-[3.6rem]" alt="github" />
-              </a>
+
+              {userInput !== "" ? (
+                <img
+                  loading="lazy"
+                  className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
+                  src="https://img.icons8.com/nolan/64/delete-sign.png"
+                  alt="delete-sign"
+                  onClick={() => setUserInput("")}
+                />
+              ) : (
+                <img
+                  loading="lazy"
+                  className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
+                  src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
+                  alt="search"
+                />
+              )}
+            </div>
+            <p className="mt-10 text-[2rem] text-white">
+              Total Projects:{" "}
+              <span className="font-medium text-green-400">
+                {filterProject.length}
+              </span>
             </p>
           </div>
+        </center>
+
+        <div className="flex flex-wrap justify-center gap-10 mt-8 mb-16">
+          {filterProject.length > 0 ? (
+            sliceProjects.map((project, i) => (
+              <Card
+                key={i}
+                image={project.image}
+                title={project.title}
+                description={project.description}
+                index={i}
+                isExpanded={isExpanded}
+                readMore={readMore}
+                readMoreFun={readMoreFun}
+                skills={project.skills}
+                github_url={project.github_url}
+                live_url={project.live_url}
+                shortenDescription={shortenDescription}
+              />
+            ))
+          ) : (
+            <ProjectsNotFound />
+          )}
         </div>
 
-        <div className="text-end">
-          <div className="relative hidden sm:block">
-            <input
-              type="text"
-              value={userInput}
-              onChange={handleUserInput}
-              placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
-              className="w-[38rem] sm:w-[30rem] md:w-[40rem] text-white backdrop-blur-sm bg-black/60 outline-none border-t-[1px] border-b-[1px] rounded-3xl py-5 px-6 custom-shadow2 md:text-2xl"
-            />
-
-            {userInput !== "" ? (
-              <img
-                loading="lazy"
-                className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
-                src="https://img.icons8.com/nolan/64/delete-sign.png"
-                alt="delete-sign"
-                onClick={() => setUserInput("")}
-              />
-            ) : (
-              <img
-                loading="lazy"
-                className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
-                src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
-                alt="search"
-              />
-            )}
-          </div>
-          <p className="mt-10 text-[2rem] text-white">
-            Total Projects:{" "}
-            <span className="font-medium text-green-400">
-              {filterProject.length}
-            </span>
-          </p>
-        </div>
-      </center>
-
-      <div className="flex flex-wrap justify-center gap-10 mt-8 mb-16">
-        {filterProject.length > 0 ? (
-          sliceProjects.map((project, i) => (
-            <Card
-              key={i}
-              image={project.image}
-              title={project.title}
-              description={project.description}
-              index={i}
-              isExpanded={isExpanded}
-              readMore={readMore}
-              readMoreFun={readMoreFun}
-              skills={project.skills}
-              github_url={project.github_url}
-              live_url={project.live_url}
-              shortenDescription={shortenDescription}
-            />
-          ))
-        ) : (
-          <ProjectsNotFound />
+        {totalPages > 1 && (
+          <Pagination
+            totalPages={totalPages}
+            currentPage={currentPage}
+            handlePageChange={handlePageChange}
+            setCurrentPage={setCurrentPage}
+          />
         )}
       </div>
-
-      {totalPages > 1 && (
-        <Pagination
-          totalPages={totalPages}
-          currentPage={currentPage}
-          handlePageChange={handlePageChange}
-          setCurrentPage={setCurrentPage}
-        />
-      )}
-    </div>
+    </>
+  ) : (
+    <Outlet />
   );
 };
 

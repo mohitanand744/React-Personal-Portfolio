@@ -11,6 +11,7 @@ import Error404 from "../Pages/Error404";
 
 import { lazy } from "react";
 import Loading from "../components/Loadings/Loading";
+import ProjectDetailsPage from "../Pages/ProjectDetailsPage";
 
 const Layout = lazy(() => import("./../Layout"));
 const AllProjects = lazy(() => import("../Pages/AllProjects"));
@@ -34,7 +35,10 @@ const Router = () => {
               <AllProjects />
             </Suspense>
           }
-        />
+        >
+          <Route path=":name" element={<ProjectDetailsPage />} />
+        </Route>
+
         {/* <Route path="notes" element={<Notes />} /> */}
         <Route path="*" element={<Error404 />} />
       </Route>

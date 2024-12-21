@@ -143,9 +143,9 @@ const Projects = () => {
           />
         ))}
       </div>
-      <Link to={"/projects"} className="flex justify-center md:w-[53%] mx-auto">
-        <Button text={"All Projects"} />
-      </Link>
+      <div className="flex justify-center md:w-[53%] mx-auto">
+        <Button url={"/projects"} text={"All Projects"} />
+      </div>
     </div>
   );
 };

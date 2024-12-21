@@ -31,7 +31,7 @@ const StoreProvider = ({ children }) => {
     setTimeout(() => {
       const section = document.getElementById(id);
       if (!section) return;
-      const yOffset = -120; // Height of the navbar
+      const yOffset = -100; // Height of the navbar
       const y =
         section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -65,6 +65,7 @@ const StoreProvider = ({ children }) => {
           toggleMenu,
           toggle,
           setToggle,
+          pathname,
         }}
       >
         {children}
