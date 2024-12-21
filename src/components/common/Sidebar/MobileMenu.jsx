@@ -11,14 +11,12 @@ const MobileMenu = () => {
       {/* Mobile  menu */}
       <div
         onClick={toggleMenu}
-        className={`fixed   cursor-pointer top-0 h-[100vh] transition-all duration-200  w-full md:hidden backdrop-blur-lg bg-black/50 overflow-hidden ${
-          toggle ? "top-0  z-40" : " -top-[100%] -z-50"
+        className={`fixed z-50  cursor-pointer top-0 h-[100vh] transition-all duration-200  w-full md:hidden backdrop-blur-lg bg-black/50 overflow-hidden ${
+          toggle ? "top-[0%]" : "-top-[100vh]"
         }`}
       >
         <div
-          className={`z-50 fixed  text-white list-none w-full py-8 px-10 rounded-b-[5rem] flex md:hidden flex-col gap-6 text-3xl duration-200 custom-shadow3 cursor-default backdrop-blur-sm bg-black/80 transition-all  ease-in overflow-hidden ${
-            toggle ? "top-0" : " -top-[50rem]"
-          }`}
+          className={`z-50 fixed  text-white list-none w-full py-8 px-10 rounded-b-[5rem] flex md:hidden flex-col gap-6 text-3xl duration-200 custom-shadow3 cursor-default backdrop-blur-sm bg-black/80 transition-all  ease-in overflow-hidden $`}
           onClick={(e) => e.stopPropagation()}
         >
           <img
