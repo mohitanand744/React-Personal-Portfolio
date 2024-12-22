@@ -15,10 +15,17 @@ const AllProjects = () => {
     handleUserInput,
     setUserInput,
     setToggle,
+    setShowSuggestionBox,
+    showSuggestionsBox,
+    userInputKeyWords,
+    suggestions,
+    setSuggestions,
+    suggestionIndex,
+    setSuggestionIndex,
+    suggestionBoxRef,
   } = useContextData();
   const [isExpanded, setIsExpanded] = useState(null);
   const [readMore, setReadMore] = useState(false);
-  const [suggestions, setSuggestions] = useState([]);
 
   const userInputWords = userInput.trim().toLowerCase().split(/\s+/); // Array Of Words..
 
@@ -47,7 +54,12 @@ const AllProjects = () => {
 
   useEffect(() => {
     setCurrentPage(1);
-    setSuggestions(filterProject);
+    setSuggestions(userInputKeyWords);
+    const suggestion = userInputKeyWords?.filter((text) =>
+      text.toLowerCase().includes(userInput.toLowerCase())
+    );
+
+    setSuggestions(suggestion);
   }, [userInput]);
 
   const totalPages = Math.ceil(filterProject.length / projectsPerPage);
@@ -84,6 +96,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
   const handelSuggestionClick = (title) => {
     setUserInput(title);
     setSuggestions([]);
+    setShowSuggestionBox(false);
   };
 
   const shortenDescription = (description, maxLength) => {
@@ -93,12 +106,49 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
     return description;
   };
 
+  /*  const highLightText = (text, highLight) => {
+    const parts = text.split(new RegExp(`${highLight}`, "gi"));
+
+    return (
+      <span>
+        {parts.map((part, index) =>
+          part.toLowerCase() === highLight.toLowerCase() ? (
+            <b key={index}>{part}</b>
+          ) : (
+            part
+          )
+        )}
+      </span>
+    );
+  }; */
+
+  const highLightText = (text, highLight) => {
+    const parts = text.split(new RegExp(`(${highLight})`, "gi"));
+
+    return (
+      <span>
+        {parts.map((part, index) =>
+          part.toLowerCase() === highLight.toLowerCase() ? (
+            <b className="highLight-text" key={index}>
+              {part}
+            </b>
+          ) : (
+            part
+          )
+        )}
+      </span>
+    );
+  };
+
   return pathname === "/projects" ? (
     <>
       <div
         id="Home"
         className="allProjects min-h-[100vh] px-10"
-        onClick={() => setToggle(false)}
+        onClick={() => {
+          setToggle(false);
+          setSuggestions([]);
+        }}
       >
         <CursorFollowing />
 
@@ -134,14 +184,15 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
                 type="text"
                 value={userInput}
                 onChange={handleUserInput}
+                onKeyDown={handleUserInput}
                 placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
-                className="w-full sm:w-[30rem] md:w-[40rem] text-white backdrop-blur-sm bg-black/60 outline-none border-t-[1px] border-t-purple-500 border-b-[1px] border-b-blue-500 rounded-3xl py-5 px-6 custom-shadow2 md:text-2xl"
+                className="w-full sm:w-[30rem] md:w-[40rem] text-white backdrop-blur-sm bg-black/60 outline-none border-t-[1px] border-t-purple-500 border-b-[1px] border-b-blue-500 rounded-3xl py-5 px-6 custom-shadow2 text-xl md:text-2xl"
               />
 
               {userInput !== "" ? (
                 <img
                   loading="lazy"
-                  className="relative sm:absolute top-6 right-5 w-[1.8rem] cursor-pointer"
+                  className="absolute top-6 right-5 w-[1.8rem] cursor-pointer"
                   src="https://img.icons8.com/nolan/64/delete-sign.png"
                   alt="delete-sign"
                   onClick={() => setUserInput("")}
@@ -163,18 +214,24 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
             </p>
           </div>
           <ul
+            ref={suggestionBoxRef}
             className={`w-full ${
-              userInput && suggestions.length > 0 ? "max-h-[33rem] p-5" : "h-0"
-            }  overflow-y-scroll right-0 sm:w-[30rem] md:w-[40rem] sm:top-28 sm:right-3  rounded-3xl absolute  top-0  text-white text-start text-2xl custom-shadow3 bg-[#000000da] transition-all duration-300`}
+              userInput && suggestions.length > 0 && showSuggestionsBox
+                ? "h-[38rem] p-6 py-10"
+                : "h-0"
+            } suggestionBox right-0 sm:w-[30rem] md:w-[40rem] sm:top-28 sm:right-3 rounded-3xl absolute top-0 text-white text-start text-xl md:text-2xl custom-shadow3 bg-[#000000da] transition-all duration-300`}
           >
-            {suggestions.map((project, i) => {
+            {suggestions.map((suggestion, i) => {
               return (
                 <li
+                  className={` suggestion-item px-4 py-3 mt-3 transition-all border-b cursor-pointer  rounded-3xl border-b-purple-500 ${
+                    suggestionIndex === i &&
+                    "border-t border-t-blue-500 bg-[#ffffff23]"
+                  }`}
                   key={i}
-                  className="px-4 py-3 mt-3 transition-all border-b cursor-pointer hover:scale-105 rounded-3xl border-b-purple-500"
-                  onClick={() => handelSuggestionClick(project.title)}
+                  onClick={() => handelSuggestionClick(suggestion)}
                 >
-                  {project.title}
+                  {highLightText(suggestion, userInput)}
                 </li>
               );
             })}

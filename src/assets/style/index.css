@@ -17,7 +17,6 @@ body {
   background-image: url("/bg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100%;
 }
 
 /***** Global CSS *****/
@@ -31,6 +30,11 @@ body {
 .zoomIn {
   animation: zoomIn 0.8s linear infinite alternate;
   -webkit-animation: zoomIn 0.8s linear infinite alternate;
+}
+
+.suggestionBox {
+  overflow-y: scroll !important;
+  overflow-x: hidden;
 }
 
 .hide-ScrollBar {

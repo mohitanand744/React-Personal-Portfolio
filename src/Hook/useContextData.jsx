@@ -19,6 +19,14 @@ const useContextData = () => {
     toggle,
     setToggle,
     pathname,
+    userInputKeyWords,
+    suggestions,
+    setSuggestions,
+    suggestionIndex,
+    setSuggestionIndex,
+    setShowSuggestionBox,
+    showSuggestionsBox,
+    suggestionBoxRef,
   } = useContext(Store);
 
   return {
@@ -38,6 +46,14 @@ const useContextData = () => {
     toggle,
     setToggle,
     pathname,
+    userInputKeyWords,
+    suggestions,
+    setSuggestions,
+    suggestionIndex,
+    setSuggestionIndex,
+    setShowSuggestionBox,
+    showSuggestionsBox,
+    suggestionBoxRef,
   };
 };
 
