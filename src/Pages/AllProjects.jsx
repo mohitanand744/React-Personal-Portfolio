@@ -217,7 +217,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
             ref={suggestionBoxRef}
             className={`w-full ${
               userInput && suggestions.length > 0 && showSuggestionsBox
-                ? "h-[38rem] p-6 py-10"
+                ? "h-[38rem] p-5"
                 : "h-0"
             } suggestionBox right-0 sm:w-[30rem] md:w-[40rem] sm:top-28 sm:right-3 rounded-3xl absolute top-0 text-white text-start text-xl md:text-2xl custom-shadow3 bg-[#000000da] transition-all duration-300`}
           >

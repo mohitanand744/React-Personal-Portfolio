@@ -20,7 +20,7 @@ const StoreProvider = ({ children }) => {
   const [suggestionIndex, setSuggestionIndex] = useState(0);
   const suggestionBoxRef = useRef(null);
 
-  const scrollIntoView = (index) => {
+  /*   const scrollIntoView = (index) => {
     if (suggestionBoxRef?.current) {
       const suggestionItems =
         suggestionBoxRef?.current.querySelectorAll(".suggestion-item");
@@ -28,6 +28,24 @@ const StoreProvider = ({ children }) => {
         suggestionItems[index].scrollIntoView({
           behavior: "smooth",
           block: "nearest",
+        });
+      }
+    }
+  };
+ */
+
+  const scrollIntoView = (index) => {
+    if (suggestionBoxRef?.current) {
+      const suggestionBox = suggestionBoxRef.current;
+      const suggestionItems =
+        suggestionBox.querySelectorAll(".suggestion-item");
+      if (suggestionItems[index]) {
+        const itemHeight = suggestionItems[index].offsetHeight;
+        const scrollOffset = index * itemHeight;
+
+        suggestionBox.scrollTo({
+          top: scrollOffset,
+          behavior: "smooth",
         });
       }
     }
