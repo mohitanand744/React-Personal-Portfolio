@@ -1,24 +1,18 @@
 import Marquee from "react-fast-marquee";
-import React, { useEffect, useState } from "react";
-import { useLocation } from "react-router-dom";
 
 const RealWorldExperience = () => {
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 600);
+  /*  const [isMobile, setIsMobile] = useState(window.innerWidth < 642);
   const location = useLocation();
 
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 600);
+    const handleResize = () => setIsMobile(window.innerWidth < 642);
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  }, []); */
 
   return (
-    <div
-      className={`py-3 bg-transparent custom-shadow2 ${
-        isMobile && location.pathname === "/projects" ? "mt-[4.5rem]" : ""
-      }`}
-    >
+    <div className={`py-3 bg-transparent custom-shadow2`}>
       <Marquee
         gradient={true}
         gradientColor={[183, 0, 255]}
@@ -27,7 +21,7 @@ const RealWorldExperience = () => {
         pauseOnHover
       >
         <p style={{ color: "white", fontSize: "20px", margin: "0 10px" }}>
-          Worked on 5 Real World Projects 🚀
+          Worked on 7 Real World Projects 🚀
         </p>
         <p style={{ color: "white", fontSize: "20px", margin: "0 10px" }}>
           Proficient in Frontend Development 🌟

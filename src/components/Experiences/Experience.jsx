@@ -129,7 +129,7 @@ const Experience = () => {
               {skillsUsed.map((skill, i) => (
                 <button
                   key={i}
-                  className="border-b-2 h-14 md:h-20 px-6 md:px-10 active:scale-[0.88] transition-all duration-300 text-xl md:text-2xl ease rounded-3xl border-slate-600 custom-shadow2"
+                  className="border-b-2 whitespace-nowrap h-14 md:h-20 px-6 md:px-10 active:scale-[0.88] transition-all duration-300 text-xl md:text-2xl ease rounded-3xl border-slate-600 custom-shadow2"
                 >
                   {skill.title}
                 </button>

@@ -28,7 +28,7 @@ const Nav = () => {
         </Link>
       </div>
       {/* Mobile Searching... */}
-      {pathname === "/projects" && (
+      {/*  {pathname === "/projects" && (
         <div className="absolute left-0 right-0 block w-full top-32 sm:hidden">
           <input
             type="text"
@@ -52,7 +52,7 @@ const Nav = () => {
             />
           )}
         </div>
-      )}
+      )} */}
       <nav className="items-center hidden gap-8 text-xl font-medium md:flex md:text-3xl">
         <p
           onClick={() => {

@@ -22,7 +22,7 @@ const Card = ({
       onClick={() => navigate(`/projects/${title.replaceAll(" ", "")}`)}
       className="projectBox rounded-3xl flex flex-col items-start justify-between gap-6 py-8 p-6 custom-shadow w-[34rem] h-fit cursor-pointer"
     >
-      <div className="imgContainer   w-[97%] h-[17rem] md:h-[20rem] mx-auto">
+      <div className="imgContainer w-[97%] h-[17rem] md:h-[20rem] mx-auto">
         <img
           loading="lazy"
           className="object-cover w-full h-full rounded-3xl"
@@ -39,7 +39,8 @@ const Card = ({
             : shortenDescription(description, 50)}
           <span
             className="cursor-pointer highLight-text"
-            onClick={() => {
+            onClick={(e) => {
+              e.stopPropagation();
               readMoreFun(index);
             }}
           >

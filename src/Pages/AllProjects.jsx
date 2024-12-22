@@ -18,6 +18,7 @@ const AllProjects = () => {
   } = useContextData();
   const [isExpanded, setIsExpanded] = useState(null);
   const [readMore, setReadMore] = useState(false);
+  const [suggestions, setSuggestions] = useState([]);
 
   const userInputWords = userInput.trim().toLowerCase().split(/\s+/); // Array Of Words..
 
@@ -28,16 +29,6 @@ const AllProjects = () => {
     window.innerWidth < 848 ? 4 : 8
   );
 
-  useEffect(() => {
-    window.addEventListener("resize", () => {
-      setProjectsPerPage(window.innerWidth < 848 ? 4 : 8);
-    });
-  }, []);
-
-  useEffect(() => {
-    setCurrentPage(1);
-  }, [userInput]);
-
   const filterProject = projects.filter((project) => {
     return userInputWords.every(
       (word) =>
@@ -47,6 +38,17 @@ const AllProjects = () => {
         project.skills.some((skill) => skill.toLowerCase().includes(word))
     );
   });
+
+  useEffect(() => {
+    window.addEventListener("resize", () => {
+      setProjectsPerPage(window.innerWidth < 848 ? 4 : 8);
+    });
+  }, []);
+
+  useEffect(() => {
+    setCurrentPage(1);
+    setSuggestions(filterProject);
+  }, [userInput]);
 
   const totalPages = Math.ceil(filterProject.length / projectsPerPage);
 
@@ -79,6 +81,11 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
     }
   };
 
+  const handelSuggestionClick = (title) => {
+    setUserInput(title);
+    setSuggestions([]);
+  };
+
   const shortenDescription = (description, maxLength) => {
     if (description.length > maxLength) {
       return description.slice(0, maxLength) + "..."; // Add ellipsis after truncating
@@ -95,8 +102,8 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
       >
         <CursorFollowing />
 
-        <center
-          className="flex flex-wrap items-center justify-between gap-10 px-3 mt-32 sm:mt-16 "
+        <div
+          className="relative z-20 flex flex-wrap items-center justify-between gap-10 px-3 mt-32 sm:mt-16 "
           data-aos="zoom-in"
         >
           <div className="mx-auto text-center sm:mx-0 sm:text-start">
@@ -122,19 +129,19 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
           </div>
 
           <div className="text-end">
-            <div className="relative hidden sm:block">
+            <div className="absolute left-0 right-0 -top-[6rem] sm:top-0 sm:relative sm:block">
               <input
                 type="text"
                 value={userInput}
                 onChange={handleUserInput}
                 placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
-                className="w-[38rem] sm:w-[30rem] md:w-[40rem] text-white backdrop-blur-sm bg-black/60 outline-none border-t-[1px] border-b-[1px] rounded-3xl py-5 px-6 custom-shadow2 md:text-2xl"
+                className="w-full sm:w-[30rem] md:w-[40rem] text-white backdrop-blur-sm bg-black/60 outline-none border-t-[1px] border-t-purple-500 border-b-[1px] border-b-blue-500 rounded-3xl py-5 px-6 custom-shadow2 md:text-2xl"
               />
 
               {userInput !== "" ? (
                 <img
                   loading="lazy"
-                  className="absolute top-5 right-5 w-[1.8rem] cursor-pointer"
+                  className="relative sm:absolute top-6 right-5 w-[1.8rem] cursor-pointer"
                   src="https://img.icons8.com/nolan/64/delete-sign.png"
                   alt="delete-sign"
                   onClick={() => setUserInput("")}
@@ -148,16 +155,33 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
                 />
               )}
             </div>
-            <p className="mt-10 text-[2rem] text-white">
+            <p className="mt-6 text-[2rem] text-white">
               Total Projects:{" "}
               <span className="font-medium text-green-400">
                 {filterProject.length}
               </span>
             </p>
           </div>
-        </center>
+          <ul
+            className={`w-full ${
+              userInput && suggestions.length > 0 ? "max-h-[33rem] p-5" : "h-0"
+            }  overflow-y-scroll right-0 sm:w-[30rem] md:w-[40rem] sm:top-28 sm:right-3  rounded-3xl absolute  top-0  text-white text-start text-2xl custom-shadow3 bg-[#000000da] transition-all duration-300`}
+          >
+            {suggestions.map((project, i) => {
+              return (
+                <li
+                  key={i}
+                  className="px-4 py-3 mt-3 transition-all border-b cursor-pointer hover:scale-105 rounded-3xl border-b-purple-500"
+                  onClick={() => handelSuggestionClick(project.title)}
+                >
+                  {project.title}
+                </li>
+              );
+            })}
+          </ul>
+        </div>
 
-        <div className="flex flex-wrap justify-center gap-10 mt-8 mb-16">
+        <div className="flex flex-wrap justify-center mt-8 mb-16 gap-14 ">
           {filterProject.length > 0 ? (
             sliceProjects.map((project, i) => (
               <Card
