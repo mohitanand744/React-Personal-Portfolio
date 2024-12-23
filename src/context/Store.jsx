@@ -90,9 +90,11 @@ const StoreProvider = ({ children }) => {
     setTimeout(() => {
       const section = document.getElementById(id);
       if (!section) return;
-      const yOffset = -100; // Height of the navbar
+      const yOffset = -130; // Height of the navbar
       const y =
         section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      console.log(window.pageYOffset);
 
       window.scrollTo({ top: y, behavior: "smooth" });
     }, 100);

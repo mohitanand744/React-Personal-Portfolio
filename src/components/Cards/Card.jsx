@@ -14,7 +14,7 @@ const Card = ({
   live_url,
   shortenDescription,
 }) => {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   return (
     <div
