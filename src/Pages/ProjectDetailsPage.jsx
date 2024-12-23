@@ -88,6 +88,7 @@ const ProjectDetailsPage = () => {
             </div>
           </div>
         </div>
+
         <div className="col-span-12 mb-6 md:col-span-6 lg:col-span-5">
           <div className="custom-shadow3 p-8 rounded-[4rem]">
             <center className="mb-4 text-3xl md:text-4xl highLight-text">

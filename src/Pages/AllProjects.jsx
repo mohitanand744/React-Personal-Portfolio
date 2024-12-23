@@ -100,9 +100,9 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
   };
 
   const shortenDescription = (description, maxLength) => {
-    if (description.length > maxLength) {
+    if (description.length > maxLength)
       return description.slice(0, maxLength) + "..."; // Add ellipsis after truncating
-    }
+
     return description;
   };
 
@@ -156,7 +156,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
           className="relative z-20 flex flex-wrap items-center justify-between gap-10 px-3 mt-32 sm:mt-16 "
           data-aos="zoom-in"
         >
-          <div className="mx-auto text-center sm:mx-0 sm:text-start">
+          <div className="mx-auto text-center md:mx-0 md:text-start">
             <SectionHeading text={"All Projects"} />
 
             <div className="gap-3 mb-6 ">
@@ -206,8 +206,8 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
                 />
               )}
             </div>
-            <p className="mt-6 text-[2rem] text-white">
-              Total Projects:{" "}
+            <p className="sm:mt-6 text-[2rem] text-white">
+              Total Projects Listed:{" "}
               <span className="font-medium text-green-400">
                 {filterProject.length}
               </span>
@@ -217,7 +217,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
             ref={suggestionBoxRef}
             className={`w-full ${
               userInput && suggestions.length > 0 && showSuggestionsBox
-                ? "h-[38rem] p-5"
+                ? "h-[18.6rem] md:h-[38rem] px-5 py-3"
                 : "h-0"
             } suggestionBox right-0 sm:w-[30rem] md:w-[40rem] sm:top-28 sm:right-3 rounded-3xl absolute top-0 text-white text-start text-xl md:text-2xl custom-shadow3 bg-[#000000da] transition-all duration-300`}
           >
