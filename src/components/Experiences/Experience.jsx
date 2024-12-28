@@ -67,10 +67,10 @@ const Experience = () => {
       >
         {experience.map((experienceItem, index) => (
           <Suspense
+            key={index}
             fallback={<span className="loading loading-ring loading-lg"></span>}
           >
             <ExperienceCard
-              key={index}
               index={index}
               experienceItem={experienceItem}
               scrollContainers={scrollContainers}

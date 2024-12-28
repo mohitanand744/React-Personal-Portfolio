@@ -44,7 +44,7 @@ const Card = ({
               readMoreFun(index);
             }}
           >
-            {isExpanded === index && readMore ? "read less" : "read more"}
+            {isExpanded === index && readMore ? " read less" : " read more"}
           </span>
         </p>
       </div>

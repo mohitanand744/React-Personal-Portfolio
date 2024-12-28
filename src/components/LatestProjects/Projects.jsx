@@ -128,10 +128,11 @@ const Projects = () => {
       >
         {latestProjects.map((project, i) => (
           <Suspense
+            className="w-full"
+            key={i}
             fallback={<span className="loading loading-ring loading-lg"></span>}
           >
             <Card
-              key={i}
               image={project.image}
               title={project.title}
               description={project.description}

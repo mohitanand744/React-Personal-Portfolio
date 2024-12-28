@@ -55,7 +55,7 @@ const AboutMe = () => {
           <p>
             A dedicated Frontend Developer with hands-on experience in building
             scalable web applications using React.js, Bootstrap, and Tailwind
-            CSS. Currently interning at WeboConnect, I focus on enhancing user
+            CSS. Currently Working at WeboConnect, I focus on enhancing user
             experiences and improving performance through dynamic interfaces and
             API integration.{" "}
             {readMore &&
