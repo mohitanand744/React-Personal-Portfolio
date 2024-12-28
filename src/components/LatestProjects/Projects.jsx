@@ -1,9 +1,9 @@
-import React, { useRef, useState } from "react";
+import React, { lazy, Suspense, useRef, useState } from "react";
 import SectionHeading from "../common/Heading/SectionHeading";
 import useContextData from "../../Hook/useContextData";
 import Button from "../common/Buttons/Button";
 import { Link } from "react-router-dom";
-import Card from "../Cards/Card";
+const Card = lazy(() => import("../Cards/Card"));
 
 const Projects = () => {
   const { projects } = useContextData();
@@ -97,7 +97,7 @@ const Projects = () => {
 
       <div
         data-aos="flip-left"
-        className="scrollButtons w-[95%] relative lg:hidden my-6"
+        className="scrollButtons w-[95%] relative lg:hidden mt-6"
       >
         {latestProjects.length <= 1 ? (
           ""
@@ -124,23 +124,27 @@ const Projects = () => {
         ref={scrollContainer}
         className={`latestWork w-[32rem] md:w-[80%]  mx-auto ${
           latestProjects.length <= 1 && "justify-center"
-        } lg:justify-center my-28 hide-ScrollBar flex overflow-x-scroll overflow-y-hidden  lg:flex-wrap  gap-8`}
+        } lg:justify-center my-16 hide-ScrollBar p-4 flex overflow-x-scroll overflow-y-hidden  lg:flex-wrap  gap-8`}
       >
         {latestProjects.map((project, i) => (
-          <Card
-            key={i}
-            image={project.image}
-            title={project.title}
-            description={project.description}
-            index={i}
-            isExpanded={isExpanded}
-            readMore={readMore}
-            readMoreFun={readMoreFun}
-            skills={project.skills}
-            github_url={project.github_url}
-            live_url={project.live_url}
-            shortenDescription={shortenDescription}
-          />
+          <Suspense
+            fallback={<span className="loading loading-ring loading-lg"></span>}
+          >
+            <Card
+              key={i}
+              image={project.image}
+              title={project.title}
+              description={project.description}
+              index={i}
+              isExpanded={isExpanded}
+              readMore={readMore}
+              readMoreFun={readMoreFun}
+              skills={project.skills}
+              github_url={project.github_url}
+              live_url={project.live_url}
+              shortenDescription={shortenDescription}
+            />
+          </Suspense>
         ))}
       </div>
       <div className="flex justify-center md:w-[53%] mx-auto">

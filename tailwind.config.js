@@ -4,5 +4,11 @@ export default {
   theme: {
     extend: {},
   },
-  plugins: [],
+  plugins: [require("daisyui")],
+  daisyui: {
+    styled: true,
+    themes: true,
+    base: false, // Disable base styles, including scrollbar
+    utils: true,
+  },
 };

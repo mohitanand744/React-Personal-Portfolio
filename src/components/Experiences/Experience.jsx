@@ -1,7 +1,7 @@
-import React, { useRef } from "react";
+import React, { lazy, Suspense, useRef } from "react";
 import SectionHeading from "../common/Heading/SectionHeading";
 import useContextData from "../../Hook/useContextData";
-import ExperienceCard from "../Cards/ExperienceCard";
+const ExperienceCard = lazy(() => import("./../Cards/ExperienceCard"));
 
 const Experience = () => {
   const { experience, skills } = useContextData();
@@ -66,14 +66,18 @@ const Experience = () => {
         className="timeline p-[1rem] hide-ScrollBar mx-auto md:w-[60rem] lg:w-[90rem] my-6 flex md:flex-col gap-10 overflow-x-scroll overflow-y-hidden"
       >
         {experience.map((experienceItem, index) => (
-          <ExperienceCard
-            key={index}
-            index={index}
-            experienceItem={experienceItem}
-            scrollContainers={scrollContainers}
-            scroll={scroll}
-            skillsUsed={skillsUsed}
-          />
+          <Suspense
+            fallback={<span className="loading loading-ring loading-lg"></span>}
+          >
+            <ExperienceCard
+              key={index}
+              index={index}
+              experienceItem={experienceItem}
+              scrollContainers={scrollContainers}
+              scroll={scroll}
+              skillsUsed={skillsUsed}
+            />
+          </Suspense>
         ))}
       </div>
     </div>

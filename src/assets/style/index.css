@@ -294,7 +294,7 @@ body {
 
 /* width */
 ::-webkit-scrollbar {
-  width: 0.5rem;
+  width: 0.6rem;
 }
 
 /* Track */
@@ -304,6 +304,8 @@ body {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
+  border-radius: 5rem !important;
+
   background: linear-gradient(#eb1d6f, #10baf3);
 }
 
