@@ -39,7 +39,7 @@ body {
 
 .hide-ScrollBar {
   &::-webkit-scrollbar {
-    display: none;
+    display: none !important;
   }
 }
 

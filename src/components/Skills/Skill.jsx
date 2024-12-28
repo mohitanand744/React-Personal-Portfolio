@@ -16,7 +16,7 @@ const Skill = () => {
       data-aos="zoom-in"
       className="px-3 mt-32 skills h-fit md:my-44 lg:px-10"
     >
-      <center className="my-10 mx-auto w-[96%] lg:w-[40%] mb-14">
+      <center className="my-10 mx-auto w-[96%] lg:w-[40%] mb-14 ">
         <SectionHeading text={"Skills"} />
         <p className="text-xl text-white lg:text-2xl ">
           Expertise in multiple frameworks and a passion for continuous
@@ -26,7 +26,7 @@ const Skill = () => {
 
       <div
         data-aos="zoom-in"
-        className="flex justify-center items-center flex-wrap text-white text-[1.6rem] md:text-3xl gap-8 md:gap-16"
+        className="hidden md:flex justify-center items-center flex-wrap text-white text-[1.3rem] md:text-3xl gap-4 md:gap-16"
       >
         <button
           data-aos="flip-left"
@@ -57,12 +57,12 @@ const Skill = () => {
         </button>
       </div>
 
-      <div className="w-[98%] md:w-[78%] lg:w-[85%] mx-auto flex rounded-3xl my-16 gap-14 justify-center flex-wrap  items-center">
+      <div className="w-[96%] md:w-[78%] lg:w-[85%] mx-auto flex my-16 gap-4 md:gap-14 md:justify-center hide-ScrollBar md:flex-wrap overflow-x-scroll justify-start flex-row md:items-center">
         {filterSkillsCategory.map((skill, i) => (
           <div
             key={i}
             data-aos="zoom-in"
-            className="flex flex-col justify-center items-center bg-[#00000081] w-[14rem] md:w-[14rem] lg:w-[18rem] py-5 rounded-3xl text-xl md:text-2xl font-bold custom-shadow"
+            className="flex flex-col justify-center items-center bg-[#00000081] min-w-[13rem] md:w-[15rem] lg:w-[18rem] py-5 px-5 rounded-3xl text-xl md:text-2xl font-bold custom-shadow"
           >
             <img
               loading="lazy"
