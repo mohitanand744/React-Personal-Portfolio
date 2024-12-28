@@ -153,7 +153,7 @@ const Nav = () => {
 
       {/* Mobile menu toggle */}
       <div
-        className="block w-[4rem] h-[4rem] 
+        className="block w-[4.5rem] h-[4.5rem] 
           md:hidden cursor-pointer"
       >
         <img
