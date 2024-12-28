@@ -57,12 +57,12 @@ const Skill = () => {
         </button>
       </div>
 
-      <div className="w-[96%] md:w-[78%] lg:w-[85%] mx-auto flex my-16 gap-4 md:gap-14 md:justify-center hide-ScrollBar md:flex-wrap overflow-x-scroll justify-start flex-row md:items-center">
+      <div className="flex flex-wrap items-center justify-center gap-4 mx-auto my-16 md:gap-8">
         {filterSkillsCategory.map((skill, i) => (
           <div
             key={i}
             data-aos="zoom-in"
-            className="flex flex-col justify-center items-center bg-[#00000081] min-w-[13rem] md:w-[15rem] lg:w-[18rem] py-5 px-5 rounded-3xl text-xl md:text-2xl font-bold custom-shadow"
+            className="flex flex-col justify-center items-center bg-[#00000081] min-w-[11rem]  md:w-[13rem] lg:w-[15rem] py-5  rounded-3xl text-xl md:text-2xl font-bold custom-shadow"
           >
             <img
               loading="lazy"

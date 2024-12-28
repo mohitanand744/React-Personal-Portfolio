@@ -13,7 +13,7 @@ const AboutMe = () => {
   return (
     <div
       id="About"
-      className="about h-fit grid w-[98%] md:w-[80%] lg:w-[98%] mx-auto gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72 px-3 lg:px-10"
+      className="about h-fit grid w-[98%] mx-auto gap-16 grid-cols-1 lg:grid-cols-12 lg:mt-72 px-3 lg:px-10"
     >
       <div className="col-span-5 p-2">
         <div
@@ -22,7 +22,7 @@ const AboutMe = () => {
         >
           <img
             loading="lazy"
-            className="profileImageContainer text-center w-[20rem] md:w-[25rem] md:h-[32rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover"
+            className="profileImageContainer text-center w-[25rem] md:w-[25rem] md:h-[32rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover"
             src="/p2.jpg"
             alt=""
           />
@@ -57,9 +57,10 @@ const AboutMe = () => {
             scalable web applications using React.js, Bootstrap, and Tailwind
             CSS. Currently Working at WeboConnect, I focus on enhancing user
             experiences and improving performance through dynamic interfaces and
-            API integration.{" "}
+            API integration. Transitioning into programming after overcoming a
+            spinal cord injury, I bring resilience, adaptability{" "}
             {readMore &&
-              "Transitioning into programming after overcoming a spinal cord injury, I bring resilience, adaptability, and a passion for creating impactful web solutions. I am continually expanding my skills, currently learning backend technologies to further enrich my projects."}{" "}
+              ", and a passion for creating impactful web solutions. I am continually expanding my skills, currently learning backend technologies to further enrich my projects."}{" "}
             <span
               className="cursor-pointer highLight-text"
               onClick={readMoreText}

@@ -75,7 +75,7 @@ const Projects = () => {
 
       <div
         data-aos="zoom-in"
-        className="flex justify-center items-center flex-wrap text-white text-[1.6rem] md:text-3xl gap-7 md:gap-10"
+        className="flex justify-center items-center flex-wrap text-white text-[1.6rem] md:text-3xl gap-7 md:gap-10 mb-5"
       >
         <button
           onClick={() => setFilterProject("Frontend")}
@@ -97,7 +97,7 @@ const Projects = () => {
 
       <div
         data-aos="flip-left"
-        className="scrollButtons w-[95%] relative lg:hidden mt-6"
+        className="scrollButtons w-[98%] relative md:hidden "
       >
         {latestProjects.length <= 1 ? (
           ""
@@ -122,9 +122,9 @@ const Projects = () => {
       </div>
       <div
         ref={scrollContainer}
-        className={`latestWork w-[32rem] md:w-[80%]  mx-auto ${
+        className={`latestWork  mt-20 md:w-[98%]  mx-auto ${
           latestProjects.length <= 1 && "justify-center"
-        } lg:justify-center my-16 hide-ScrollBar p-4 flex overflow-x-scroll overflow-y-hidden  lg:flex-wrap  gap-8`}
+        } lg:justify-center my-16 hide-ScrollBar flex md:grid grid-cols-12 p-4 overflow-y-hidden  overflow-x-scroll  lg:flex-wrap  gap-8`}
       >
         {latestProjects.map((project, i) => (
           <Suspense

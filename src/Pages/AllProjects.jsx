@@ -238,7 +238,7 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
           </ul>
         </div>
 
-        <div className="flex flex-wrap justify-center mt-8 mb-16 gap-14 ">
+        <div className="flex flex-wrap justify-center grid-cols-12 gap-8 mt-8 mb-16 md:grid ">
           {filterProject.length > 0 ? (
             sliceProjects.map((project, i) => (
               <Card
