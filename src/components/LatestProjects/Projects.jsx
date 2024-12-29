@@ -81,7 +81,7 @@ const Projects = () => {
           onClick={() => setFilterProject("Frontend")}
           className={`border-b-2 ${
             filterProjects === "Frontend" && "highLight-text"
-          } h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
+          } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
         >
           Frontend
         </button>
@@ -89,7 +89,7 @@ const Projects = () => {
           onClick={() => setFilterProject("Full Stack")}
           className={`border-b-2 ${
             filterProjects === "Full Stack" && "highLight-text"
-          } h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
+          } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
         >
           Full Stack
         </button>
