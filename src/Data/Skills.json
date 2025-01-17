@@ -78,5 +78,10 @@
     "title": "MongoDB",
     "image": "/mongoDB.png",
     "category": "backend"
+  },
+  {
+    "title": "MySQL",
+    "image": "/mySql.png",
+    "category": "backend"
   }
 ]

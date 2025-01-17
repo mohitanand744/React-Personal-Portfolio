@@ -16,8 +16,10 @@ const ExperienceCard = ({
         <img
           loading="lazy"
           className={`${
-            experienceItem.company === "WeboConnect" ? "" : "w-[3.9rem]"
-          } h-[4rem] sm:h-[3rem] lg:h-[4rem] my-auto lg:w-[6rem] object-cover`}
+            experienceItem.company === "WeboConnect"
+              ? "rounded-full w-[4.6rem] h-[4.5rem] border-2 border-gray-400"
+              : "w-[3.9rem] h-[4rem] sm:h-[3rem] lg:h-[4rem]  lg:w-[6rem]"
+          }  my-auto object-cover`}
           src={experienceItem.logo}
           alt={experienceItem.company}
         />
@@ -29,6 +31,17 @@ const ExperienceCard = ({
               <span className="highLight-text">[</span> {experienceItem.type}{" "}
               <span className="highLight-text">]</span>
             </span>
+            <a
+              target="_blank"
+              className="ml-4"
+              href={experienceItem.companyLinkdin}
+            >
+              <img
+                className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] md:w-[3.4rem]"
+                src="/linkedin.png"
+                alt="icon"
+              />
+            </a>
           </h1>
           <p className={`text-lg sm:text-2xl`}>
             {experienceItem.start_date} -{" "}
