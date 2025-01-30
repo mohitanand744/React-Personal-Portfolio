@@ -61,7 +61,7 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("About");
           }}
-          className={`cursor-pointer navlinks ${
+          className={`cursor-pointer navlinks  ${
             active === "About" ? "active" : ""
           }`}
         >
@@ -74,7 +74,7 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Skills");
           }}
-          className={`cursor-pointer navlinks ${
+          className={`cursor-pointer navlinks  ${
             active === "Skills" ? "active" : ""
           }`}
         >
@@ -87,7 +87,7 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Experience");
           }}
-          className={`cursor-pointer navlinks ${
+          className={`cursor-pointer navlinks  ${
             active === "Experience" ? "active" : ""
           }`}
         >
@@ -100,7 +100,7 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Projects");
           }}
-          className={`cursor-pointer navlinks ${
+          className={`cursor-pointer navlinks  ${
             active === "Projects" ? "active" : ""
           }`}
         >
@@ -114,7 +114,7 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Notes");
           }}
-          className={`cursor-pointer navlinks ${
+          className={`cursor-pointer navlinks  ${
             active === "Notes" ? "active" : ""
           }`}
         >
@@ -129,7 +129,7 @@ const Nav = () => {
 
             alert("Working on it...");
           }}
-          className={`cursor-pointer navlinks ${
+          className={`cursor-pointer navlinks  ${
             active === "Blogs" ? "active" : ""
           }`}
         >
@@ -143,7 +143,7 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Contact");
           }}
-          className={`cursor-pointer navlinks ${
+          className={`cursor-pointer navlinks  ${
             active === "Contact" ? "active" : ""
           }`}
         >
