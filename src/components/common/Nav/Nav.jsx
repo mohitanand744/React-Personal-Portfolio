@@ -109,10 +109,11 @@ const Nav = () => {
 
         <p
           onClick={() => {
-            navigate("/");
+            /*navigate("/");
             setActive("Notes");
             setToggle(false);
-            scrollToSection("Notes");
+            scrollToSection("Notes");*/
+            alert("Working on it...");
           }}
           className={`cursor-pointer navlinks  ${
             active === "Notes" ? "active" : ""

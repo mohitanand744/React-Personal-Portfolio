@@ -127,7 +127,7 @@ const Footer = () => {
         <div className="flex flex-col items-center justify-center h-full gap-4 md:col-span-3">
           <ul className="flex flex-col gap-2 list-none ">
             <h2 className="text-3xl highLight-text">Social Media</h2>
-            <div className="flex">
+            <ul className="flex items-center justify-center ">
               <li>
                 <a
                   target="_blank"
@@ -178,7 +178,18 @@ const Footer = () => {
                   />{" "}
                 </a>
               </li>
-            </div>
+              {/*  <li>
+                <a target="_blank" href="mailto:anandmohit744@gmail.com">
+                  {" "}
+                  <img
+                    loading="lazy"
+                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[3.5rem] sm:w-[3.6rem]"
+                    src="https://icons.iconarchive.com/icons/franksouza183/fs/512/Apps-skype-icon.png"
+                    alt="icon"
+                  />{" "}
+                </a>
+              </li> */}
+            </ul>
           </ul>
 
           <div className="flex flex-col gap-3 mt-5 text-2xl">

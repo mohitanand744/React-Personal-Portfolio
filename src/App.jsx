@@ -84,7 +84,26 @@ function App() {
         className="Home w-full min-h-[100vh] "
         onClick={() => setToggle(false)}
       >
-        {" "}
+        <a
+          target="_blank"
+          className={`fixed group z-50 w-16 transition-all duration-200 cursor-pointer ${
+            showGoToTop ? "bottom-40 right-16" : "bottom-10 right-10"
+          }   lg:w-20 active:scale-90`}
+          href="https://join.skype.com/invite/vdxXfk3ouB0x"
+        >
+          <div className="absolute w-[16rem] text-center p-3 rounded-full  text-white transition-all duration-200 scale-0 -translate-x-1/2 -translate-y-1/2 group-hover:scale-100 -top-1/3 bg-[#000] border border-purple-500 -left-1/2">
+            <p className="text-3xl fw-bold">Let's Chat.</p>
+          </div>
+
+          <div className="relative w-[4.6rem] h-[4.6rem] flex justify-center items-center">
+            <img
+              className="object-contain w-full h-full"
+              src="https://img.icons8.com/3d-fluency/94/comments.png"
+              alt=""
+            />
+            <span className="loading absolute z-[-4]  loading-ring w-[7rem]"></span>
+          </div>
+        </a>{" "}
         {!showGoToTop ? (
           ""
         ) : (

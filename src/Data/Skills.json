@@ -70,7 +70,7 @@
     "category": "backend"
   },
   {
-    "title": "Node",
+    "title": "Node Js",
     "image": "/node-js.png",
     "category": "backend"
   },
@@ -83,5 +83,30 @@
     "title": "MySQL",
     "image": "/mySql.png",
     "category": "backend"
+  },
+  {
+    "title": "Next Js",
+    "image": "https://img.icons8.com/nolan/64/nextjs.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Material UI",
+    "image": "https://img.icons8.com/color/material-ui.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Vite",
+    "image": "https://www.svgrepo.com/show/354521/vitejs.svg",
+    "category": "frontend"
+  },
+  {
+    "title": "Redux",
+    "image": "https://img.icons8.com/color/512/redux.png",
+    "category": "frontend"
+  },
+  {
+    "title": "SEO",
+    "image": "https://cdn-icons-png.flaticon.com/512/6188/6188785.png",
+    "category": "frontend"
   }
 ]
