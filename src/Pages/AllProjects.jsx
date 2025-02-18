@@ -238,28 +238,30 @@ const sliceProjects = filterProject.slice(firstIndex, lastIndex); */
           </ul>
         </div>
 
-        <div className="flex flex-wrap justify-center grid-cols-12 gap-8 mt-8 mb-16 md:grid ">
-          {filterProject.length > 0 ? (
-            sliceProjects.map((project, i) => (
-              <Card
-                key={i}
-                image={project.image}
-                title={project.title}
-                description={project.description}
-                index={i}
-                isExpanded={isExpanded}
-                readMore={readMore}
-                readMoreFun={readMoreFun}
-                skills={project.skills}
-                github_url={project.github_url}
-                live_url={project.live_url}
-                shortenDescription={shortenDescription}
-              />
-            ))
-          ) : (
-            <ProjectsNotFound />
-          )}
+        <div className="flex flex-wrap justify-center grid-cols-12 gap-8 mt-8 mb-16 md:grid">
+          {sliceProjects?.map((project, i) => (
+            <Card
+              key={i}
+              image={project.image}
+              title={project.title}
+              description={project.description}
+              index={i}
+              isExpanded={isExpanded}
+              readMore={readMore}
+              readMoreFun={readMoreFun}
+              skills={project.skills}
+              github_url={project.github_url}
+              live_url={project.live_url}
+              shortenDescription={shortenDescription}
+            />
+          ))}
         </div>
+
+        {filterProject.length <= 0 && (
+          <>
+            <ProjectsNotFound />
+          </>
+        )}
 
         {totalPages > 1 && (
           <Pagination

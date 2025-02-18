@@ -9,7 +9,7 @@ const ProjectsNotFound = () => {
           src="/emptySearchResult.webp"
           alt=""
         />
-        <h2 className="text-[#4a5366] text-2xl md:text-4xl font-bold">
+        <h2 className="text-[#70798b] text-2xl mt-5 md:text-4xl font-bold">
           Search Result: Not Found!!
         </h2>
       </div>
