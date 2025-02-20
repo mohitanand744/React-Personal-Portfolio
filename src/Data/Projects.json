@@ -1,5 +1,17 @@
 [
   {
+    "title": "Book Store",
+    "description": "A dynamic and feature-rich online bookstore built with the MERN stack. Users can explore, rate, and purchase books, while authors can register, list, and manage their books. Features include user authentication, author dashboards, book ratings, and a seamless shopping experience. Future enhancements include audiobooks, secure payments, and improved user engagement.",
+    "skills": [
+      "MERN"
+    ],
+    "live_url": "https://bookstore-react-mysql.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/Book-Store-React-MySQL-.git",
+    "image": "/BookStore.png",
+    "projectTime": "Latest",
+    "category": "Full Stack"
+  },
+  {
     "title": "Pokémon World",
     "description": "React project that dynamically displays Pokémon data by leveraging the Pokémon API, and I’m thrilled with the results!This project was a great learning experience, combining API integration with reusable and scalable React components.Check out the demo look of the website",
     "skills": [
@@ -172,17 +184,5 @@
     "image": "/react TODO.png",
     "projectTime": "",
     "category": "Frontend"
-  },
-  {
-    "title": "Work in progress...",
-    "description": "I am continually expanding my skills, currently learning backend technologies to further enrich my projects.",
-    "skills": [
-      "MERN"
-    ],
-    "live_url": "",
-    "github_url": "",
-    "image": "https://thehubbackend.com/media/65246d_c7bd3ba476fb4191af59a11494ad027f_mv2.jpg",
-    "projectTime": "Latest",
-    "category": "Full Stack"
   }
 ]

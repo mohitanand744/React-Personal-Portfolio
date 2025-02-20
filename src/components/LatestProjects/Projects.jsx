@@ -9,7 +9,7 @@ const Projects = () => {
   const { projects } = useContextData();
   const [isExpanded, setIsExpanded] = useState(null);
   const [readMore, setReadMore] = useState(false);
-  const [filterProjects, setFilterProject] = useState("Frontend");
+  const [filterProjects, setFilterProject] = useState("All");
   const scrollContainer = useRef();
 
   const readMoreFun = (i) => {
@@ -25,7 +25,8 @@ const Projects = () => {
 
   const latestProjects = projects.filter(
     (project) =>
-      project.projectTime === "Latest" && project.category === filterProjects
+      (filterProjects === "All" && project.projectTime === "Latest") ||
+      (project.projectTime === "Latest" && project.category === filterProjects)
   );
 
   const shortenDescription = (description, maxLength) => {
@@ -77,6 +78,14 @@ const Projects = () => {
         data-aos="zoom-in"
         className="flex justify-center items-center flex-wrap text-white text-[1.6rem] md:text-3xl gap-7 md:gap-10 mb-5"
       >
+        <button
+          onClick={() => setFilterProject("All")}
+          className={`border-b-2 ${
+            filterProjects === "All" && "highLight-text"
+          } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
+        >
+          All
+        </button>
         <button
           onClick={() => setFilterProject("Frontend")}
           className={`border-b-2 ${
