@@ -26,7 +26,7 @@ const Card = ({
         <img
           loading="lazy"
           className="object-cover w-full h-full rounded-3xl"
-          src={image}
+          src={image || "/react poster.jpg"}
           alt=""
         />
       </div>

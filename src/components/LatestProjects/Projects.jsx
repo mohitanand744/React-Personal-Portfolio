@@ -120,34 +120,67 @@ const Projects = () => {
           </>
         )}
       </div>
-      <div
-        ref={scrollContainer}
-        className={`latestWork  mt-20 md:w-[98%]  mx-auto ${
-          latestProjects.length <= 1 && "justify-center"
-        } lg:justify-center my-16 hide-ScrollBar flex md:grid grid-cols-12 p-4 overflow-y-hidden  overflow-x-scroll  lg:flex-wrap  gap-8`}
-      >
-        {latestProjects.map((project, i) => (
-          <Suspense
-            className="w-full"
-            key={i}
-            fallback={<span className="loading loading-ring loading-lg"></span>}
+      {latestProjects.length >= 4 ? (
+        <>
+          <div
+            ref={scrollContainer}
+            className={`latestWork  mt-20 md:w-[98%]  mx-auto lg:justify-center my-16 hide-ScrollBar flex md:grid grid-cols-12 p-4 overflow-y-hidden  overflow-x-scroll gap-8`}
           >
-            <Card
-              image={project.image}
-              title={project.title}
-              description={project.description}
-              index={i}
-              isExpanded={isExpanded}
-              readMore={readMore}
-              readMoreFun={readMoreFun}
-              skills={project.skills}
-              github_url={project.github_url}
-              live_url={project.live_url}
-              shortenDescription={shortenDescription}
-            />
-          </Suspense>
-        ))}
-      </div>
+            {latestProjects.map((project, i) => (
+              <Suspense
+                className="w-full"
+                key={i}
+                fallback={
+                  <span className="loading loading-ring loading-lg"></span>
+                }
+              >
+                <Card
+                  image={project.image}
+                  title={project.title}
+                  description={project.description}
+                  index={i}
+                  isExpanded={isExpanded}
+                  readMore={readMore}
+                  readMoreFun={readMoreFun}
+                  skills={project.skills}
+                  github_url={project.github_url}
+                  live_url={project.live_url}
+                  shortenDescription={shortenDescription}
+                />
+              </Suspense>
+            ))}
+          </div>
+        </>
+      ) : (
+        <>
+          <div className="px-4 w-full sm:w-[33rem] mx-auto my-20">
+            {latestProjects.map((project, i) => (
+              <Suspense
+                className="w-full"
+                key={i}
+                fallback={
+                  <span className="loading loading-ring loading-lg"></span>
+                }
+              >
+                <Card
+                  image={project.image}
+                  title={project.title}
+                  description={project.description}
+                  index={i}
+                  isExpanded={isExpanded}
+                  readMore={readMore}
+                  readMoreFun={readMoreFun}
+                  skills={project.skills}
+                  github_url={project.github_url}
+                  live_url={project.live_url}
+                  shortenDescription={shortenDescription}
+                />
+              </Suspense>
+            ))}
+          </div>
+        </>
+      )}
+
       <div className="flex justify-center md:w-[53%] mx-auto">
         <Button url={"/projects"} text={"All Projects"} />
       </div>
