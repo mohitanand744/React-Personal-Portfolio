@@ -23,7 +23,7 @@ const AboutMe = () => {
           <img
             loading="lazy"
             className="profileImageContainer text-center w-[25rem] md:w-[25rem] md:h-[32rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover"
-            src="/p2.jpg"
+            src="/profileImg.jpeg"
             alt=""
           />
         </div>
