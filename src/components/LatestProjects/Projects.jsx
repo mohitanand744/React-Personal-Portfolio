@@ -155,6 +155,7 @@ const Projects = () => {
                   github_url={project.github_url}
                   live_url={project.live_url}
                   shortenDescription={shortenDescription}
+                  docs={project.Docs}
                 />
               </Suspense>
             ))}
@@ -183,6 +184,7 @@ const Projects = () => {
                   github_url={project.github_url}
                   live_url={project.live_url}
                   shortenDescription={shortenDescription}
+                  docs={project.Docs}
                 />
               </Suspense>
             ))}

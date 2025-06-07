@@ -9,7 +9,8 @@
     "github_url": "https://github.com/mohitanand744/Book-Store-React-MySQL-.git",
     "image": "/BookStore.png",
     "projectTime": "Latest",
-    "category": "Full Stack"
+    "category": "Full Stack",
+    "Docs": "true"
   },
   {
     "title": "Pokémon World",
@@ -75,7 +76,6 @@
     "live_url": "https://mohit-anand.netlify.app",
     "github_url": "https://github.com/mohitanand744/React-Personal-Portfolio.git",
     "image": "/portfolio.png",
-    "projectTime": "Latest",
     "category": "Frontend"
   },
   {
