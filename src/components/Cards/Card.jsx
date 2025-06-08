@@ -15,12 +15,12 @@ const Card = ({
   shortenDescription,
   docs,
 }) => {
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
 
   return (
     <div
       data-aos="flip-left"
-      // onClick={() => navigate(`/projects/${title.replaceAll(" ", "")}`)}
+      onClick={() => navigate(`/projects/${title.replaceAll(" ", "")}`)}
       className="flex flex-col items-start justify-between w-full col-span-12 gap-6 p-6 py-8 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-3 projectBox rounded-3xl custom-shadow h-fit "
     >
       <div className="imgContainer relative w-[97%] h-[19rem] md:h-[20rem] mx-auto">
@@ -32,10 +32,10 @@ const Card = ({
         />
 
         {docs && (
-          <div className="absolute cursor-pointer group h-20 w-20 rounded-full flex justify-center items-center custom-shadow bg-[#000000af] top-3 right-3">
-            <img src="/download.png" alt="" class="w-4  lg:w-8 shadow-2xl" />
+          <div className="absolute active:scale-75 transition-all duration-200 ease-in  cursor-pointer group h-20 w-20 rounded-full flex justify-center items-center custom-shadow bg-[#000000af] top-3 right-3">
+            <img src="/download.png" alt="" class="w-8 shadow-2xl" />
 
-            <div className="absolute left-[-16rem] text-nowrap text-xl  group-hover:scale-100 scale-50 opacity-0 group-hover:opacity-100 transition-all duration-300 text-white bg-[#000000cc] px-4 py-2 rounded-full">
+            <div className="absolute left-[-16rem] text-nowrap text-xl  group-hover:scale-100 group-active:scale-100 scale-50 opacity-0 group-hover:opacity-100 transition-all duration-300 text-white bg-[#000000cc] px-4 py-2 rounded-full">
               <p>Download Project Docs</p>
             </div>
           </div>

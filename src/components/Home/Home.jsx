@@ -83,7 +83,7 @@ const Home = () => {
         <div className="order-1 lg:col-span-5 lg:order-2">
           <div
             data-aos="flip-right"
-            className="flex items-center w-full h-full justify-end"
+            className="flex items-center justify-center w-full h-full lg:justify-end"
           >
             <div className="ms-2 profileImageContainer w-[26rem] md:w-[30rem] lg:w-[35rem] h-[26rem] md:h-[30rem] lg:h-[35rem] rounded-full">
               <img
