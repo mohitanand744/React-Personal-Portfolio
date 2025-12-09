@@ -3,13 +3,13 @@ import Button from "../common/Buttons/Button";
 
 const Home = () => {
   return (
-    <div id="Home" className="px-3 mt-32 hero lg:mt-64 lg:px-10">
+    <div id="Home" className="px-0 mt-32 hero lg:mt-48">
       <div
         data-aos="zoom-in"
-        className="grid grid-cols-1 gap-10 lg:grid-cols-12"
+        className="grid w-full grid-cols-1 gap-8 lg:grid-cols-12"
       >
         <div className="lg:col-span-7 h-[48vh] order-2 lg:order-1">
-          <div className="flex items-center justify-center h-full gap-3 ">
+          <div className="flex items-center justify-start w-full h-full gap-3 ">
             <ul className="list-none flex flex-col w-[7rem] md:w-[6rem] gap-2">
               <li>
                 <a

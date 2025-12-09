@@ -33,7 +33,7 @@ const Experience = () => {
   const skillsUsed = skills.filter((skill) => skill.category === "frontend");
 
   return (
-    <div id="Experience" className="sm:px-4 mt-36 md:my-44">
+    <div id="Experience" className="mt-36 md:my-44">
       <center className="my-10 mx-auto w-[96%] lg:w-[44%]" data-aos="zoom-in">
         <SectionHeading text={"Experience"} />
         <p className="text-xl text-white lg:text-2xl">
@@ -63,7 +63,7 @@ const Experience = () => {
       <div
         data-aos="zoom-in"
         ref={scrollExperienceContainers}
-        className="timeline p-[1rem] hide-ScrollBar mx-auto md:w-[60rem] lg:w-[90rem] my-6 flex md:flex-col gap-10 overflow-x-scroll overflow-y-hidden"
+        className="timeline p-[1rem] hide-ScrollBar mx-auto  my-6 flex md:flex-col gap-10 overflow-x-scroll overflow-y-hidden"
       >
         {experience.map((experienceItem, index) => (
           <Suspense

@@ -8,7 +8,7 @@ import MobileMenu from "./components/common/Sidebar/MobileMenu";
 
 const Layout = () => {
   return (
-    <div>
+    <div className="container">
       <StoreProvider>
         <Nav />
         {/* ! Sidebar  */}

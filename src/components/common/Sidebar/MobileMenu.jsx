@@ -11,7 +11,7 @@ const MobileMenu = () => {
       {/* Mobile  menu */}
 
       <div
-        className={`z-50 fixed  text-white list-none w-full py-8 px-10 rounded-b-[5rem] flex md:hidden flex-col gap-6 text-3xl  custom-shadow3 cursor-default backdrop-blur-sm bg-black/80 transition-all  ease-in overflow-hidden ${
+        className={`z-50 fixed  text-white list-none w-full py-8 px-10 rounded-b-[5rem] flex md:hidden flex-col gap-6 text-3xl  custom-shadow3 cursor-default backdrop-blur-sm bg-black/80 left-0 transition-all  ease-in overflow-hidden ${
           toggle ? "top-0" : "-top-[90vh]"
         }`}
         onClick={(e) => e.stopPropagation()}

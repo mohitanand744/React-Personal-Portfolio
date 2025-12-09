@@ -2,13 +2,26 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      container: {
+        center: true,
+        padding: "1rem",
+        screens: {
+          DEFAULT: "100%",
+          sm: "100%",
+          md: "100%",
+          lg: "1500px",
+          xl: "1500px",
+          "2xl": "1500px",
+        },
+      },
+    },
   },
   plugins: [require("daisyui")],
   daisyui: {
     styled: true,
     themes: true,
-    base: false, // Disable base styles, including scrollbar
+    base: false,
     utils: true,
   },
 };

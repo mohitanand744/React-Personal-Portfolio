@@ -55,7 +55,7 @@ function App() {
           }
         });
       },
-      { threshold: 0.4 } // Trigger when 50% of the section is visible
+      { threshold: 0.7 } // Trigger when 70% of the section is visible
     );
 
     sections.forEach((section) => {

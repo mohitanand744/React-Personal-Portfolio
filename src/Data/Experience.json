@@ -2,23 +2,55 @@
   {
     "company": "WeboConnect",
     "logo": "/weboconnect.jpeg",
-    "position": "Frontend Developer",
-    "companyLinkdin": "https://www.linkedin.com/company/weboconnect/",
-    "type": "Full Time",
-    "start_date": "Aug 2024",
+    "companyLinkedin": "https://www.linkedin.com/company/weboconnect/",
     "location": "Remote",
-    "end_date": "Working...",
-    "description": "At WeboConnect, I focus on crafting efficient, scalable, and visually engaging interfaces, optimizing performance, and collaborating closely with designers and backend teams to bring ideas to life. Every day is an opportunity to solve real-world challenges, write clean and maintainable code, and push the boundaries of frontend development."
+    "role": "Frontend Developer",
+    "companyLocation": "New Delhi, Delhi India",
+    "duration": "1 Year",
+    "roles": [
+      {
+        "position": "Frontend Developer Intern",
+        "type": "Internship",
+        "start_date": "Aug 2024",
+        "end_date": "Nov 2024",
+        "duration": "3 Months",
+        "description": "Started as a Frontend Developer Intern, building responsive UI components, improving existing pages, and learning real-world development workflows."
+      },
+      {
+        "position": "Frontend Developer Intern (Extended)",
+        "type": "Internship",
+        "start_date": "Nov 2024",
+        "end_date": "Feb 2025",
+        "duration": "3 Months",
+        "description": "Internship extended based on performance. Contributed to major features, optimized performance, and worked closely with senior developers to solve production-level problems."
+      },
+      {
+        "position": "Frontend Developer",
+        "type": "Full Time",
+        "start_date": "Feb 2025",
+        "end_date": "Aug 2025",
+        "duration": "6 Months",
+        "description": "Promoted to Full-Time Frontend Developer. Built scalable modules, implemented reusable components, improved page performance, and delivered key production features in collaboration with design and backend teams."
+      }
+    ]
   },
   {
     "company": "BazaarNxt",
     "logo": "/bazaarnxt.png",
-    "position": "Frontend Developer",
-    "type": "Internship",
-    "companyLinkdin": "https://www.linkedin.com/company/bazaarnxt/",
-    "start_date": "May 2023",
+    "companyLinkedin": "https://www.linkedin.com/company/bazaarnxt/",
     "location": "Remote",
-    "end_date": "Aug 2023",
-    "description": "This experience has been truly transformative, allowing me to work on diverse projects, learn from a fantastic team, and develop proficiency in (React.js, Tailwind Css, Responsive web app, APIs). I'm grateful for the supportive environment at BazaarNxt and look forward to applying these skills in my future career"
+    "role": "Frontend Developer",
+    "companyLocation": "Bangalore, Karnataka India",
+    "duration": "3 Months",
+    "roles": [
+      {
+        "position": "Frontend Developer Intern",
+        "type": "Internship",
+        "start_date": "May 2023",
+        "end_date": "Aug 2023",
+        "duration": "3 Months",
+        "description": "Worked as a Frontend Developer Intern, gaining hands-on experience by contributing to responsive web applications, implementing UI components using React.js and Tailwind CSS, and integrating APIs. This internship helped strengthen my real-world development skills and gave me exposure to production-ready workflows."
+      }
+    ]
   }
 ]

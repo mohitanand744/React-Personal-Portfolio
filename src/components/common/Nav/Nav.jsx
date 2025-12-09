@@ -17,7 +17,7 @@ const Nav = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="sticky top-0 z-30 flex items-center justify-between w-full px-10 py-8 text-white backdrop-blur-sm bg-black/30 rounded-b-3xl">
+    <header className="container custom-shadow sticky top-0 z-30 flex items-center justify-between w-full px-10 py-8 text-white border-white backdrop-blur-sm bg-black/30 lg:border-b-[1px] mb-2 rounded-b-3xl">
       <div className="bg-white rounded-full">
         <Link to={"/"}>
           <img
