@@ -20,7 +20,7 @@ const Card = ({
   return (
     <div
       data-aos="flip-left"
-      onClick={() => navigate(`/projects/${title.replaceAll(" ", "")}`)}
+      //onClick={() => navigate(`/projects/${title.replaceAll(" ", "")}`)}
       className="flex flex-col items-start justify-between w-full col-span-12 gap-6 p-6 py-8 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-3 projectBox rounded-3xl custom-shadow h-fit "
     >
       <div className="imgContainer relative w-[97%] h-[19rem] md:h-[20rem] mx-auto">

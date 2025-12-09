@@ -1,4 +1,5 @@
 import React from "react";
+import ExperienceAccordion from "../Accordion/ExperienceAccordion";
 
 const ExperienceCard = ({
   experienceItem,
@@ -71,31 +72,7 @@ const ExperienceCard = ({
 
       {/* Roles Loop Section */}
       <div className="flex flex-col gap-8">
-        {experienceItem.roles.map((role, rIndex) => (
-          <div key={rIndex} className="p-5 border-b-[1px] rounded-2xl">
-            <h2 className="mb-1 text-2xl lg:text-3xl">
-              <span className="highLight-text">{role.position}</span>{" "}
-              <span className="text-xl"> [{role.type}]</span>
-            </h2>
-
-            <p className="text-lg sm:text-xl">
-              {role.start_date} -{" "}
-              <span
-                className={`${
-                  role.end_date === "Working..." && "text-green-500"
-                }`}
-              >
-                {role.end_date}
-              </span>
-            </p>
-
-            <p className="text-lg sm:text-xl">
-              Duration: <span className="highLight-text">{role.duration}</span>
-            </p>
-
-            <p className="mt-3 text-xl lg:text-2xl">{role.description}</p>
-          </div>
-        ))}
+        <ExperienceAccordion experienceItem={experienceItem} />
       </div>
 
       {/* Skills Section */}

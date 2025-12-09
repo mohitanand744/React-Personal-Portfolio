@@ -5,7 +5,7 @@
     "skills": [
       "MERN"
     ],
-    "live_url": "https://bookstore-react-mysql.netlify.app/",
+    "live_url": "https://nxtchapter.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Book-Store-React-MySQL-.git",
     "image": "/BookStore.png",
     "projectTime": "Latest",
@@ -73,7 +73,7 @@
       "React",
       "Tailwind CSS"
     ],
-    "live_url": "https://mohit-anand.netlify.app",
+    "live_url": "https://mohit-anand-portfolio.netlify.app/",
     "github_url": "https://github.com/mohitanand744/React-Personal-Portfolio.git",
     "image": "/portfolio.png",
     "category": "Frontend"
