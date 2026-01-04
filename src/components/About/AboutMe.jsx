@@ -69,7 +69,7 @@ const AboutMe = () => {
           </div>
 
           <div className="mt-10 lg:mt-20">
-            <DownloadButton />
+            <DownloadButton text="Download Resume" url="/Mohit Anand.pdf" />
           </div>
         </div>
       </div>

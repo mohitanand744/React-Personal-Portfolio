@@ -9,7 +9,7 @@ const Projects = () => {
   const { projects } = useContextData();
   const [isExpanded, setIsExpanded] = useState(null);
   const [readMore, setReadMore] = useState(false);
-  const [filterProjects, setFilterProject] = useState("All");
+  const [filterType, setFilterType] = useState("initial");
   const scrollContainer = useRef();
 
   const readMoreFun = (i) => {
@@ -22,12 +22,14 @@ const Projects = () => {
       setReadMore(true);
     }
   };
-
-  const latestProjects = projects.filter(
-    (project) =>
-      (filterProjects === "All" && project.projectTime === "Latest") ||
-      (project.projectTime === "Latest" && project.category === filterProjects)
-  );
+  const filteredProjects = projects.filter((project) => {
+    if (filterType === "initial") {
+      return project.level === "Intermediate";
+    } else if (filterType === "production") {
+      return project.level === "Hard";
+    }
+    return true;
+  });
 
   const shortenDescription = (description, maxLength) => {
     if (description.length > maxLength) {
@@ -72,43 +74,81 @@ const Projects = () => {
             />
           </a>
         </p>
+        <p className="text-xl text-white lg:text-2xl">
+          Here's a showcase of my coding journey, from initial learning stages
+          to production-ready applications. Each project represents a milestone
+          in my growth as a developer.
+        </p>
       </center>
 
-      <div
-        data-aos="zoom-in"
-        className="flex justify-center items-center flex-wrap text-white text-[1.6rem] md:text-3xl gap-7 md:gap-10 mb-5"
-      >
-        <button
-          onClick={() => setFilterProject("All")}
-          className={`border-b-2 ${
-            filterProjects === "All" && "highLight-text"
-          } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
-        >
-          All
-        </button>
-        <button
-          onClick={() => setFilterProject("Frontend")}
-          className={`border-b-2 ${
-            filterProjects === "Frontend" && "highLight-text"
-          } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
-        >
-          Frontend
-        </button>
-        <button
-          onClick={() => setFilterProject("Full Stack")}
-          className={`border-b-2 ${
-            filterProjects === "Full Stack" && "highLight-text"
-          } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
-        >
-          Full Stack
-        </button>
+      {/* Filter Buttons */}
+      <div data-aos="zoom-in" className="grid w-full grid-cols-2 gap-8 mb-24">
+        <div className="flex flex-col items-center w-full">
+          <button
+            onClick={() => setFilterType("initial")}
+            className={`relative group p-4 w-full active:scale-[0.95] border-b-2 border-t  transition-all duration-300 ease rounded-2xl ${
+              filterType === "initial" ? "custom-shadow3" : ""
+            }`}
+          >
+            <span
+              className={`text-2xl md:text-3xl font-bold ${
+                filterType === "initial" ? "highLight-text" : "text-white"
+              }`}
+            >
+              Learning Journey Projects
+            </span>
+          </button>
+          <div className="mt-3 text-lg text-center text-gray-300 md:text-2xl">
+            Created during initial learning phase
+          </div>
+        </div>
+
+        <div className="flex flex-col items-center w-full">
+          <button
+            onClick={() => setFilterType("production")}
+            className={`relative group p-4 w-full active:scale-[0.95] border-b-2 border-t  transition-all duration-300 ease rounded-2xl ${
+              filterType === "production" ? "custom-shadow3" : ""
+            }`}
+          >
+            <span
+              className={`text-2xl md:text-3xl font-bold ${
+                filterType === "production" ? "highLight-text" : "text-white"
+              }`}
+            >
+              Production Ready Projects
+            </span>
+          </button>
+          <div className="mt-3 text-lg text-center text-gray-300 md:text-2xl">
+            Building experience with real-world applications
+          </div>
+        </div>
+      </div>
+
+      {/* Section Title based on selection */}
+      <div className="mb-8 text-center">
+        <h2 className="text-3xl font-bold text-white md:text-4xl">
+          {filterType === "initial" ? (
+            <>
+              <span className="highLight-text">Learning Stage</span> Projects
+            </>
+          ) : (
+            <>
+              <span className="highLight-text">Production Level</span> Projects
+            </>
+          )}
+        </h2>
+        <p className="max-w-2xl mx-auto mt-3 text-2xl text-gray-300">
+          {filterType === "initial"
+            ? "Projects I built while learning frontend development. These represent my foundational skills and early experiments."
+            : "Advanced projects I'm building while learning backend development. Focused on real world applications and scalability."}
+        </p>
       </div>
 
       <div
         data-aos="flip-left"
         className="scrollButtons w-[98%] relative md:hidden "
       >
-        {latestProjects.length <= 1 ? (
+        {filteredProjects.length <= 1 ? (
           ""
         ) : (
           <>
@@ -129,13 +169,13 @@ const Projects = () => {
           </>
         )}
       </div>
-      {latestProjects.length >= 4 ? (
+      {filteredProjects.length >= 4 ? (
         <>
           <div
             ref={scrollContainer}
             className={`latestWork  mt-20 md:w-[98%]  mx-auto lg:justify-center my-16 hide-ScrollBar flex md:grid grid-cols-12 p-4 overflow-y-hidden  overflow-x-scroll gap-8`}
           >
-            {latestProjects.map((project, i) => (
+            {filteredProjects.slice(0, 4).map((project, i) => (
               <Suspense
                 className="w-full"
                 key={i}
@@ -164,7 +204,7 @@ const Projects = () => {
       ) : (
         <>
           <div className="px-4 w-full sm:w-[33rem] mx-auto my-20">
-            {latestProjects.map((project, i) => (
+            {filteredProjects.slice(0, 4).map((project, i) => (
               <Suspense
                 className="w-full"
                 key={i}

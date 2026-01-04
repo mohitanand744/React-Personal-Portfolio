@@ -32,13 +32,19 @@ const Card = ({
         />
 
         {docs && (
-          <div className="absolute active:scale-75 transition-all duration-200 ease-in  cursor-pointer group h-20 w-20 rounded-full flex justify-center items-center custom-shadow bg-[#000000af] top-3 right-3">
-            <img src="/download.png" alt="" className="w-8 shadow-2xl" />
+          <a
+            href={
+              "https://github.com/mohitanand744/Book-Store-React-MySQL-/archive/refs/heads/main.zip"
+            }
+          >
+            <div className="absolute active:scale-75 transition-all duration-200 ease-in  cursor-pointer group h-20 w-20 rounded-full flex justify-center items-center custom-shadow bg-[#000000af] top-3 right-3">
+              <img src="/download.png" alt="" className="w-8 shadow-2xl" />
 
-            <div className="absolute left-[-16rem] text-nowrap text-xl  group-hover:scale-100 group-active:scale-100 scale-50 opacity-0 group-hover:opacity-100 transition-all duration-300 text-white bg-[#000000cc] px-4 py-2 rounded-full">
-              <p>Download Project Docs</p>
+              <div className="absolute left-[-16rem] text-nowrap text-xl  group-hover:scale-100 group-active:scale-100 scale-50 opacity-0 group-hover:opacity-100 transition-all duration-300 text-white bg-[#000000cc] px-4 py-2 rounded-full">
+                <p>Download Project Zip</p>
+              </div>
             </div>
-          </div>
+          </a>
         )}
       </div>
 

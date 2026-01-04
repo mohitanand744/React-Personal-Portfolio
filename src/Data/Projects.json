@@ -13,7 +13,8 @@
     "Docs": "true",
     "difficulty": "Medium",
     "type": "personal or company",
-    "status": "completed or in-progress, archived",
+    "status": "In Progress",
+    "level": "Hard",
     "features": [],
     "duration": "",
     "detailed_description": "",
@@ -32,7 +33,9 @@
     "github_url": "https://github.com/mohitanand744/pokiWorld.git",
     "image": "/pokiWorld .png",
     "projectTime": "Latest",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "Social media (memo)",
@@ -45,7 +48,9 @@
     "github_url": "https://github.com/mohitanand744/React-Beginner-level-Social-media-app-.git",
     "image": "/memo.png",
     "projectTime": "Latest",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "Flipkart Clone",
@@ -58,7 +63,9 @@
     "live_url": "https://mohit-filpkart-clone.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Flipkart-clone-Using-Vite.git",
     "image": "/flipkartClone.png",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "RMAT E-Commerce",
@@ -72,7 +79,9 @@
     "github_url": "https://github.com/mohitanand744/E-commerce-Website.git",
     "image": "/E-Commerce banner.png",
     "projectTime": "Latest",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "My Portfolio",
@@ -84,7 +93,9 @@
     "live_url": "https://mohit-anand-portfolio.netlify.app/",
     "github_url": "https://github.com/mohitanand744/React-Personal-Portfolio.git",
     "image": "/portfolio.png",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "Gender Guesser",
@@ -98,7 +109,9 @@
     "live_url": "https://predict-gender-by-name.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Predict-Gender-By-Name.git",
     "image": "https://i.pinimg.com/736x/e5/73/e6/e573e641b66d8e0a91b41133ac25598b.jpg",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "Generate Gradient Color",
@@ -111,7 +124,9 @@
     "live_url": "https://gradient-colour-website.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Create-your-Own-Gradient-Colour-.git",
     "image": "/Gradients.jpg",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "Currency Converter",
@@ -125,7 +140,9 @@
     "live_url": "https://mohit-anand-currency-converter.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Currency-Converter.git",
     "image": "/CurrencyConverter.jpg",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "TODO App",
@@ -138,7 +155,9 @@
     "live_url": "https://todo-app-mohit-anand.netlify.app",
     "github_url": "https://github.com/mohitanand744/TODO-WEB-APP.git",
     "image": "/TODO.png",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "Weather App",
@@ -152,7 +171,9 @@
     "live_url": "https://weather-app-mohit-anand.netlify.app/",
     "github_url": "https://github.com/mohitanand744/Weather-Web-App-API-.git",
     "image": "/weatherApp.jpg",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "Tic Tac Toe Game",
@@ -166,7 +187,9 @@
     "github_url": "https://github.com/mohitanand744/Tic-Tac-Toe-Game.git",
     "image": "/tictactoe.webp",
     "projectTime": "",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "Stop Watch",
@@ -179,7 +202,9 @@
     "live_url": "https://stop-watch-mohit.netlify.app/",
     "github_url": "https://github.com/mohitanand744/stop-watch.git",
     "image": "/stopWatch.png",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   },
   {
     "title": "React TODO App",
@@ -191,6 +216,8 @@
     "github_url": "https://github.com/mohitanand744/TODO-App-Using-React.git",
     "image": "/react TODO.png",
     "projectTime": "",
-    "category": "Frontend"
+    "category": "Frontend",
+    "level": "Intermediate",
+    "status": "Completed"
   }
 ]
