@@ -20,7 +20,7 @@ const AboutMe = () => {
           <img
             loading="lazy"
             className="profileImageContainer text-center w-[25rem] md:w-[25rem] md:h-[32rem] h-[28rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover"
-            src="/profileImg.jpeg"
+            src="/profileImg.png"
             alt=""
           />
         </div>
@@ -52,14 +52,13 @@ const AboutMe = () => {
           <div className="mt-10 text-2xl text-white lg:mt-16 lg:text-3xl lg:pr-28">
             <p>
               A dedicated Frontend Developer with hands-on experience in
-              building scalable web applications using React.js, Bootstrap, and
-              Tailwind CSS. Currently Working at WeboConnect, I focus on
-              enhancing user experiences and improving performance through
-              dynamic interfaces and API integration. Transitioning into
-              programming after overcoming a spinal cord injury, I bring
-              resilience, adaptability{" "}
+              building scalable, responsive, and high-performance web
+              applications using React.js, Next.js, Tailwind CSS, Bootstrap, and
+              TypeScript. Proficient in API integration, performance
+              optimization, and developing reusable, maintainable UI components
+              for real-world production environments.
               {readMore &&
-                ", and a passion for creating impactful web solutions. I am continually expanding my skills, currently learning backend technologies to further enrich my projects."}{" "}
+                "Experienced in collaborating with designers and backend teams to deliver user-centric features with clean architecture and modern UI/UX practices. Passionate about modern web technologies, writing clean and efficient code, and continuously learning to stay updated with the evolving frontend ecosystem."}{" "}
               <span
                 className="cursor-pointer highLight-text"
                 onClick={readMoreText}

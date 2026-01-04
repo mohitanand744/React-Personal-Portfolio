@@ -57,14 +57,9 @@ const Home = () => {
               </h1>
 
               <p className="text-white text-[1.5rem] sm:text-md md:text-3xl mt-5">
-                Frontend Developer{" "}
-                <a
-                  className="text-blue-500"
-                  href="https://www.linkedin.com/company/weboconnect/about/"
-                >
-                  @WeboConnect
-                </a>{" "}
-                | Learning MERN | Teamwork Makes The Dream work.
+                Frontend Developer |{" "}
+                <span className="highLight-text">Learning Backend</span>, With
+                AI, Smart Search, Chatbots | Teamwork Makes The Dream Work.
               </p>
 
               <div className="flex gap-3 mt-4 text-white lg:gap-5">

@@ -10,7 +10,15 @@
     "image": "/BookStore.png",
     "projectTime": "Latest",
     "category": "Full Stack",
-    "Docs": "true"
+    "Docs": "true",
+    "difficulty": "Medium",
+    "type": "personal or company",
+    "status": "completed or in-progress, archived",
+    "features": [],
+    "duration": "",
+    "detailed_description": "",
+    "challenges": "",
+    "learnings": ""
   },
   {
     "title": "Pokémon World",

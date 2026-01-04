@@ -15,8 +15,23 @@
     "category": "frontend"
   },
   {
+    "title": "TypeScript",
+    "image": "/typescript.png",
+    "category": "frontend"
+  },
+  {
     "title": "React",
     "image": "/react.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Next Js",
+    "image": "https://img.icons8.com/nolan/64/nextjs.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Redux",
+    "image": "https://img.icons8.com/color/512/redux.png",
     "category": "frontend"
   },
   {
@@ -30,29 +45,39 @@
     "category": "frontend"
   },
   {
+    "title": "Material UI",
+    "image": "https://img.icons8.com/color/material-ui.png",
+    "category": "frontend"
+  },
+  {
+    "title": "Vite",
+    "image": "https://www.svgrepo.com/show/354521/vitejs.svg",
+    "category": "frontend"
+  },
+  {
     "title": "Responsiveness",
     "image": "/responsive.png",
     "category": "frontend"
   },
   {
-    "title": "Code Review",
-    "image": "https://img.icons8.com/nolan/64/code--v1.png",
+    "title": "Performance Optimization",
+    "image": "/performance.png",
     "category": "frontend"
   },
   {
-    "title": "Optimization",
-    "image": "https://img.icons8.com/external-jumpicon-solid-gradient-ayub-irawan/32/external-Optimization-crisis-management-jumpicon-(solid-gradient)-jumpicon-solid-gradient-ayub-irawan.png",
+    "title": "SEO",
+    "image": "https://cdn-icons-png.flaticon.com/512/6188/6188785.png",
     "category": "frontend"
   },
   {
-    "title": "GitHub",
-    "image": "/github.png",
+    "title": "Accessibility (WCAG)",
+    "image": "/accessibility.webp",
     "category": "frontend"
   },
   {
-    "title": "Team Work",
-    "image": "https://img.icons8.com/nolan/64/parallel-tasks.png",
-    "category": "common"
+    "title": "API Integration",
+    "image": "/api.png",
+    "category": "frontend"
   },
   {
     "title": "Figma",
@@ -60,9 +85,9 @@
     "category": "frontend"
   },
   {
-    "title": "API",
-    "image": "/api.png",
-    "category": "frontend"
+    "title": "Node Js",
+    "image": "/node-js.png",
+    "category": "backend"
   },
   {
     "title": "Express",
@@ -70,8 +95,13 @@
     "category": "backend"
   },
   {
-    "title": "Node Js",
-    "image": "/node-js.png",
+    "title": "REST APIs",
+    "image": "/rest-api.png",
+    "category": "backend"
+  },
+  {
+    "title": "JWT & Auth Flow",
+    "image": "/auth.png",
     "category": "backend"
   },
   {
@@ -85,28 +115,118 @@
     "category": "backend"
   },
   {
-    "title": "Next Js",
-    "image": "https://img.icons8.com/nolan/64/nextjs.png",
-    "category": "frontend"
+    "title": "Database Design",
+    "image": "/database.png",
+    "category": "backend"
   },
   {
-    "title": "Material UI",
-    "image": "https://img.icons8.com/color/material-ui.png",
-    "category": "frontend"
+    "title": "GitHub",
+    "image": "/github.png",
+    "category": "tools"
   },
   {
-    "title": "Vite",
-    "image": "https://www.svgrepo.com/show/354521/vitejs.svg",
-    "category": "frontend"
+    "title": "Git",
+    "image": "/git.png",
+    "category": "tools"
   },
   {
-    "title": "Redux",
-    "image": "https://img.icons8.com/color/512/redux.png",
-    "category": "frontend"
+    "title": "Code Review",
+    "image": "https://img.icons8.com/nolan/64/code--v1.png",
+    "category": "tools"
   },
   {
-    "title": "SEO",
-    "image": "https://cdn-icons-png.flaticon.com/512/6188/6188785.png",
-    "category": "frontend"
+    "title": "Optimization",
+    "image": "https://img.icons8.com/external-jumpicon-solid-gradient-ayub-irawan/32/external-Optimization-crisis-management-jumpicon-(solid-gradient)-jumpicon-solid-gradient-ayub-irawan.png",
+    "category": "tools"
+  },
+  {
+    "title": "Agile / Team Collaboration",
+    "image": "/agile.png",
+    "category": "tools"
+  },
+  {
+    "title": "Team Work",
+    "image": "https://img.icons8.com/nolan/64/parallel-tasks.png",
+    "category": "tools"
+  },
+  {
+    "title": "Deployment",
+    "image": "/deployment.png",
+    "category": "tools"
+  },
+  {
+    "title": "Netlify",
+    "image": "/netlify.png",
+    "category": "tools"
+  },
+  {
+    "title": "Vercel",
+    "image": "/vercel.png",
+    "category": "tools"
+  },
+  {
+    "title": "Hostinger",
+    "image": "/hostinger.png",
+    "category": "tools"
+  },
+  {
+    "title": "GoDaddy",
+    "image": "/godaddy.png",
+    "category": "tools"
+  },
+  {
+    "title": "Authentication (OAuth)",
+    "image": "/authentication.png",
+    "category": "backend"
+  },
+  {
+    "title": "Password Hashing",
+    "image": "/PasswordHashing.png",
+    "category": "backend"
+  },
+  {
+    "title": "Cloudinary",
+    "image": "/cloudinary.png",
+    "category": "backend"
+  },
+  {
+    "title": "Cookie Management",
+    "image": "/Cookie.png",
+    "category": "backend"
+  },
+  {
+    "title": "CORS Configuration",
+    "image": "/configuration.png",
+    "category": "backend"
+  },
+  {
+    "title": "Environment Variables",
+    "image": "/env.png",
+    "category": "backend"
+  },
+  {
+    "title": "JWT Authentication",
+    "image": "/jwt.webp",
+    "category": "backend"
+  },
+  {
+    "title": "File Uploads",
+    "image": "/folder.png",
+    "category": "backend"
+  },
+  {
+    "title": "Email Services",
+    "image": "/email.png",
+    "category": "backend"
+  },
+  {
+    "title": "Stream Processing",
+    "image": "/chunks.png",
+    "category": "backend"
+  },
+  {
+    "title": "Database Migrations",
+    "image": "/migrations.png",
+    "category": "backend"
   }
 ]
