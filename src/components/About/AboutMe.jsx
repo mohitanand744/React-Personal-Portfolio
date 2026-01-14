@@ -42,7 +42,10 @@ const AboutMe = () => {
             </div>
             <div className="flex flex-col gap-2 text-2xl lg:text-3xl">
               <p className="font-bold">
-                Role: <span className="font-normal">Frontend Developer</span>
+                Role:{" "}
+                <span className="font-normal">
+                  Frontend Focused - Full Stack Developer
+                </span>
               </p>{" "}
               <p className="font-bold">
                 Freelance: <span className="font-normal">Available</span>
@@ -51,14 +54,19 @@ const AboutMe = () => {
           </div>
           <div className="mt-10 text-2xl text-white lg:mt-16 lg:text-3xl lg:pr-28">
             <p>
-              A dedicated Frontend Developer with hands-on experience in
+              Frontend-focused Full-Stack Developer with hands-on experience
               building scalable, responsive, and high-performance web
               applications using React.js, Next.js, Tailwind CSS, Bootstrap, and
-              TypeScript. Proficient in API integration, performance
-              optimization, and developing reusable, maintainable UI components
-              for real-world production environments.
+              TypeScript, along with backend development using Node.js,
+              Express.js, and MySQL. Proficient in API integration,
+              authentication flows, and performance optimization, with a strong
+              focus on building reusable, maintainable UI components for
+              real-world production environments.
               {readMore &&
-                "Experienced in collaborating with designers and backend teams to deliver user-centric features with clean architecture and modern UI/UX practices. Passionate about modern web technologies, writing clean and efficient code, and continuously learning to stay updated with the evolving frontend ecosystem."}{" "}
+                `Experienced in collaborating across design and backend workflows to deliver user centric features with clean architecture and modern UI/UX practices.
+              Passionate about modern web technologies, writing clean and
+              efficient code, and continuously learning to stay updated with the
+              evolving web ecosystem.`}{" "}
               <span
                 className="cursor-pointer highLight-text"
                 onClick={readMoreText}

@@ -36,13 +36,21 @@ const AllProjects = () => {
     window.innerWidth < 848 ? 4 : 8
   );
 
+  const normalize = (str) => str.toLowerCase().trim();
+
   const filterProject = projects.filter((project) => {
-    return userInputWords.every(
-      (word) =>
-        project.title.toLowerCase().includes(word) ||
-        project.description.toLowerCase().includes(word) ||
-        project.category.toLowerCase().includes(word) ||
-        project.skills.some((skill) => skill.toLowerCase().includes(word))
+    const projectSearchText = [
+      project.title,
+      project.description,
+      project.category,
+      ...project.skills,
+      ...(project.searchingKeys || []),
+    ]
+      .join(" ")
+      .toLowerCase();
+
+    return userInputWords.every((word) =>
+      projectSearchText.includes(normalize(word))
     );
   });
 
