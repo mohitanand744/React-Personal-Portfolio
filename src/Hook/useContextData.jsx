@@ -27,6 +27,8 @@ const useContextData = () => {
     setShowSuggestionBox,
     showSuggestionsBox,
     suggestionBoxRef,
+    scrollContainers,
+    scroll,
   } = useContext(Store);
 
   return {
@@ -54,6 +56,8 @@ const useContextData = () => {
     setShowSuggestionBox,
     showSuggestionsBox,
     suggestionBoxRef,
+    scroll,
+    scrollContainers,
   };
 };
 

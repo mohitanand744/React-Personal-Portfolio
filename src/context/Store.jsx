@@ -19,6 +19,17 @@ const StoreProvider = ({ children }) => {
   const [suggestions, setSuggestions] = useState([]);
   const [suggestionIndex, setSuggestionIndex] = useState(0);
   const suggestionBoxRef = useRef(null);
+  const scrollContainers = useRef([]);
+
+    const scroll = (index, direction) => {
+    const scrollAmount = 150;
+    const container = scrollContainers.current[index]; // Get the correct container
+
+    container?.scrollBy({
+      left: direction === "right" ? scrollAmount : -scrollAmount,
+      behavior: "smooth",
+    });
+  };
 
   /*   const scrollIntoView = (index) => {
     if (suggestionBoxRef?.current) {
@@ -135,6 +146,8 @@ const StoreProvider = ({ children }) => {
           suggestionIndex,
           setSuggestionIndex,
           suggestionBoxRef,
+          scrollContainers,
+          scroll,
         }}
       >
         {children}

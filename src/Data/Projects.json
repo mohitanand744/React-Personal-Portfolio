@@ -55,7 +55,7 @@
     "projectTime": "Latest",
     "category": "Full Stack",
     "Docs": "true",
-    "difficulty": "Hard",
+    "level": "Hard",
     "status": "In Progress",
     "features": [
       "User authentication with JWT and Google OAuth",
