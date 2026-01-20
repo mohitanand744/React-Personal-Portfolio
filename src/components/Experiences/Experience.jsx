@@ -5,18 +5,7 @@ const ExperienceCard = lazy(() => import("./../Cards/ExperienceCard"));
 
 const Experience = () => {
   const { experience, skills } = useContextData();
-  const scrollContainers = useRef([]);
   const scrollExperienceContainers = useRef();
-
-  const scroll = (index, direction) => {
-    const scrollAmount = 150;
-    const container = scrollContainers.current[index]; // Get the correct container
-
-    container?.scrollBy({
-      left: direction === "right" ? scrollAmount : -scrollAmount,
-      behavior: "smooth",
-    });
-  };
 
   const scrollExperienceBox = (direction) => {
     const container = scrollExperienceContainers.current;
@@ -30,7 +19,11 @@ const Experience = () => {
     });
   };
 
-  const skillsUsed = skills.filter((skill) => skill.category === "frontend");
+  const skillsUsed = skills
+    .filter((s) => s.category === "frontend")
+    .map((s) => s.title);
+
+  console.log(skillsUsed, "bbbbbbbbbbbbbbbbbbbbb");
 
   return (
     <div id="Experience" className="mt-36 md:my-44">
@@ -73,8 +66,6 @@ const Experience = () => {
             <ExperienceCard
               index={index}
               experienceItem={experienceItem}
-              scrollContainers={scrollContainers}
-              scroll={scroll}
               skillsUsed={skillsUsed}
             />
           </Suspense>

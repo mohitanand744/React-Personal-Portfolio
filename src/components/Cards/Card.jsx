@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import SkillsSlider from "../slider/skillsSlider";
 
 const Card = ({
   image,
@@ -21,7 +22,7 @@ const Card = ({
     <div
       data-aos="flip-left"
       //onClick={() => navigate(`/projects/${title.replaceAll(" ", "")}`)}
-      className="flex flex-col items-start justify-between w-full col-span-12 gap-6 p-6 py-8 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-3 projectBox rounded-3xl custom-shadow h-fit "
+      className="flex flex-col items-start justify-between w-full col-span-12 gap-3 p-6 py-8 sm:col-span-6 md:col-span-6 lg:col-span-4 xl:col-span-3 projectBox rounded-3xl custom-shadow h-fit "
     >
       <div className="imgContainer relative w-[97%] h-[19rem] md:h-[20rem] mx-auto">
         <img
@@ -65,18 +66,7 @@ const Card = ({
           </span>
         </p>
       </div>
-      <div className="flex flex-wrap gap-2 px-3">
-        <h2 className="text-xl text-white sm:text-2xl">Skills Used :</h2>
-        <div className="flex flex-wrap items-center ">
-          <p className="flex flex-wrap w-full text-xl text-center text-white lg:text-2xl">
-            {skills.map((skill, i) => (
-              <span key={i} className="me-1 ">
-                {skill},
-              </span>
-            ))}
-          </p>
-        </div>
-      </div>
+      <SkillsSlider index={index} skillsUsed={skills} />
       {github_url && (
         <div className="flex gap-5 mx-auto text-white justify-evenly">
           <>

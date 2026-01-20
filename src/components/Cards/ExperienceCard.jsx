@@ -1,14 +1,7 @@
-import React from "react";
 import ExperienceAccordion from "../Accordion/ExperienceAccordion";
 import SkillsSlider from "../slider/skillsSlider";
 
-const ExperienceCard = ({
-  experienceItem,
-  index,
-  scrollContainers,
-  scroll,
-  skillsUsed,
-}) => {
+const ExperienceCard = ({ experienceItem, index, skillsUsed }) => {
   return (
     <div
       data-aos="zoom-in"
@@ -76,12 +69,7 @@ const ExperienceCard = ({
         <ExperienceAccordion experienceItem={experienceItem} />
       </div>
 
-      <SkillsSlider
-        scrollContainers={scrollContainers}
-        index={index}
-        scroll={scroll}
-        skillsUsed={skillsUsed}
-      />
+      <SkillsSlider index={index} skillsUsed={skillsUsed} />
     </div>
   );
 };
