@@ -5,8 +5,7 @@ const SkillsSlider = ({ index, skillsUsed }) => {
 
   const scroll = (index, direction) => {
     const scrollAmount = 150;
-    const container = scrollContainers.current[index]; // Get the correct container
-
+    const container = scrollContainers.current[index];
     container?.scrollBy({
       left: direction === "right" ? scrollAmount : -scrollAmount,
       behavior: "smooth",

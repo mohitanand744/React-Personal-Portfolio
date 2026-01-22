@@ -6,13 +6,28 @@
       "React.js",
       "Tailwind CSS",
       "Redux Toolkit",
+      "Accessibility (WCAG)",
       "Node.js",
       "Express.js",
       "MySQL",
       "JWT",
       "Google OAuth",
       "Cloudinary",
-      "REST APIs"
+      "REST APIs",
+      "Nodemailer",
+      "Multer",
+      "Responsive Design",
+      "API-first Architecture",
+      "Scalable Backend",
+      "Database Migrations",
+      "Password Hashing",
+      "Cookie Management",
+      "Async Error Handling",
+      "Error Boundaries",
+      "Environment Variables (.env)",
+      "Deployment (Netlify, Railway)",
+      "Git",
+      "GitHub"
     ],
     "searchingKeys": [
       "full stack",
@@ -77,9 +92,22 @@
     "title": "Pokémon World",
     "description": "React project that dynamically displays Pokémon data by leveraging the Pokémon API, and I’m thrilled with the results!This project was a great learning experience, combining API integration with reusable and scalable React components.Check out the demo look of the website",
     "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
       "React",
       "Tailwind",
-      "Axios"
+      "Axios",
+      "API Integration",
+      "REST APIs",
+      "Responsiveness",
+      "Performance Optimization",
+      "Accessibility (WCAG)",
+      "Vite",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify"
     ],
     "searchingKeys": [
       "pokemon",
@@ -130,10 +158,22 @@
   },
   {
     "title": "Social media (memo)",
-    "description": "I’ve built a social media web app using React, Tailwind CSS, and Bootstrap, where users can create accounts, log in, upload posts, and customize profiles, with data managed through local storage. Right now, it’s frontend-only, but I’m learning backend development to add more features using Node.js and Express.",
+    "description": "I’ve built a social media web app using React, Tailwind CSS, and Bootstrap, where users can create accounts, log in, upload posts, and customize profiles, with data managed through local storage. Right now, it’s frontend-only.",
     "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
       "React",
-      "Tailwind"
+      "Tailwind",
+      "Bootstrap",
+      "Responsiveness",
+      "Performance Optimization",
+      "Accessibility (WCAG)",
+      "API Integration",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify"
     ],
     "searchingKeys": [
       "social media",
@@ -190,7 +230,14 @@
     "skills": [
       "HTML",
       "CSS",
-      "JavaScript"
+      "JavaScript",
+      "Responsiveness",
+      "Performance Optimization",
+      "API Integration",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify"
     ],
     "searchingKeys": [
       "flipkart",
@@ -241,7 +288,15 @@
     "skills": [
       "HTML",
       "CSS",
-      "JavaScript"
+      "JavaScript",
+      "Responsiveness",
+      "Performance Optimization",
+      "API Integration",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify",
+      "Vercel"
     ],
     "searchingKeys": [
       "rmat",
@@ -292,8 +347,20 @@
     "title": "My Portfolio",
     "description": "A personal portfolio showcasing my experience, projects, and skills.",
     "skills": [
+      "HTML",
+      "CSS",
+      "JavaScript",
       "React",
-      "Tailwind CSS"
+      "Tailwind",
+      "Responsiveness",
+      "Performance Optimization",
+      "Accessibility (WCAG)",
+      "SEO",
+      "Vite",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify"
     ],
     "searchingKeys": [
       "portfolio",
@@ -343,7 +410,14 @@
       "HTML",
       "CSS",
       "JavaScript",
-      "API"
+      "Responsiveness",
+      "Performance Optimization",
+      "API Integration",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify",
+      "Vercel"
     ],
     "searchingKeys": [
       "gender guesser",
@@ -390,7 +464,13 @@
     "skills": [
       "HTML",
       "CSS",
-      "JavaScript"
+      "JavaScript",
+      "Responsiveness",
+      "Performance Optimization",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify"
     ],
     "searchingKeys": [
       "gradient generator",
@@ -438,7 +518,13 @@
       "HTML",
       "CSS",
       "JavaScript",
-      "API"
+      "Responsiveness",
+      "Performance Optimization",
+      "API Integration",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify"
     ],
     "searchingKeys": [
       "currency converter",
@@ -489,7 +575,12 @@
     "skills": [
       "HTML",
       "CSS",
-      "JavaScript"
+      "JavaScript",
+      "Responsiveness",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify"
     ],
     "searchingKeys": [
       "todo app",
@@ -536,7 +627,13 @@
       "HTML",
       "CSS",
       "JavaScript",
-      "API"
+      "Responsiveness",
+      "Performance Optimization",
+      "API Integration",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify"
     ],
     "searchingKeys": [
       "weather app",
@@ -588,7 +685,13 @@
     "skills": [
       "HTML",
       "CSS",
-      "JavaScript"
+      "JavaScript",
+      "Responsiveness",
+      "Performance Optimization",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify"
     ],
     "searchingKeys": [
       "tic tac toe",
@@ -638,7 +741,14 @@
     "skills": [
       "HTML",
       "CSS",
-      "JavaScript"
+      "JavaScript",
+      "Responsiveness",
+      "Performance Optimization",
+      "API Integration",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify"
     ],
     "searchingKeys": [
       "stopwatch",
@@ -683,7 +793,15 @@
     "title": "React TODO App",
     "description": "A Todo app with modern UI. Features include adding tasks, deleting tasks, and marking tasks as completed, task Timing.",
     "skills": [
-      "React"
+      "React",
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Responsiveness",
+      "Git",
+      "GitHub",
+      "Deployment",
+      "Netlify"
     ],
     "searchingKeys": [
       "todo",
