@@ -228,5 +228,15 @@
     "title": "Database Migrations",
     "image": "/migrations.png",
     "category": "backend"
+  },
+  {
+    "title": "PostgreSQL",
+    "image": "https://img.icons8.com/color/512/postgreesql.png",
+    "category": "backend"
+  },
+  {
+    "title": "Framer Motion",
+    "image": "https://framerusercontent.com/images/48oEb9S9EMZKhY3QQYpST9C9uI.png",
+    "category": "frontend"
   }
 ]

@@ -24,9 +24,8 @@ const ExperienceAccordion = ({ experienceItem }) => {
       {experienceItem.roles.map((role, rIndex) => (
         <div
           key={rIndex}
-          className={`p-5 border-b-[1px] rounded-2xl transition-all duration-300 ${
-            expandedIndex === rIndex ? "custom-shadow3" : ""
-          }`}
+          className={`p-5 border-b-[1px] rounded-2xl transition-all duration-300 ${expandedIndex === rIndex ? "custom-shadow3" : ""
+            }`}
         >
           {/* Header - Always visible */}
           <div
@@ -42,9 +41,8 @@ const ExperienceAccordion = ({ experienceItem }) => {
               <p className="text-lg sm:text-xl">
                 {role.start_date} -{" "}
                 <span
-                  className={`${
-                    role.end_date === "Working..." && "text-green-500"
-                  }`}
+                  className={`${role.end_date === "Present" && "font-bold text-green-500"
+                    }`}
                 >
                   {role.end_date}
                 </span>
@@ -54,9 +52,8 @@ const ExperienceAccordion = ({ experienceItem }) => {
             {/* Arrow indicator */}
             <div className="ml-4">
               <svg
-                className={`w-6 h-6 transform transition-transform duration-300 ${
-                  expandedIndex === rIndex ? "rotate-180" : ""
-                }`}
+                className={`w-6 h-6 transform transition-transform duration-300 ${expandedIndex === rIndex ? "rotate-180" : ""
+                  }`}
                 fill="none"
                 stroke="currentColor"
                 viewBox="0 0 24 24"
@@ -74,11 +71,10 @@ const ExperienceAccordion = ({ experienceItem }) => {
 
           {/* Expandable content */}
           <div
-            className={`overflow-hidden transition-all duration-300 ease-in-out ${
-              expandedIndex === rIndex
-                ? "max-h-[500px] opacity-100 mt-4"
-                : "max-h-0 opacity-0"
-            }`}
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${expandedIndex === rIndex
+              ? "max-h-[500px] opacity-100 mt-4"
+              : "max-h-0 opacity-0"
+              }`}
           >
             <p className="text-lg sm:text-xl">
               Duration: <span className="highLight-text">{role.duration}</span>

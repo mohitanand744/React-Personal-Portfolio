@@ -10,7 +10,7 @@ const Home = () => {
       >
         <div className="lg:col-span-7 h-[48vh] order-2 lg:order-1">
           <div className="flex items-center justify-start w-full h-full gap-3 ">
-            <ul className="list-none flex flex-col w-[7rem] md:w-[6rem] gap-2">
+            <ul className="list-none flex flex-col min-w-[4rem] md:w-[6rem] gap-2">
               <li>
                 <a
                   target="_blank"
@@ -56,10 +56,9 @@ const Home = () => {
                 </span>
               </h1>
 
-              <p className="text-white text-[1.5rem] sm:text-md md:text-3xl mt-5">
-                Frontend Developer |{" "}
-                <span className="highLight-text">Learning Backend</span>, With
-                AI, Smart Search, Chatbots | Teamwork Makes The Dream Work.
+              <p className="text-white text-[1.2rem] sm:text-md md:text-2xl mt-5">
+                Lead Software Engineer at Inklude Skillia |{" "}
+                <span className="highLight-text">I specialize</span>, in building high-performance web applications and scalable digital architectures | Delivering elite engineering solutions for global brands
               </p>
 
               <div className="flex gap-3 mt-4 text-white lg:gap-5">

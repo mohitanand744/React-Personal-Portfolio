@@ -1,5 +1,24 @@
 [
   {
+    "company": "INKLUDE SKILLIA",
+    "logo": "/inkludeskillia.png",
+    "companyLinkedin": "https://www.linkedin.com/company/inklude-skillia",
+    "location": "Remote",
+    "role": "Lead Software Engineer",
+    "companyLocation": "New York, United States",
+    "duration": "2 mos",
+    "roles": [
+      {
+        "position": "Lead Software Engineer",
+        "type": "Full Time",
+        "start_date": "Feb 2026",
+        "end_date": "Present",
+        "duration": "2 mos",
+        "description": "Designing and building high-performance, scalable web applications for a diverse range of global brands. I specialize in architecting modern front-end experiences and robust back-end systems that drive measurable business growth. Key Technical Contributions: Lead Full-Stack Development using modern technologies (React, Vite, Framer Motion, and Tailwind CSS | Node.js (Express), PostgreSQL, etc.), designed scalable technical architectures, and maintained engineering excellence to ensure superior technology delivery."
+      }
+    ]
+  },
+  {
     "company": "WeboConnect",
     "logo": "/weboconnect.jpeg",
     "companyLinkedin": "https://www.linkedin.com/company/weboconnect/",
