@@ -114,6 +114,28 @@ const MobileMenu = () => {
         <Link>
           <p
             onClick={() => {
+              setActive("Workplace");
+
+              setToggle(false);
+              scrollToSection("Workplace");
+            }}
+            className={`cursor-pointer  justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
+              active === "Workplace"
+                ? "custom-shadow3 rounded-full  transition-all"
+                : ""
+            }`}
+          >
+            Workplace
+            <img
+              className="w-[3.8rem] h-[3.8rem] custom-shadow3 rounded-full p-2"
+              src="https://img.icons8.com/nolan/64/desk-lamp.png"
+              alt="workplace"
+            />{" "}
+          </p>
+        </Link>
+        <Link>
+          <p
+            onClick={() => {
               setActive("Notes");
               setToggle(false);
               scrollToSection("Notes");

@@ -9,7 +9,7 @@ const Projects = () => {
   const { projects } = useContextData();
   const [isExpanded, setIsExpanded] = useState(null);
   const [readMore, setReadMore] = useState(false);
-  const [filterType, setFilterType] = useState("initial");
+  const [filterType, setFilterType] = useState("production");
   const scrollContainer = useRef();
 
   const readMoreFun = (i) => {
@@ -86,14 +86,12 @@ const Projects = () => {
         <div className="flex flex-col items-center w-full">
           <button
             onClick={() => setFilterType("initial")}
-            className={`relative group p-4 w-full active:scale-[0.95] border-b-2 border-t  transition-all duration-300 ease rounded-2xl ${
-              filterType === "initial" ? "custom-shadow3" : ""
-            }`}
+            className={`relative group p-4 w-full active:scale-[0.95] border-b-2 border-t  transition-all duration-300 ease rounded-2xl ${filterType === "initial" ? "custom-shadow3" : ""
+              }`}
           >
             <span
-              className={`text-2xl md:text-3xl font-bold ${
-                filterType === "initial" ? "highLight-text" : "text-white"
-              }`}
+              className={`text-2xl md:text-3xl font-bold ${filterType === "initial" ? "highLight-text" : "text-white"
+                }`}
             >
               Learning Journey Projects
             </span>
@@ -106,14 +104,12 @@ const Projects = () => {
         <div className="flex flex-col items-center w-full">
           <button
             onClick={() => setFilterType("production")}
-            className={`relative group p-4 w-full active:scale-[0.95] border-b-2 border-t  transition-all duration-300 ease rounded-2xl ${
-              filterType === "production" ? "custom-shadow3" : ""
-            }`}
+            className={`relative group p-4 w-full active:scale-[0.95] border-b-2 border-t  transition-all duration-300 ease rounded-2xl ${filterType === "production" ? "custom-shadow3" : ""
+              }`}
           >
             <span
-              className={`text-2xl md:text-3xl font-bold ${
-                filterType === "production" ? "highLight-text" : "text-white"
-              }`}
+              className={`text-2xl md:text-3xl font-bold ${filterType === "production" ? "highLight-text" : "text-white"
+                }`}
             >
               Production Ready Projects
             </span>

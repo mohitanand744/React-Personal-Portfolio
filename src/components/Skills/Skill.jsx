@@ -1,45 +1,114 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import useContextData from "../../Hook/useContextData";
 import SectionHeading from "../common/Heading/SectionHeading";
+
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/autoplay";
+
+// import required modules
+import { Autoplay, Pagination } from "swiper/modules";
 
 const Skill = () => {
   const [showSkills, setShowSkills] = useState("all");
   const { skills } = useContextData();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 1024);
+    };
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const categories = ["frontend", "backend", "tools"];
 
-  const renderSkillGrid = (filteredSkills) => (
-    <div className="grid grid-cols-2 gap-4 mx-auto my-16 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 md:gap-6">
-      {filteredSkills.map((skill) => (
-        <div
-          key={skill.title}
-          data-aos="zoom-in"
-          className="flex flex-col px-3 text-center justify-center items-center bg-[#00000081] py-5 rounded-3xl text-xl md:text-2xl font-bold custom-shadow"
-        >
-          <div className="w-[4.5rem] h-[4.5rem] md:w-[6rem] md:h-[6rem] flex items-center justify-center">
-            <img
-              loading="lazy"
-              className="object-contain max-w-full max-h-full"
-              src={skill.image}
-              alt={skill.title}
-            />
-          </div>
-          <p className="mt-3 text-lg text-white sm:text-xl">{skill.title}</p>
-        </div>
-      ))}
+  const SkillCard = ({ skill }) => (
+    <div
+      key={skill.title}
+      className="flex flex-col px-3 text-center justify-center items-center bg-[#00000081] py-5 rounded-3xl text-xl md:text-2xl font-bold custom-shadow w-full select-none"
+    >
+      <div className="w-[3.5rem] h-[3.5rem] md:w-[5rem] md:h-[5rem] flex items-center justify-center pointer-events-none">
+        <img
+          loading="lazy"
+          className="object-contain max-w-full max-h-full"
+          src={skill.image}
+          alt={skill.title}
+        />
+      </div>
+      <p className="mt-3 text-center text-white text-lg pointer-events-none">{skill.title}</p>
     </div>
   );
+
+  const renderSkillContent = (filteredSkills) => {
+    if (isMobile) {
+      return (
+        <div className="my-10 px-4">
+          <Swiper
+            slidesPerView={2}
+            spaceBetween={20}
+            grabCursor={true}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              640: {
+                slidesPerView: 3,
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 4,
+                spaceBetween: 40,
+              },
+            }}
+            modules={[Autoplay, Pagination]}
+            className="mySwiper"
+          >
+            {filteredSkills.map((skill) => (
+              <SwiperSlide key={skill.title}>
+                <SkillCard skill={skill} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      );
+    }
+
+    return (
+      <div className="grid grid-cols-2 gap-4 mx-auto my-16 sm:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 md:gap-6">
+        {filteredSkills.map((skill) => (
+          <div key={skill.title} data-aos="zoom-in" className="flex flex-col px-3 text-center justify-center items-center bg-[#00000081] py-5 rounded-3xl text-xl md:text-2xl font-bold custom-shadow">
+            <div className="w-[4.5rem] h-[4.5rem] md:w-[6rem] md:h-[6rem] flex items-center justify-center">
+              <img
+                loading="lazy"
+                className="object-contain max-w-full max-h-full"
+                src={skill.image}
+                alt={skill.title}
+              />
+            </div>
+            <p className="mt-3 text-lg text-white sm:text-xl">{skill.title}</p>
+          </div>
+        ))}
+      </div>
+    );
+  };
 
   return (
     <div
       id="Skills"
       data-aos="zoom-in"
-      className="px-3 mt-32 skills h-fit md:my-44 lg:px-10"
+      className="px-3 mt-32 skills h-fit md:my-44 lg:px-10 overflow-hidden"
     >
       <center className="my-10 mx-auto w-[96%] lg:w-[40%] mb-14">
         <SectionHeading text={"Skills"} />
         <p className="text-xl text-white lg:text-2xl ">
-          Full-Stack expertise in modern frameworks, scalable architectures, and 
+          Full-Stack expertise in modern frameworks, scalable architectures, and
           professional development tools for elite technology delivery.
         </p>
       </center>
@@ -50,36 +119,32 @@ const Skill = () => {
       >
         <button
           onClick={() => setShowSkills("all")}
-          className={`${
-            showSkills === "all" ? " highLight-text" : ""
-          } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
+          className={`${showSkills === "all" ? " highLight-text" : ""
+            } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
         >
           All
         </button>
 
         <button
           onClick={() => setShowSkills("frontend")}
-          className={`${
-            showSkills === "frontend" ? " highLight-text" : ""
-          } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
+          className={`${showSkills === "frontend" ? " highLight-text" : ""
+            } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
         >
           Frontend
         </button>
 
         <button
           onClick={() => setShowSkills("backend")}
-          className={`${
-            showSkills === "backend" ? " highLight-text " : ""
-          } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
+          className={`${showSkills === "backend" ? " highLight-text " : ""
+            } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
         >
           Backend
         </button>
 
         <button
           onClick={() => setShowSkills("tools")}
-          className={`${
-            showSkills === "tools" ? " highLight-text " : ""
-          } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
+          className={`${showSkills === "tools" ? " highLight-text " : ""
+            } border-b-2 h-16 w-[10rem] md:w-[13rem] active:scale-[0.88] transition-all duration-300 ease rounded-3xl border-slate-600 custom-shadow2 `}
         >
           Tools
         </button>
@@ -94,12 +159,12 @@ const Skill = () => {
               <h3 className="text-3xl font-bold text-center text-white capitalize highLight-text mb-8">
                 {category}
               </h3>
-              {renderSkillGrid(filtered)}
+              {renderSkillContent(filtered)}
             </div>
           );
         })
       ) : (
-        renderSkillGrid(skills.filter((s) => s.category === showSkills))
+        renderSkillContent(skills.filter((s) => s.category === showSkills))
       )}
     </div>
   );

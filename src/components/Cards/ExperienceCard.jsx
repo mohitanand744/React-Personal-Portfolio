@@ -1,12 +1,35 @@
 import ExperienceAccordion from "../Accordion/ExperienceAccordion";
 import SkillsSlider from "../slider/skillsSlider";
+import { motion } from "framer-motion";
 
 const ExperienceCard = ({ experienceItem, index, skillsUsed }) => {
   return (
     <div
       data-aos="zoom-in"
-      className="flex-none w-full h-fit text-white experienceBox custom-shadow p-7 sm:p-10 backdrop-blur-sm backdrop-saturate-150 rounded-[4rem]"
+      className="flex-none relative w-full h-fit text-white experienceBox custom-shadow p-7 sm:p-10 backdrop-blur-sm backdrop-saturate-150 rounded-[4rem]"
     >
+      <motion.div
+        initial={{
+          opacity: 0,
+          scale: 0.5,
+          borderRadius: "30%", // start as circle
+        }}
+        animate={{
+          opacity: 1,
+          scale: 1,
+          borderRadius: "10%", // remove circle
+          clipPath: "polygon(0 0, 0% 100%, 100% 100%)", // right angle triangle
+        }}
+        transition={{
+          delay: 2,
+          duration: 0.5,
+          ease: "easeInOut",
+        }}
+        style={{
+          background: "linear-gradient(rgb(255, 0, 102), #3cf)",
+        }}
+        className="absolute top-24 left-0 w-10 h-10 bg-red-500"
+      />
       {/* Top Section */}
       <div className="flex flex-wrap justify-between gap-4 mb-2">
         <div className="flex flex-wrap gap-4 mb-5 sm:flex-nowrap">

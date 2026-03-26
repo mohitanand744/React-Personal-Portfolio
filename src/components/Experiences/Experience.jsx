@@ -19,11 +19,12 @@ const Experience = () => {
     });
   };
 
-  const skillsUsed = skills
+  const allSkills = skills
+    .filter((s) => s.title !== "GoDaddy")
+    .map((s) => s.title);
+  const frontendSkills = skills
     .filter((s) => s.category === "frontend")
     .map((s) => s.title);
-
-  console.log(skillsUsed, "bbbbbbbbbbbbbbbbbbbbb");
 
   return (
     <div id="Experience" className="mt-36 md:my-44">
@@ -66,7 +67,11 @@ const Experience = () => {
             <ExperienceCard
               index={index}
               experienceItem={experienceItem}
-              skillsUsed={skillsUsed}
+              skillsUsed={
+                experienceItem.company === "INKLUDE SKILLIA"
+                  ? allSkills
+                  : frontendSkills
+              }
             />
           </Suspense>
         ))}

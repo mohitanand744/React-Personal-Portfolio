@@ -96,6 +96,19 @@ const Nav = () => {
         <p
           onClick={() => {
             navigate("/");
+            setActive("Workplace");
+            setToggle(false);
+            scrollToSection("Workplace");
+          }}
+          className={`cursor-pointer navlinks  ${
+            active === "Workplace" ? "active" : ""
+          }`}
+        >
+          Workplace
+        </p>
+        <p
+          onClick={() => {
+            navigate("/");
             setActive("Projects");
             setToggle(false);
             scrollToSection("Projects");

@@ -11,6 +11,8 @@ import Projects from "./components/LatestProjects/Projects";
 import RealWorldExperience from "./components/RealWorldExperineceData/RealWorldExperience";
 import MobileMenu from "./components/common/Sidebar/MobileMenu";
 
+import Workplace from "./components/Workplace/Workplace";
+
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);
   const { setActive, setToggle } = useContextData();
@@ -21,6 +23,7 @@ function App() {
   const about = useRef(null);
   const skill = useRef(null);
   const experience = useRef(null);
+  const workplace = useRef(null);
   const projects = useRef(null);
   const contact = useRef(null);
   const notes = useRef(null);
@@ -42,6 +45,7 @@ function App() {
       { id: "About", container: about },
       { id: "Skill", container: skill },
       { id: "Experience", container: experience },
+      { id: "Workplace", container: workplace },
       { id: "Projects", container: projects },
       { id: "Contact", container: contact },
       { id: "Notes", container: notes },
@@ -129,6 +133,10 @@ function App() {
           </div>
           <div id="Experience" ref={experience}>
             <Experience />
+          </div>
+
+          <div id="Workplace" ref={workplace}>
+            <Workplace />
           </div>
 
           <div id="Projects" ref={projects}>
