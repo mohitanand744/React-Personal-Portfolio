@@ -11,9 +11,8 @@ const MobileMenu = () => {
       {/* Mobile  menu */}
 
       <div
-        className={`z-50 fixed  text-white list-none w-full py-8 px-10 rounded-b-[5rem] flex md:hidden flex-col gap-6 text-3xl  custom-shadow3 cursor-default backdrop-blur-sm bg-black/80 left-0 transition-all  ease-in overflow-hidden ${
-          toggle ? "top-0" : "-top-[90vh]"
-        }`}
+        className={`z-50 fixed  text-white list-none w-full py-8 px-10 rounded-b-[5rem] flex md:hidden flex-col gap-6 text-3xl  custom-shadow3 cursor-default backdrop-blur-sm bg-black/80 left-0 transition-all  ease-in overflow-hidden ${toggle ? "top-0" : "-top-[90vh]"
+          }`}
         onClick={(e) => e.stopPropagation()}
       >
         <img
@@ -31,11 +30,10 @@ const MobileMenu = () => {
               setToggle(false);
               scrollToSection("About");
             }}
-            className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto mt-16 gap-16 items-center ${
-              active === "About"
+            className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto mt-16 gap-16 items-center ${active === "About"
                 ? "custom-shadow3 rounded-full  transition-all"
                 : ""
-            }`}
+              }`}
           >
             About
             <img
@@ -53,11 +51,10 @@ const MobileMenu = () => {
               setToggle(false);
               scrollToSection("Skills");
             }}
-            className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
-              active === "Skills"
+            className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${active === "Skills"
                 ? "custom-shadow3 rounded-full  transition-all"
                 : ""
-            }`}
+              }`}
           >
             Skills
             <img
@@ -75,11 +72,10 @@ const MobileMenu = () => {
               setToggle(false);
               scrollToSection("Projects");
             }}
-            className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto  flex  gap-16 items-center ${
-              active === "Projects"
+            className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto  flex  gap-16 items-center ${active === "Projects"
                 ? "custom-shadow3 rounded-full  transition-all"
                 : ""
-            }`}
+              }`}
           >
             Projects
             <img
@@ -97,11 +93,10 @@ const MobileMenu = () => {
               setToggle(false);
               scrollToSection("Experience");
             }}
-            className={`cursor-pointer  justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
-              active === "Experience"
+            className={`cursor-pointer  justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${active === "Experience"
                 ? "custom-shadow3 rounded-full  transition-all"
                 : ""
-            }`}
+              }`}
           >
             Experience
             <img
@@ -119,16 +114,15 @@ const MobileMenu = () => {
               setToggle(false);
               scrollToSection("Workplace");
             }}
-            className={`cursor-pointer  justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
-              active === "Workplace"
+            className={`cursor-pointer  justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${active === "Workplace"
                 ? "custom-shadow3 rounded-full  transition-all"
                 : ""
-            }`}
+              }`}
           >
             Workplace
             <img
               className="w-[3.8rem] h-[3.8rem] custom-shadow3 rounded-full p-2"
-              src="https://img.icons8.com/nolan/64/desk-lamp.png"
+              src="https://img.icons8.com/nolan/64/workstation.png"
               alt="workplace"
             />{" "}
           </p>
@@ -140,11 +134,10 @@ const MobileMenu = () => {
               setToggle(false);
               scrollToSection("Notes");
             }}
-            className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${
-              active === "Notes"
+            className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${active === "Notes"
                 ? "custom-shadow3 rounded-full  transition-all"
                 : ""
-            }`}
+              }`}
           >
             Dev Notes
             <img
@@ -163,11 +156,10 @@ const MobileMenu = () => {
 
               alert("Working on it...");
             }}
-            className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${
-              active === "Blogs"
+            className={`cursor-pointer flex justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto gap-16 items-center ${active === "Blogs"
                 ? "custom-shadow3 rounded-full  transition-all"
                 : ""
-            }`}
+              }`}
           >
             Blogs
             <img
@@ -185,11 +177,10 @@ const MobileMenu = () => {
               setToggle(false);
               scrollToSection("Contact");
             }}
-            className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${
-              active === "Contact"
+            className={`cursor-pointer justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${active === "Contact"
                 ? "custom-shadow3 rounded-full  transition-all"
                 : ""
-            }`}
+              }`}
           >
             Contact
             <img
