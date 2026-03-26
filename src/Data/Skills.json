@@ -236,7 +236,32 @@
   },
   {
     "title": "Framer Motion",
-    "image": "https://framerusercontent.com/images/48oEb9S9EMZKhY3QQYpST9C9uI.png",
+    "image": "/framer-motion.png",
     "category": "frontend"
+  },
+  {
+    "title": "GraphQL",
+    "image": "https://img.icons8.com/color/512/graphql.png",
+    "category": "backend"
+  },
+  {
+    "title": "Firebase",
+    "image": "https://img.icons8.com/color/512/firebase.png",
+    "category": "backend"
+  },
+  {
+    "title": "Docker",
+    "image": "https://img.icons8.com/color/512/docker.png",
+    "category": "tools"
+  },
+  {
+    "title": "AWS",
+    "image": "/aws.png",
+    "category": "tools"
+  },
+  {
+    "title": "Postman",
+    "image": "/postman.png",
+    "category": "tools"
   }
 ]
