@@ -43,9 +43,9 @@ function App() {
     const sections = [
       { id: "Home", container: home },
       { id: "About", container: about },
+      { id: "Workplace", container: workplace },
       { id: "Skill", container: skill },
       { id: "Experience", container: experience },
-      { id: "Workplace", container: workplace },
       { id: "Projects", container: projects },
       { id: "Contact", container: contact },
       { id: "Notes", container: notes },
@@ -128,15 +128,15 @@ function App() {
             <AboutMe />
           </div>
 
+          <div id="Workplace" ref={workplace}>
+            <Workplace />
+          </div>
+
           <div id="Skills" ref={skill}>
             <Skill />
           </div>
           <div id="Experience" ref={experience}>
             <Experience />
-          </div>
-
-          <div id="Workplace" ref={workplace}>
-            <Workplace />
           </div>
 
           <div id="Projects" ref={projects}>
