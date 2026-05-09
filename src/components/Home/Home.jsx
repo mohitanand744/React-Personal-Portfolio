@@ -34,11 +34,11 @@ const Home = () => {
               "/node-js.png",
               "/js.png",
               "tailwind.png"].map((icon, index) => (
-                <div key={index} className="w-8 h-8 md:w-20 md:h-20 bg-white/5 rounded-full p-1.5 flex items-center justify-center hover:-translate-y-2 hover:scale-115 transition-all duration-300 cursor-pointer border border-white/5">
+                <div key={index} className="w-8 h-8 md:w-20 md:h-20 bg-white/10 rounded-full p-1.5 flex items-center justify-center hover:-translate-y-2 hover:scale-110 transition-all duration-200 cursor-pointer border border-white/5">
                   <img
                     src={icon}
                     alt="skill"
-                    className="w-full h-full object-contain"
+                    className="w-full h-full rounded-full object-contain"
                   />
                 </div>
               ))}
