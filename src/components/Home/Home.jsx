@@ -12,7 +12,7 @@ const Home = () => {
         className="relative overflow-hidden"
       >
         {/* Banner Section */}
-        <div className="relative h-[300px] md:h-[400px] lg:h-[550px] w-full overflow-hidden group">
+        <div className="relative h-[300px] md:h-[400px] rounded-xl lg:h-[550px] w-full overflow-hidden group">
           <img
             src="/working_me.jpeg"
             alt="Cover Banner"
@@ -25,7 +25,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 opacity-50"></div>
 
           {/* Skill Icons in Bottom Right */}
-          <div className="absolute bottom-24 right-4 md:bottom-8 md:right-10 flex gap-3 z-10 bg-black/30 backdrop-blur-md">
+          <div className="absolute bottom-24 right-4 md:bottom-8 md:right-10 flex gap-3 bg-black/70 z-[40]   backdrop-blur-md p-2 rounded-full border border-white/10">
             {[
               "/react.png",
               "/nextjs.png",
@@ -34,11 +34,14 @@ const Home = () => {
               "/node-js.png",
               "/js.png",
               "tailwind.png"].map((icon, index) => (
-                <div key={index} className="w-8 h-8 md:w-20 md:h-20 bg-white/10 rounded-full p-1.5 flex items-center justify-center hover:-translate-y-2 hover:scale-110 transition-all duration-200 cursor-pointer border border-white/5">
+                <div
+                  key={index}
+                  className="hidden md:flex md:w-16 md:h-16 lg:w-20 lg:h-20 bg-white/10 rounded-full group/item p-2 items-center justify-center group-hover/item:-translate-y-4 transition-all duration-300 cursor-pointer border border-white/5"
+                >
                   <img
                     src={icon}
                     alt="skill"
-                    className="w-full h-full rounded-full object-contain"
+                    className="w-full h-full group-hover/item:-translate-y-4 group-hover/item:scale-110 transition-all duration-300 cursor-pointer [will-change:transform] rounded-full object-contain"
                   />
                 </div>
               ))}
@@ -46,9 +49,9 @@ const Home = () => {
         </div>
 
         {/* Profile Info Section */}
-        <div className="relative px-6 sm:px-10 pb-12">
+        <div className="relative px-6 sm:px-10 pb-12 pointer-events-none">
           {/* Profile Picture & Social Icons Row */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end -mt-20 md:-mt-28 mb-6 z-20 relative">
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end -mt-20 md:-mt-28 mb-6 z-20 relative pointer-events-auto">
 
             {/* Profile Picture Wrapper */}
             <div className="relative p-2 bg-[#030014] rounded-full z-20 shadow-2xl">
@@ -95,7 +98,7 @@ const Home = () => {
           </div>
 
           {/* Text Content */}
-          <div className="mt-4 text-left z-20 relative">
+          <div className="mt-4 text-left z-20 relative pointer-events-auto">
             <h1 className="font-bold text-white text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] leading-tight">
               Hi There, I'm <span className="highLight-text">Mohit</span>
             </h1>
@@ -103,13 +106,13 @@ const Home = () => {
               a <span className="highLight-text">Web Developer</span>
             </h2>
 
-            <p className="text-gray-300 text-[1.1rem] md:text-2xl mt-6 max-w-4xl leading-relaxed">
+            <p className="text-gray-300 text-xl md:text-2xl mt-6 max-w-4xl leading-relaxed">
               Lead Software Engineer at Inklude Skillia |{" "}
               <span className="highLight-text font-medium">I specialize</span> in building high-performance web applications and scalable digital architectures | Delivering elite engineering solutions for global brands
             </p>
 
             {/* Action Buttons */}
-            <div className="flex flex-wrap gap-4 lg:gap-6 mt-8">
+            <div className="flex flex-wrap max-w-4xl gap-4 lg:gap-6 mt-8">
               <Button
                 text={"Hire me"}
                 url={"https://www.linkedin.com/in/mohit-anand-developer"}

@@ -17,7 +17,7 @@ const Nav = () => {
   const navigate = useNavigate();
 
   return (
-    <header className="container custom-shadow sticky top-0 z-30 flex items-center justify-between w-full px-10 py-8 text-white border-white backdrop-blur-sm bg-black/30 lg:border-b-[1px] mb-2 rounded-b-3xl">
+    <header className="container custom-shadow sticky top-0 z-[99999] flex items-center justify-between w-full px-10 py-8 text-white border-white backdrop-blur-sm bg-black/30 lg:border-b-[1px] mb-2 rounded-b-3xl">
       <div className="bg-white rounded-full">
         <Link to={"/"}>
           <img
@@ -61,9 +61,8 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("About");
           }}
-          className={`cursor-pointer navlinks  ${
-            active === "About" ? "active" : ""
-          }`}
+          className={`cursor-pointer navlinks  ${active === "About" ? "active" : ""
+            }`}
         >
           About
         </p>
@@ -74,9 +73,8 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Skills");
           }}
-          className={`cursor-pointer navlinks  ${
-            active === "Skills" ? "active" : ""
-          }`}
+          className={`cursor-pointer navlinks  ${active === "Skills" ? "active" : ""
+            }`}
         >
           Skills
         </p>
@@ -87,9 +85,8 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Experience");
           }}
-          className={`cursor-pointer navlinks  ${
-            active === "Experience" ? "active" : ""
-          }`}
+          className={`cursor-pointer navlinks  ${active === "Experience" ? "active" : ""
+            }`}
         >
           Experience
         </p>
@@ -100,9 +97,8 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Workplace");
           }}
-          className={`cursor-pointer navlinks  ${
-            active === "Workplace" ? "active" : ""
-          }`}
+          className={`cursor-pointer navlinks  ${active === "Workplace" ? "active" : ""
+            }`}
         >
           Workplace
         </p>
@@ -113,9 +109,8 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Projects");
           }}
-          className={`cursor-pointer navlinks  ${
-            active === "Projects" ? "active" : ""
-          }`}
+          className={`cursor-pointer navlinks  ${active === "Projects" ? "active" : ""
+            }`}
         >
           Projects
         </p>
@@ -128,9 +123,8 @@ const Nav = () => {
             scrollToSection("Notes");*/
             alert("Working on it...");
           }}
-          className={`cursor-pointer navlinks  ${
-            active === "Notes" ? "active" : ""
-          }`}
+          className={`cursor-pointer navlinks  ${active === "Notes" ? "active" : ""
+            }`}
         >
           Dev Notes
         </p>
@@ -143,9 +137,8 @@ const Nav = () => {
 
             alert("Working on it...");
           }}
-          className={`cursor-pointer navlinks  ${
-            active === "Blogs" ? "active" : ""
-          }`}
+          className={`cursor-pointer navlinks  ${active === "Blogs" ? "active" : ""
+            }`}
         >
           Blogs
         </p>
@@ -157,9 +150,8 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Contact");
           }}
-          className={`cursor-pointer navlinks  ${
-            active === "Contact" ? "active" : ""
-          }`}
+          className={`cursor-pointer navlinks  ${active === "Contact" ? "active" : ""
+            }`}
         >
           Contact
         </p>
