@@ -22,7 +22,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-[#030014]/40 to-transparent"></div>
 
           {/* Subtle glow overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 opacity-50"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-[#0D0F1C]/10 to-[#181a21]/10 opacity-30"></div>
 
           {/* Skill Icons in Bottom Right */}
           <div className="absolute bottom-24 right-4 md:bottom-8 md:right-10 flex gap-3 z-[40]   backdrop-blur-md p-2 rounded-full">
