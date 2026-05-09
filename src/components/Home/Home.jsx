@@ -1,94 +1,127 @@
 import React from "react";
 import Button from "../common/Buttons/Button";
+import { motion } from "framer-motion";
 
 const Home = () => {
   return (
-    <div id="Home" className="px-0 mt-32 hero lg:mt-48">
-      <div
-        data-aos="zoom-in"
-        className="grid w-full grid-cols-1 gap-8 lg:grid-cols-12"
+    <div id="Home" className="mx-auto w-full">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative overflow-hidden"
       >
-        <div className="lg:col-span-7 h-[48vh] order-2 lg:order-1">
-          <div className="flex items-center justify-start w-full h-full gap-3 ">
-            <ul className="list-none flex flex-col min-w-[4rem] md:w-[6rem] gap-2">
-              <li>
-                <a
-                  target="_blank"
-                  href="https://www.linkedin.com/in/mohit-anand-developer"
-                >
-                  <img
-                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem]"
-                    src="/linkedin.png"
-                    alt="icon"
-                  />
-                </a>
-              </li>
-              <li>
-                <a target="_blank" href="https://github.com/mohitanand744">
-                  {" "}
-                  <img
-                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
-                    src="/github.png"
-                    alt="icon"
-                  />
-                </a>
-              </li>
+        {/* Banner Section */}
+        <div className="relative h-[300px] md:h-[400px] lg:h-[550px] w-full overflow-hidden group">
+          <img
+            src="/working_me.jpeg"
+            alt="Cover Banner"
+            className="w-full h-full object-cover  transition-transform duration-700 group-hover:scale-105"
+            style={{ objectPosition: "center 83%" }}
+          />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-[#030014]/40 to-transparent"></div>
 
-              <li>
-                <a target="_blank" href="mailto:anandmohit744@gmail.com">
-                  {" "}
+          {/* Subtle glow overlay */}
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 opacity-50"></div>
+
+          {/* Skill Icons in Bottom Right */}
+          <div className="absolute bottom-24 right-4 md:bottom-8 md:right-10 flex gap-3 z-10 bg-black/30 backdrop-blur-md">
+            {[
+              "/react.png",
+              "/nextjs.png",
+              "/api.png",
+              "/typescript.png",
+              "/node-js.png",
+              "/js.png",
+              "tailwind.png"].map((icon, index) => (
+                <div key={index} className="w-8 h-8 md:w-20 md:h-20 bg-white/5 rounded-full p-1.5 flex items-center justify-center hover:-translate-y-2 hover:scale-115 transition-all duration-300 cursor-pointer border border-white/5">
                   <img
-                    className="hover:rotate-[360deg] transition-all duration-500 hover:scale-110 ease-linear w-[4rem] sm:w-[4rem] md:w-[5rem] "
-                    src="email.png"
-                    alt="icon"
-                  />{" "}
+                    src={icon}
+                    alt="skill"
+                    className="w-full h-full object-contain"
+                  />
+                </div>
+              ))}
+          </div>
+        </div>
+
+        {/* Profile Info Section */}
+        <div className="relative px-6 sm:px-10 pb-12">
+          {/* Profile Picture & Social Icons Row */}
+          <div className="flex flex-col md:flex-row justify-between items-start md:items-end -mt-20 md:-mt-28 mb-6 z-20 relative">
+
+            {/* Profile Picture Wrapper */}
+            <div className="relative p-2 bg-[#030014] rounded-full z-20 shadow-2xl">
+              <div className="w-[140px] h-[140px] md:w-[180px] md:h-[180px] rounded-full overflow-hidden border-4 border-purple-500/40 relative">
+                <img
+                  src="/footer1.jpg"
+                  alt="Mohit Anand"
+                  className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+                />
+              </div>
+              <div className="absolute bottom-4 right-4 w-5 h-5 bg-green-500 border-4 border-[#030014] rounded-full z-30"></div>
+            </div>
+
+            {/* Social Icons */}
+            <ul className="flex gap-4 mt-6 md:mt-0 list-none z-20 relative">
+              <li>
+                <a target="_blank" href="https://www.linkedin.com/in/mohit-anand-developer" rel="noreferrer">
+                  <img
+                    className="hover:-translate-y-2 hover:scale-110 transition-all duration-300 w-[3.5rem] md:w-[4rem]"
+                    src="/linkedin.png"
+                    alt="LinkedIn"
+                  />
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="https://github.com/mohitanand744" rel="noreferrer">
+                  <img
+                    className="hover:-translate-y-2 hover:scale-110 transition-all duration-300 w-[3.5rem] md:w-[4rem]"
+                    src="/github.png"
+                    alt="GitHub"
+                  />
+                </a>
+              </li>
+              <li>
+                <a target="_blank" href="mailto:anandmohit744@gmail.com" rel="noreferrer">
+                  <img
+                    className="hover:-translate-y-2 hover:scale-110 transition-all duration-300 w-[3.5rem] md:w-[4rem]"
+                    src="/email.png"
+                    alt="Email"
+                  />
                 </a>
               </li>
             </ul>
-
-            <div className="head">
-              <h1 className="font-bold text-white text-[3rem] sm:text-[3rem] md:text-[4rem] xl:text-[5rem] leading-10  md:leading-[4rem] lg:leading-[5rem]">
-                Hi There, I'm <span className="highLight-text ">Mohit</span>{" "}
-                <br />{" "}
-                <span className=" text-[2rem] sm:text-[2.3rem] md:text-[3rem] xl:text-[3.8rem]">
-                  {" "}
-                  a <span className="highLight-text">Web Developer</span>
-                </span>
-              </h1>
-
-              <p className="text-white text-[1.2rem] sm:text-md md:text-2xl mt-5">
-                Lead Software Engineer at Inklude Skillia |{" "}
-                <span className="highLight-text">I specialize</span>, in building high-performance web applications and scalable digital architectures | Delivering elite engineering solutions for global brands
-              </p>
-
-              <div className="flex gap-3 mt-4 text-white lg:gap-5">
-                <Button
-                  text={"Hire me"}
-                  url={"https://www.linkedin.com/in/mohit-anand-developer"}
-                />
-                <Button
-                  text={"1:1 Call"}
-                  url={"https://topmate.io/mohit_anand_developer"}
-                />
-              </div>
-            </div>
           </div>
-        </div>
-        <div className="order-1 lg:col-span-5 lg:order-2">
-          <div
-            data-aos="flip-right"
-            className="flex items-center justify-center w-full h-full lg:justify-end"
-          >
-            <div className="ms-2 profileImageContainer w-[26rem] md:w-[30rem] lg:w-[35rem] h-[26rem] md:h-[30rem] lg:h-[35rem] rounded-full">
-              <img
-                className="object-cover w-full h-full rounded-full"
-                src="/hero-profile.jpeg"
-                alt=""
+
+          {/* Text Content */}
+          <div className="mt-4 text-left z-20 relative">
+            <h1 className="font-bold text-white text-[2.5rem] md:text-[3.5rem] lg:text-[4rem] leading-tight">
+              Hi There, I'm <span className="highLight-text">Mohit</span>
+            </h1>
+            <h2 className="text-[1.8rem] md:text-[2.2rem] text-gray-200 mt-2 font-medium">
+              a <span className="highLight-text">Web Developer</span>
+            </h2>
+
+            <p className="text-gray-300 text-[1.1rem] md:text-2xl mt-6 max-w-4xl leading-relaxed">
+              Lead Software Engineer at Inklude Skillia |{" "}
+              <span className="highLight-text font-medium">I specialize</span> in building high-performance web applications and scalable digital architectures | Delivering elite engineering solutions for global brands
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-wrap gap-4 lg:gap-6 mt-8">
+              <Button
+                text={"Hire me"}
+                url={"https://www.linkedin.com/in/mohit-anand-developer"}
+              />
+              <Button
+                text={"1:1 Call"}
+                url={"https://topmate.io/mohit_anand_developer"}
               />
             </div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
