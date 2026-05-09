@@ -25,7 +25,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-gradient-to-r from-purple-500/10 to-blue-500/10 opacity-50"></div>
 
           {/* Skill Icons in Bottom Right */}
-          <div className="absolute bottom-24 right-4 md:bottom-8 md:right-10 flex gap-3 bg-black/70 z-[40]   backdrop-blur-md p-2 rounded-full border border-white/10">
+          <div className="absolute bottom-24 right-4 md:bottom-8 md:right-10 flex gap-3 z-[40]   backdrop-blur-md p-2 rounded-full">
             {[
               "/react.png",
               "/nextjs.png",
@@ -36,7 +36,7 @@ const Home = () => {
               "tailwind.png"].map((icon, index) => (
                 <div
                   key={index}
-                  className="hidden md:flex md:w-16 md:h-16 lg:w-20 lg:h-20 bg-white/10 rounded-full group/item p-2 items-center justify-center group-hover/item:-translate-y-4 transition-all duration-300 cursor-pointer border border-white/5"
+                  className="hidden md:flex md:w-16 md:h-16 lg:w-20 lg:h-20 bg-white/10 rounded-full group/item p-2 items-center justify-center group-hover/item:-translate-y-4 hover:scale-110 transition-all duration-300 cursor-pointer border border-white/5"
                 >
                   <img
                     src={icon}
