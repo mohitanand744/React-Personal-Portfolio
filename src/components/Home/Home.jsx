@@ -107,8 +107,7 @@ const Home = () => {
             </h2>
 
             <p className="text-gray-300 text-xl md:text-2xl mt-6 max-w-4xl leading-relaxed">
-              Lead Software Engineer at Inklude Skillia |{" "}
-              <span className="highLight-text font-medium">I specialize</span> in building high-performance web applications and scalable digital architectures | Delivering elite engineering solutions for global brands
+              Full Stack Developer (Frontend-Focused) | AI-Assisted Development • Scalable SaaS Applications • React/Next, Node.js, MySQL • Scalable Backend Architecture & Modern Development Workflows
             </p>
 
             {/* Action Buttons */}

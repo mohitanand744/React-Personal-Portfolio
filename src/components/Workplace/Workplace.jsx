@@ -1,6 +1,7 @@
 import React from "react";
 import SectionHeading from "../common/Heading/SectionHeading";
 import { motion } from "framer-motion";
+import { Code2, BrainCircuit, Database, Terminal, Cpu } from "lucide-react";
 
 const Workplace = () => {
   // Professional workspace stats
@@ -8,36 +9,31 @@ const Workplace = () => {
     { value: "50+", label: "Active Projects", icon: "/ActiveProjects.png" },
     { value: "24/7", label: "Creative Flow", icon: "/CreativeFlow.png" },
     { value: "100%", label: "Focus Mode", icon: "/FocusMode.png" },
-    { value: "CentOS 10", label: "VM Cloud Ready", icon: "/centos-stream.svg" },
-    { value: "ESXi", label: "VMware Virtualization", icon: "/Vmware.png" }, // Added VMware stat
+    { value: "Local", label: "AI Models", iconComponent: <Cpu className="w-14 h-14 md:w-16 md:h-16 text-purple-400" /> },
+    { value: "API", label: "First Design", iconComponent: <Database className="w-14 h-14 md:w-16 md:h-16 text-blue-400" /> },
   ];
 
   // Workspace features based on your setup
   const workspaceFeatures = [
     {
-      title: "AI-Powered Development",
-      description: "Integrated AI Gallery for intelligent coding assistance",
-      icon: "/AIPoweredDevelopment.png",
+      title: "Local AI Development",
+      description: "VS Code + Continue + Ollama workflow for AI-assisted coding, debugging, architecture reviews, and development productivity.",
+      iconComponent: <Code2 className="w-12 h-12 md:w-14 md:h-14 text-blue-400" />,
     },
     {
-      title: "Streamlined Workflow",
-      description: "Projects, Themes, and Content management at your fingertips",
-      icon: "/StreamlinedWorkflow.png",
+      title: "AI-Assisted Engineering",
+      description: "Using local coding models for backend reviews, SQL optimization, refactoring, documentation, and scalable development workflows.",
+      iconComponent: <BrainCircuit className="w-12 h-12 md:w-14 md:h-14 text-purple-400" />,
     },
     {
-      title: "Version Control Ready",
-      description: "Dashboard v1.2 configurations optimized for deployment",
-      icon: "/VersionControlReady.png",
+      title: "Scalable Backend Workflow",
+      description: "Building modular Node.js + MySQL architecture with migration systems, API-first design, and production-focused backend structure.",
+      iconComponent: <Database className="w-12 h-12 md:w-14 md:h-14 text-green-400" />,
     },
     {
-      title: "CentOS Stream Environment",
-      description: "Enterprise-grade Linux virtualization for cloud deployment, server management, and scalable infrastructure",
-      icon: "/centos-stream.svg",
-    },
-    {
-      title: "VMware Virtualization",
-      description: "High-performance ESXi hypervisor management for professional server environments",
-      icon: "/Vmware.png",
+      title: "Modern Developer Tooling",
+      description: "Git, CLI workflows, local AI models, deployment tools, scalable project structures, and productivity-focused engineering setup.",
+      iconComponent: <Terminal className="w-12 h-12 md:w-14 md:h-14 text-pink-400" />,
     },
   ];
 
@@ -59,14 +55,14 @@ const Workplace = () => {
           >
             <SectionHeading text={"My Workspace"} />
 
-            <p className="text-lg md:text-xl text-gray-300 lg:text-2xl leading-relaxed mt-4">
-              Where creativity meets code. This is the powerhouse where I architect
+            <p className="text-lg md:text-xl text-gray-300 lg:text-3xl leading-relaxed mt-4">
+              Where creativity meets scalable architecture. This is the setup where I build
               <span className="text-white font-semibold">
                 {" "}
                 high-performance applications
               </span>{" "}
-              and push the boundaries of{" "}
-              <span className="text-purple-400">modern web technology</span>.
+              and leverage a{" "}
+              <span className="text-purple-400">modern AI-assisted engineering workflow</span>.
             </p>
           </motion.div>
 
@@ -83,16 +79,20 @@ const Workplace = () => {
                 className="custom-shadow2 bg-gradient-to-br from-white/5 to-white/0 backdrop-blur-sm rounded-2xl p-4 md:p-6 text-center border border-white/10 hover:border-purple-500/50 transition-all duration-300"
               >
                 <div className="text-3xl md:text-[4xl] mb-2 flex justify-center items-center">
-                  <img
-                    src={stat.icon}
-                    alt={stat.label}
-                    className="w-14 h-14 md:w-16 md:h-16 object-contain"
-                  />
+                  {stat.iconComponent ? (
+                    stat.iconComponent
+                  ) : (
+                    <img
+                      src={stat.icon}
+                      alt={stat.label}
+                      className="w-14 h-14 md:w-16 md:h-16 object-contain"
+                    />
+                  )}
                 </div>
                 <div className="text-xl md:text-2xl font-bold text-white">
                   {stat.value}
                 </div>
-                <div className="text-base text-gray-400 mt-1">{stat.label}</div>
+                <div className="text-base text-2xl md:text-2xl text-gray-300 mt-1">{stat.label}</div>
               </div>
             ))}
           </motion.div>
@@ -108,7 +108,7 @@ const Workplace = () => {
               Professional <span className="text-purple-400">Setup Highlights</span>
             </h3>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {workspaceFeatures.map((feature, index) => (
                 <motion.div
                   key={index}
@@ -116,20 +116,24 @@ const Workplace = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 }}
                   viewport={{ once: true }}
-                  className="flex flex-wrap items-center gap-6 bg-gradient-to-br custom-shadow2 from-white/5 to-white/0 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:scale-[1.02]"
+                  className="flex flex-col sm:flex-row items-start sm:items-center gap-6 bg-gradient-to-br custom-shadow2 from-white/5 to-white/0 backdrop-blur-sm rounded-2xl p-6 border border-white/10 hover:border-purple-500/30 transition-all duration-300 hover:scale-[1.02]"
                 >
-                  <div className="shrink-0">
-                    <img
-                      src={feature.icon}
-                      alt={feature.title}
-                      className="w-12 h-12 md:w-16 md:h-16 object-contain"
-                    />
+                  <div className="shrink-0 flex justify-center items-center">
+                    {feature.iconComponent ? (
+                      feature.iconComponent
+                    ) : (
+                      <img
+                        src={feature.icon}
+                        alt={feature.title}
+                        className="w-12 h-12 md:w-14 md:h-14 object-contain"
+                      />
+                    )}
                   </div>
                   <div>
-                    <h4 className="text-xl font-semibold text-white mb-1">
+                    <h4 className="text-2xl border-b pb-3 mb-4 border-gray-400/50 font-semibold text-white mb-2">
                       {feature.title}
                     </h4>
-                    <p className="text-gray-400 text-base leading-relaxed">
+                    <p className="text-gray-300 text-base md:text-xl leading-relaxed">
                       {feature.description}
                     </p>
                   </div>
@@ -177,7 +181,7 @@ const Workplace = () => {
             >
               <span className="text-white text-lg md:text-xl font-medium flex items-center gap-2">
                 <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span>
-                Optimized for Productivity
+                Local AI Powered Setup
               </span>
             </motion.div>
           </div>

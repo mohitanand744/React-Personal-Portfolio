@@ -2,7 +2,7 @@ import React from "react";
 
 const DownloadButton = ({ text, url }) => {
   return (
-    <button className="p-[0.6rem] px-[0.8rem] md:p-[0.8rem] text-xl md:text-2xl font-[500] custom-button">
+    <button className="p-[0.6rem] px-[0.8rem] md:p-[1rem] text-xl md:text-2xl font-[500] custom-button">
       <a
         href={url}
         download={"Mohit Anand Resume"}

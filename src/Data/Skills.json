@@ -263,5 +263,55 @@
     "title": "Postman",
     "image": "/postman.png",
     "category": "tools"
+  },
+  {
+    "title": "AI-Assisted Development",
+    "image": "https://img.icons8.com/fluency/48/artificial-intelligence.png",
+    "category": "tools"
+  },
+  {
+    "title": "Ollama",
+    "image": "https://media.licdn.com/dms/image/v2/D5612AQEOULWgnVbBRA/article-cover_image-shrink_720_1280/article-cover_image-shrink_720_1280/0/1713098774047?e=2147483647&v=beta&t=ci_6MctI3jG8VK_mPNiyGuno_3ePW_IEJKCjACj2gCg",
+    "category": "tools"
+  },
+  {
+    "title": "Continue AI",
+    "image": "https://img.icons8.com/color/48/bot.png",
+    "category": "tools"
+  },
+  {
+    "title": "Local AI Models",
+    "image": "https://img.icons8.com/color/48/brain--v1.png",
+    "category": "tools"
+  },
+  {
+    "title": "CLI Workflows",
+    "image": "https://img.icons8.com/color/48/console.png",
+    "category": "tools"
+  },
+  {
+    "title": "Scalable Backend Architecture",
+    "image": "https://img.icons8.com/color/48/server.png",
+    "category": "backend"
+  },
+  {
+    "title": "Schema Management",
+    "image": "https://img.icons8.com/color/48/database.png",
+    "category": "backend"
+  },
+  {
+    "title": "SQL Optimization",
+    "image": "https://img.icons8.com/color/48/sql.png",
+    "category": "backend"
+  },
+  {
+    "title": "API-First Architecture",
+    "image": "https://img.icons8.com/color/48/api-settings.png",
+    "category": "backend"
+  },
+  {
+    "title": "Production Workflows",
+    "image": "https://img.icons8.com/color/48/workflow.png",
+    "category": "tools"
   }
 ]
