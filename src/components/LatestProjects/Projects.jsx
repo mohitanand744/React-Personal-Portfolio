@@ -26,7 +26,7 @@ const Projects = () => {
     if (filterType === "initial") {
       return project.level === "Intermediate";
     } else if (filterType === "production") {
-      return project.level === "Hard";
+      return project.level === "Advanced";
     }
     return true;
   });

@@ -115,25 +115,25 @@ const Nav = () => {
           Projects
         </p>
 
-        <p
+        {/* <p
           onClick={() => {
-            /*navigate("/");
+            navigate("/");
             setActive("Notes");
             setToggle(false);
-            scrollToSection("Notes");*/
+            scrollToSection("Notes");
             alert("Working on it...");
           }}
           className={`cursor-pointer navlinks  ${active === "Notes" ? "active" : ""
             }`}
         >
           Dev Notes
-        </p>
-        <p
+        </p> */}
+        {/*  <p
           onClick={() => {
-            navigate("/"); /* 
+            navigate("/"); 
             setActive("Blogs");
                 setToggle(false);
-                scrollToSection("Blogs");*/
+                scrollToSection("Blogs");
 
             alert("Working on it...");
           }}
@@ -141,7 +141,7 @@ const Nav = () => {
             }`}
         >
           Blogs
-        </p>
+        </p> */}
 
         <p
           onClick={() => {
