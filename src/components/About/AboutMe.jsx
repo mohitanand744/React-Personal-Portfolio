@@ -6,11 +6,15 @@ import { Target, BrainCircuit, Rocket } from "lucide-react";
 const AboutMe = () => {
   const tags = [
     "React",
+    "Next",
     "Node.js",
     "MySQL",
     "REST APIs",
     "AI-Assisted Development",
     "Scalable Backend Architecture",
+    "Low Level Systems Design",
+    "High Performance",
+    "System Design",
     "Full Stack Engineering",
     "SaaS Development",
   ];
@@ -118,19 +122,19 @@ const AboutMe = () => {
 
             {/* Contact Details Grid */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-black/30 p-6 md:p-8 rounded-3xl border border-gray-800/60 mb-10">
-              <div className="flex flex-col gap-1 text-base md:text-lg">
-                <p className="text-gray-500 text-sm uppercase tracking-wider font-semibold mb-2">Contact</p>
-                <p className="text-white font-medium">Mohit Anand</p>
+              <div className="flex flex-col gap-1 text-base md:text-2xl">
+                <p className="text-gray-500 text-xl uppercase tracking-wider font-semibold mb-2">Contact</p>
+                <p className="text-white font-medium"> Name : Mohit Anand</p>
                 <a
                   href="mailto:anandmohit744@gmail.com"
-                  className="text-gray-300 hover:text-[#3cf] transition-colors"
+                  className="transition-colors"
                 >
-                  anandmohit744@gmail.com
+                  Email : <span className="text-blue-400 hover:text-blue-500">anandmohit744@gmail.com</span>
                 </a>
-                <span className="text-green-400 mt-1">+91 8521227434</span>
+                <a href="tel:+918521227434" className="transition-colors">Phone : <span className="text-blue-400 hover:text-blue-500">+91 8521227434</span></a>
               </div>
-              <div className="flex flex-col gap-1 text-base md:text-lg">
-                <p className="text-gray-500 text-sm uppercase tracking-wider font-semibold mb-2">Current Role</p>
+              <div className="flex flex-col gap-1 text-base md:text-2xl">
+                <p className="text-gray-500 text-xl uppercase tracking-wider font-semibold mb-2">Current Role</p>
                 <p className="text-gray-200">Frontend-Focused Full Stack Developer</p>
               </div>
             </div>
@@ -139,7 +143,7 @@ const AboutMe = () => {
           {/* Action Footer */}
           <div className="pt-8 border-t border-gray-800/60 flex flex-wrap items-center justify-between gap-4">
             <DownloadButton text="Download Resume" url="/Mohit Anand.pdf" />
-            <span className="text-gray-500 text-sm md:text-base font-medium">
+            <span className="text-2xl highLight-text font-medium">
               Available for new opportunities
             </span>
           </div>

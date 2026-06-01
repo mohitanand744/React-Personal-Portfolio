@@ -21,16 +21,27 @@ const RealWorldExperience = () => {
         pauseOnHover
       >
         <p style={{ color: "white", fontSize: "20px", margin: "0 10px" }}>
-          Worked on <b>12+</b> Real World Projects 🚀
+          Worked on <b>20+</b> Real-World Projects 🚀
         </p>
+
         <p style={{ color: "white", fontSize: "20px", margin: "0 10px" }}>
-          Proficient in <b>Frontend Development</b> 🌟
+          Frontend-Focused <b>Full Stack Developer</b> ⚡
         </p>
+
         <p style={{ color: "white", fontSize: "20px", margin: "0 10px" }}>
-          Dedicated to Creating <b>User Centric</b> Solutions 💡
+          Building <b>Scalable SaaS Applications</b> 🧩
         </p>
+
         <p style={{ color: "white", fontSize: "20px", margin: "0 10px" }}>
-          Learning <b>Backend</b> 🖥️📖🖊️
+          Exploring <b>AI-Assisted Development</b> 🤖
+        </p>
+
+        <p style={{ color: "white", fontSize: "20px", margin: "0 10px" }}>
+          Learning <b>Backend Architecture & MySQL</b> 🖥️
+        </p>
+
+        <p style={{ color: "white", fontSize: "20px", margin: "0 10px" }}>
+          Focused on <b>Clean Code & Performance</b> 💡
         </p>
       </Marquee>
     </div>

@@ -106,7 +106,7 @@ const Home = () => {
               a <span className="highLight-text">Web Developer</span>
             </h2>
 
-            <p className="text-gray-300 text-xl md:text-2xl mt-6 max-w-4xl leading-relaxed">
+            <p className="text-gray-300 text-xl md:text-3xl mt-6 max-w-5xl leading-relaxed">
               Full Stack Developer (Frontend-Focused) | AI-Assisted Development • Scalable SaaS Applications • React/Next, Node.js, MySQL • Scalable Backend Architecture & Modern Development Workflows
             </p>
 
