@@ -240,11 +240,6 @@
     "category": "frontend"
   },
   {
-    "title": "GraphQL",
-    "image": "https://img.icons8.com/color/512/graphql.png",
-    "category": "backend"
-  },
-  {
     "title": "Firebase",
     "image": "https://img.icons8.com/color/512/firebase.png",
     "category": "backend"
@@ -287,6 +282,21 @@
   {
     "title": "CLI Workflows",
     "image": "https://img.icons8.com/color/48/console.png",
+    "category": "tools"
+  },
+  {
+    "title": "pgadmin",
+    "image": "/pgadmin.svg",
+    "category": "tools"
+  },
+  {
+    "title": "mysql-workbench",
+    "image": "/mysql-workbench.png",
+    "category": "tools"
+  },
+  {
+    "title": "Swagger",
+    "image": "/Swagger-logo.png",
     "category": "tools"
   },
   {
