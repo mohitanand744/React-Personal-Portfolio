@@ -70,8 +70,8 @@
       "local llm",
       "nextchapter"
     ],
-    "live_url": "Coming Soon — currently optimizing the platform for production deployment.",
-    "github_url": "https://github.com/mohitanand744/Book-Store-React-MySQL-.git",
+    "live_url": "https://nxtchapter.netlify.app/",
+    "github_url": "https://github.com/mohitanand744/NextChapter-AI-Powered-Bookstore-Author-Ecosystem",
     "image": "/BookStore.png",
     "projectTime": "Latest",
     "category": "AI-Ready Full Stack Platform",
