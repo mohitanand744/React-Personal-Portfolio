@@ -62,7 +62,7 @@ const Home = () => {
                   className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
                 />
               </div>
-              <div className="absolute bottom-4 right-4 w-5 h-5 bg-green-500 border-4 border-[#030014] rounded-full z-30"></div>
+              <div className="absolute bottom-10 right-6 w-10 h-10 animate-pulse bg-green-500 border-4 border-[#030014] rounded-full z-30"></div>
               {/* Current Company Logo Badge */}
               <a
                 href="https://www.linkedin.com/company/cronixweb/"

@@ -143,9 +143,9 @@ const AboutMe = () => {
           {/* Action Footer */}
           <div className="pt-8 border-t border-gray-800/60 flex flex-wrap items-center justify-between gap-4">
             <DownloadButton text="Download Resume" url="/Mohit Anand.pdf" />
-            <span className="text-2xl highLight-text font-medium">
+            {/*  <span className="text-2xl highLight-text font-medium">
               Available for new opportunities
-            </span>
+            </span> */}
           </div>
         </div>
       </div>
