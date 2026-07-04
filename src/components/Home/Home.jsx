@@ -63,6 +63,20 @@ const Home = () => {
                 />
               </div>
               <div className="absolute bottom-4 right-4 w-5 h-5 bg-green-500 border-4 border-[#030014] rounded-full z-30"></div>
+              {/* Current Company Logo Badge */}
+              <a
+                href="https://www.linkedin.com/company/cronixweb/"
+                target="_blank"
+                rel="noreferrer"
+                className="absolute -top-16 -right-12 w-10 h-10 md:w-44 md:h-44 bg-[#030014] border-2 border-purple-500/60 rounded-full overflow-hidden z-30 flex items-center justify-center shadow-lg hover:scale-110 hover:border-purple-400 transition-all duration-300 pointer-events-auto"
+                title="Current Company: Cronix"
+              >
+                <img
+                  src="/cronix_logo.jpg"
+                  alt="Cronix Logo"
+                  className="w-full h-full object-cover rounded-full"
+                />
+              </a>
             </div>
 
             {/* Social Icons */}
@@ -103,7 +117,7 @@ const Home = () => {
               Hi There, I'm <span className="highLight-text">Mohit</span>
             </h1>
             <h2 className="text-[1.8rem] md:text-[2.2rem] text-gray-200 mt-2 font-medium">
-              a <span className="highLight-text">Web Developer</span>
+              a <span className="highLight-text">Full Stack Frontend Developer</span> at <span className="highLight-text">Cronix</span>
             </h2>
 
             <p className="text-gray-300 text-xl md:text-3xl mt-6 max-w-5xl leading-relaxed">

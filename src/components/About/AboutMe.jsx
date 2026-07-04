@@ -20,7 +20,7 @@ const AboutMe = () => {
   ];
 
   const stats = [
-    { label: "Experience", value: "1+ Years" },
+    { label: "Experience", value: "2+ Years" },
     { label: "Development", value: "Full Stack" },
     { label: "Workflow", value: "AI-Assisted" },
     { label: "Focus", value: "Scalable SaaS" },
@@ -58,7 +58,7 @@ const AboutMe = () => {
               </p>
 
               <p className="text-lg md:text-xl lg:text-[17px] text-gray-400 ">
-                Frontend-Focused Full Stack Engineer with professional experience building responsive web platforms, AI-powered coaching products, and data analytics dashboards. Currently developing scalable client products at <span className="text-gray-200 font-medium">INKLUDE SKILLIA</span> and building <span className="text-gray-200 font-medium">NextChapter</span>, an AI-powered e-commerce & social platform, to deepen full-stack and backend mastery.
+                Frontend-Focused Full Stack Engineer with professional experience building responsive web platforms, AI-powered coaching products, and data analytics dashboards. Currently developing scalable client products at <span className="text-gray-200 font-medium">Cronix</span> and building <span className="text-gray-200 font-medium">NextChapter</span>, an AI-powered e-commerce & social platform, to deepen full-stack and backend mastery.
               </p>
             </div>
 

@@ -68,7 +68,8 @@ const Experience = () => {
               index={index}
               experienceItem={experienceItem}
               skillsUsed={
-                experienceItem.company === "INKLUDE SKILLIA"
+                experienceItem.company === "INKLUDE SKILLIA" ||
+                experienceItem.company === "Cronix"
                   ? allSkills
                   : frontendSkills
               }

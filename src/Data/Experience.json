@@ -1,5 +1,24 @@
 [
   {
+    "company": "Cronix",
+    "logo": "/cronix_logo.jpg",
+    "companyLinkedin": "https://www.linkedin.com/company/cronixweb/",
+    "location": "Remote",
+    "role": "Full Stack Frontend Developer",
+    "companyLocation": "Los Angeles, California, United States",
+    "duration": "2 mos",
+    "roles": [
+      {
+        "position": "Full Stack Frontend Developer",
+        "type": "Full Time",
+        "start_date": "Jun 2026",
+        "end_date": "Present",
+        "duration": "2 mos",
+        "description": "Working as a Full Stack Developer at Cronix, building scalable, secure, and production-ready web applications across frontend and backend. Developed responsive and reusable frontend components, implemented application flows, integrated REST APIs, handled authentication-based features, managed API-driven state, and worked closely with backend/database workflows to deliver complete end-to-end solutions. Technical responsibilities included building modern frontend applications using React.js, Next.js, JavaScript/TypeScript, and Tailwind CSS; creating reusable, maintainable, and performance-focused UI components; integrating REST APIs with proper loading, error, and success handling; managing frontend state, form validation, protected routes, and user-based flows; working with backend APIs, authentication, authorization, and database-driven features; and debugging production issues, optimizing performance, and improving application reliability."
+      }
+    ]
+  },
+  {
     "company": "INKLUDE SKILLIA",
     "logo": "/inkludeskillia.png",
     "companyLinkedin": "https://www.linkedin.com/company/inklude-skillia",
@@ -12,8 +31,8 @@
         "position": "Lead Software Engineer",
         "type": "Full Time",
         "start_date": "Feb 2026",
-        "end_date": "Present",
-        "duration": "2 mos",
+        "end_date": "Jun 2026",
+        "duration": "5 mos",
         "description": "Designing and building high-performance, scalable web applications for a diverse range of global brands. I specialize in architecting modern front-end experiences and robust back-end systems that drive measurable business growth. Key Technical Contributions: Lead Full-Stack Development using modern technologies (React, Vite, Framer Motion, and Tailwind CSS | Node.js (Express), PostgreSQL, etc.), designed scalable technical architectures, and maintained engineering excellence to ensure superior technology delivery."
       }
     ]
