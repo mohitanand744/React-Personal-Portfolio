@@ -68,7 +68,7 @@ const Home = () => {
                 href="https://www.linkedin.com/company/cronixweb/"
                 target="_blank"
                 rel="noreferrer"
-                className="absolute -top-16 -right-12 w-10 h-10 md:w-44 md:h-44 bg-[#030014] border-2 border-purple-500/60 rounded-full overflow-hidden z-30 flex items-center justify-center shadow-lg hover:scale-110 hover:border-purple-400 transition-all duration-300 pointer-events-auto"
+                className="absolute -top-16 -right-12 w-38 h-38 md:w-44 md:h-44 bg-[#030014] border-[3px] border-purple-500/60 rounded-full overflow-hidden z-30 flex items-center justify-center shadow-lg hover:scale-110 hover:border-purple-400 transition-all duration-300 pointer-events-auto"
                 title="Current Company: Cronix"
               >
                 <img
