@@ -1,9 +1,28 @@
-import React from "react";
 import SectionHeading from "../common/Heading/SectionHeading";
 import DownloadButton from "../common/Buttons/DownloadButton";
-import { Target, BrainCircuit, Rocket } from "lucide-react";
+import useContextData from "../../Hook/useContextData";
+import {
+  Target,
+  BrainCircuit,
+  Rocket,
+  Mail,
+  Phone,
+  User,
+  Briefcase,
+  Calendar,
+} from "lucide-react";
 
 const AboutMe = () => {
+  const { experience } = useContextData();
+
+  const presentCompany = experience?.find((exp) =>
+    exp.roles?.some((role) => role.end_date?.toLowerCase() === "present")
+  );
+  const presentRole = presentCompany?.roles?.find(
+    (role) => role.end_date?.toLowerCase() === "present"
+  );
+  const joiningDate = presentRole?.start_date || "Jun 2026";
+
   const tags = [
     "React",
     "Next",
@@ -20,132 +39,228 @@ const AboutMe = () => {
   ];
 
   const stats = [
-    { label: "Experience", value: "2+ Years" },
-    { label: "Development", value: "Full Stack" },
-    { label: "Workflow", value: "AI-Assisted" },
-    { label: "Focus", value: "Scalable SaaS" },
+    { label: "Experience", value: "2+ Years", subtext: "Professional Track Record" },
+    { label: "Development", value: "Full Stack", subtext: "Frontend-Focused Engineering" },
+    { label: "Workflow", value: "AI-Assisted", subtext: "Ollama & Local LLMs" },
+    { label: "Focus", value: "Scalable SaaS", subtext: "Performance & Systems" },
   ];
 
   return (
-    <div
-      id="About"
-      className="grid grid-cols-1 gap-16 px-3 mx-auto about h-fit lg:grid-cols-12 lg:mt-72"
-    >
-      {/* Left Profile Image Column */}
-      <div className="col-span-5 p-2">
-        <div data-aos="flip-left" className="flex flex-col items-center lg:sticky lg:top-44">
-          <img
-            loading="lazy"
-            className="profileImageContainer text-center w-[25rem] md:w-[25rem] md:h-[32rem] h-[28rem] lg:w-[40rem] lg:h-[50rem] rounded-[4rem] object-cover transition-all duration-300 hover:scale-[1.02]"
-            src="/profileImg.png"
-            alt="Mohit Anand Profile"
-          />
+    <div id="About" className="w-full mt-16 md:mt-24 lg:mt-32 px-3 mx-auto">
+      {/* 1. Full-Width Banner */}
+      <div className="w-full mb-10 md:mb-14" data-aos="zoom-in">
+        <div className="w-full overflow-hidden rounded-2xl md:rounded-[2.5rem] shadow-2xl border border-purple-500/20 group transition-all duration-500 hover:border-purple-500/40 hover:shadow-[0_0_40px_rgba(168,85,247,0.25)]">
+          <picture className="w-full block">
+            <source
+              media="(max-width: 768px)"
+              srcSet="/Mohit-Anand-Full-Stack-Developer-Banner-mobile.png"
+            />
+            <img
+              src="/Mohit-Anand-Full-Stack-Developer-Banner.png"
+              alt="Mohit Anand - Full Stack Developer (Frontend-Focused) Banner"
+              className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-[1.015]"
+              loading="lazy"
+            />
+          </picture>
         </div>
       </div>
 
-      {/* Right Details Column */}
-      <div className="col-span-7" data-aos="zoom-in">
-        <div className="p-6 md:p-10 border-b-[1px] border-t-[1px] rounded-[3rem] md:rounded-[4rem] custom-shadow bg-[#080810ab] backdrop-blur-md min-h-[550px] flex flex-col justify-between">
-          <div>
-            <div className="mb-8">
-              <SectionHeading text={"About me"} />
-            </div>
+      {/* 2. Redesigned Content Card */}
+      <div
+        data-aos="fade-up"
+        className="w-full p-6 sm:p-10 md:p-14 border-b border-t rounded-[2.5rem] md:rounded-[3.5rem] custom-shadow bg-[#080810ab] backdrop-blur-md"
+      >
+        {/* Header Row */}
+        <div className="mb-12 pb-6 border-b border-white/10">
+          <SectionHeading text={"About me"} />
+        </div>
 
-            {/* Profile Summary */}
-            <div className="space-y-6 text-white mb-10">
-              <p className="text-xl md:text-2xl lg:text-[20px]  text-gray-200">
-                I’m <span className="font-semibold text-white">Mohit Anand</span>, a Frontend-Focused Full Stack Developer passionate about building scalable, high-performance web applications and continuously improving my backend engineering skills.
+        {/* Profile Summary */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 text-white mb-14">
+          <div className="lg:col-span-6 space-y-5">
+            <h3 className="text-2xl md:text-3xl lg:text-[2.8rem] font-bold text-white leading-[1.3] md:leading-[1.35] lg:leading-[1.35]">
+              Frontend-Focused <span className="highLight-text">Full Stack Developer</span> crafting modern, scalable applications.
+            </h3>
+            <p className="text-xl md:text-2xl lg:text-[2.2rem] text-gray-200 leading-[1.7] md:leading-[1.75] lg:leading-[1.8] pt-2">
+              I’m <span className="font-semibold text-white">Mohit Anand</span>, passionate about building high-performance web products, scalable backend architectures, and leveraging modern AI-assisted engineering workflows.
+            </p>
+          </div>
+          <div className="lg:col-span-6 space-y-5">
+            <p className="text-lg md:text-xl lg:text-[2rem] text-gray-300 leading-[1.7] md:leading-[1.75] lg:leading-[1.8]">
+              Frontend-Focused Full Stack Engineer with professional experience building responsive web platforms, AI-powered coaching products, and data analytics dashboards. Currently developing scalable client products at <span className="text-white font-semibold">Cronix</span> and building <span className="text-white font-semibold">NextChapter</span>, an AI-powered e-commerce & social platform, to deepen full-stack and backend mastery.
+            </p>
+            <p className="text-lg md:text-xl lg:text-[2rem] text-gray-300 leading-[1.7] md:leading-[1.75] lg:leading-[1.8]">
+              Committed to clean code principles, intuitive user experiences, scalable database modeling, and fast iteration speeds.
+            </p>
+          </div>
+        </div>
+
+        {/* Stats Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+          {stats.map((stat, i) => (
+            <div
+              key={i}
+              className="p-6 md:p-8 rounded-3xl bg-gradient-to-b from-white/5 to-transparent border border-white/10 backdrop-blur-sm hover:border-purple-500/40 hover:bg-white/[0.08] transition-all duration-300"
+            >
+              <span className="text-white font-extrabold text-3xl md:text-4xl lg:text-[3.4rem] leading-[1.2] block mb-2">
+                {stat.value}
+              </span>
+              <span className="text-purple-400 text-lg md:text-xl lg:text-[1.9rem] font-semibold leading-[1.4] block mb-1">
+                {stat.label}
+              </span>
+              <span className="text-gray-400 text-base md:text-lg lg:text-[1.6rem] leading-[1.5] block">
+                {stat.subtext}
+              </span>
+            </div>
+          ))}
+        </div>
+
+        {/* Technical Competencies Badges */}
+        <div className="mb-16">
+          <p className="text-gray-300 text-xl md:text-2xl lg:text-[2.2rem] uppercase tracking-wider font-semibold leading-[1.4] mb-6">
+            Core Competencies & Stack
+          </p>
+          <div className="flex flex-wrap gap-3 md:gap-4">
+            {tags.map((tag, i) => (
+              <span
+                key={i}
+                className="px-6 py-3.5 rounded-full text-base md:text-xl lg:text-[1.7rem] font-medium leading-[1.4] bg-white/5 border border-white/10 text-gray-200 hover:text-white hover:border-purple-500/50 hover:bg-purple-500/10 transition-all cursor-default shadow-sm"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Info Cards Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
+          {/* Card 1 */}
+          <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-purple-500/10 to-transparent border border-white/10 hover:border-purple-500/40 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div className="w-14 h-14 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center mb-6">
+                <Target size={28} className="text-purple-400" />
+              </div>
+              <h4 className="text-white font-bold text-2xl md:text-3xl lg:text-[2.4rem] leading-[1.3] mb-4">
+                Current Focus
+              </h4>
+              <p className="text-gray-300 text-lg md:text-xl lg:text-[1.8rem] leading-[1.7] md:leading-[1.75] lg:leading-[1.8]">
+                Building scalable SaaS applications, improving backend architecture skills, and integrating AI-assisted engineering workflows into modern development processes.
               </p>
+            </div>
+          </div>
 
-              <p className="text-lg md:text-xl lg:text-[17px] text-gray-400 ">
-                Frontend-Focused Full Stack Engineer with professional experience building responsive web platforms, AI-powered coaching products, and data analytics dashboards. Currently developing scalable client products at <span className="text-gray-200 font-medium">Cronix</span> and building <span className="text-gray-200 font-medium">NextChapter</span>, an AI-powered e-commerce & social platform, to deepen full-stack and backend mastery.
+          {/* Card 2 */}
+          <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-blue-500/10 to-transparent border border-white/10 hover:border-blue-500/40 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div className="w-14 h-14 rounded-2xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center mb-6">
+                <BrainCircuit size={28} className="text-blue-400" />
+              </div>
+              <h4 className="text-white font-bold text-2xl md:text-3xl lg:text-[2.4rem] leading-[1.3] mb-4">
+                AI-Assisted Workflow
+              </h4>
+              <p className="text-gray-300 text-lg md:text-xl lg:text-[1.8rem] leading-[1.7] md:leading-[1.75] lg:leading-[1.8]">
+                Using Ollama + Continue + Local AI Models for backend reviews, refactoring, SQL optimization, documentation, and productivity-focused engineering workflows.
               </p>
             </div>
+          </div>
 
-            {/* Professional Tags */}
-            <div className="flex flex-wrap gap-3 mb-12">
-              {tags.map((tag, i) => (
-                <span
-                  key={i}
-                  className="px-4 py-2 rounded-full text-[13px] font-medium bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:border-purple-500/50 hover:bg-purple-500/10 transition-all cursor-default shadow-sm"
-                >
-                  {tag}
-                </span>
-              ))}
-            </div>
-
-            {/* Stats Section */}
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-10">
-              {stats.map((stat, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col justify-center items-center md:items-start p-5 rounded-3xl bg-gradient-to-b from-white/5 to-transparent border border-white/10 backdrop-blur-sm hover:border-white/20 transition-colors"
-                >
-                  <span className="text-white font-bold text-2xl md:text-3xl mb-1">{stat.value}</span>
-                  <span className="text-gray-400 text-[12px] font-medium">{stat.label}</span>
-                </div>
-              ))}
-            </div>
-
-            {/* Info Cards Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mb-10">
-              {/* Card 1 */}
-              <div className="p-6 rounded-3xl bg-gradient-to-br from-purple-500/10 to-transparent border border-white/10 hover:border-purple-500/30 transition-all duration-300">
-                <h4 className="text-white font-semibold text-2xl mb-3 flex items-center gap-2">
-                  <Target size={20} className="text-purple-400" /> Current Focus
-                </h4>
-                <p className="text-gray-400 text-[15px] leading-relaxed">
-                  Building scalable SaaS applications, improving backend architecture skills, and integrating AI-assisted engineering workflows into modern development processes.
-                </p>
+          {/* Card 3 */}
+          <div className="p-8 md:p-10 rounded-3xl bg-gradient-to-br from-pink-500/10 to-transparent border border-white/10 hover:border-pink-500/40 transition-all duration-300 flex flex-col justify-between">
+            <div>
+              <div className="w-14 h-14 rounded-2xl bg-pink-500/20 border border-pink-500/30 flex items-center justify-center mb-6">
+                <Rocket size={28} className="text-pink-400" />
               </div>
+              <h4 className="text-white font-bold text-2xl md:text-3xl lg:text-[2.4rem] leading-[1.3] mb-4">
+                Featured Project
+              </h4>
+              <p className="text-gray-300 text-lg md:text-xl lg:text-[1.8rem] leading-[1.7] md:leading-[1.75] lg:leading-[1.8]">
+                <span className="text-white font-semibold">NextChapter</span> — AI-powered E-commerce + Social Platform for Authors & Readers.
+              </p>
+            </div>
+          </div>
+        </div>
 
-              {/* Card 2 */}
-              <div className="p-6 rounded-3xl bg-gradient-to-br from-blue-500/10 to-transparent border border-white/10 hover:border-blue-500/30 transition-all duration-300">
-                <h4 className="text-white font-semibold text-2xl mb-3 flex items-center gap-2">
-                  <BrainCircuit size={20} className="text-blue-400" /> AI-Assisted Workflow
-                </h4>
-                <p className="text-gray-400 text-[15px] leading-relaxed">
-                  Using Ollama + Continue + Local AI Models for backend reviews, refactoring, SQL optimization, documentation, and productivity-focused engineering workflows.
-                </p>
+        {/* Contact Details & Action Footer Bar */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-black/40 p-6 md:p-10 rounded-3xl border border-white/10 items-center">
+          <div className="lg:col-span-8 grid grid-cols-1 sm:grid-cols-2 gap-8">
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-purple-500/20 border border-purple-500/30 flex items-center justify-center shrink-0 mt-1">
+                <User size={24} className="text-purple-400" />
               </div>
-
-              {/* Card 3 */}
-              <div className="p-6 rounded-3xl bg-gradient-to-br from-pink-500/10 to-transparent border border-white/10 hover:border-pink-500/30 transition-all duration-300">
-                <h4 className="text-white font-semibold text-2xl mb-3 flex items-center gap-2">
-                  <Rocket size={20} className="text-pink-400" /> Featured Project
-                </h4>
-                <p className="text-gray-400 text-[15px] leading-relaxed">
-                  <span className="text-white font-medium">NextChapter</span> — AI-powered E-commerce + Social Platform for Authors & Readers.
+              <div>
+                <p className="text-gray-400 text-base md:text-lg lg:text-[1.6rem] uppercase tracking-wider font-semibold leading-[1.4] mb-1">
+                  Name
+                </p>
+                <p className="text-white font-semibold text-xl md:text-2xl lg:text-[2.2rem] leading-[1.35]">
+                  Mohit Anand
+                </p>
+                <p className="text-gray-300 text-base md:text-lg lg:text-[1.7rem] leading-[1.5] mt-1">
+                  Full Stack Developer
                 </p>
               </div>
             </div>
 
-            {/* Contact Details Grid */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 bg-black/30 p-6 md:p-8 rounded-3xl border border-gray-800/60 mb-10">
-              <div className="flex flex-col gap-1 text-base md:text-2xl">
-                <p className="text-gray-500 text-xl uppercase tracking-wider font-semibold mb-2">Contact</p>
-                <p className="text-white font-medium"> Name : Mohit Anand</p>
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-blue-500/20 border border-blue-500/30 flex items-center justify-center shrink-0 mt-1">
+                <Briefcase size={24} className="text-blue-400" />
+              </div>
+              <div>
+                <p className="text-gray-400 text-base md:text-lg lg:text-[1.6rem] uppercase tracking-wider font-semibold leading-[1.4] mb-1">
+                  Current Role
+                </p>
+                <p className="text-white font-semibold text-xl md:text-2xl lg:text-[2.2rem] leading-[1.35]">
+                  Cronix
+                </p>
+                <p className="text-gray-300 text-base md:text-lg lg:text-[1.7rem] leading-[1.5] mt-1">
+                  Frontend-Focused Full Stack
+                </p>
+              </div>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-green-500/20 border border-green-500/30 flex items-center justify-center shrink-0 mt-1">
+                <Mail size={24} className="text-green-400" />
+              </div>
+              <div>
+                <p className="text-gray-400 text-base md:text-lg lg:text-[1.6rem] uppercase tracking-wider font-semibold leading-[1.4] mb-1">
+                  Email
+                </p>
                 <a
                   href="mailto:anandmohit744@gmail.com"
-                  className="transition-colors"
+                  className="text-blue-400 hover:text-blue-300 transition-colors text-xl md:text-2xl lg:text-[2.2rem] font-medium leading-[1.35] break-all block"
                 >
-                  Email : <span className="text-blue-400 hover:text-blue-500">anandmohit744@gmail.com</span>
+                  anandmohit744@gmail.com
                 </a>
-                <a href="tel:+918521227434" className="transition-colors">Phone : <span className="text-blue-400 hover:text-blue-500">+91 8521227434</span></a>
               </div>
-              <div className="flex flex-col gap-1 text-base md:text-2xl">
-                <p className="text-gray-500 text-xl uppercase tracking-wider font-semibold mb-2">Current Role</p>
-                <p className="text-gray-200">Frontend-Focused Full Stack Developer</p>
+            </div>
+
+            <div className="flex items-start gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-pink-500/20 border border-pink-500/30 flex items-center justify-center shrink-0 mt-1">
+                <Phone size={24} className="text-pink-400" />
+              </div>
+              <div>
+                <p className="text-gray-400 text-base md:text-lg lg:text-[1.6rem] uppercase tracking-wider font-semibold leading-[1.4] mb-1">
+                  Phone
+                </p>
+                <a
+                  href="tel:+918521227434"
+                  className="text-blue-400 hover:text-blue-300 transition-colors text-xl md:text-2xl lg:text-[2.2rem] font-medium leading-[1.35] block"
+                >
+                  +91 8521227434
+                </a>
               </div>
             </div>
           </div>
 
-          {/* Action Footer */}
-          <div className="pt-8 border-t border-gray-800/60 flex flex-wrap items-center justify-between gap-4">
+          {/* Download Resume & Last Updated */}
+          <div className="lg:col-span-4 flex flex-col items-center justify-center gap-3 lg:border-l lg:border-white/10 lg:pl-8 pt-4 lg:pt-0">
             <DownloadButton text="Download Resume" url="/Mohit Anand.pdf" />
-            {/*  <span className="text-2xl highLight-text font-medium">
-              Available for new opportunities
-            </span> */}
+            <div className="flex items-center gap-2 text-gray-400 text-base md:text-lg lg:text-[1.6rem] mt-1">
+              <Calendar size={18} className="text-purple-400" />
+              <span>
+                Last Updated: <span className="text-white font-semibold">{joiningDate}</span>
+              </span>
+            </div>
           </div>
         </div>
       </div>
@@ -154,4 +269,3 @@ const AboutMe = () => {
 };
 
 export default AboutMe;
-
