@@ -12,6 +12,7 @@ import RealWorldExperience from "./components/RealWorldExperineceData/RealWorldE
 import MobileMenu from "./components/common/Sidebar/MobileMenu";
 
 import Workplace from "./components/Workplace/Workplace";
+import Education from "./components/Education/Education";
 
 function App() {
   const [showGoToTop, setShowGoToTop] = useState(false);
@@ -23,6 +24,7 @@ function App() {
   const about = useRef(null);
   const skill = useRef(null);
   const experience = useRef(null);
+  const education = useRef(null);
   const workplace = useRef(null);
   const projects = useRef(null);
   const contact = useRef(null);
@@ -46,6 +48,7 @@ function App() {
       { id: "Workplace", container: workplace },
       { id: "Skill", container: skill },
       { id: "Experience", container: experience },
+      { id: "Education", container: education },
       { id: "Projects", container: projects },
       { id: "Contact", container: contact },
       { id: "Notes", container: notes },
@@ -137,6 +140,10 @@ function App() {
           </div>
           <div id="Experience" ref={experience}>
             <Experience />
+          </div>
+
+          <div id="Education" ref={education}>
+            <Education />
           </div>
 
           <div id="Projects" ref={projects}>

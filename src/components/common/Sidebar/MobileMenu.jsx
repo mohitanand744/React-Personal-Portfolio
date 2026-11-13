@@ -109,6 +109,27 @@ const MobileMenu = () => {
         <Link>
           <p
             onClick={() => {
+              setActive("Education");
+
+              setToggle(false);
+              scrollToSection("Education");
+            }}
+            className={`cursor-pointer  justify-between ps-4 w-[80%] sm:w-[50%] text-start mx-auto flex  gap-16 items-center ${active === "Education"
+                ? "custom-shadow3 rounded-full  transition-all"
+                : ""
+              }`}
+          >
+            Education
+            <img
+              className="w-[3.8rem] h-[3.8rem] custom-shadow3 rounded-full p-2"
+              src="https://img.icons8.com/nolan/64/graduation-cap.png"
+              alt="education"
+            />{" "}
+          </p>
+        </Link>
+        <Link>
+          <p
+            onClick={() => {
               setActive("Workplace");
 
               setToggle(false);
