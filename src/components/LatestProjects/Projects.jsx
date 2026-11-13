@@ -3,6 +3,7 @@ import SectionHeading from "../common/Heading/SectionHeading";
 import useContextData from "../../Hook/useContextData";
 import Button from "../common/Buttons/Button";
 import { Link } from "react-router-dom";
+import SingleProjectCard from "../Cards/SingleProjectCard";
 const Card = lazy(() => import("../Cards/Card"));
 
 const Projects = () => {
@@ -165,7 +166,9 @@ const Projects = () => {
           </>
         )}
       </div>
-      {filteredProjects.length >= 4 ? (
+      {filteredProjects.length === 1 ? (
+        <SingleProjectCard project={filteredProjects[0]} />
+      ) : filteredProjects.length >= 4 ? (
         <>
           <div
             ref={scrollContainer}
@@ -199,10 +202,10 @@ const Projects = () => {
         </>
       ) : (
         <>
-          <div className="px-4 w-full sm:w-[33rem] mx-auto my-20">
+          <div className="px-4 w-full md:w-[90%] mx-auto my-20 flex flex-wrap justify-center gap-8">
             {filteredProjects.slice(0, 4).map((project, i) => (
               <Suspense
-                className="w-full"
+                className="w-full sm:w-[33rem]"
                 key={i}
                 fallback={
                   <span className="loading loading-ring loading-lg"></span>
