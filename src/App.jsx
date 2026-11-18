@@ -46,7 +46,7 @@ function App() {
       { id: "Home", container: home },
       { id: "About", container: about },
       { id: "Workplace", container: workplace },
-      { id: "Skill", container: skill },
+      { id: "Skills", container: skill },
       { id: "Experience", container: experience },
       { id: "Education", container: education },
       { id: "Projects", container: projects },

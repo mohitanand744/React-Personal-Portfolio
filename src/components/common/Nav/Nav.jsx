@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { X } from "lucide-react";
 import useContextData from "../../../Hook/useContextData";
 
 const Nav = () => {
@@ -11,48 +12,33 @@ const Nav = () => {
     setActive,
     scrollToSection,
     toggleMenu,
+    toggle,
     setToggle,
     pathname,
   } = useContextData();
   const navigate = useNavigate();
 
   return (
-    <header className="container custom-shadow sticky top-0 z-[99999] flex items-center justify-between w-full px-10 py-8 text-white border-white backdrop-blur-sm bg-black/30 lg:border-b-[1px] mb-2 rounded-b-3xl">
+    <header
+      className="container custom-shadow sticky top-0 z-[99999] flex items-center justify-between w-full px-6 sm:px-10 h-[7.5rem] md:h-[8.5rem] text-white backdrop-blur-md bg-black/40 border-b-[1px] border-white/10 mb-2 rounded-b-3xl transition-all duration-300"
+    >
       <div className="bg-white rounded-full">
-        <Link to={"/"}>
+        <Link
+          to={"/"}
+          onClick={() => {
+            setActive("Home");
+            setToggle(false);
+            scrollToSection("Home");
+          }}
+        >
           <img
             src="/logo2.png"
-            className="w-[4.5rem] md:w-[5.7rem]"
+            className="w-[4.2rem] md:w-[5.7rem]"
             alt="logo"
           />
         </Link>
       </div>
-      {/* Mobile Searching... */}
-      {/*  {pathname === "/projects" && (
-        <div className="absolute left-0 right-0 block w-full top-32 sm:hidden">
-          <input
-            type="text"
-            value={userInput}
-            onChange={handleUserInput}
-            placeholder="Search projects (e.g., 'React', 'Clone', 'Html')"
-            className="relative left-0 right-0 w-full px-6 py-6 text-xl border-b-[1px]  rounded-2xl outline-none backdrop-blur-sm bg-black/80 custom-shadow2 md:text-2xl"
-          />
-          {userInput !== "" ? (
-            <img
-              className="absolute  top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
-              src="https://img.icons8.com/nolan/64/delete-sign.png"
-              alt="delete-sign"
-              onClick={() => setUserInput("")}
-            />
-          ) : (
-            <img
-              className="absolute top-[1.3rem] right-6 w-[1.8rem] cursor-pointer"
-              src="https://img.icons8.com/external-vitaliy-gorbachev-blue-vitaly-gorbachev/60/external-search-food-delivery-vitaliy-gorbachev-blue-vitaly-gorbachev.png"
-              alt="search"
-            />
-          )}
-        </div>
-      )} */}
+
       <nav className="items-center hidden gap-8 text-xl font-medium md:flex md:text-3xl">
         <p
           onClick={() => {
@@ -61,10 +47,24 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("About");
           }}
-          className={`cursor-pointer navlinks  ${active === "About" ? "active" : ""
-            }`}
+          className={`cursor-pointer navlinks ${
+            active === "About" ? "active" : ""
+          }`}
         >
           About
+        </p>
+        <p
+          onClick={() => {
+            navigate("/");
+            setActive("Workplace");
+            setToggle(false);
+            scrollToSection("Workplace");
+          }}
+          className={`cursor-pointer navlinks ${
+            active === "Workplace" ? "active" : ""
+          }`}
+        >
+          Workplace
         </p>
         <p
           onClick={() => {
@@ -73,8 +73,9 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Skills");
           }}
-          className={`cursor-pointer navlinks  ${active === "Skills" ? "active" : ""
-            }`}
+          className={`cursor-pointer navlinks ${
+            active === "Skills" ? "active" : ""
+          }`}
         >
           Skills
         </p>
@@ -85,8 +86,9 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Experience");
           }}
-          className={`cursor-pointer navlinks  ${active === "Experience" ? "active" : ""
-            }`}
+          className={`cursor-pointer navlinks ${
+            active === "Experience" ? "active" : ""
+          }`}
         >
           Experience
         </p>
@@ -97,22 +99,11 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Education");
           }}
-          className={`cursor-pointer navlinks  ${active === "Education" ? "active" : ""
-            }`}
+          className={`cursor-pointer navlinks ${
+            active === "Education" ? "active" : ""
+          }`}
         >
           Education
-        </p>
-        <p
-          onClick={() => {
-            navigate("/");
-            setActive("Workplace");
-            setToggle(false);
-            scrollToSection("Workplace");
-          }}
-          className={`cursor-pointer navlinks  ${active === "Workplace" ? "active" : ""
-            }`}
-        >
-          Workplace
         </p>
         <p
           onClick={() => {
@@ -121,40 +112,12 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Projects");
           }}
-          className={`cursor-pointer navlinks  ${active === "Projects" ? "active" : ""
-            }`}
+          className={`cursor-pointer navlinks ${
+            active === "Projects" ? "active" : ""
+          }`}
         >
           Projects
         </p>
-
-        {/* <p
-          onClick={() => {
-            navigate("/");
-            setActive("Notes");
-            setToggle(false);
-            scrollToSection("Notes");
-            alert("Working on it...");
-          }}
-          className={`cursor-pointer navlinks  ${active === "Notes" ? "active" : ""
-            }`}
-        >
-          Dev Notes
-        </p> */}
-        {/*  <p
-          onClick={() => {
-            navigate("/"); 
-            setActive("Blogs");
-                setToggle(false);
-                scrollToSection("Blogs");
-
-            alert("Working on it...");
-          }}
-          className={`cursor-pointer navlinks  ${active === "Blogs" ? "active" : ""
-            }`}
-        >
-          Blogs
-        </p> */}
-
         <p
           onClick={() => {
             navigate("/");
@@ -162,24 +125,36 @@ const Nav = () => {
             setToggle(false);
             scrollToSection("Contact");
           }}
-          className={`cursor-pointer navlinks  ${active === "Contact" ? "active" : ""
-            }`}
+          className={`cursor-pointer navlinks ${
+            active === "Contact" ? "active" : ""
+          }`}
         >
           Contact
         </p>
       </nav>
 
       {/* Mobile menu toggle */}
-      <div
-        className="block w-[4.5rem] h-[4.5rem] 
-          md:hidden cursor-pointer"
-      >
-        <img
-          className="menu w-full h-full object-cover  active:rotate-[360deg] transition-all duration-500 ease-linear cursor-pointer"
-          src="/menu.png"
-          alt="menu"
+      <div className="block md:hidden">
+        <button
+          type="button"
           onClick={toggleMenu}
-        />
+          className={`flex items-center justify-center w-[4.4rem] h-[4.4rem] rounded-full border transition-all duration-300 cursor-pointer active:scale-90 ${
+            toggle
+              ? "bg-purple-900/40 border-pink-500/60 text-pink-300 shadow-[0_0_15px_rgba(236,72,153,0.35)]"
+              : "bg-purple-500/10 border-purple-500/30 text-white hover:border-purple-400"
+          }`}
+          aria-label={toggle ? "Close Navigation Menu" : "Open Navigation Menu"}
+        >
+          {toggle ? (
+            <X className="w-[2.2rem] h-[2.2rem] text-pink-400 transition-transform duration-300 rotate-90" />
+          ) : (
+            <img
+              className="menu w-full h-full object-cover rounded-full active:rotate-[360deg] transition-all duration-500 ease-linear cursor-pointer"
+              src="/menu.png"
+              alt="menu"
+            />
+          )}
+        </button>
       </div>
     </header>
   );

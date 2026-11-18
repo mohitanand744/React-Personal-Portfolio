@@ -99,15 +99,17 @@ const StoreProvider = ({ children }) => {
   // Scrolling to targeted Section
   const scrollToSection = (id) => {
     setTimeout(() => {
+      if (id === "Home") {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        return;
+      }
       const section = document.getElementById(id);
       if (!section) return;
-      const yOffset = -130; // Height of the navbar
+      const yOffset = -100; // Height of the navbar
       const y =
         section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
-      console.log(window.pageYOffset);
-
-      window.scrollTo({ top: y, behavior: "smooth" });
+      window.scrollTo({ top: Math.max(0, y), behavior: "smooth" });
     }, 100);
   };
   const toggleMenu = (e) => {
